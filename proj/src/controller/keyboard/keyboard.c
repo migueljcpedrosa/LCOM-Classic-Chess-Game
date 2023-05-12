@@ -49,7 +49,6 @@ void (kbc_ih)(){
 
 int (kbd_reset_conf)(){
 
-
   uint8_t RD_CMD = 0x20;
 
   sys_outb(INPUT_CMD, RD_CMD);

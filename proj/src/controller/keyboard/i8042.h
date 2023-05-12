@@ -35,5 +35,6 @@
 #define REQUEST_FRWD  0xD4
 #define SUCCESS       0xFA
 
+#define ESC 0x01
 
 #endif
