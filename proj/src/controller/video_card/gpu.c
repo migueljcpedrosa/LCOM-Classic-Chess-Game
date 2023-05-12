@@ -1,6 +1,5 @@
 #include "gpu.h"
 #include "vbe.h"
-#include <math.h>
 
 static void *video_mem;
 static void *buffer;
@@ -55,13 +54,13 @@ int (map_info)(vbe_mode_info_t* vmi_p){
   h_res = vmi_p->XResolution;
   v_res = vmi_p->YResolution;
   bits_per_pixel = vmi_p->BitsPerPixel; 
-  bytes_per_pixel = ceil((bits_per_pixel) / 8.0);   
+  bytes_per_pixel = (bits_per_pixel + 7) / 8.0;   
   red_mask_size = vmi_p->RedMaskSize;
   green_mask_size = vmi_p->GreenMaskSize;
   blue_mask_size = vmi_p->BlueMaskSize;
   vram_base = vmi_p->PhysBasePtr;
   vram_size = h_res * v_res * bytes_per_pixel;    
-    
+  
   mr.mr_base = (phys_bytes) vram_base;	
   mr.mr_limit = mr.mr_base + vram_size;  
 
