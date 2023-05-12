@@ -1,0 +1,278 @@
+#include "gpu.h"
+#include "vbe.h"
+#include <math.h>
+
+static void *video_mem;
+static void *buffer;
+static unsigned int h_res;	        /* Horizontal resolution in pixels */
+static unsigned int v_res;	        /* Vertical resolution in pixels */
+static unsigned int bits_per_pixel; /* Number of VRAM bits per pixel */
+static unsigned int bytes_per_pixel;
+
+static uint8_t red_mask_size;
+static uint8_t green_mask_size;
+static uint8_t blue_mask_size;
+
+static bool index_mode;
+
+int (set_mode)(uint16_t mode){
+
+  if (mode == MODE1)
+    index_mode = true;
+  else 
+    index_mode = false;
+
+  reg86_t r86;
+  
+  memset(&r86, 0, sizeof(r86));	
+
+  r86.intno = 0x10; 
+  r86.ah = WRT_FUNC;    
+  r86.al = VBE_SET_MODE;  
+  r86.bx = mode | LINEAR_FRAME_BUFFER;
+
+  if( sys_int86(&r86) != OK ) {
+    return 1;
+  }
+
+  if (r86.al != FUNC_SUPPORTED){
+    return 1;
+  }
+  else if (r86.ah != 0x00){
+    return 1;
+  }
+  
+  return 0;
+}
+
+int (map_info)(vbe_mode_info_t* vmi_p){
+
+  int r;				    
+  unsigned int vram_base;  
+  unsigned int vram_size;      
+  struct minix_mem_range mr;
+  
+  h_res = vmi_p->XResolution;
+  v_res = vmi_p->YResolution;
+  bits_per_pixel = vmi_p->BitsPerPixel; 
+  bytes_per_pixel = ceil((bits_per_pixel) / 8.0);   
+  red_mask_size = vmi_p->RedMaskSize;
+  green_mask_size = vmi_p->GreenMaskSize;
+  blue_mask_size = vmi_p->BlueMaskSize;
+  vram_base = vmi_p->PhysBasePtr;
+  vram_size = h_res * v_res * bytes_per_pixel;    
+    
+  mr.mr_base = (phys_bytes) vram_base;	
+  mr.mr_limit = mr.mr_base + vram_size;  
+
+  if(OK != (r = sys_privctl(SELF, SYS_PRIV_ADD_MEM, &mr))){
+    panic("sys_privctl (ADD_MEM) failed: %d\n", r);
+    return 1;
+  }
+
+  video_mem = vm_map_phys(SELF, (void *)mr.mr_base, vram_size);
+  
+  if(video_mem == MAP_FAILED){
+    panic("couldn't map video memory");
+    return 1;    
+  }
+  
+  buffer = malloc(vram_size);
+  memset(video_mem, 0, vram_size);
+  memset(buffer, 0, vram_size);
+  
+  return 0;
+}
+
+int (draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color){
+
+  if (x < 0 || x >= h_res || y < 0 || y >= v_res) {
+
+    return 1;
+  }
+
+  for (unsigned int cur_y = y; cur_y < y + height && cur_y < v_res; cur_y++){
+
+    for (unsigned int cur_x = x; cur_x < x + width && cur_x < h_res; cur_x++){
+       
+      uint8_t* pixel_pos = (uint8_t*)buffer + (cur_y * h_res + cur_x) * bytes_per_pixel;
+
+      memcpy(pixel_pos, &color, bytes_per_pixel);
+      /*
+      for (unsigned int byte = 0; byte < bytes_per_pixel; byte++){
+        
+        pixel_pos[byte] = (color >> (8 * byte));
+      }*/
+    }
+  }
+
+  memcpy(video_mem, buffer, h_res * v_res * bytes_per_pixel);
+
+  return 0;
+}
+
+uint8_t R(uint32_t first) {
+    return (first >> (green_mask_size + blue_mask_size)) & ((1 << red_mask_size) - 1);
+}
+
+uint8_t G(uint32_t first) {
+    return (first >> blue_mask_size) & ((1 << green_mask_size) - 1);
+}
+
+uint8_t B(uint32_t first) {
+    return first & ((1 << blue_mask_size) - 1);
+}
+
+int (draw_pattern)(uint8_t no_rectangles, uint32_t first, uint8_t step){
+
+  uint16_t width = h_res / no_rectangles;
+  uint16_t height = v_res / no_rectangles;
+  
+  for (uint16_t row = 0; row < no_rectangles; row++){
+    for (uint16_t col = 0; col < no_rectangles; col++){
+
+        uint32_t color;
+
+        if (index_mode)
+          color = (first + (row * no_rectangles + col) * step) % (1 << bits_per_pixel); 
+        else{
+          uint32_t red = (R(first) + col * step) % (1 << red_mask_size); 
+          uint32_t green = (G(first) + row * step) % (1 << green_mask_size); 
+          uint32_t blue  = (B(first) + (col + row) * step) % (1 << blue_mask_size);
+
+          color = (red << (green_mask_size + blue_mask_size)) | (green << blue_mask_size) | blue;
+        }
+
+        if (draw_rectangle(col * width, row * height, width, height, color))
+          return 1;
+    }
+  }
+  return 0;
+}
+
+int get_xpm_image_type(enum xpm_image_type* type, uint16_t mode){
+
+  switch (mode){
+    case 0x105:
+      *type = XPM_INDEXED;
+      break;
+    case 0x110:
+      *type = XPM_1_5_5_5;
+      break;
+    case 0x115:
+      *type = XPM_8_8_8;
+      break;
+    case 0x11A:
+      *type = XPM_5_6_5;
+      break;
+    case 0x14C:
+      *type = XPM_8_8_8_8;
+      break;
+    default:
+      return 1;
+  }
+
+  return 0;
+}
+
+int draw_xpm(xpm_map_t xpm, enum xpm_image_type type, uint16_t x, uint16_t y){
+
+
+  xpm_image_t img_info;
+
+  uint8_t* img_addr;
+  
+  if ((img_addr = xpm_load(xpm, type, &img_info)) == NULL)
+    return 1;
+
+  for(unsigned int cur_y = y; cur_y < y + img_info.height && cur_y < v_res; cur_y++){
+
+    for(unsigned int cur_x = x; cur_x < x + img_info.width && cur_x < h_res; cur_x++){
+
+      unsigned int img_x = cur_x - x, img_y = cur_y - y;
+
+      unsigned int color = *(img_addr + (img_y * img_info.width) + img_x) * bytes_per_pixel;
+
+      uint8_t* pixel_pos = (uint8_t*)buffer + (cur_y * h_res + cur_x) * bytes_per_pixel;
+
+      memcpy(pixel_pos, &color, bytes_per_pixel);
+    }
+  }
+
+  memcpy(video_mem, buffer, (h_res*v_res)*(bytes_per_pixel));
+
+  return 0;
+}
+
+
+int (erase_xpm)(xpm_map_t xpm, enum xpm_image_type type, uint16_t x, uint16_t y){
+
+  xpm_image_t img_info;
+
+  uint8_t* img_addr;
+  
+  if ((img_addr = xpm_load(xpm, type, &img_info)) == NULL)
+    return 1;
+
+  for(unsigned int cur_y = y; cur_y < y + img_info.height && cur_y < v_res; cur_y++){
+
+    for(unsigned int cur_x = x; cur_x < x + img_info.width && cur_x < h_res; cur_x++){
+
+      unsigned int color = 0;
+
+      uint8_t* pixel_pos = (uint8_t*)buffer + (cur_y * h_res + cur_x) * bytes_per_pixel;
+
+      memcpy(pixel_pos, &color, bytes_per_pixel);
+    }
+  }
+  return 0;
+}
+
+bool (move_sprite)( uint16_t* xi, uint16_t* yi, uint16_t xf, uint16_t yf, int16_t speed, uint32_t frame_count){
+
+  if (*xi == xf){
+    if (speed < 0){
+      if (frame_count % (-speed) == 0){
+        if (yf > *yi){
+          (*yi)++;
+          return *yi >= yf;
+        }
+        else{
+          (*yi)--;
+          return *yi <= yf;
+        }
+      }
+
+    } else {
+      if (yf > *yi){
+        *yi += speed;
+        return *yi >= yf;
+      } else {
+        *yi -= speed;
+        return *yi <= yf;
+      }
+    }
+  } else {
+    if (speed < 0){
+      if (frame_count % (-speed) == 0) {
+        if (xf > *xi){
+          (*xi)++;
+          return *xi >= xf;  
+        }
+        else{
+          (*xi)--;
+          return *xi <= xf;  
+        }
+      }
+    } else {
+      if (xf > *xi){
+        *xi += speed;
+        return *xi >= xf;
+      } else{
+        *xi -= speed;
+        return *xi <= xf;
+      }
+    }
+  }
+  return false;
+}
