@@ -1,0 +1,18 @@
+#ifndef _PLAYER_H_
+#define _PLAYER_H_
+
+#include "piece.h"
+
+typedef struct {
+
+    char* name;
+    Color color;
+    Piece* pieces[16];
+
+} Player;
+
+Player* create_player(char* name, Color color);
+
+void destroy_player(Player* player);
+
+#endif
