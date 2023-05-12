@@ -2,7 +2,6 @@
 #define _GPU_H_
 
 #include <lcom/lcf.h>
-#include <lcom/lab5.h>
 
 int (set_mode)(uint16_t mode);
 
