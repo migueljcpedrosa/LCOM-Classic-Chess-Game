@@ -24,3 +24,21 @@ int draw_board() {
 
   return 0;
 }
+
+int draw_piece( uint16_t x, uint16_t y, uint32_t color) {
+  //in this function, we will draw a piece in the position x,y using the model/xpm/blackQueen.xpm image
+  
+  //load the image
+  xpm_image_t img;
+  uint8_t *sprite = xpm_load("../model/xpm/blackQueen_xpm", XPM_8_8_8_8, &img);
+  if (sprite == NULL) {
+    printf("Error loading sprite\n");
+    return 1;
+  }
+  
+
+  //draw the image
+  draw_xpm(x, y, &img, sprite);
+  return 0;
+}
+

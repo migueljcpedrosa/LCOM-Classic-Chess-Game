@@ -17,3 +17,6 @@ uint16_t mode = MODE5;
 
 int(draw_board)();
 
+
+int(draw_piece)(uint16_t x, uint16_t y, uint32_t color);
+
