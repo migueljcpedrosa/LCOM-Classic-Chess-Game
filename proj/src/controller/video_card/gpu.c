@@ -97,11 +97,7 @@ int (draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, ui
       uint8_t* pixel_pos = (uint8_t*)buffer + (cur_y * h_res + cur_x) * bytes_per_pixel;
 
       memcpy(pixel_pos, &color, bytes_per_pixel);
-      /*
-      for (unsigned int byte = 0; byte < bytes_per_pixel; byte++){
-        
-        pixel_pos[byte] = (color >> (8 * byte));
-      }*/
+
     }
   }
 
