@@ -5,7 +5,7 @@ PROG=proj
 .PATH: ${.CURDIR}/model/game/
 .PATH: ${.CURDIR}/model/xpm/
 
-SRCS = 	main.c 
+SRCS = 	main.c timer.c mouse.c keyboard.c menu.c video_card.c game.c
 
 CFLAGS += -pedantic -DLAB3
 
