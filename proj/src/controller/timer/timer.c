@@ -1,17 +1,13 @@
-#include "timer.h"
+#include <lcom/lcf.h>
+#include <lcom/timer.h>
+#include <stdint.h>
 #include "i8254.h"
-#include "../utils.h"
 
 int hook_id = 0;
 int counter = 0;
 
 //Function to change the frequency of any timer to generate interrupts at a given rate.
 int (timer_set_frequency)(uint8_t timer, uint32_t freq) {
-  // Validate the frequency
-  if (freq > TIMER_FREQ || freq < TIMER_FREQ) {
-    printf("Invalid frequency\n");
-    return 1;
-  }
   
   // Retrieve the current configuration of the timer
   uint8_t current_config;

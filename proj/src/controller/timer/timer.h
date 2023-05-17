@@ -5,8 +5,6 @@
 #ifndef TIMER_H_INCLUDED
 #define TIMER_H_INCLUDED
 
-#include <lcom/lcf.h>
-
 //7.1 timer_test_read_config()
 int (timer_get_conf)(uint8_t timer, uint8_t *st);
 int (timer_display_conf)(uint8_t timer, uint8_t st, enum timer_status_field field);
