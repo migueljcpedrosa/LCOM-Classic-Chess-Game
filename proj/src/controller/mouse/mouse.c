@@ -1,4 +1,5 @@
 #include "mouse.h"
+#include "../utils.h"
 
 int mouse_hook_id = 2;
 
@@ -29,7 +30,7 @@ void (mouse_ih)(){
   if (status & (TIME_OUT_ERROR | PARITY_ERROR))
     return;
 
-  if (!(status & OUTPUT_BUF_READY))
+  if (!(status & OUT_BUF_READY))
     return;
 
   if (!(status & DATA_FROM_MOUSE))
@@ -88,28 +89,26 @@ void (mouse_ih)(){
 
 int (enable_data_reporting)(){
 
-  return write_command(ENBL_DATA_REP, 0, NULL, 0);
+  return write_command(ENBL_DATA_REP, NULL, NULL, 0);
 }
 
 int (disable_data_reporting)(){
 
-  return write_command(DIS_DATA_REP, 0, NULL, 0);
+  return write_command(DIS_DATA_REP, NULL, NULL, 0);
 }
 
 int get_response(uint8_t* response){
 
   uint8_t st;
 
-  if (*response){
-   do {
+  do {
     if (util_sys_inb(STATUS_PORT, &st))
       return 1;
     tickdelay(micros_to_ticks(DELAY_US));
-    } while (!(st & OUT_BUF_FUL));
+  } while (!(st & OUT_BUF_READY));
 
-    if (util_sys_inb(KBD_OUT_BUF, response))
-      return 1;
-  }
+  if (util_sys_inb(KBD_OUT_BUF, response))
+    return 1;
 
   return 0;
 }
@@ -122,7 +121,7 @@ int wait_for_input_buffer(){
     if (util_sys_inb(STATUS_PORT, &st))
       return 1;
     tickdelay(micros_to_ticks(DELAY_US));
-  } while (st & IN_BUF_FUL);
+  } while (st & IN_BUF_READY);
 
   return 0;
 }
@@ -138,9 +137,7 @@ int wait_for_output_buffer(){
 
     tickdelay(micros_to_ticks(DELAY_US));
 
-  } while (!(st & OUT_BUF_FUL && st & BIT(5)));
-
-  printf("STEP 3-5\n");
+  } while (!(st & OUT_BUF_READY));
 
   return 0;
 }
@@ -153,50 +150,45 @@ int write_to_mouse(uint8_t cmd){
   if (sys_outb(INPUT_CMD, REQUEST_FRWD))
     return 1;
 
-  printf("STEP 1\n");
-
   if (wait_for_input_buffer())
     return 1;
-
-  printf("STEP 2\n");
 
   if (sys_outb(INPUT_DATA, cmd))
     return 1;
 
-  printf("STEP 3\n");
-
+  tickdelay(micros_to_ticks(DELAY_US));
 
   uint8_t aknowledgement_byte = 0;
 
-  if (wait_for_output_buffer())
-    return 1;
-
-  printf("STEP 4\n");
-
   if (util_sys_inb(KBD_OUT_BUF, &aknowledgement_byte))
     return 1;
-
-  printf("STEP 5\n");
   
 
   if (aknowledgement_byte != SUCCESS)
-    return 1;
-
-  printf("STEP FINALE\n");
+    return 2;
 
   return 0;
 }
 
 int (write_command)(uint8_t cmd, uint8_t* response, uint8_t args[], uint32_t arg_n){
 
-  if (write_to_mouse(cmd))
-    return 1;
+  int error;
+
+  while((error = write_to_mouse(cmd))){
+    if (error == 2)
+      continue;
+    else if (error == 1)
+      return 1;
+    else
+      break;
+  }
 
   for (int i = 0; i < (int) arg_n; i++)
     if (write_to_mouse(args[i]))
       return 1;
 
-  get_response(response);
+  if (response != NULL)
+    get_response(response);
 
   return 0;
 }

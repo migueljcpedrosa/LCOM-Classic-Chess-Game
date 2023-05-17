@@ -43,22 +43,8 @@ typedef struct {
     int num_moves;
 } Piece;
 
-Piece* create_piece(Type type, Color color);
+Position create_position(int boardIndex);
 
-Piece* getMoves(Board* board, Piece* piece);
-
-void getPawnMoves(Board* board, Piece* piece);
-
-void getMovesInLine(Board* board, Piece* piece, int increment);
-
-void getBishopMoves(Board* board, Piece* piece);
-
-void getRookMoves(Board* board, Piece* piece);
-
-void getQueenMoves(Board* board, Piece* piece);
-
-void getHorseMoves(Board* board, Piece* piece);
-
-void getKingMoves(Board* board, Piece* piece);
+Piece* create_piece(Type type, Color color, Position pos);
 
 #endif

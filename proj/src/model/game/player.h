@@ -1,7 +1,7 @@
 #ifndef _PLAYER_H_
 #define _PLAYER_H_
 
-#include "piece.h"
+#include "pieces.h"
 
 typedef struct {
 
@@ -11,7 +11,7 @@ typedef struct {
 
 } Player;
 
-Player* create_player(char* name, Color color);
+Player* create_player(char name[], Color color);
 
 void destroy_player(Player* player);
 

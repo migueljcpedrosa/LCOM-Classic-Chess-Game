@@ -8,44 +8,37 @@ int counter = 0;
 //Function to change the frequency of any timer to generate interrupts at a given rate.
 int (timer_set_frequency)(uint8_t timer, uint32_t freq) {
   // Validate the frequency
-  if (freq > TIMER_FREQ || freq < TIMER_FREQ) {
+  if (freq > TIMER_FREQ) {
     printf("Invalid frequency\n");
     return 1;
   }
   
-  // Retrieve the current configuration of the timer
   uint8_t current_config;
   if (timer_get_conf(timer, &current_config) != 0) {
     printf("Error reading timer_get_conf\n");
     return 1;
   }
 
-  // Calculate the initial count for the desired frequency
   uint16_t initial_count = TIMER_FREQ / freq;
 
-  // Extract the most and least significant bytes from the initial count
   uint8_t msb, lsb;
   if (util_get_MSB(initial_count, &msb) != 0 || util_get_LSB(initial_count, &lsb) != 0) {
     printf("Could not obtain initial count MSB and/or LSB\n");
     return 1;
   }
 
-  // Prepare the new control word by preserving the 4 least significant bits of the current configuration
   uint8_t control_word = (timer << 6) | TIMER_LSB_MSB | (current_config & 0x0F);
   
-  // Write the new control word to the timer's control register
   if(sys_outb(TIMER_CTRL, control_word)) {
     printf("Error in sys_outb while writing control word\n");
     return 1;   
   } 
   
-  // Write the least significant byte of the initial count to the timer's register
   if(sys_outb(TIMER_0 + timer, lsb) != 0) {
     printf("Error in sys_outb while writing LSB\n");
     return 1;
   }
 
-  // Write the most significant byte of the initial count to the timer's register
   if(sys_outb(TIMER_0 + timer, msb) != 0) {
     printf("Error in sys_outb while writing MSB\n");
     return 1;
@@ -86,7 +79,7 @@ int (timer_unsubscribe_int)() {
 }
 
 // Handler for timer interrupt
-void (timer_int_handler)() {
+void (timer_ih)() {
   counter++;
 }
 

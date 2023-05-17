@@ -1,6 +1,8 @@
 #ifndef _i8042_H_
 #define _i8042_H_
 
+#define ESC_KEY     0x81
+
 #define KBD_IRQ     1
 
 #define STATUS_PORT 0x64
@@ -10,7 +12,6 @@
 #define INPUT_DATA  0x60
 
 #define DELAY_US    20000
-
 
 #define MOUSE_IRQ   12
 
@@ -25,7 +26,8 @@
 #define MOUSE_X_OVF       BIT(6)
 #define MOUSE_Y_OVF       BIT(7)
 
-#define OUTPUT_BUF_READY  BIT(0)
+#define OUT_BUF_READY     BIT(0)
+#define IN_BUF_READY      BIT(1)
 #define DATA_FROM_MOUSE   BIT(5)
 #define TIME_OUT_ERROR    BIT(6)
 #define PARITY_ERROR      BIT(7)

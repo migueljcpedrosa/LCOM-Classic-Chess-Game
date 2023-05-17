@@ -1,12 +1,13 @@
 #include "game.h"
+#include <stdlib.h>
 
-Game* create_game(){
+Game* create_game(char white_name[], char black_name[]){
     Game* game = malloc(sizeof(Game));
 
-    game->white_player = create_player(WHITE);
-    game->black_player = create_player(BLACK);
+    game->white_player = create_player(white_name, WHITE);
+    game->black_player = create_player(black_name, BLACK);
 
-    game->board = board_create(game->white_player, game->black_player);
+    game->board = create_board(game->white_player, game->black_player);
     game->turn = WHITE;
 
     return game;
@@ -39,7 +40,7 @@ void execute_move(Game* game, Move move){
         captured_piece->status = CAPTURED;
     }
 
-    if (piece->type == PAWN && (move.destination < 8 || move.destination > 55)){
+    if (piece->type == PAWN && (destination < 8 || destination > 55)){
         piece->type = QUEEN;
     }
 
@@ -80,7 +81,10 @@ bool is_check(Game* game){
         Move* moves = checking_player->pieces[i]->moves;
 
         for (int j = 0; j < num_moves; j++){
-            if (game->board->squares[moves[j].destination]->type == KING){
+
+            int destination = moves[j].destination.x * 8 + moves[j].destination.y;
+
+            if (game->board->squares[destination]->type == KING){
                 return true;
             }
         }

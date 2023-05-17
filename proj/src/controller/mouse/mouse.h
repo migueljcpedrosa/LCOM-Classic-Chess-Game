@@ -2,6 +2,7 @@
 #define _MOUSE_H_
 
 #include "i8042.h"
+#include <lcom/lcf.h>
 
 int (mouse_subscribe_int)(uint8_t* bit_no);
 

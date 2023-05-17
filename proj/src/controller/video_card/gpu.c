@@ -3,8 +3,8 @@
 
 static void *video_mem;
 static void *buffer;
-static unsigned int h_res;	        /* Horizontal resolution in pixels */
-static unsigned int v_res;	        /* Vertical resolution in pixels */
+unsigned int h_res;	        /* Horizontal resolution in pixels */
+unsigned int v_res;	        /* Vertical resolution in pixels */
 static unsigned int bits_per_pixel; /* Number of VRAM bits per pixel */
 static unsigned int bytes_per_pixel;
 
@@ -97,10 +97,14 @@ int (draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, ui
       uint8_t* pixel_pos = (uint8_t*)buffer + (cur_y * h_res + cur_x) * bytes_per_pixel;
 
       memcpy(pixel_pos, &color, bytes_per_pixel);
-
     }
   }
 
+  return 0;
+}
+
+int (copy_buffer_to_video_mem)(){
+  
   memcpy(video_mem, buffer, h_res * v_res * bytes_per_pixel);
 
   return 0;
@@ -193,8 +197,6 @@ int draw_xpm(xpm_map_t xpm, enum xpm_image_type type, uint16_t x, uint16_t y){
       memcpy(pixel_pos, &color, bytes_per_pixel);
     }
   }
-
-  memcpy(video_mem, buffer, (h_res*v_res)*(bytes_per_pixel));
 
   return 0;
 }

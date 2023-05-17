@@ -3,10 +3,7 @@
 
 #include "board.h"
 
-typedef enum {
-    WHITE,
-    BLACK
-} Turn;
+typedef Color Turn;
 
 typedef struct {
 

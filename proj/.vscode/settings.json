@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "utils.h": "c"
+        "utils.h": "c",
+        "timer.h": "c",
+        "board.h": "c",
+        "pieces.h": "c"
     }
 }
