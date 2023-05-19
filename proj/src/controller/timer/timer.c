@@ -1,6 +1,7 @@
-#include "timer.h"
+#include <lcom/lcf.h>
+#include <lcom/timer.h>
+#include <stdint.h>
 #include "i8254.h"
-#include "../utils.h"
 
 int hook_id = 0;
 int counter = 0;

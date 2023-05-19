@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "files.associations": {
         "utils.h": "c",
@@ -5,4 +6,10 @@
         "board.h": "c",
         "pieces.h": "c"
     }
+=======
+{
+    "files.associations": {
+        "utils.h": "c"
+    }
+>>>>>>> c43d9993a54288ba95206d10f8bb7a4832a4699a
 }

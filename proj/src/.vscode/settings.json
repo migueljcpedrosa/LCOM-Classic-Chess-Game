@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "git.ignoreLimitWarning": true,
   "C_Cpp.clang_format_fallbackStyle": "LLVM",
@@ -14,4 +15,17 @@
     "vbe.h": "c",
     "i8042.h": "c"
   },
+=======
+{
+  "git.ignoreLimitWarning": true,
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.formatOnSave": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 100,
+  "files.associations": {
+    "viewer.h": "c"
+  },
+>>>>>>> c43d9993a54288ba95206d10f8bb7a4832a4699a
 }

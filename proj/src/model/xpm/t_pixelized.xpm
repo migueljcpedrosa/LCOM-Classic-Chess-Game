@@ -1,0 +1,21 @@
+/* XPM */
+static char * t_xpm[] = {
+"16 16 2 1",
+" 	c #FFFFFE",
+"x	c #000000",
+" xxxxxxxxxxxxx  ",
+" xxxxxxxxxxxxx  ",
+" xxxxxxxxxxxxx  ",
+"      xxx       ",
+"      xxx       ",
+"      xxx       ",
+"      xxx       ",
+"      xxx       ",
+"      xxx       ",
+"      xxx       ",
+"      xxx       ",
+"      xxx       ",
+"      xxx       ",
+"      xxx       ",
+"      xxx       ",
+"      xxx       "};
