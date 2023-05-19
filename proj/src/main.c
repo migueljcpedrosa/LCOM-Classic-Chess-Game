@@ -10,6 +10,7 @@
 #include "controller/keyboard/keyboard.h"
 #include "model/modes/utils.h"
 #include "view/viewer.h"
+#include "view/sprite.h"
 
 extern int hook_id;
 extern int hook_id;
@@ -46,6 +47,8 @@ int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse){
     
     // if(timer_set_frequency(0,60)) return 1;
 
+    if (load_sprites()) return 1;
+
     if(timer_subscribe_int(irqTimer)) return 1;
     if(keyboard_subscribe_int(irqKeyboard)) return 1;
     if(mouse_subscribe_int(irqMouse)) return 1;
@@ -77,8 +80,12 @@ int interrupts_handler(){
     int ipc_status,r;
     message msg;
 
-    if (initialize(&irqTimer, &irqKeyboard, &irqMouse))
+    if (initialize(&irqTimer, &irqKeyboard, &irqMouse)){
         terminate();
+        return 1;
+    }
+
+    printf("Before Loop\n");
 
     while(scan_code[0] != ESC_KEY){
 

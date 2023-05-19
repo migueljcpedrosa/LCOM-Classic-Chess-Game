@@ -89,6 +89,7 @@ void (mouse_ih)(){
 
 int (enable_data_reporting)(){
 
+  write_command(0xEA, NULL, NULL, 0);
   return write_command(ENBL_DATA_REP, NULL, NULL, 0);
 }
 

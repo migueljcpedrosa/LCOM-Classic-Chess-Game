@@ -3,6 +3,9 @@
 
 #include <lcom/lcf.h>
 
+extern unsigned int h_res;	        /* Horizontal resolution in pixels */
+extern unsigned int v_res;	
+
 int (set_mode)(uint16_t mode);
 
 int (map_info)(vbe_mode_info_t* vmi_p);
@@ -19,7 +22,9 @@ uint8_t B(uint32_t first);
 
 int (get_xpm_image_type)(enum xpm_image_type* type, uint16_t mode);
 
-int (draw_xpm)(xpm_map_t xpm, enum xpm_image_type type, uint16_t x, uint16_t y);
+int (load_xpm)(xpm_map_t xpm, enum xpm_image_type type, xpm_image_t* sprite,  uint8_t** img_addr);
+
+int (draw_xpm)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y);
 
 int (erase_xpm)(xpm_map_t xpm, enum xpm_image_type type, uint16_t x, uint16_t y);
 

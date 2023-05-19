@@ -11,6 +11,9 @@ static unsigned int bytes_per_pixel;
 static uint8_t red_mask_size;
 static uint8_t green_mask_size;
 static uint8_t blue_mask_size;
+static uint8_t red_pos;
+static uint8_t green_pos;
+static uint8_t blue_pos;
 
 static bool index_mode;
 
@@ -59,6 +62,10 @@ int (map_info)(vbe_mode_info_t* vmi_p){
   green_mask_size = vmi_p->GreenMaskSize;
   blue_mask_size = vmi_p->BlueMaskSize;
   vram_base = vmi_p->PhysBasePtr;
+  red_pos = vmi_p->RedFieldPosition;
+  green_pos = vmi_p->GreenFieldPosition;
+  blue_pos = vmi_p->BlueFieldPosition;
+
   vram_size = h_res * v_res * bytes_per_pixel;    
   
   mr.mr_base = (phys_bytes) vram_base;	
@@ -174,23 +181,32 @@ int get_xpm_image_type(enum xpm_image_type* type, uint16_t mode){
   return 0;
 }
 
-int draw_xpm(xpm_map_t xpm, enum xpm_image_type type, uint16_t x, uint16_t y){
-
-
-  xpm_image_t img_info;
-
-  uint8_t* img_addr;
+int (load_xpm)(xpm_map_t xpm, enum xpm_image_type type, xpm_image_t* sprite,  uint8_t** img_addr){
   
-  if ((img_addr = xpm_load(xpm, type, &img_info)) == NULL)
+  if ((*img_addr = xpm_load(xpm, type, sprite)) == NULL)
     return 1;
 
-  for(unsigned int cur_y = y; cur_y < y + img_info.height && cur_y < v_res; cur_y++){
+  return 0;
+}
 
-    for(unsigned int cur_x = x; cur_x < x + img_info.width && cur_x < h_res; cur_x++){
+int (draw_xpm)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y){
+
+  for(unsigned int cur_y = y; cur_y < y + sprite.height && cur_y < v_res; cur_y++){
+
+    for(unsigned int cur_x = x; cur_x < x + sprite.width && cur_x < h_res; cur_x++){
 
       unsigned int img_x = cur_x - x, img_y = cur_y - y;
 
-      unsigned int color = *(img_addr + (img_y * img_info.width) + img_x) * bytes_per_pixel;
+      unsigned int color = *(img_addr + (img_y * sprite.width) + img_x) * bytes_per_pixel;
+      
+      /*
+      if (!index_mode){
+         color = (R(color) << red_pos) || (G(color) << green_pos) ||  (B(color) <<     blue_pos);
+      }*/
+
+      /*if (color == 0xFF00FF){
+        continue;
+      }*/
 
       uint8_t* pixel_pos = (uint8_t*)buffer + (cur_y * h_res + cur_x) * bytes_per_pixel;
 
