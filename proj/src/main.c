@@ -80,30 +80,16 @@ int interrupts_handler(){
     if (initialize(&irqTimer, &irqKeyboard, &irqMouse))
         terminate();
 
-    printf("Starting game\n");
-    
-    while((counter / 60) <= 5){
+    while(scan_code[0] != ESC_KEY){
 
          if ((r = driver_receive(ANY, &msg, &ipc_status)) != 0) {
-            printf("Error");
             continue;
         }
 
         if(is_ipc_notify(ipc_status)) {
             switch(_ENDPOINT_P(msg.m_source)){
                 case HARDWARE:{
-                    if (msg.m_notify.interrupts & irqTimer) {
-                        printf("Counter: %d\n", counter);
-                        timer_ih();
-                        draw();/*
-                        if(gameMode == MENU_MODE) {drawMenu();}
-                            if(counter % 60 == 0){
-                            if(gameStates == PLAYING) gameTurnCounter--;
-                            if((gameTurnCounter == 0) && (gameStates == PLAYING)){
-                                gameStates = ENDING;
-                            }
-                        }*/
-                    } 
+                    
                     if (msg.m_notify.interrupts & irqKeyboard){
                         kbc_ih();
                         /*
@@ -116,6 +102,17 @@ int interrupts_handler(){
                     if (msg.m_notify.interrupts & irqMouse) {
                         mouse_ih();
                     }
+                    if (msg.m_notify.interrupts & irqTimer) {
+                        timer_ih();
+                        draw();/*
+                        if(gameMode == MENU_MODE) {drawMenu();}
+                            if(counter % 60 == 0){
+                            if(gameStates == PLAYING) gameTurnCounter--;
+                            if((gameTurnCounter == 0) && (gameStates == PLAYING)){
+                                gameStates = ENDING;
+                            }
+                        }*/
+                    } 
                     break;
                 }
                 default:
