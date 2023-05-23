@@ -13,8 +13,13 @@
 #include "view/sprite.h"
 
 extern int counter;
+
 extern uint8_t scan_code[2];
+extern bool last_byte_read;
+
 extern struct packet packet_pp;
+extern int pp_index;
+extern bool packet_read;
 
 uint8_t gameMode = MENU_MODE;
 
@@ -89,7 +94,9 @@ int interrupts_handler(){
         return 1;
     }
 
-    while(scan_code[0] != ESC_KEY || packet_pp.lb){
+    bool running = true;
+
+    while(running){
 
          if ((r = driver_receive(ANY, &msg, &ipc_status)) != 0) {
             continue;
@@ -101,6 +108,12 @@ int interrupts_handler(){
                     
                     if (msg.m_notify.interrupts & irqKeyboard){
                         kbc_ih();
+                        if (last_byte_read){
+                            bool make = (scan_code[0] & BIT(7)) >> 7;
+                            kbd_print_scancode(make, 2, scan_code);
+                            if (scan_code[0] == 0x81)
+                                running = false;
+                        }
                         /*
                         if(gameMode == MENU_MODE){
                             if(scan_code[0] == 0x01){
@@ -110,6 +123,14 @@ int interrupts_handler(){
                     }
                     if (msg.m_notify.interrupts & irqMouse) {
                         mouse_ih();
+                        if (packet_read){
+                            mouse_print_packet(&packet_pp);
+                            packet_read = false;
+                            pp_index = 0;
+                            if (packet_pp.rb){
+                                running = false;
+                            }
+                        }
                     }
                     if (msg.m_notify.interrupts & irqTimer) {
                         timer_ih();
