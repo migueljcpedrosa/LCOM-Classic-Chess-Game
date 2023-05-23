@@ -12,7 +12,7 @@ PROG=proj
 
 SRCS = 	main.c timer.c mouse.c keyboard.c menu.c gpu.c game.c pieces.c board.c player.c viewer.c utils.c sprite.c
 
-CFLAGS += -pedantic -D__LCOM_OPTIMIZE__
+CFLAGS += -pedantic -D__LCOM_OPTIMIZED__
 
 DPADD += ${LIBLCF}
 LDADD += -Wall -llcf -lxpm -llm

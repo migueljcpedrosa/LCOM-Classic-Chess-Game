@@ -11,6 +11,8 @@ bool last_byte_read = false;
 
 int (keyboard_subscribe_int)(uint8_t* bit_no){
 
+  hook_id = 1;
+
   *bit_no = hook_id;
 
   return sys_irqsetpolicy(KBD_IRQ, IRQ_REENABLE | IRQ_EXCLUSIVE, &hook_id);

@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include "i8254.h"
 
-int hook_id = 0;
+static int hook_id = 0;
 int counter = 0;
 
 //Function to change the frequency of any timer to generate interrupts at a given rate.
@@ -50,12 +50,13 @@ int (timer_set_frequency)(uint8_t timer, uint32_t freq) {
 
 // Subscribe a timer interrupt
 int (timer_subscribe_int)(uint8_t *bit_no) {
-  // Ensure the pointer is valid
+
+  hook_id = 0;
+
   if(bit_no == NULL) 
     return 1;
 
-  // The interrupt bit is defined by the device managing module
-  *bit_no = BIT(hook_id);
+  *bit_no = hook_id;
 
   // Subscribe to the interrupts
   if (sys_irqsetpolicy(TIMER0_IRQ, IRQ_REENABLE, &hook_id) != 0) 

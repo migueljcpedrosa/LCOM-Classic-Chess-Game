@@ -12,11 +12,9 @@
 #include "view/viewer.h"
 #include "view/sprite.h"
 
-extern int hook_id;
-extern int hook_id;
-extern int mouse_hook_id;
 extern int counter;
 extern uint8_t scan_code[2];
+extern struct packet packet_pp;
 
 uint8_t gameMode = MENU_MODE;
 
@@ -45,13 +43,19 @@ int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse){
 
     if(enable_data_reporting()) return 1; 
     
-    // if(timer_set_frequency(0,60)) return 1;
+    if(timer_set_frequency(0,60)) return 1;
 
     if (load_sprites()) return 1;
 
-    if(timer_subscribe_int(irqTimer)) return 1;
-    if(keyboard_subscribe_int(irqKeyboard)) return 1;
-    if(mouse_subscribe_int(irqMouse)) return 1;
+    uint8_t bit_no;
+    if(timer_subscribe_int(&bit_no)) return 1;
+    *irqTimer = BIT(bit_no);
+
+    if(keyboard_subscribe_int(&bit_no)) return 1;
+    *irqKeyboard = BIT(bit_no);
+
+    if(mouse_subscribe_int(&bit_no)) return 1;
+    *irqMouse = BIT(bit_no);
 
     if (set_mode(VBE_MODE)) return 1;
     vbe_mode_info_t vmi_p;
@@ -85,9 +89,7 @@ int interrupts_handler(){
         return 1;
     }
 
-    printf("Before Loop\n");
-
-    while(scan_code[0] != ESC_KEY){
+    while(scan_code[0] != ESC_KEY || packet_pp.lb){
 
          if ((r = driver_receive(ANY, &msg, &ipc_status)) != 0) {
             continue;
@@ -111,7 +113,8 @@ int interrupts_handler(){
                     }
                     if (msg.m_notify.interrupts & irqTimer) {
                         timer_ih();
-                        draw();/*
+                        draw();
+                        /*
                         if(gameMode == MENU_MODE) {drawMenu();}
                             if(counter % 60 == 0){
                             if(gameStates == PLAYING) gameTurnCounter--;

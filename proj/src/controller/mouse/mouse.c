@@ -1,7 +1,7 @@
 #include "mouse.h"
 #include "../utils.h"
 
-int mouse_hook_id = 2;
+static int hook_id = 2;
 
 struct packet packet_pp;
 int pp_index = 0;
@@ -9,14 +9,16 @@ bool packet_read = false;
 
 int (mouse_subscribe_int)(uint8_t* bit_no){
 
-  *bit_no = mouse_hook_id;
+  hook_id = 2;
 
-  return sys_irqsetpolicy(MOUSE_IRQ, IRQ_EXCLUSIVE | IRQ_REENABLE, &mouse_hook_id);
+  *bit_no = hook_id;
+
+  return sys_irqsetpolicy(MOUSE_IRQ, IRQ_EXCLUSIVE | IRQ_REENABLE, &hook_id);
 }
 
 int (mouse_unsubscribe_int)(){
 
-  return sys_irqrmpolicy(&mouse_hook_id);
+  return sys_irqrmpolicy(&hook_id);
 }
 
 
@@ -89,7 +91,6 @@ void (mouse_ih)(){
 
 int (enable_data_reporting)(){
 
-  write_command(0xEA, NULL, NULL, 0);
   return write_command(ENBL_DATA_REP, NULL, NULL, 0);
 }
 
