@@ -3,6 +3,7 @@
 
 static void *video_mem;
 static void *buffer;
+static void *screenshot;
 unsigned int h_res;	        /* Horizontal resolution in pixels */
 unsigned int v_res;	        /* Vertical resolution in pixels */
 static unsigned int bits_per_pixel; /* Number of VRAM bits per pixel */
@@ -84,8 +85,10 @@ int (map_info)(vbe_mode_info_t* vmi_p){
   }
   
   buffer = malloc(vram_size);
+  screenshot = malloc(vram_size);
   memset(video_mem, 0, vram_size);
   memset(buffer, 0, vram_size);
+  memset(screenshot, 0, vram_size);
   
   return 0;
 }
@@ -104,6 +107,29 @@ int (draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, ui
       uint8_t* pixel_pos = (uint8_t*)buffer + (cur_y * h_res + cur_x) * bytes_per_pixel;
 
       memcpy(pixel_pos, &color, bytes_per_pixel);
+    }
+  }
+
+  return 0;
+}
+
+int (copy_buffer_to_screenshot)(){
+  
+  memcpy(screenshot, buffer, h_res * v_res * bytes_per_pixel);
+
+  return 0;
+}
+
+int (draw_screenshot_to_buffer)(uint32_t x, uint32_t y, uint32_t width, uint32_t height){
+
+  for (unsigned int cur_y = y; cur_y < y + height && cur_y < v_res; cur_y++){
+
+    for (unsigned int cur_x = x; cur_x < x + width && cur_x < h_res; cur_x++){
+       
+      uint8_t* pixel_pos = (uint8_t*)buffer + (cur_y * h_res + cur_x) * bytes_per_pixel;
+      uint8_t* screenshot_pos = (uint8_t*)screenshot + (cur_y * h_res + cur_x) * bytes_per_pixel;
+
+      memcpy(pixel_pos, screenshot_pos, bytes_per_pixel);
     }
   }
 

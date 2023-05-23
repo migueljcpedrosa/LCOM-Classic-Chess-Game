@@ -1,4 +1,5 @@
 #include "cursor.h"
+#include "../../controller/video_card/gpu.h"
 #include <stdlib.h>
 
 void cursor_create(int x, int y){
@@ -9,6 +10,8 @@ void cursor_create(int x, int y){
     cursor->y = y;
     cursor->old_x = x;
     cursor->old_y = y;	
+    cursor->width = 17;
+    cursor->height = 26;
 }
 
 void cursor_destroy(){
@@ -17,6 +20,9 @@ void cursor_destroy(){
 
 void cursor_move(int x, int y){
 
-    cursor->x += x;
-    cursor->y += y;
+    if (cursor->x + x >= 0 && cursor->x + x + cursor->width < (int) h_res)
+        cursor->x += x;
+
+    if (cursor->y + y >= 0 && cursor->y + y + cursor->height < (int) v_res)
+        cursor->y += y;
 }

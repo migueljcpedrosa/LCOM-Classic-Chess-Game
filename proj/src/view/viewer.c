@@ -17,8 +17,8 @@ int render_screen(){
 }
 
 int erase_cursor(){
-  if (draw_rectangle(cursor->old_x, cursor->old_y, 10, 10, 0x000000))
-    return 1;
+
+  draw_screenshot_to_buffer(cursor->old_x, cursor->old_y, 17, 26);
 
   cursor->old_x = cursor->x;
   cursor->old_y = cursor->y;
@@ -27,21 +27,32 @@ int erase_cursor(){
 }
 
 int draw_cursor(){
-  if (draw_rectangle(cursor->x, cursor->y, 10, 10, 0xFF0000))
+  if (draw_piece(&mouse, cursor->x, cursor->y, 0xFF0000))
     return 1;
 
   return 0;
 }
 
-int draw(){
+int (take_screenshot)(){
+
+  draw_board();
+  draw_piece(&blackQueen, border_size + (0 * square_size), border_size + (0 * square_size), 0xFF0000);
+
+  if (copy_buffer_to_screenshot())
+    return 1;
+  
+  return 0;
+}
+
+int (draw)(){
 
   erase_cursor();
 
-  if (draw_board())
+  /*if (draw_board())
     return 1;
 
   if (draw_piece(&blackQueen, border_size + (0 * square_size), border_size + (0 * square_size), 0xFF0000))
-    return 1;
+    return 1;*/
 
   if (draw_cursor())
     return 1;

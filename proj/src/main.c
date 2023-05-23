@@ -100,6 +100,8 @@ int interrupts_handler(){
     
     bool running = true;
 
+    take_screenshot();
+
     while(running){
 
          if ((r = driver_receive(ANY, &msg, &ipc_status)) != 0) {

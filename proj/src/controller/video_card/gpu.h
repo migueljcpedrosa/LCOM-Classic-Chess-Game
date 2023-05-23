@@ -12,6 +12,10 @@ int (map_info)(vbe_mode_info_t* vmi_p);
 
 int (draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color);
 
+int (copy_buffer_to_screenshot)();
+
+int (draw_screenshot_to_buffer)(uint32_t x, uint32_t y, uint32_t width, uint32_t height);
+
 int (copy_buffer_to_video_mem)();
 
 int (draw_pattern)(uint8_t no_rectangles, uint32_t first, uint8_t step);

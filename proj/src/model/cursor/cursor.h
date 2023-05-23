@@ -6,6 +6,8 @@ typedef struct {
     int y;
     int old_x;
     int old_y;
+    int width;
+    int height;
 } Cursor;
 
 Cursor* cursor;
