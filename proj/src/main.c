@@ -97,7 +97,7 @@ int interrupts_handler(){
         terminate();
         return 1;
     }
-
+    
     bool running = true;
 
     while(running){

@@ -197,20 +197,15 @@ int (draw_xpm)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y){
 
       unsigned int img_x = cur_x - x, img_y = cur_y - y;
 
-      unsigned int color = *(img_addr + (img_y * sprite.width) + img_x) * bytes_per_pixel;
-      
-      /*
-      if (!index_mode){
-         color = (R(color) << red_pos) || (G(color) << green_pos) ||  (B(color) <<     blue_pos);
-      }*/
+      uint8_t* color = img_addr + ((img_y * sprite.width) + img_x) * bytes_per_pixel;
 
-      /*if (color == 0xFF00FF){
+      if (*((uint32_t*)color) == 0xFF00FF){
         continue;
-      }*/
+      }
 
       uint8_t* pixel_pos = (uint8_t*)buffer + (cur_y * h_res + cur_x) * bytes_per_pixel;
 
-      memcpy(pixel_pos, &color, bytes_per_pixel);
+      memcpy(pixel_pos, color, bytes_per_pixel);
     }
   }
 
