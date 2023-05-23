@@ -1,6 +1,7 @@
 #include "viewer.h" 
 #include "../model/xpm/xpm.h"
 #include "../controller/video_card/gpu.h"
+#include "../model/cursor/cursor.h"
 
 uint16_t square_size = 100;
 uint32_t square_color = 0xeeeed2; 
@@ -15,15 +16,39 @@ int render_screen(){
   return 0;
 }
 
+int erase_cursor(){
+  if (draw_rectangle(cursor->old_x, cursor->old_y, 10, 10, 0x000000))
+    return 1;
+
+  cursor->old_x = cursor->x;
+  cursor->old_y = cursor->y;
+  
+  return 0;
+}
+
+int draw_cursor(){
+  if (draw_rectangle(cursor->x, cursor->y, 10, 10, 0xFF0000))
+    return 1;
+
+  return 0;
+}
+
 int draw(){
+
+  erase_cursor();
+
   if (draw_board())
     return 1;
 
   if (draw_piece(&blackQueen, border_size + (0 * square_size), border_size + (0 * square_size), 0xFF0000))
     return 1;
 
+  if (draw_cursor())
+    return 1;
+
   if (render_screen())
     return 1;
+
   return 0;
 }
 

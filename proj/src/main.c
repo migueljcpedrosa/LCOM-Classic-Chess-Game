@@ -11,6 +11,7 @@
 #include "model/modes/utils.h"
 #include "view/viewer.h"
 #include "view/sprite.h"
+#include "model/cursor/cursor.h"
 
 extern int counter;
 
@@ -46,6 +47,8 @@ int main(int argc, char *argv[]) {
 
 int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse){
 
+    cursor_create(0,0);
+
     if(enable_data_reporting()) return 1; 
     
     if(timer_set_frequency(0,60)) return 1;
@@ -72,6 +75,7 @@ int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse){
 
 int terminate(){
 
+    cursor_destroy();
     if(timer_unsubscribe_int()) return 1;
     if(mouse_unsubscribe_int() || disable_data_reporting()) return 1;
     if(keyboard_unsubscribe_int()) return 1;
@@ -109,8 +113,6 @@ int interrupts_handler(){
                     if (msg.m_notify.interrupts & irqKeyboard){
                         kbc_ih();
                         if (last_byte_read){
-                            bool make = (scan_code[0] & BIT(7)) >> 7;
-                            kbd_print_scancode(make, 2, scan_code);
                             if (scan_code[0] == 0x81)
                                 running = false;
                         }
@@ -124,12 +126,15 @@ int interrupts_handler(){
                     if (msg.m_notify.interrupts & irqMouse) {
                         mouse_ih();
                         if (packet_read){
-                            mouse_print_packet(&packet_pp);
                             packet_read = false;
                             pp_index = 0;
                             if (packet_pp.rb){
                                 running = false;
                             }
+                            int16_t move_x = (((int16_t) packet_pp.x_ov) << 8) | packet_pp.delta_x;
+                            int16_t move_y = (((int16_t) packet_pp.y_ov) << 8) | packet_pp.delta_y;
+                            
+                            cursor_move(move_x, -move_y);
                         }
                     }
                     if (msg.m_notify.interrupts & irqTimer) {

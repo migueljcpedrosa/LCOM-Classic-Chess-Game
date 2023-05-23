@@ -8,11 +8,12 @@ PROG=proj
 .PATH: ${.CURDIR}/model/game/
 .PATH: ${.CURDIR}/model/xpm/
 .PATH: ${.CURDIR}/model/modes/
+.PATH: ${.CURDIR}/model/cursor/
 .PATH: ${.CURDIR}/view/
 
-SRCS = 	main.c timer.c mouse.c keyboard.c menu.c gpu.c game.c pieces.c board.c player.c viewer.c utils.c sprite.c
+SRCS = 	main.c timer.c mouse.c keyboard.c menu.c gpu.c game.c pieces.c board.c player.c viewer.c utils.c sprite.c cursor.c
 
-CFLAGS += -pedantic 
+CFLAGS += -pedantic -D__LCOM_OPTIMIZED__
 
 DPADD += ${LIBLCF}
 LDADD += -Wall -llcf -lxpm -llm
