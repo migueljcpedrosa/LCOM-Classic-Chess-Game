@@ -8,7 +8,7 @@ bool rtc_binary_mode;
 
 rtc_in_binary_mode(){
     uint8_t counting_status;
-    if (rtc_outb(11, &counting_status)) return 1;
+    if (rtc_read_register(11, &counting_status)) return 1;
     return counting_status & BIT(2);
 }
 
