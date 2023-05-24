@@ -30,6 +30,8 @@ int (load_xpm)(xpm_map_t xpm, enum xpm_image_type type, xpm_image_t* sprite,  ui
 
 int (draw_xpm)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y);
 
+int (draw_xpm_letters)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y, char letter);
+
 int (erase_xpm)(xpm_map_t xpm, enum xpm_image_type type, uint16_t x, uint16_t y);
 
 bool (move_sprite)( uint16_t* xi, uint16_t* yi, uint16_t xf, uint16_t yf, int16_t speed, uint32_t frame_count);

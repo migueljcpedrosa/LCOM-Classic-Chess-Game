@@ -16,5 +16,6 @@
 #include "mouse.xpm"
 #include "playButtonMenu.xpm"
 #include "exitButtonMenu.xpm"
+#include "alphabet-courier.xpm"
 
 #endif

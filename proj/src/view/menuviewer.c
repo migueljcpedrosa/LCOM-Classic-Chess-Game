@@ -1,6 +1,7 @@
 #include "menuviewer.h"
 #include "../model/xpm/xpm.h"
 #include "../drivers/video_card/gpu.h"
+#include "viewer.h"
 
 int load_sprites_menu(){
 
@@ -19,12 +20,44 @@ int draw_menu_button(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color) {
   return 0;
 }
 
-int drawMenu(){
-
-  if(draw_menu_button(&playButtonMenu, 400, 200, 0xFF00FF))
+int drawTitle(){
+  
+  if(draw_letter(&alphabet, 426, 400, 0xFF00FF, 'C'))
     return 1;
 
-  if(draw_menu_button(&exitButtonMenu, 400, 400, 0xFF00FF))
+  if(draw_letter(&alphabet, 100, 100, 0xFF00FF, 'H')) 
+    return 1;
+  
+  if(draw_letter(&alphabet, 100, 100, 0xFF00FF, 'E'))   
+    return 1; 
+
+  if(draw_letter(&alphabet, 100, 100, 0xFF00FF, 'S'))
+    return 1; 
+  
+  if(draw_letter(&alphabet, 100, 100, 0xFF00FF, 'S'))
+    return 1;
+
+  if(draw_letter(&alphabet, 100, 100, 0xFF00FF, 'G'))
+    return 1;
+
+  if(draw_letter(&alphabet, 300, 100, 0xFF00FF, 'A'))
+    return 1;
+
+  if(draw_letter(&alphabet, 100, 100, 0xFF00FF, 'M'))
+    return 1;
+
+  if(draw_letter(&alphabet, 100, 100, 0xFF00FF, 'E'))
+    return 1;
+
+  return 0;
+}
+
+int drawMenu(){
+
+  if(draw_menu_button(&playButtonMenu, 426, 400, 0xFF00FF))
+    return 1;
+
+  if(draw_menu_button(&exitButtonMenu, 426, 500, 0xFF00FF))
     return 1;
 
   return 0;

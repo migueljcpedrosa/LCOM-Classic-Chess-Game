@@ -15,4 +15,6 @@ int (draw_piece)(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color);
 
 int (take_screenshot)();
 
+int (draw_letter)(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color, char letter);
+
 #endif

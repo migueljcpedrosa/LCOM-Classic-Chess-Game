@@ -36,7 +36,7 @@ int draw_cursor(){
 int (take_screenshot)(){
 
   draw_board();
-  draw_piece(&blackQueen, border_size + (0 * square_size), border_size + (0 * square_size), 0xFF0000);
+  draw_piece(&blackQueen, border_size + (0 * square_size), border_size + (0 * square_size), 0xFF0000);  
 
   if (copy_buffer_to_screenshot())
     return 1;
@@ -84,5 +84,11 @@ int draw_board() {
 int draw_piece(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color) {
   
   draw_xpm(sprite->img, sprite->addr, x, y);
+  return 0;
+}
+
+int (draw_letter)(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color, char letter) {
+  
+  draw_xpm_letters(sprite->img, sprite->addr, x, y, letter);
   return 0;
 }

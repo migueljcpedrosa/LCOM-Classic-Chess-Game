@@ -10,6 +10,7 @@ typedef struct {
 
 Sprite exitButtonMenu;
 Sprite playButtonMenu;
+Sprite alphabet;
 Sprite blackQueen;
 Sprite mouse;
 

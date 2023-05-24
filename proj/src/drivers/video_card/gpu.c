@@ -238,6 +238,30 @@ int (draw_xpm)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y){
   return 0;
 }
 
+int (draw_xpm_letters)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y, char letter){
+
+  for(unsigned int cur_y = y; cur_y < y + sprite.height && cur_y < v_res; cur_y++){
+
+    for(unsigned int cur_x = x; cur_x < x + 76 && cur_x < h_res; cur_x++){
+
+      unsigned int img_x = cur_x - x, img_y = cur_y - y;
+
+      //(letter - 'A') * 126 * 1979;
+
+      uint8_t* color = img_addr + ((letter - 'A') + (img_y * 76) + img_x)*bytes_per_pixel;
+
+      if (*((uint32_t*)color) == 0xFF00FF){
+        continue;
+      }
+
+      uint8_t* pixel_pos = (uint8_t*)buffer + (cur_y * h_res + cur_x) * bytes_per_pixel;
+
+      memcpy(pixel_pos, color, bytes_per_pixel);
+    }
+  }
+
+  return 0;
+}
 
 int (erase_xpm)(xpm_map_t xpm, enum xpm_image_type type, uint16_t x, uint16_t y){
 

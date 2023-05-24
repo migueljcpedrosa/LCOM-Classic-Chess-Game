@@ -6,6 +6,9 @@ static enum xpm_image_type xpm_img_type = XPM_8_8_8_8;
 int load_sprites(){
   if (load_sprite(&blackQueen, (xpm_map_t) blackQueen_xpm))
     return 1;
+
+  if (load_sprite(&alphabet, (xpm_map_t) alphabet_courier_xpm))
+    return 1;
     
   if (load_sprite(&mouse, (xpm_map_t) mouse_xpm))
     return 1;
