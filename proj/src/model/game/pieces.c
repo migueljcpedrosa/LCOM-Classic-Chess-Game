@@ -7,15 +7,11 @@ Position (create_position)(int boardIndex){
     
     Position pos = {boardIndex % 8, boardIndex / 8};
 
-    printf("Position created: (%d, %d)\n", pos.x, pos.y);
-
     return pos;
 }
 
 void get_white_piece_sprite(Type type, Sprite** sprite){
 
-
-    printf("Getting white piece sprite...\n");
     switch (type)
     {
     case PAWN:
@@ -45,13 +41,9 @@ void get_white_piece_sprite(Type type, Sprite** sprite){
     default:
         break;
     }
-
-    printf("White piece sprite gotten...\n");
 }
 
 void get_black_piece_sprite(Type type, Sprite** sprite){
-
-    printf("Getting black piece sprite...\n");
 
     switch (type)
     {
@@ -82,11 +74,7 @@ void get_black_piece_sprite(Type type, Sprite** sprite){
     default:
         break;
     }
-
-    printf("Black piece sprite gotten...\n");
 }
-
-
 
 Piece* (create_piece)(Type type, Color color, Position pos){
 
@@ -102,6 +90,7 @@ Piece* (create_piece)(Type type, Color color, Position pos){
     piece->position = pos;
     piece->has_moved = false;
     piece->num_moves = 0;
+    piece->moves = (Move*) malloc(sizeof(Move) * 64);
     piece->status = ALIVE;
 
     return piece;

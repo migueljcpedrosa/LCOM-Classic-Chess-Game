@@ -40,7 +40,7 @@ typedef struct {
     bool has_moved;
     enum {ALIVE, CAPTURED} status;
     
-    Move moves[64];
+    Move* moves;
     int num_moves;
 
     Sprite* sprite;

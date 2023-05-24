@@ -10,20 +10,11 @@ CursorInput read_cursor_input(struct packet *packet){
                             
     cursor_move(move_x, -move_y);
 
-    if(packet->lb){
-        CursorInput.leftClick = true;
-    }
-    else CursorInput.leftClick = false;
+    CursorInput.leftClick = packet->lb;
 
-    if(packet->rb){
-        CursorInput.rightClick = true;
-    }
-    else CursorInput.rightClick = false;
+    CursorInput.rightClick = packet->rb;
 
-    if(packet->mb){
-        CursorInput.middleClick = true;
-    }
-    else CursorInput.middleClick = false;
+    CursorInput.middleClick = packet->mb;
 
     CursorInput.x = cursor->x;
     CursorInput.y = cursor->y;

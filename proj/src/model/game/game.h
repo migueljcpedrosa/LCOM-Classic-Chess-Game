@@ -32,4 +32,22 @@ bool is_check_mate(Game* game);
 
 bool is_stale_mate(Game* game);
 
+Piece* getPiece(Game* game, unsigned int x, unsigned int y);
+
+void setMoves(Game* game, Piece* piece);
+
+void getPawnMoves(Game* game, Piece* piece);
+
+void getMovesInLine(Game* game, Piece* piece, Position increment);
+
+void getBishopMoves(Game* game, Piece* piece);
+
+void getRookMoves(Game* game, Piece* piece);
+
+void getQueenMoves(Game* game, Piece* piece);
+
+void getKnightMoves(Game* game, Piece* piece);
+
+void getKingMoves(Game* game, Piece* piece);
+
 #endif

@@ -48,7 +48,8 @@ int draw_pieces(){
 
       Piece* piece = game->board->squares[i];
       if (piece != NULL){
-        draw_piece(piece->sprite, piece->position.x, piece->position.y);
+        if (piece->status == ALIVE)
+          draw_piece(piece->sprite, piece->position.x, piece->position.y);
       }
     }
   }

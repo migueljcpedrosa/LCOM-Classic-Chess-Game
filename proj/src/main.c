@@ -121,6 +121,8 @@ int interrupts_handler(){
                     if (msg.m_notify.interrupts & irqKeyboard){
                         kbc_ih();
                         if (last_byte_read){
+                            //bool make = (scan_code[0] & BIT(7)) == 0;
+                            //kbd_print_scancode(make, kbd_index +1 , scan_code);
                             if (scan_code[0] == 0x81)
                                 running = false;
                         }
