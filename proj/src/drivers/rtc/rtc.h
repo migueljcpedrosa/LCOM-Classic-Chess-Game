@@ -24,6 +24,7 @@ typedef struct {
     uint8_t seconds;
 } rtc_timestamp_t;
 
+rtc_in_binary_mode();
 rtc_initialize_system();
 rtc_subscribe_interrupts();
 rtc_unsubscribe_interrupts();
