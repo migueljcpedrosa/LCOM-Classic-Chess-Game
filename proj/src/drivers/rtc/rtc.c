@@ -41,7 +41,7 @@ bool rtc_currently_updating() {
         return update_status & BIT(7);
 }
 
-int rtc_update_time_component(uint8_t register_address, uint8_t* time_component) {
+int rtc_update_time_unit(uint8_t register_address, uint8_t* time_component) {
     uint8_t rtc_register_value;
     if (rtc_read_register(register_address, &rtc_register_value) != 0) return 1;
     if (rtc_binary_mode) {
