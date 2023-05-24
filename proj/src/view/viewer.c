@@ -43,6 +43,17 @@ int draw_piece(Sprite* sprite, uint16_t x, uint16_t y) {
 
 int draw_pieces(){
 
+  if (selected_piece != NULL){
+
+    printf("Number of moves: %d\n", selected_piece->num_moves);
+    for (int i = 0; i < selected_piece->num_moves; i++) {
+      Move move = selected_piece->moves[i];
+      int x = board_start + (move.destination.x * square_size);
+      int y = board_start + (move.destination.y * square_size);
+      draw_rectangle(x, y, square_size, square_size, 0xFF0000);
+    }
+  }
+
   for (int i = 0; i < 64; i++) {
     if (game->board->squares[i] != NULL) {
 

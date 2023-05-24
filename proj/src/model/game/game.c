@@ -25,7 +25,11 @@ void destroy_game(Game* game){
 
 Turn switch_turn(Game* game){
 
+
+    printf("Game turn before: %d\n", game->turn);
     game->turn = game->turn == WHITE ? BLACK : WHITE;
+
+    printf("Game turn after: %d\n", game->turn);
 
     return game->turn;
 }

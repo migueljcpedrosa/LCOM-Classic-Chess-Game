@@ -15,17 +15,27 @@ void treat_input(CursorInput* input){
         }
 
         if (selected_piece->color != game->turn){
+            selected_piece = NULL;
             return;
         }
+        setMoves(game, selected_piece);
 
         take_screenshot();
-
-        setMoves(game, selected_piece);
 
         if (selected_piece->num_moves == 0){
             return;
         }
     } else if (!input->leftClick && selected_piece != NULL){
+
+        for (int i = 0; i < selected_piece->num_moves; i++){
+
+            unsigned int x = selected_piece->moves[i].destination.x;
+            unsigned int y = selected_piece->moves[i].destination.y;
+            if (x == square_x && y == square_y){
+                execute_move(game, selected_piece->moves[i]);
+                break;
+            }
+        }
         selected_piece = NULL;
         take_screenshot();
     }
