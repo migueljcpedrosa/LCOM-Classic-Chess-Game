@@ -9,6 +9,7 @@ unsigned int square_color_alt = 0x769656;
 void set_white_pieces(Board* board, Player* white_player){
 
     board->squares[0] = create_piece(ROOK, WHITE, create_position(0));
+    printf("set white rook\n");
     board->squares[1] = create_piece(KNIGHT, WHITE, create_position(1));
     board->squares[2] = create_piece(BISHOP, WHITE, create_position(2));
     board->squares[3] = create_piece(QUEEN, WHITE, create_position(3));
@@ -46,17 +47,20 @@ void set_black_pieces(Board* board, Player* black_player){
     }
 }
 
-Board* create_board(Player* white_player, Player* black_player){
+Board* (create_board)(Player* white_player, Player* black_player){
 
     Board* board = malloc(sizeof(Board));
 
     set_white_pieces(board, white_player);
+    printf("White pieces set...\n");
 
     for (int i = 16; i < 48; i++){
         board->squares[i] = NULL;
     }
+    printf("Empty squares set...\n");
 
     set_black_pieces(board, black_player);
+    printf("Black pieces set...\n");
 
     return board;
 }

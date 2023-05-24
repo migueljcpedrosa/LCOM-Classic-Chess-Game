@@ -13,6 +13,7 @@
 #include "view/sprite.h"
 #include "model/cursor/cursor.h"
 #include "model/cursor/cursor_input.h"
+#include "model/game/game.h"
 #include "controller/game_ctrl.h"
 
 extern int counter;
@@ -56,8 +57,6 @@ int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse){
     
     if(timer_set_frequency(0,60)) return 1;
 
-    if (load_sprites()) return 1;
-
     uint8_t bit_no;
     if(timer_subscribe_int(&bit_no)) return 1;
     *irqTimer = BIT(bit_no);
@@ -72,6 +71,11 @@ int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse){
     vbe_mode_info_t vmi_p;
     if (vbe_get_mode_info(VBE_MODE, &vmi_p)) return 1;
     if (map_info(&vmi_p)) return 1;
+
+    if (load_sprites()) return 1;
+
+    game = create_game("Player 1", "Player 2");
+
     if (take_screenshot()) return 1;
 
     return 0;

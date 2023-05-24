@@ -1,7 +1,7 @@
 #include "player.h"
 #include <stdlib.h>
 
-Player* create_player(char name[], Color color){
+Player* (create_player)(char name[], Color color){
 
     Player* player = malloc(sizeof(Player));
 

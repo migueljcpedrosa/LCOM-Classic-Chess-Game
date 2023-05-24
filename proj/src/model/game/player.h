@@ -11,7 +11,7 @@ typedef struct {
 
 } Player;
 
-Player* create_player(char name[], Color color);
+Player* (create_player)(char name[], Color color);
 
 void destroy_player(Player* player);
 

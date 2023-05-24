@@ -2,6 +2,7 @@
 #define _PIECE_H_
 
 #include <stdbool.h>
+#include "../../view/sprite.h"
 
 typedef struct
 {
@@ -41,10 +42,12 @@ typedef struct {
     
     Move moves[64];
     int num_moves;
+
+    Sprite* sprite;
 } Piece;
 
-Position create_position(int boardIndex);
+Position (create_position)(int boardIndex);
 
-Piece* create_piece(Type type, Color color, Position pos);
+Piece* (create_piece)(Type type, Color color, Position pos);
 
 #endif

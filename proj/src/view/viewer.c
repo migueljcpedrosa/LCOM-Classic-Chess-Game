@@ -2,7 +2,8 @@
 #include "../model/xpm/xpm.h"
 #include "../drivers/video_card/gpu.h"
 #include "../model/cursor/cursor.h"
-#include "../model/game/board.h"
+#include "../model/game/game.h"
+
 
 uint32_t border_size;
 
@@ -24,8 +25,33 @@ int erase_cursor(){
 }
 
 int draw_cursor(){
-  if (draw_piece(&mouse, cursor->x, cursor->y, 0xFF0000))
+
+  if (draw_sprite(mouse, cursor->x, cursor->y))
     return 1;
+
+  return 0;
+}
+
+int draw_piece(Sprite* sprite, uint16_t x, uint16_t y) {
+  
+  x = board_start + (x * square_size);
+  y = board_start + (y * square_size);
+  draw_sprite(sprite, x, y);
+
+  return 0;
+}
+
+int draw_pieces(){
+
+  for (int i = 0; i < 64; i++) {
+    if (game->board->squares[i] != NULL) {
+
+      Piece* piece = game->board->squares[i];
+      if (piece != NULL){
+        draw_piece(piece->sprite, piece->position.x, piece->position.y);
+      }
+    }
+  }
 
   return 0;
 }
@@ -34,7 +60,7 @@ int (take_screenshot)(){
 
   board_start = (v_res - (8 * square_size))  / 2;
   draw_board();
-  draw_piece(&blackQueen, board_start, board_start, 0xFF0000);
+  draw_pieces();
 
   if (copy_buffer_to_screenshot())
     return 1;
@@ -45,12 +71,6 @@ int (take_screenshot)(){
 int (draw)(){
 
   erase_cursor();
-
-  /*if (draw_board())
-    return 1;
-
-  if (draw_piece(&blackQueen, border_size + (0 * square_size), border_size + (0 * square_size), 0xFF0000))
-    return 1;*/
 
   if (draw_cursor())
     return 1;
@@ -81,7 +101,7 @@ int draw_board() {
   return 0;
 }
 
-int draw_piece(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color) {
+int draw_sprite(Sprite* sprite, uint16_t x, uint16_t y) {
   
   draw_xpm(sprite->img, sprite->addr, x, y);
   return 0;

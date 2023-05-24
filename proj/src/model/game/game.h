@@ -14,8 +14,9 @@ typedef struct {
 
 } Game;
 
+Game* game;
 
-Game* create_game();
+Game* (create_game)(char white_name[], char black_name[]);
 
 void destroy_game(Game* game);
 

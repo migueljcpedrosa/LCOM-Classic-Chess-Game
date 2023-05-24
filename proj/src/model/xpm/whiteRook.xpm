@@ -1,7 +1,7 @@
 /* XPM */
 static char * whiteRook_xpm[] = {
 "100 100 75 1",
-" 	c None",
+" 	c #FF00FF",
 ".	c #000000",
 "+	c #CCCCCC",
 "@	c #DEDEDE",

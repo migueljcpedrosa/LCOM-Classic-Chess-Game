@@ -13,7 +13,7 @@ typedef struct {
     Piece* squares[64];
 } Board;
 
-Board* create_board(Player* white_player, Player* black_player);
+Board* (create_board)(Player* white_player, Player* black_player);
 
 void destroy_board(Board* board);
 
