@@ -26,7 +26,7 @@ int rtc_unsubscribe_interrupts() {
     return sys_irqrmpolicy(&hook_id);
 }
 
-uint8_t rtc_bcd_to_binary(uint8_t bcd_number) {
+uint8_t rtc_convert_bcd_to_binary(uint8_t bcd_number) {
     return ((bcd_number >> 4) * 10) + (bcd_number & 0xF);
 }
 
