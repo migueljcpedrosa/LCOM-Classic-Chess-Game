@@ -8,8 +8,8 @@ typedef struct {
   xpm_image_t img;
 } Sprite;
 
-Sprite exitButton;
-Sprite playButton;
+Sprite exitButtonMenu;
+Sprite playButtonMenu;
 Sprite blackQueen;
 Sprite mouse;
 

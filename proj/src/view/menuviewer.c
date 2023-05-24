@@ -4,16 +4,16 @@
 
 int load_sprites_menu(){
 
-  if (load_sprite(&playButton, (xpm_map_t) playButton_xpm))
+  if (load_sprite(&playButtonMenu, (xpm_map_t) playButtonMenu_xpm))
     return 1;
 
-  if (load_sprite(&exitButton, (xpm_map_t) exitButton_xpm))
+  if (load_sprite(&exitButtonMenu, (xpm_map_t) exitButtonMenu_xpm))
     return 1;
 
   return 0;
 }
 
-int draw_menu_button(Sprite* sprite, uint16_t x, uint16_t y) {
+int draw_menu_button(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color) {
   
   draw_xpm(sprite->img, sprite->addr, x, y);
   return 0;
@@ -21,10 +21,10 @@ int draw_menu_button(Sprite* sprite, uint16_t x, uint16_t y) {
 
 int drawMenu(){
 
-  if(draw_menu_button(&playButton, 0, 100))
+  if(draw_menu_button(&playButtonMenu, 400, 200, 0xFF00FF))
     return 1;
 
-  if(draw_menu_button(&exitButton, 600, 100))
+  if(draw_menu_button(&exitButtonMenu, 400, 400, 0xFF00FF))
     return 1;
 
   return 0;
