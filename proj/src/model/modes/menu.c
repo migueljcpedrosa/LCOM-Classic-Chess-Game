@@ -1,3 +1,4 @@
+/*
 #include "menu.h"
 
 bool startPressed = false;
@@ -42,5 +43,6 @@ int processQuitButton(uint16_t x, uint16_t y){
     else quitPressed = false;
     return 0;
 }
+*/
 
 
