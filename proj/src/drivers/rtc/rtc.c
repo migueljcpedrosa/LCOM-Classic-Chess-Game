@@ -21,3 +21,8 @@ int rtc_read_register(uint8_t command, uint8_t *output) {
 int rtc_subscribe_interrupts() {
     return sys_irqsetpolicy(rtc_irq, IRQ_REENABLE, &hook_id);
 }
+
+int rtc_unsubscribe_interrupts() {
+    return sys_irqrmpolicy(&hook_id);
+}
+
