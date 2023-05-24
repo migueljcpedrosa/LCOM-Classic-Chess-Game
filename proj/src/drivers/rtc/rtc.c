@@ -53,57 +53,15 @@ int rtc_update_time_component(uint8_t register_address, uint8_t* time_component)
 }
 
 int rtc_update_current_time() {
-    
-    if (rtc_currently_updating() != 0) return 1;
-    uint8_t rtc_register_value;
+    if (rtc_currently_updating()) return 1;
 
-
-    if (rtc_read_register(RTC_SECONDS, &rtc_register_value) != 0) return 1;
-    if (rtc_in_binary_mode()) {
-        current_time.seconds = rtc_register_value;
-    } else {
-        current_time.seconds = bcd_to_binary(rtc_register_value);
-    }
-
-
-    if (rtc_read_register(RTC_MINUTES, &rtc_register_value) != 0) return 1;
-    if (rtc_in_binary_mode()) {
-        current_time.minutes = rtc_register_value;
-    } else {
-        current_time.minutes = bcd_to_binary(rtc_register_value);
-    }
-
-
-    if (rtc_read_register(RTC_HOURS, &rtc_register_value) != 0) return 1;
-    if (rtc_in_binary_mode()) {
-        current_time.hours = rtc_register_value;
-    } else {
-        current_time.hours = bcd_to_binary(rtc_register_value);
-    }
-
-
-    if (rtc_read_register(RTC_DAY, &rtc_register_value) != 0) return 1;
-    if (rtc_in_binary_mode()) {
-        current_time.day = rtc_register_value;
-    } else {
-        current_time.day = bcd_to_binary(rtc_register_value);
-    }
-
-
-    if (rtc_read_register(RTC_MONTH, &rtc_register_value) != 0) return 1;
-    if (rtc_in_binary_mode()) {
-        current_time.month = rtc_register_value;
-    } else {
-        current_time.month = bcd_to_binary(rtc_register_value);
-    }
-
-
-    if (rtc_read_register(RTC_YEAR, &rtc_register_value) != 0) return 1;
-    if (rtc_in_binary_mode()) {
-        current_time.year = rtc_register_value;
-    } else {
-        current_time.year = bcd_to_binary(rtc_register_value);
-    }
+    if (rtc_update_time_component(RTC_SECONDS, &current_time.seconds) != 0) return 1;
+    if (rtc_update_time_component(RTC_MINUTES, &current_time.minutes) != 0) return 1;
+    if (rtc_update_time_component(RTC_HOURS, &current_time.hours) != 0) return 1;
+    if (rtc_update_time_component(RTC_DAY, &current_time.day) != 0) return 1;
+    if (rtc_update_time_component(RTC_MONTH, &current_time.month) != 0) return 1;
+    if (rtc_update_time_component(RTC_YEAR, &current_time.year) != 0) return 1;
 
     return 0;
 }
+
