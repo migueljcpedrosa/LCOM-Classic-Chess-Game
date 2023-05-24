@@ -25,6 +25,10 @@ int (keyboard_unsubscribe_int)(){
 
 void (kbc_ih)(){
 
+  if (last_byte_read){
+    kbd_index = 0;
+  }
+
   uint8_t st;
 
   if (util_sys_inb(STATUS_PORT, &st))
