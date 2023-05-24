@@ -24,9 +24,12 @@ typedef struct {
     uint8_t seconds;
 } rtc_timestamp_t;
 
-rtc_in_binary_mode();
-rtc_initialize_system();
-rtc_subscribe_interrupts();
-rtc_unsubscribe_interrupts();
-rtc_read_register(uint8_t command, uint8_t *output);
+int rtc_in_binary_mode();
+int rtc_initialize_system();
+int rtc_subscribe_interrupts();
+int rtc_unsubscribe_interrupts();
+int rtc_read_register(uint8_t command, uint8_t *output);
+uint8_t rtc_convert_bcd_to_binary(uint8_t bcd_number);
+bool rtc_currently_updating();
+int rtc_update_current_time();
 #endif

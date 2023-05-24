@@ -6,7 +6,7 @@ int rtc_irq = 8;
 rtc_timestamp_t current_time;
 bool rtc_binary_mode;
 
-rtc_in_binary_mode(){
+int rtc_in_binary_mode(){
     uint8_t counting_status;
     if (rtc_read_register(11, &counting_status)) return 1;
     return counting_status & BIT(2);
@@ -26,16 +26,15 @@ int rtc_unsubscribe_interrupts() {
     return sys_irqrmpolicy(&hook_id);
 }
 
-uint8_t rtc_bcd_to_binary(uint8_t bcd_number) {
+uint8_t rtc_convert_bcd_to_binary(uint8_t bcd_number) {
     return ((bcd_number >> 4) * 10) + (bcd_number & 0xF);
 }
 
 bool rtc_currently_updating() {
     uint8_t update_status;
     if (read_rtc_register(11, &update_status)) return true;
-    return update_status & 7;
+        return update_status & BIT(7);
 }
-
 
 int rtc_update_current_time() {
     
