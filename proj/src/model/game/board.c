@@ -1,6 +1,11 @@
 #include "board.h"
 #include <stdlib.h>
 
+unsigned int board_start;
+unsigned int square_size = 100;
+unsigned int square_color = 0xeeeed2; 
+unsigned int square_color_alt = 0x769656; 
+
 void set_white_pieces(Board* board, Player* white_player){
 
     board->squares[0] = create_piece(ROOK, WHITE, create_position(0));
@@ -110,7 +115,7 @@ void getPawnMoves(Board* board, Piece* piece){
     int newPos = boardPos + direction * 8;
 
     if (newPos >= 0 && newPos < 64){
-        if (board->squares[newPos]->type == NONE){
+        if (board->squares[newPos]->type == EMPTY){
             Move move = {pos, {newPos % 8, newPos / 8}};
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;
@@ -122,7 +127,7 @@ void getPawnMoves(Board* board, Piece* piece){
     if (!piece->has_moved){
         newPos = boardPos + direction * 16;
 
-        if (board->squares[newPos]->type == NONE){
+        if (board->squares[newPos]->type == EMPTY){
             Move move = {pos, {newPos % 8, newPos / 8}};
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;
@@ -132,7 +137,7 @@ void getPawnMoves(Board* board, Piece* piece){
     newPos = boardPos + direction * 8 - 1;
 
     if (newPos / 8 == boardPos / 8 + direction){
-        if (board->squares[newPos]->type != NONE && board->squares[newPos]->color != piece->color){
+        if (board->squares[newPos]->type != EMPTY && board->squares[newPos]->color != piece->color){
             Move move = {pos, {newPos % 8, newPos / 8}};
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;
@@ -142,7 +147,7 @@ void getPawnMoves(Board* board, Piece* piece){
     newPos = boardPos + direction * 8 + 1;
 
     if (newPos / 8 == boardPos / 8 + direction) {
-        if (board->squares[newPos]->type != NONE && board->squares[newPos]->color != piece->color){
+        if (board->squares[newPos]->type != EMPTY && board->squares[newPos]->color != piece->color){
             Move move = {pos, {newPos % 8, newPos / 8}};
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;
@@ -155,7 +160,7 @@ void getMovesInLine(Board* board, Piece* piece, int increment){
     Position pos = piece->position;
     int boardPos = pos.y * 8 + pos.x;
 
-    while(board->squares[boardPos]->type == NONE){
+    while(board->squares[boardPos]->type == EMPTY){
         if (boardPos < 0 || boardPos >= 64){
             break;
         }
@@ -223,7 +228,7 @@ void getKnightMoves(Board* board, Piece* piece){
             continue;
         }
 
-        if (board->squares[newPos]->type == NONE || board->squares[newPos]->color != piece->color){
+        if (board->squares[newPos]->type == EMPTY || board->squares[newPos]->color != piece->color){
             Move move = {pos, {newPos % 8, newPos / 8}};
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;
@@ -248,7 +253,7 @@ void getKingMoves(Board* board, Piece* piece){
             continue;
         }
 
-        if (board->squares[newPos]->type == NONE || board->squares[newPos]->color != piece->color){
+        if (board->squares[newPos]->type == EMPTY || board->squares[newPos]->color != piece->color){
             Move move = {pos, {newPos % 8, newPos / 8}};
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;

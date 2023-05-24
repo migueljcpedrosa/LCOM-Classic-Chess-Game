@@ -2,10 +2,7 @@
 #include "../model/xpm/xpm.h"
 #include "../drivers/video_card/gpu.h"
 #include "../model/cursor/cursor.h"
-
-uint16_t square_size = 100;
-uint32_t square_color = 0xeeeed2; 
-uint32_t square_color_alt = 0x769656; 
+#include "../model/game/board.h"
 
 uint32_t border_size;
 
@@ -35,8 +32,9 @@ int draw_cursor(){
 
 int (take_screenshot)(){
 
+  board_start = (v_res - (8 * square_size))  / 2;
   draw_board();
-  draw_piece(&blackQueen, border_size + (0 * square_size), border_size + (0 * square_size), 0xFF0000);
+  draw_piece(&blackQueen, board_start, board_start, 0xFF0000);
 
   if (copy_buffer_to_screenshot())
     return 1;
@@ -66,7 +64,6 @@ int (draw)(){
 int draw_board() {
   
   uint32_t color;
-  border_size = (v_res - (8 * square_size))  / 2;
   for (int w = 0; w < 8; w++) {
     for (int h = 0; h < 8; h++) {
       if((w+h) % 2 == 0)
@@ -74,7 +71,10 @@ int draw_board() {
       else
         color = square_color_alt;
 
-      draw_rectangle(border_size + (w * square_size), border_size + (h * square_size), square_size, square_size, color);
+      int x = board_start + (w * square_size);
+      int y = board_start + (h * square_size);
+
+      draw_rectangle(x, y, square_size, square_size, color);
     }
   }
 

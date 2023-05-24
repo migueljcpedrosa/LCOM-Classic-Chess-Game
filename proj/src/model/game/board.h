@@ -4,6 +4,11 @@
 #include "pieces.h"
 #include "player.h"
 
+extern unsigned int board_start;
+extern unsigned int square_size;
+extern unsigned int square_color; 
+extern unsigned int square_color_alt; 
+
 typedef struct {
     Piece* squares[64];
 } Board;

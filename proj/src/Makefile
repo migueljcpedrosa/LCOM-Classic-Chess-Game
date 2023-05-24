@@ -9,9 +9,10 @@ PROG=proj
 .PATH: ${.CURDIR}/model/xpm/
 .PATH: ${.CURDIR}/model/modes/
 .PATH: ${.CURDIR}/model/cursor/
+.PATH: ${.CURDIR}/controller/	
 .PATH: ${.CURDIR}/view/
 
-SRCS = 	main.c timer.c mouse.c keyboard.c menu.c gpu.c game.c pieces.c board.c player.c viewer.c utils.c sprite.c cursor.c
+SRCS = 	main.c timer.c mouse.c keyboard.c menu.c gpu.c game.c pieces.c board.c player.c viewer.c utils.c sprite.c cursor.c cursor_input.c game_ctrl.c
 
 CFLAGS += -pedantic
 

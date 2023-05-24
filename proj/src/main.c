@@ -12,6 +12,8 @@
 #include "view/viewer.h"
 #include "view/sprite.h"
 #include "model/cursor/cursor.h"
+#include "model/cursor/cursor_input.h"
+#include "controller/game_ctrl.h"
 
 extern int counter;
 
@@ -70,6 +72,7 @@ int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse){
     vbe_mode_info_t vmi_p;
     if (vbe_get_mode_info(VBE_MODE, &vmi_p)) return 1;
     if (map_info(&vmi_p)) return 1;
+    if (take_screenshot()) return 1;
 
     return 0;
 }
@@ -81,7 +84,7 @@ int terminate(){
     if(mouse_unsubscribe_int() || disable_data_reporting()) return 1;
     if(keyboard_unsubscribe_int()) return 1;
     if(vg_exit()) return 1;
-    
+
     return 0;
 }
 
@@ -100,8 +103,6 @@ int interrupts_handler(){
     }
     
     bool running = true;
-
-    take_screenshot();
 
     while(running){
 
@@ -129,15 +130,8 @@ int interrupts_handler(){
                     if (msg.m_notify.interrupts & irqMouse) {
                         mouse_ih();
                         if (packet_read){
-                            packet_read = false;
-                            pp_index = 0;
-                            if (packet_pp.rb){
-                                running = false;
-                            }
-                            int16_t move_x = (((int16_t) packet_pp.x_ov) << 8) | packet_pp.delta_x;
-                            int16_t move_y = (((int16_t) packet_pp.y_ov) << 8) | packet_pp.delta_y;
-                            
-                            cursor_move(move_x, -move_y);
+                            CursorInput input = read_cursor_input(&packet_pp);
+                            treat_input(&input);
                         }
                     }
                     if (msg.m_notify.interrupts & irqTimer) {

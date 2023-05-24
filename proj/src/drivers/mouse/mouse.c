@@ -24,6 +24,11 @@ int (mouse_unsubscribe_int)(){
 
 void (mouse_ih)(){
 
+  if (packet_read){
+    packet_read = false;
+    pp_index = 0;
+  }
+
   uint8_t status;
 
   if (util_sys_inb(STATUS_PORT, &status))

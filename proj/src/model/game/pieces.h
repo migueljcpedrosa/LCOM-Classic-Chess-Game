@@ -15,7 +15,7 @@ typedef enum {
 } Color;
 
 typedef enum {
-    NONE,
+    EMPTY,
     PAWN,
     KNIGHT,
     ROOK,
