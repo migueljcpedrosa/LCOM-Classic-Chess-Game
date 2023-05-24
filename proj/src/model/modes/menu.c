@@ -5,8 +5,7 @@
 bool startPressed = false;
 bool quitPressed = false;
 
-/*
-int processStartButton(uint16_t x, uint16_t y){
+/*int process_start_button(uint16_t x, uint16_t y){
     //check if the x and y coordinates of the mouse cursor are within the button limits
     if(x > xmin && x < xmax && y > ymin && y < ymax){
         //If the start button has not yet been pressed
@@ -27,7 +26,7 @@ int processStartButton(uint16_t x, uint16_t y){
     return 0;
 }
 
-int processQuitButton(uint16_t x, uint16_t y){
+int process_quit_button(uint16_t x, uint16_t y){
     //check if the x and y coordinates of the mouse cursor are within the button limits
     if(x > xmin && x < xmax && y > ymin && y < ymax){
         //If the quit button has not yet been pressed
