@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "cursor.h": "c",
+        "gpu.h": "c"
+    }
+}
