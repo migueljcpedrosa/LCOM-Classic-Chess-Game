@@ -2,7 +2,7 @@
 #include "menu.h"
 #include <stdbool.h>
 
-/*bool startPressed = false;
+bool startPressed = false;
 bool quitPressed = false;
 
 /*
