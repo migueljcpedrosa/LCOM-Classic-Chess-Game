@@ -6,7 +6,7 @@ int rtc_irq = 8;
 rtc_timestamp_t rtc_timestamp;
 bool rtc_binary_mode;
 
-rtc_in_binary_mode(){
+int rtc_in_binary_mode(){
     uint8_t counting_status;
     if (rtc_read_register(11, &counting_status)) return 1;
     return counting_status & BIT(2);
@@ -33,5 +33,5 @@ uint8_t rtc_bcd_to_binary(uint8_t bcd_number) {
 bool rtc_currently_updating() {
     uint8_t update_status;
     if (read_rtc_register(11, &update_status)) return true;
-    return update_status & 7;
+    return update_status & BIT(7);
 }
