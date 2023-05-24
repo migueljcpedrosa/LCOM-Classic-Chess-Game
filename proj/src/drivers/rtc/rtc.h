@@ -27,4 +27,5 @@ typedef struct {
 rtc_initialize_system();
 rtc_subscribe_interrupts();
 rtc_unsubscribe_interrupts();
+rtc_read_register(uint8_t command, uint8_t *output);
 #endif
