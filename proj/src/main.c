@@ -56,6 +56,8 @@ int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse){
 
     if (load_sprites()) return 1;
 
+    if(lead)
+
     uint8_t bit_no;
     if(timer_subscribe_int(&bit_no)) return 1;
     *irqTimer = BIT(bit_no);

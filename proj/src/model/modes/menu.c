@@ -6,6 +6,7 @@ bool startPressed = false;
 bool quitPressed = false;
 
 
+
 int clickedStartButton(uint16_t x, uint16_t y){
     //check if the x and y coordinates of the mouse cursor are within the button limits
     if(x > xmin && x < xmax && y > ymin && y < ymax){
@@ -26,6 +27,7 @@ int clickedStartButton(uint16_t x, uint16_t y){
     else startPressed = false;
     return 0;
 }
+
 
 int clickedQuitButton(uint16_t x, uint16_t y){
     //check if the x and y coordinates of the mouse cursor are within the button limits

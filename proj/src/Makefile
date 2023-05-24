@@ -11,7 +11,7 @@ PROG=proj
 .PATH: ${.CURDIR}/model/cursor/
 .PATH: ${.CURDIR}/view/
 
-SRCS = 	main.c timer.c mouse.c keyboard.c menu.c gpu.c game.c pieces.c board.c player.c viewer.c utils.c sprite.c cursor.c
+SRCS = 	main.c timer.c mouse.c keyboard.c menu.c gpu.c game.c pieces.c board.c player.c viewer.c  utils.c sprite.c cursor.c menuviewer.c
 
 CFLAGS += -pedantic
 
