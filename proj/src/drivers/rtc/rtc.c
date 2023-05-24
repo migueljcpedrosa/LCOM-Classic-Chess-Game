@@ -6,6 +6,11 @@ int rtc_irq = 8;
 rtc_timestamp_t current_time;
 bool rtc_binary_mode;
 
+int rtc_initialize_system(){
+   rtc_binary_mode = rtc_in_binary_mode();
+   rtc_update_current_time();
+}
+
 int rtc_in_binary_mode(){
     uint8_t counting_status;
     if (rtc_read_register(11, &counting_status)) return 1;
