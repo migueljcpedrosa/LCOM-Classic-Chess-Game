@@ -7,6 +7,12 @@ int load_sprites(){
   if (load_sprite(&blackQueen, (xpm_map_t) blackQueen_xpm))
     return 1;
 
+  if (load_sprite(&playButton, (xpm_map_t) playButton_xpm))
+    return 1;
+
+  if (load_sprite(&exitButton, (xpm_map_t) exitButton_xpm))
+    return 1;
+    
   if (load_sprite(&mouse, (xpm_map_t) mouse_xpm))
     return 1;
 

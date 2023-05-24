@@ -14,5 +14,7 @@
 #include "whiteRook.xpm"
 #include "whitePawn.xpm"
 #include "mouse.xpm"
+#include "playButton.xpm"
+#include "exitButton.xpm"
 
 #endif
