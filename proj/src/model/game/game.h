@@ -3,6 +3,7 @@
 
 #include "board.h"
 
+
 typedef Color Turn;
 
 typedef struct {
@@ -14,7 +15,8 @@ typedef struct {
 
 } Game;
 
-Game* game;
+extern Piece* selected_piece;
+extern Game* game;
 
 Game* (create_game)(char white_name[], char black_name[]);
 

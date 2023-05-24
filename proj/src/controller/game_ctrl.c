@@ -1,5 +1,4 @@
 #include "game_ctrl.h"
-#include "../model/game/game.h"
 #include "../view/viewer.h"
 
 void treat_input(CursorInput* input){
@@ -7,22 +6,27 @@ void treat_input(CursorInput* input){
     unsigned int square_x = (input->x - board_start) / square_size;
     unsigned int square_y = (input->y - board_start) / square_size;
 
-    if (input->leftClick){
+    if (input->leftClick && selected_piece == NULL){
 
-        Piece* piece  = getPiece(game, square_x, square_y);
+        selected_piece = getPiece(game, square_x, square_y);
 
-        if (piece == NULL){
+        if (selected_piece == NULL){
             return;
         }
 
-        setMoves(game, piece);
-
-        if (piece->num_moves == 0){
+        if (selected_piece->color != game->turn){
             return;
         }
 
-        execute_move(game, piece->moves[0]);
+        take_screenshot();
 
+        setMoves(game, selected_piece);
+
+        if (selected_piece->num_moves == 0){
+            return;
+        }
+    } else if (!input->leftClick && selected_piece != NULL){
+        selected_piece = NULL;
         take_screenshot();
     }
 

@@ -1,6 +1,9 @@
 #include "game.h"
 #include <stdlib.h>
 
+Piece* selected_piece = NULL;
+Game* game;
+
 Game* (create_game)(char white_name[], char black_name[]){
     Game* game = malloc(sizeof(Game));
 

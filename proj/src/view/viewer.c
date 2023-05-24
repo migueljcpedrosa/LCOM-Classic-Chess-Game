@@ -48,7 +48,7 @@ int draw_pieces(){
 
       Piece* piece = game->board->squares[i];
       if (piece != NULL){
-        if (piece->status == ALIVE)
+        if (piece->status == ALIVE && piece != selected_piece)
           draw_piece(piece->sprite, piece->position.x, piece->position.y);
       }
     }
@@ -69,12 +69,26 @@ int (take_screenshot)(){
   return 0;
 }
 
+unsigned int selected_piece_old_x = 0;
+unsigned int  selected_piece_old_y = 0;
+
 int (draw)(){
 
   erase_cursor();
 
+
   if (draw_cursor())
     return 1;
+
+  if (selected_piece != NULL){
+
+    draw_screenshot_to_buffer(selected_piece_old_x, selected_piece_old_y, square_size, square_size);
+    int x = cursor->x - square_size / 2;
+    int y = cursor->y - square_size / 2;
+    draw_sprite(selected_piece->sprite, x, y);
+    selected_piece_old_x = x;
+    selected_piece_old_y = y;
+  }
 
   if (render_screen())
     return 1;
