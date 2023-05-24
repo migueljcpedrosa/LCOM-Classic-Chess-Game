@@ -1,8 +1,11 @@
+
 #include "menu.h"
+#include <stdbool.h>
 
 /*bool startPressed = false;
 bool quitPressed = false;
 
+/*
 int processStartButton(uint16_t x, uint16_t y){
     //check if the x and y coordinates of the mouse cursor are within the button limits
     if(x > xmin && x < xmax && y > ymin && y < ymax){

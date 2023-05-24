@@ -27,6 +27,7 @@ void (kbc_ih)(){
 
   if (last_byte_read){
     kbd_index = 0;
+    memset(scan_code, 0, 2);
   }
 
   uint8_t st;

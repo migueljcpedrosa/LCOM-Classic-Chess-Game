@@ -16,7 +16,8 @@
 extern int counter;
 
 extern uint8_t scan_code[2];
-extern bool last_byte_read;
+extern bool last_byte_read; 
+extern int kbd_index;
 
 extern struct packet packet_pp;
 extern int pp_index;
@@ -115,8 +116,6 @@ int interrupts_handler(){
                     if (msg.m_notify.interrupts & irqKeyboard){
                         kbc_ih();
                         if (last_byte_read){
-                            bool make = (scan_code[0] & BIT(7)) == 0;
-                            kbd_print_scancode(make, 2, scan_code);
                             if (scan_code[0] == 0x81)
                                 running = false;
                         }
