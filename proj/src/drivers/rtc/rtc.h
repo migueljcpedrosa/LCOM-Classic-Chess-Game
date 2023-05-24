@@ -8,6 +8,13 @@
 #define RTC_COMMAND_REGISTER 0x70
 #define RTC_DATA_REGISTER    0x71
 
+#define RTC_SECONDS 0
+#define RTC_MINUTES 2
+#define RTC_HOURS   4
+#define RTC_DAY     7
+#define RTC_MONTH   8
+#define RTC_YEAR    9
+
 typedef struct {
     uint8_t year;
     uint8_t month;
