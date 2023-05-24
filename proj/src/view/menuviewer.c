@@ -9,17 +9,24 @@ int load_sprites_menu(){
 
   if (load_sprite(&exitButton, (xpm_map_t) exitButton_xpm))
     return 1;
+
+  return 0;
+}
+
+int draw_menu_button(Sprite* sprite, uint16_t x, uint16_t y) {
+  
+  draw_xpm(sprite->img, sprite->addr, x, y);
+  return 0;
 }
 
 int drawMenu(){
-  if (draw_sprite(&playButton, 100, 100))
+
+  if(draw_menu_button(&playButton, 0, 100))
     return 1;
 
-  if (draw_sprite(&exitButton, 300, 300))
-    return 1;
-
-  if (render_screen())
+  if(draw_menu_button(&exitButton, 600, 100))
     return 1;
 
   return 0;
 }
+

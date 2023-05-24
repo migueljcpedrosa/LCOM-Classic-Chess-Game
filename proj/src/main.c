@@ -12,6 +12,7 @@
 #include "view/viewer.h"
 #include "view/sprite.h"
 #include "model/cursor/cursor.h"
+#include "view/menuviewer.h"
 
 extern int counter;
 
@@ -56,7 +57,7 @@ int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse){
 
     if (load_sprites()) return 1;
 
-    if(lead)
+    if(load_sprites_menu()) return 1;   
 
     uint8_t bit_no;
     if(timer_subscribe_int(&bit_no)) return 1;
@@ -103,7 +104,8 @@ int interrupts_handler(){
     
     bool running = true;
 
-    take_screenshot();
+    drawMenu();
+    //take_screenshot();
 
     while(running){
 

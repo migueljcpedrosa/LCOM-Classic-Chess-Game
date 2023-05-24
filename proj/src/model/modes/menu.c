@@ -1,11 +1,11 @@
-/*
+
 #include "menu.h"
 #include <stdbool.h>
 
 bool startPressed = false;
 bool quitPressed = false;
 
-
+/*
 
 int clickedStartButton(uint16_t x, uint16_t y){
     //check if the x and y coordinates of the mouse cursor are within the button limits
@@ -68,3 +68,4 @@ int drawMenu(){
   return 0;
 }
 */
+
