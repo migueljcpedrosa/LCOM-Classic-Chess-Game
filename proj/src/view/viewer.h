@@ -1,8 +1,8 @@
 #ifndef _VIEWER_H_
 #define _VIEWER_H_
 
-#include "../controller/video_card/gpu.h"
-#include "../controller/video_card/vbe.h"
+#include "../drivers/video_card/gpu.h"
+#include "../drivers/video_card/vbe.h"
 #include "sprite.h"
 
 #define VBE_MODE MODE5

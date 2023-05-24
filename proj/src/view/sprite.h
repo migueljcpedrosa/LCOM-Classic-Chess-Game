@@ -1,7 +1,7 @@
 #ifndef _SPRITE_H_
 #define _SPRITE_H_
 
-#include "../controller/video_card/gpu.h"
+#include "../drivers/video_card/gpu.h"
 
 typedef struct {
   uint8_t* addr;

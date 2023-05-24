@@ -1,10 +1,10 @@
 PROG=proj
 
-.PATH: ${.CURDIR}/controller/keyboard
-.PATH: ${.CURDIR}/controller/mouse
-.PATH: ${.CURDIR}/controller/timer
-.PATH: ${.CURDIR}/controller/video_card/
-.PATH: ${.CURDIR}/controller/
+.PATH: ${.CURDIR}/drivers/keyboard
+.PATH: ${.CURDIR}/drivers/mouse
+.PATH: ${.CURDIR}/drivers/timer
+.PATH: ${.CURDIR}/drivers/video_card/
+.PATH: ${.CURDIR}/drivers/
 .PATH: ${.CURDIR}/model/game/
 .PATH: ${.CURDIR}/model/xpm/
 .PATH: ${.CURDIR}/model/modes/

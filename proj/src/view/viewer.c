@@ -1,6 +1,6 @@
 #include "viewer.h" 
 #include "../model/xpm/xpm.h"
-#include "../controller/video_card/gpu.h"
+#include "../drivers/video_card/gpu.h"
 #include "../model/cursor/cursor.h"
 
 uint16_t square_size = 100;

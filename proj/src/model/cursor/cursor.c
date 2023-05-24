@@ -1,5 +1,5 @@
 #include "cursor.h"
-#include "../../controller/video_card/gpu.h"
+#include "../../drivers/video_card/gpu.h"
 #include <stdlib.h>
 
 void cursor_create(int x, int y){
