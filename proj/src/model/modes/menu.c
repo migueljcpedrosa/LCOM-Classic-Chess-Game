@@ -43,6 +43,24 @@ int processQuitButton(uint16_t x, uint16_t y){
     else quitPressed = false;
     return 0;
 }
+
+int drawMenu(){
+  //paint background
+  memset(imgBuffer, 0x000000, xRes*yRes*bytesPerPixel);
+  
+  //draw title
+  drawSprite(firstLetterOfTitle,screenx,screeny);
+  drawSprite(secondLetterOfTitle,screenx+firstLetterOfTitle.width,screeny);
+  drawSprite(thirdLetterOfTitle,screenx+firstLetterOfTitle.width+secondLetterOfTitle.width,screeny);
+  drawSprite(fourthLetterOfTitle,screenx+firstLetterOfTitle.width+secondLetterOfTitle.width * 2,screeny);
+  drawSprite(fifthLetterOfTitle,screenx+firstLetterOfTitle.width+secondLetterOfTitle.width * 3,screeny);
+
+  //start button
+  drawSprite(startButton,xpos,ypos);
+  
+  //quit button
+  drawSprite(quitButton,xpos,ypos);
+
+  return 0;
+}
 */
-
-
