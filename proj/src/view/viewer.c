@@ -87,11 +87,10 @@ int draw_piece(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color) {
   return 0;
 }
 
-int (draw_letter)(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color, char letter) {
-  
+/*int (draw_letter)(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color, char letter) {
   draw_xpm_letters(sprite->img, sprite->addr, x, y, letter);
   return 0;
-}
+}*/
 
 int draw_word(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color, char* word) {
   draw_xpm_word(sprite->img, sprite->addr, x, y, word);

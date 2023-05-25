@@ -19,4 +19,8 @@ int (draw_letter)(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color, char l
 
 int draw_word(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color, char* word);
 
+int erase_cursor();
+
+int render_screen();
+
 #endif

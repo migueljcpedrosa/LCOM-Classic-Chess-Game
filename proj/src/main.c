@@ -104,8 +104,8 @@ int interrupts_handler(){
     
     bool running = true;
 
-    drawMenu();
-    drawTitle();
+    menu_screenshot();
+    draw_menu();
     //take_screenshot();
 
     while(running){
