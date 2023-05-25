@@ -1,2 +1,4 @@
 *.o
 proj/src/trace.txt
+proj/src/output.txt
+proj/src/proj
