@@ -32,42 +32,7 @@ void treat_input(CursorInput* input){
             return;
         }
 
-        Move* filtered_moves = malloc(sizeof(Move) * selected_piece->num_moves);
-        int num_filtered_moves = 0;
-
-        for (int i = 0; i < selected_piece->num_moves; i++){
-
-            Position origin = selected_piece->moves[i].origin;
-            Position destination = selected_piece->moves[i].destination;
-
-            selected_piece->position = destination;
-
-            Piece* taken_piece = game->board->squares[destination.y * 8 + destination.x];
-            if (taken_piece != NULL){
-                taken_piece->status = CAPTURED;
-            }
-            game->board->squares[destination.y * 8 + destination.x] = selected_piece;
-            game->board->squares[origin.y * 8 + origin.x] = NULL;
-
-            if (!is_check(game)){
-
-                filtered_moves[num_filtered_moves] = selected_piece->moves[i];
-                num_filtered_moves++;
-            }
-
-            selected_piece->position = selected_piece->moves[i].origin;
-            game->board->squares[destination.y * 8 + destination.x] = taken_piece;
-            if (taken_piece != NULL){
-                taken_piece->status = ALIVE;
-            }
-            game->board->squares[origin.y * 8 + origin.x] = selected_piece;
-
-        }
-        free(selected_piece->moves);
-
-        selected_piece->num_moves = num_filtered_moves;
-
-        selected_piece->moves = filtered_moves;
+        filterMoves(game, selected_piece);
 
         take_screenshot();
 

@@ -82,9 +82,21 @@ bool can_move(Game* game){
 
     for (int i = 0; i < 16; i++){
 
-        setMoves(game, moving_player->pieces[i]);
+        Piece* piece = moving_player->pieces[i];
 
-        int num_moves = moving_player->pieces[i]->num_moves;
+        if (piece == NULL){
+            continue;
+        }
+
+        if (piece->status != ALIVE){
+            continue;
+        }
+
+        setMoves(game, piece);
+
+        filterMoves(game, piece);
+
+        int num_moves = piece->num_moves;
 
         if (num_moves > 0){
             return true;
@@ -134,7 +146,7 @@ bool is_check(Game* game){
 
 bool is_check_mate(Game* game){
 
-    return is_check(game) && !can_move(game);
+    return /* is_check(game) && */ !can_move(game);
 }
 
 bool is_stale_mate(Game* game){
@@ -147,6 +159,46 @@ Piece* getPiece(Game* game, unsigned int x, unsigned int y){
     int pos = y * 8 + x;
 
     return game->board->squares[pos];
+}
+
+void filterMoves(Game* game, Piece* piece){
+
+    Move* filtered_moves = malloc(sizeof(Move) * piece->num_moves);
+    int num_filtered_moves = 0;
+
+    for (int i = 0; i < piece->num_moves; i++){
+
+        Position origin = piece->moves[i].origin;
+        Position destination = piece->moves[i].destination;
+
+        piece->position = destination;
+
+        Piece* taken_piece = game->board->squares[destination.y * 8 + destination.x];
+        if (taken_piece != NULL){
+            taken_piece->status = CAPTURED;
+        }
+        game->board->squares[destination.y * 8 + destination.x] = piece;
+        game->board->squares[origin.y * 8 + origin.x] = NULL;
+
+        if (!is_check(game)){
+
+            filtered_moves[num_filtered_moves] = piece->moves[i];
+            num_filtered_moves++;
+        }
+
+        piece->position = piece->moves[i].origin;
+        game->board->squares[destination.y * 8 + destination.x] = taken_piece;
+        if (taken_piece != NULL){
+            taken_piece->status = ALIVE;
+        }
+        game->board->squares[origin.y * 8 + origin.x] = piece;
+
+    }
+    free(piece->moves);
+
+    piece->num_moves = num_filtered_moves;
+
+    piece->moves = filtered_moves;
 }
 
 void setMoves(Game* game, Piece* piece){

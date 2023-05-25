@@ -38,6 +38,8 @@ bool is_stale_mate(Game* game);
 
 Piece* getPiece(Game* game, unsigned int x, unsigned int y);
 
+void filterMoves(Game* game, Piece* piece);
+
 void setMoves(Game* game, Piece* piece);
 
 void getPawnMoves(Game* game, Piece* piece);
