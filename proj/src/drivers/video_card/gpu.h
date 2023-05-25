@@ -10,6 +10,8 @@ int (set_mode)(uint16_t mode);
 
 int (map_info)(vbe_mode_info_t* vmi_p);
 
+int (clean_screen)();
+
 int (draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color);
 
 int (copy_buffer_to_screenshot)();

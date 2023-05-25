@@ -8,6 +8,12 @@ void treat_input(CursorInput* input){
 
     if (input->leftClick && selected_piece == NULL){
 
+        if (square_x > 7 || square_y > 7){
+            return;
+        }
+
+        printf("Click on x: %d, y: %d\n", square_x, square_y);
+
         selected_piece = getPiece(game, square_x, square_y);
 
         if (selected_piece == NULL){
@@ -22,6 +28,7 @@ void treat_input(CursorInput* input){
         setMoves(game, selected_piece);
 
         if (selected_piece->num_moves == 0){
+            take_screenshot();
             return;
         }
 
@@ -36,6 +43,9 @@ void treat_input(CursorInput* input){
             selected_piece->position = destination;
 
             Piece* taken_piece = game->board->squares[destination.y * 8 + destination.x];
+            if (taken_piece != NULL){
+                taken_piece->status = CAPTURED;
+            }
             game->board->squares[destination.y * 8 + destination.x] = selected_piece;
             game->board->squares[origin.y * 8 + origin.x] = NULL;
 
@@ -47,6 +57,9 @@ void treat_input(CursorInput* input){
 
             selected_piece->position = selected_piece->moves[i].origin;
             game->board->squares[destination.y * 8 + destination.x] = taken_piece;
+            if (taken_piece != NULL){
+                taken_piece->status = ALIVE;
+            }
             game->board->squares[origin.y * 8 + origin.x] = selected_piece;
 
         }
@@ -60,6 +73,12 @@ void treat_input(CursorInput* input){
 
     } else if (!input->leftClick && selected_piece != NULL){
 
+        if (square_x > 7 || square_y > 7){
+            selected_piece = NULL;
+            take_screenshot();
+            return;
+        }   
+
         for (int i = 0; i < selected_piece->num_moves; i++){
 
             unsigned int x = selected_piece->moves[i].destination.x;
@@ -70,6 +89,11 @@ void treat_input(CursorInput* input){
             }
         }
         selected_piece = NULL;
+        if (is_check_mate(game)){
+            printf("Check mate!\n");
+        } else if (is_stale_mate(game)){
+            printf("Stale mate!\n");
+        }
         take_screenshot();
     }
 

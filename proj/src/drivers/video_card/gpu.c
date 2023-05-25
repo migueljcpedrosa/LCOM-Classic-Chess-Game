@@ -93,6 +93,13 @@ int (map_info)(vbe_mode_info_t* vmi_p){
   return 0;
 }
 
+int (clean_screen)(){
+  
+    memset(buffer, 0, h_res * v_res * bytes_per_pixel);
+  
+    return 0; 
+}
+
 int (draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color){
 
   if (x < 0 || x >= h_res || y < 0 || y >= v_res) {

@@ -1,32 +1,184 @@
-Number of moves: 2
-Number of moves: 2
-Number of moves: 4
-Number of moves: 0
-Number of moves: 0
-Number of moves: 1
-Number of moves: 11
-Number of moves: 0
-Number of moves: 0
-Number of moves: 2
-Number of moves: 13
-Number of moves: 1
-Number of moves: 1
-Number of moves: 1
-Number of moves: 1
-Number of moves: 0
-Number of moves: 0
-Number of moves: 0
-Number of moves: 1
-Number of moves: 18
-Number of moves: 13
-Number of moves: 0
-Number of moves: 3
-Number of moves: 3
-Number of moves: 3
-Number of moves: 3
-Number of moves: 3
-Number of moves: 2
-Number of moves: 13
-Number of moves: 3
-Number of moves: 1
-Number of moves: 1
+Click on x: 4, y: 1
+Click on x: 6, y: 7
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 3, y: 0
+Click on x: 6, y: 6
+Click on x: 7, y: 4
+Click on x: 5, y: 5
+Click on x: 5, y: 6
+Click on x: 5, y: 6
+Click on x: 5, y: 6
+Click on x: 5, y: 6
+Click on x: 5, y: 6
+Click on x: 5, y: 6
+Click on x: 5, y: 6
+Click on x: 5, y: 6
+Click on x: 5, y: 6
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 6
+Click on x: 5, y: 6
+Click on x: 5, y: 6
+Click on x: 5, y: 6
+Click on x: 5, y: 6
+Click on x: 5, y: 6
+Click on x: 5, y: 6
+Click on x: 1, y: 1
+Click on x: 0, y: 1
+Click on x: 5, y: 6
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 3, y: 4
+Click on x: 0, y: 2
+Click on x: 4, y: 4
+Click on x: 4, y: 4
+Click on x: 4, y: 4
+Click on x: 3, y: 4
+Click on x: 7, y: 5
+Click on x: 4, y: 7
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 5, y: 5
+Click on x: 6, y: 4
+Click on x: 5, y: 4
+Click on x: 7, y: 6
+Click on x: 5, y: 7
+Click on x: 7, y: 7
+Click on x: 5, y: 4
+Click on x: 5, y: 5
+Click on x: 4, y: 6
+Click on x: 5, y: 4
+Click on x: 6, y: 4
+Click on x: 5, y: 5
+Click on x: 5, y: 1
+Click on x: 7, y: 4
+Click on x: 4, y: 3
+Click on x: 4, y: 3
+Click on x: 5, y: 7
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 4
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 6, y: 3
+Click on x: 7, y: 1
+Click on x: 6, y: 4
+Click on x: 7, y: 2
+Click on x: 7, y: 5
+Click on x: 4, y: 0
+Click on x: 2, y: 0
+Click on x: 1, y: 0
+Click on x: 4, y: 0
+Click on x: 4, y: 0
+Click on x: 4, y: 0
+Click on x: 4, y: 0
+Click on x: 4, y: 1
+Click on x: 4, y: 1
+Click on x: 4, y: 1
+Click on x: 4, y: 1
+Click on x: 4, y: 1
+Click on x: 4, y: 1
+Click on x: 4, y: 1
+Click on x: 4, y: 1
+Click on x: 4, y: 1
+Click on x: 4, y: 2
+Click on x: 4, y: 2
+Click on x: 4, y: 2
+Click on x: 4, y: 2
+Click on x: 4, y: 2
+Click on x: 4, y: 2
+Click on x: 4, y: 2
+Click on x: 4, y: 2
+Click on x: 4, y: 2
+Click on x: 4, y: 2
+Click on x: 4, y: 2
+Click on x: 4, y: 0
+Click on x: 4, y: 0
+Click on x: 4, y: 0
+Click on x: 4, y: 0
+Click on x: 4, y: 0
+Click on x: 4, y: 0
+Click on x: 4, y: 1
+Click on x: 4, y: 1
+Click on x: 4, y: 1
+Click on x: 4, y: 1
+Click on x: 4, y: 1
+Click on x: 4, y: 1
+Click on x: 4, y: 1
+Click on x: 4, y: 2
+Click on x: 4, y: 2
+Click on x: 4, y: 2

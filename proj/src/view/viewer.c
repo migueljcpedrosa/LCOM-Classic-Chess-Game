@@ -16,7 +16,7 @@ int render_screen(){
 
 int erase_cursor(){
 
-  draw_screenshot_to_buffer(cursor->old_x, cursor->old_y, 17, 26);
+  draw_screenshot_to_buffer(cursor->old_x, cursor->old_y, mouse->img.width, mouse->img.height);
 
   cursor->old_x = cursor->x;
   cursor->old_y = cursor->y;
@@ -45,7 +45,6 @@ int draw_pieces(){
 
   if (selected_piece != NULL){
 
-    printf("Number of moves: %d\n", selected_piece->num_moves);
     for (int i = 0; i < selected_piece->num_moves; i++) {
       Move move = selected_piece->moves[i];
       int x = board_start + (move.destination.x * square_size);
@@ -71,6 +70,7 @@ int draw_pieces(){
 int (take_screenshot)(){
 
   board_start = (v_res - (8 * square_size))  / 2;
+  clean_screen();
   draw_board();
   draw_pieces();
 

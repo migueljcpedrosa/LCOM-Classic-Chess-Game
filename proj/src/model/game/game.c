@@ -252,22 +252,7 @@ void getMovesInLine(Game* game, Piece* piece, Position increment){
     Position newPos = pos;
 
     while (true) {
-        /*
-        if (piece == NULL){
-            printf("PIECE IS NULL\n");
-            return;
-        }
-        
-        if (piece->type == QUEEN){
-            printf("QUEEN FOUND\n");
-        } else {
-            printf("NOT QUEEN\n");
-        } */
-
-       /* if (pos.x == 7 && pos.y == 4 && piece->type == QUEEN){
-            printf("Num_moves: %d\n", piece->num_moves);
-        } 
-        */
+      
         newPos = (Position) {newPos.x + increment.x, newPos.y + increment.y};
 
         if (newPos.x < 0 || newPos.x > 7 || newPos.y < 0 || newPos.y > 7){
