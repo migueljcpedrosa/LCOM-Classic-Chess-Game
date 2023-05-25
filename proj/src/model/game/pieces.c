@@ -90,7 +90,7 @@ Piece* (create_piece)(Type type, Color color, Position pos){
     piece->position = pos;
     piece->has_moved = false;
     piece->num_moves = 0;
-    piece->moves = (Move*) malloc(sizeof(Move) * 64);
+    piece->moves = (Move*) malloc(sizeof(Move) * 28);
     piece->status = ALIVE;
 
     return piece;

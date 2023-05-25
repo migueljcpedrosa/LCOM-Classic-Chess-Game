@@ -61,6 +61,30 @@ Board* (create_board)(Player* white_player, Player* black_player){
     return board;
 }
 
+Board* copy_board(Board* board, Player* white_player, Player* black_player){
+
+    Board* copy = malloc(sizeof(Board));
+
+    for (int i = 0; i < 64; i++){
+
+        printf("i: %d\n", i);
+        if (board->squares[i] == NULL){
+            copy->squares[i] = NULL;
+            continue;
+        }
+
+        copy->squares[i] = create_piece(board->squares[i]->type, board->squares[i]->color, create_position(i));
+
+        if (board->squares[i]->color == WHITE){
+            white_player->pieces[i] = copy->squares[i];
+        } else {
+            black_player->pieces[i] = copy->squares[i];
+        }
+    }
+
+    return copy;
+}
+
 void destroy_board(Board* board){
 
     for (int i = 0; i < 64; i++){

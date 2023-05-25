@@ -18,13 +18,46 @@ void treat_input(CursorInput* input){
             selected_piece = NULL;
             return;
         }
-        setMoves(game, selected_piece);
 
-        take_screenshot();
+        setMoves(game, selected_piece);
 
         if (selected_piece->num_moves == 0){
             return;
         }
+
+        Move* filtered_moves = malloc(sizeof(Move) * selected_piece->num_moves);
+        int num_filtered_moves = 0;
+
+        for (int i = 0; i < selected_piece->num_moves; i++){
+
+            Position origin = selected_piece->moves[i].origin;
+            Position destination = selected_piece->moves[i].destination;
+
+            selected_piece->position = destination;
+
+            Piece* taken_piece = game->board->squares[destination.y * 8 + destination.x];
+            game->board->squares[destination.y * 8 + destination.x] = selected_piece;
+            game->board->squares[origin.y * 8 + origin.x] = NULL;
+
+            if (!is_check(game)){
+
+                filtered_moves[num_filtered_moves] = selected_piece->moves[i];
+                num_filtered_moves++;
+            }
+
+            selected_piece->position = selected_piece->moves[i].origin;
+            game->board->squares[destination.y * 8 + destination.x] = taken_piece;
+            game->board->squares[origin.y * 8 + origin.x] = selected_piece;
+
+        }
+        free(selected_piece->moves);
+
+        selected_piece->num_moves = num_filtered_moves;
+
+        selected_piece->moves = filtered_moves;
+
+        take_screenshot();
+
     } else if (!input->leftClick && selected_piece != NULL){
 
         for (int i = 0; i < selected_piece->num_moves; i++){

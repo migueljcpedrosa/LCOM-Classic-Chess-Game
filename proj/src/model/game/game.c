@@ -17,6 +17,20 @@ Game* (create_game)(char white_name[], char black_name[]){
     return game;
 }
 
+Game* copy_game(Game* game){
+
+    Game* copy = malloc(sizeof(Game));
+
+    copy->white_player = create_player(game->white_player->name, WHITE);
+    copy->black_player = create_player(game->black_player->name, BLACK);
+
+    copy->board = copy_board(game->board, copy->white_player, copy->black_player);
+
+    copy->turn = game->turn;
+
+    return copy;
+}
+
 void destroy_game(Game* game){
 
     destroy_board(game->board);
@@ -25,11 +39,7 @@ void destroy_game(Game* game){
 
 Turn switch_turn(Game* game){
 
-
-    printf("Game turn before: %d\n", game->turn);
     game->turn = game->turn == WHITE ? BLACK : WHITE;
-
-    printf("Game turn after: %d\n", game->turn);
 
     return game->turn;
 }
@@ -89,16 +99,31 @@ bool is_check(Game* game){
 
     for (int i = 0; i < 16; i++){
 
-        setMoves(game, checking_player->pieces[i]);
+        Piece* checking_piece = checking_player->pieces[i];
 
-        int num_moves = checking_player->pieces[i]->num_moves;
-        Move* moves = checking_player->pieces[i]->moves;
+        if (checking_piece == NULL){
+            continue;
+        }
+
+        if (checking_piece->status != ALIVE){
+            continue;
+        }
+
+        setMoves(game, checking_piece);
+
+        int num_moves = checking_piece->num_moves;
+
+        Move* moves = checking_piece->moves;
 
         for (int j = 0; j < num_moves; j++){
 
-            int destination = moves[j].destination.x + moves[j].destination.y  * 8;
+            int destination = moves[j].destination.x + moves[j].destination.y * 8;
 
-            if (game->board->squares[destination]->type == KING){
+            if (game->board->squares[destination] == NULL){
+                continue;
+            }
+
+            if (game->board->squares[destination]->type == KING && game->board->squares[destination]->color != checking_piece->color){
                 return true;
             }
         }
@@ -125,6 +150,10 @@ Piece* getPiece(Game* game, unsigned int x, unsigned int y){
 }
 
 void setMoves(Game* game, Piece* piece){
+
+
+    piece->num_moves = 0;
+    piece->moves = malloc(sizeof(Move) * 28);
 
     if (piece == NULL){
         return;
@@ -223,7 +252,22 @@ void getMovesInLine(Game* game, Piece* piece, Position increment){
     Position newPos = pos;
 
     while (true) {
+        /*
+        if (piece == NULL){
+            printf("PIECE IS NULL\n");
+            return;
+        }
         
+        if (piece->type == QUEEN){
+            printf("QUEEN FOUND\n");
+        } else {
+            printf("NOT QUEEN\n");
+        } */
+
+       /* if (pos.x == 7 && pos.y == 4 && piece->type == QUEEN){
+            printf("Num_moves: %d\n", piece->num_moves);
+        } 
+        */
         newPos = (Position) {newPos.x + increment.x, newPos.y + increment.y};
 
         if (newPos.x < 0 || newPos.x > 7 || newPos.y < 0 || newPos.y > 7){

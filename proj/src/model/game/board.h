@@ -15,6 +15,8 @@ typedef struct {
 
 Board* (create_board)(Player* white_player, Player* black_player);
 
+Board* copy_board(Board* board, Player* white_player, Player* black_player);
+
 void destroy_board(Board* board);
 
 #endif

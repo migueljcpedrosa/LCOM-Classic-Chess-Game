@@ -20,6 +20,8 @@ extern Game* game;
 
 Game* (create_game)(char white_name[], char black_name[]);
 
+Game* copy_game(Game* game);
+
 void destroy_game(Game* game);
 
 Turn switch_turn(Game* game);
