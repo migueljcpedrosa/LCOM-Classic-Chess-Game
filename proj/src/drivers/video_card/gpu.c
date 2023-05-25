@@ -246,7 +246,7 @@ int (draw_xpm_letters)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16
 
       unsigned int img_x = cur_x - x, img_y = cur_y - y;
 
-      uint32_t offset =  (letter - 'A') * 76;
+      uint32_t offset =  (letter - 'A') * 76 + 5;
 
       uint8_t* color = img_addr + (offset + (img_y * sprite.width) + img_x)*bytes_per_pixel;
 
@@ -262,6 +262,17 @@ int (draw_xpm_letters)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16
 
   return 0;
 }
+
+int (draw_xpm_word)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y, char* word){
+
+  for(size_t i = 0; i < strlen(word); i++){
+
+    if(draw_xpm_letters(sprite, img_addr, x + i * 76, y, word[i])) return 1;
+  }
+
+  return 0;
+}
+
 
 int (erase_xpm)(xpm_map_t xpm, enum xpm_image_type type, uint16_t x, uint16_t y){
 

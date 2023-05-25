@@ -92,3 +92,8 @@ int (draw_letter)(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color, char l
   draw_xpm_letters(sprite->img, sprite->addr, x, y, letter);
   return 0;
 }
+
+int draw_word(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color, char* word) {
+  draw_xpm_word(sprite->img, sprite->addr, x, y, word);
+  return 0;
+}

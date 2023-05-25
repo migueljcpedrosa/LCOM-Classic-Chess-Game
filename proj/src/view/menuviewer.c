@@ -22,32 +22,10 @@ int draw_menu_button(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color) {
 
 int drawTitle(){
   
-  if(draw_letter(&alphabet, 0, 0, 0xFF00FF, 'C'))
-    return 1;
+  if(draw_word(&alphabet, 0, 0, 0xFF00FF, "CHESS")) return 1;
 
-  if(draw_letter(&alphabet, 80, 0, 0xFF00FF, 'H')) 
-    return 1;
-  
-  if(draw_letter(&alphabet, 160, 0, 0xFF00FF, 'E'))   
-    return 1; 
 
-  if(draw_letter(&alphabet, 240, 0, 0xFF00FF, 'S'))
-    return 1; 
-  
-  if(draw_letter(&alphabet, 320, 0, 0xFF00FF, 'S'))
-    return 1;
-
-  if(draw_letter(&alphabet, 0, 200, 0xFF00FF, 'G'))
-    return 1;
-
-  if(draw_letter(&alphabet, 80, 200, 0xFF00FF, 'A'))
-    return 1;
-
-  if(draw_letter(&alphabet, 160, 200, 0xFF00FF, 'M'))
-    return 1;
-
-  if(draw_letter(&alphabet, 240, 200, 0xFF00FF, 'E'))
-    return 1;
+  if(draw_word(&alphabet, 0, 200, 0xFF00FF, "GAME")) return 1;
 
   return 0;
 }
