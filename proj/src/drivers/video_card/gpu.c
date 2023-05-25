@@ -246,9 +246,9 @@ int (draw_xpm_letters)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16
 
       unsigned int img_x = cur_x - x, img_y = cur_y - y;
 
-      //(letter - 'A') * 126 * 1979;
+      uint32_t offset =  (letter - 'A') * 76;
 
-      uint8_t* color = img_addr + ((letter - 'A') + (img_y * 76) + img_x)*bytes_per_pixel;
+      uint8_t* color = img_addr + (offset + (img_y * sprite.width) + img_x)*bytes_per_pixel;
 
       if (*((uint32_t*)color) == 0xFF00FF){
         continue;
