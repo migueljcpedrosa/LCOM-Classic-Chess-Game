@@ -7,6 +7,7 @@ typedef struct {
 
     char* name;
     Color color;
+    unsigned int time;
     Piece* pieces[16];
 
 } Player;

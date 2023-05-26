@@ -1,7 +1,7 @@
 #include "game_ctrl.h"
 #include "../view/viewer.h"
 
-void treat_input(CursorInput* input){
+void handle_input(CursorInput* input){
 
     unsigned int square_x = (input->x - board_start) / square_size;
     unsigned int square_y = (input->y - board_start) / square_size;
@@ -69,5 +69,35 @@ void treat_input(CursorInput* input){
 
     if (input->middleClick){
         printf("Middle click on (%d, %d) \n", square_x, square_y);
+    }
+}
+
+unsigned int white_counter = ROUND_TIME * 60;
+unsigned int black_counter = ROUND_TIME * 60;
+
+void handle_player_timer(){
+
+    if (game->turn == WHITE){
+        white_counter--;
+        if ((white_counter + 59) % 60 == 0){
+            game->white_player->time--;
+            printf("White time: %02d:%02d\n", game->white_player->time / 60, game->white_player->time % 60);
+            printf("Black time: %02d:%02d\n", game->black_player->time / 60, game->black_player->time % 60);
+        }
+        if (white_counter == 0){
+            printf("Black wins on time!\n");
+            printf("\n");
+        }
+    } else {
+        black_counter--;
+        if ((black_counter + 59) % 60 == 0){
+            game->black_player->time--;
+            printf("White time: %02d:%02d\n", game->white_player->time / 60, game->white_player->time % 60);
+            printf("Black time: %02d:%02d\n", game->black_player->time / 60, game->black_player->time % 60);
+            printf("\n");
+        }
+        if (black_counter == 0){
+            printf("White wins on time!\n");
+        }
     }
 }

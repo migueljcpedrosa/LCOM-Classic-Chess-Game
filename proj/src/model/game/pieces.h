@@ -3,33 +3,7 @@
 
 #include <stdbool.h>
 #include "../../view/sprite.h"
-
-typedef struct
-{
-    int x;
-    int y;
-} Position;
-
-typedef enum {
-    WHITE,
-    BLACK,
-} Color;
-
-typedef enum {
-    EMPTY,
-    PAWN,
-    KNIGHT,
-    ROOK,
-    BISHOP,
-    QUEEN,
-    KING
-} Type;
-
-
-typedef struct {
-    Position origin;
-    Position destination;
-} Move;
+#include "game_util.h"
 
 typedef struct {
 

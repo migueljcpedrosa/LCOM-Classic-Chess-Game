@@ -137,11 +137,12 @@ int interrupts_handler(){
                         mouse_ih();
                         if (packet_read){
                             CursorInput input = read_cursor_input(&packet_pp);
-                            treat_input(&input);
+                            handle_input(&input);
                         }
                     }
                     if (msg.m_notify.interrupts & irqTimer) {
                         timer_ih();
+                        handle_player_timer();
                         draw();
                         /*
                         if(gameMode == MENU_MODE) {drawMenu();}

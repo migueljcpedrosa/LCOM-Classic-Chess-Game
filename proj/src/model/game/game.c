@@ -4,6 +4,8 @@
 Piece* selected_piece = NULL;
 Game* game;
 
+static Piece* last_moved_pawn = NULL;
+
 Game* (create_game)(char white_name[], char black_name[]){
     Game* game = malloc(sizeof(Game));
 
@@ -44,7 +46,59 @@ Turn switch_turn(Game* game){
     return game->turn;
 }
 
-void execute_move(Game* game, Move move){
+void execute_normal(Game* game, Move move){
+
+    Board* board = game->board;
+
+    int origin = move.origin.x + move.origin.y * 8;
+    Piece* piece = board->squares[origin];
+
+    int destination = move.destination.x + move.destination.y  * 8;
+
+    if (piece->type == PAWN && abs(move.origin.y - move.destination.y) == 2){
+        last_moved_pawn = piece;
+    } else {
+        last_moved_pawn = NULL;
+    }
+
+    if (piece->type == PAWN && (destination < 8 || destination > 55)){
+        piece->type = QUEEN;
+        piece->sprite = piece->color == WHITE ? white_queen : black_queen;
+    }
+
+    board->squares[destination] = piece;
+    board->squares[origin] = NULL;
+    piece->position = move.destination;
+    piece->has_moved = true;
+}
+
+void execute_capture(Game* game, Move move){
+    
+    Board* board = game->board;
+
+    int origin = move.origin.x + move.origin.y * 8;
+    Piece* piece = board->squares[origin];
+
+    int destination = move.destination.x + move.destination.y  * 8;
+    Piece* captured_piece = board->squares[destination];
+
+    if (captured_piece != NULL){
+        captured_piece->status = CAPTURED;
+    }
+
+    if (piece->type == PAWN && (destination < 8 || destination > 55)){
+        piece->type = QUEEN;
+        piece->sprite = piece->color == WHITE ? white_queen : black_queen;
+    }
+
+    board->squares[destination] = piece;
+    board->squares[origin] = NULL;
+
+    piece->position = move.destination;
+    piece->has_moved = true;
+}
+
+void execute_castle(Game* game, Move move){
 
     Board* board = game->board;
 
@@ -58,49 +112,77 @@ void execute_move(Game* game, Move move){
     int destination = move.destination.x + move.destination.y  * 8;
     Piece* captured_piece = board->squares[destination];
 
-    if (captured_piece != NULL){
-        if (captured_piece->color == piece->color && captured_piece->type == ROOK && piece->type == KING){
+    Piece* rook = captured_piece;
+    Piece* king = piece;
 
-            Piece* rook = captured_piece;
-            Piece* king = piece;
+    if (origin < destination) {
 
-            if (origin < destination) {
-
-                board->squares[origin + 1] = rook;
-                board->squares[origin + 3] = NULL;
-                board->squares[origin + 2] = king;
-                king->position.x += 2;
-                rook->position.x = king->position.x - 1;
-            }
-            else {
-
-                board->squares[origin - 1] = rook;
-                board->squares[origin - 4] = NULL;
-                board->squares[origin - 2] = king;
-                king->position.x -= 2;
-                rook->position.x = king->position.x + 1;
-            }
-            board->squares[origin] = NULL;
-
-            king->has_moved = true;
-            rook->has_moved = true;
-
-            return;
-        } else {
-            captured_piece->status = CAPTURED;
-        }
+        board->squares[origin + 1] = rook;
+        board->squares[origin + 3] = NULL;
+        board->squares[origin + 2] = king;
+        king->position.x += 2;
+        rook->position.x = king->position.x - 1;
     }
+    else {
 
-    if (piece->type == PAWN && (destination < 8 || destination > 55)){
-        piece->type = QUEEN;
-        piece->sprite = piece->color == WHITE ? white_queen : black_queen;
+        board->squares[origin - 1] = rook;
+        board->squares[origin - 4] = NULL;
+        board->squares[origin - 2] = king;
+        king->position.x -= 2;
+        rook->position.x = king->position.x + 1;
     }
-
-    board->squares[destination] = piece;
     board->squares[origin] = NULL;
 
-    piece->position = move.destination;
-    piece->has_moved = true;
+    king->has_moved = true;
+    rook->has_moved = true;
+
+    return;
+}
+
+void execute_enPassant(Game* game, Move move){
+
+    Board* board = game->board;
+
+    int origin = move.origin.x + move.origin.y * 8;
+    Piece* pawn = board->squares[origin];
+
+    int destination = move.destination.x + move.destination.y  * 8;
+
+    int captured_pawn_pos = move.destination.x + move.origin.y * 8;
+
+    Piece* captured_pawn = board->squares[captured_pawn_pos];
+
+    captured_pawn->status = CAPTURED;
+
+    board->squares[captured_pawn_pos] = NULL;
+
+    board->squares[destination] = pawn;
+    board->squares[origin] = NULL;
+    pawn->position = move.destination;
+}
+
+
+void execute_move(Game* game, Move move){
+
+    switch(move.type){
+
+        case NORMAL:
+            execute_normal(game, move);
+            break;
+
+        case CAPTURE:
+            execute_capture(game, move);
+            break;
+
+        case CASTLE:
+            execute_castle(game, move);
+            break;
+
+        case EN_PASSANT:
+
+            execute_enPassant(game, move);
+            break;
+    }
 }
 
 bool can_move(Game* game){
@@ -273,13 +355,31 @@ void getPawnMoves(Game* game, Piece* piece){
     int boardPos = pos.y * 8 + pos.x;
 
     piece->num_moves = 0;
-    int direction = piece->color == WHITE ? 1 : -1;
+    int direction = piece->color == WHITE ? -1 : 1;
 
     int newPos = boardPos + direction * 8;
 
+    if (last_moved_pawn != NULL){
+        if (last_moved_pawn->position.y == pos.y){
+            if (last_moved_pawn->position.x == pos.x + 1 || last_moved_pawn->position.x == pos.x - 1){
+                Move move = {
+                    pos, 
+                    {last_moved_pawn->position.x, last_moved_pawn->position.y + direction},
+                    EN_PASSANT
+                };
+                piece->moves[piece->num_moves] = move;
+                piece->num_moves++;
+            }
+        }
+    }
+
     if (newPos >= 0 && newPos < 64){
         if (board->squares[newPos] == NULL){
-            Move move = {pos, {newPos % 8, newPos / 8}};
+            Move move = {
+                pos, 
+                {newPos % 8, newPos / 8},
+                NORMAL
+            };
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;
 
@@ -287,7 +387,11 @@ void getPawnMoves(Game* game, Piece* piece){
                 newPos = boardPos + direction * 16;
 
                 if (board->squares[newPos] == NULL){
-                    Move move = {pos, {newPos % 8, newPos / 8}};
+                    Move move = {
+                        pos, 
+                        {newPos % 8, newPos / 8},
+                        NORMAL
+                    };
                     piece->moves[piece->num_moves] = move;
                     piece->num_moves++;
                 }
@@ -302,7 +406,11 @@ void getPawnMoves(Game* game, Piece* piece){
     if (newPos / 8 == boardPos / 8 + direction){
         if (board->squares[newPos] != NULL) {
             if (board->squares[newPos]->color != piece->color){
-                Move move = {pos, {newPos % 8, newPos / 8}};
+                Move move = {
+                    pos, 
+                    {newPos % 8, newPos / 8},
+                    CAPTURE
+                };
                 piece->moves[piece->num_moves] = move;
                 piece->num_moves++;
             }
@@ -314,7 +422,11 @@ void getPawnMoves(Game* game, Piece* piece){
     if (newPos / 8 == boardPos / 8 + direction) {
         if (board->squares[newPos] != NULL) { 
             if (board->squares[newPos]->color != piece->color){
-                Move move = {pos, {newPos % 8, newPos / 8}};
+                Move move = {
+                    pos, 
+                    {newPos % 8, newPos / 8},
+                    CAPTURE
+                };
                 piece->moves[piece->num_moves] = move;
                 piece->num_moves++;
             }
@@ -339,13 +451,21 @@ void getMovesInLine(Game* game, Piece* piece, Position increment){
         }
         
         if (board->squares[newPos.y * 8 + newPos.x] == NULL){
-            Move move = {pos, newPos};
+            Move move = {
+                pos, 
+                newPos,
+                NORMAL
+            };
 
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;
         }
         else if (board->squares[newPos.y * 8 + newPos.x]->color != piece->color){
-            Move move = {pos, newPos};
+            Move move = {
+                pos, 
+                newPos,
+                CAPTURE
+            };
 
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;
@@ -414,8 +534,21 @@ void getKnightMoves(Game* game, Piece* piece){
 
         int newPos = dest.y * 8 + dest.x;
 
-        if (board->squares[newPos] == NULL || board->squares[newPos]->color != piece->color){
-            Move move = {pos, {newPos % 8, newPos / 8}};
+        if (board->squares[newPos] == NULL){
+            Move move = {
+                pos, 
+                {newPos % 8, newPos / 8},
+                NORMAL
+            };
+            piece->moves[piece->num_moves] = move;
+            piece->num_moves++;
+        } else if (board->squares[newPos]->color != piece->color) {
+
+            Move move = {
+                pos, 
+                {newPos % 8, newPos / 8},
+                CAPTURE
+            };
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;
         }
@@ -438,8 +571,6 @@ void getKingMoves(Game* game, Piece* king, bool checkForCheck){
 
     for (int i = 0; i < 8; i++){
 
-
-
         Position newPos = {pos.x + direction[i].x, pos.y + direction[i].y};
 
         if (newPos.x < 0 || newPos.x >= 8 || newPos.y < 0 || newPos.y >= 8){
@@ -448,8 +579,13 @@ void getKingMoves(Game* game, Piece* king, bool checkForCheck){
 
         int boardNewPos = newPos.y * 8 + newPos.x;
 
-        if (board->squares[boardNewPos] == NULL || board->squares[boardNewPos]->color != king->color){
-            Move move = {pos, newPos};
+        if (board->squares[boardNewPos] == NULL){
+            Move move = { pos, newPos, NORMAL};
+            king->moves[king->num_moves] = move;
+            king->num_moves++;
+        } else if (board->squares[boardNewPos]->color != king->color) {
+
+            Move move = {pos, newPos, CAPTURE};
             king->moves[king->num_moves] = move;
             king->num_moves++;
         }
@@ -463,13 +599,13 @@ void getKingMoves(Game* game, Piece* king, bool checkForCheck){
         return;
     }
 
-    if (is_check(game))
-        return;
 
+    if (is_check(game)){
+        return;
+    }
     Piece* rightRook = board->squares[boardPos + 3];
     Piece* leftRook = board->squares[boardPos - 4];
 
-    
     if (!rightRook->has_moved){
 
         bool empty = true, checkable = false;
@@ -488,7 +624,7 @@ void getKingMoves(Game* game, Piece* king, bool checkForCheck){
             } else {
                 
                 king->num_moves = 1;
-                king->moves[0] = (Move) {pos, {pos.x + i, pos.y}};
+                king->moves[0] = (Move) {pos, {pos.x + i, pos.y}, NORMAL};
                 filterMoves(game, king);
                 free(king->moves);
                 if (king->num_moves == 0){
@@ -503,7 +639,7 @@ void getKingMoves(Game* game, Piece* king, bool checkForCheck){
         king->num_moves = backupNum;
 
         if (empty && !checkable){
-            Move move = {pos, rightRook->position};
+            Move move = {pos, rightRook->position, CASTLE};
             king->moves[king->num_moves] = move;
             king->num_moves++;
         } 
@@ -526,7 +662,7 @@ void getKingMoves(Game* game, Piece* king, bool checkForCheck){
             } else {
 
                 king->num_moves = 1;
-                king->moves[0] = (Move) {pos, {pos.x - i, pos.y}};
+                king->moves[0] = (Move) {pos, {pos.x - i, pos.y}, NORMAL};
                 filterMoves(game, king);
                 free(king->moves);
                 if (king->num_moves == 0){
@@ -540,7 +676,7 @@ void getKingMoves(Game* game, Piece* king, bool checkForCheck){
         king->num_moves = backupNum;
 
         if (empty && !checkable){
-            Move move = {pos, leftRook->position};
+            Move move = {pos, leftRook->position, CASTLE};
             king->moves[king->num_moves] = move;
             king->num_moves++;
         }  

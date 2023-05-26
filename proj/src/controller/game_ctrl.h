@@ -6,6 +6,8 @@
 
 extern Piece* selected_piece;
 
-void treat_input(CursorInput* input);
+void handle_input(CursorInput* input);
+
+void handle_player_timer();
 
 #endif

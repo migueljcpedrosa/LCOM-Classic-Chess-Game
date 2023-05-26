@@ -7,6 +7,7 @@ Player* (create_player)(char name[], Color color){
 
     player->name = name;
     player->color = color;
+    player->time = 600;
 
     return player;
 }
