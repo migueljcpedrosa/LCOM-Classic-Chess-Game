@@ -29,6 +29,8 @@ uint8_t gameMode = MENU_MODE;
 typedef enum { WAITING, PLAYING, ENDING} GameStates;
 GameStates gameStates = PLAYING;
 
+uint16_t player_name_init = 100;
+
 int gameTurnCounter = 600;
 
 int main(int argc, char *argv[]) {
@@ -104,8 +106,8 @@ int interrupts_handler(){
     
     bool running = true;
 
-    menu_screenshot();
-    draw_menu();
+
+
     //take_screenshot();
 
     while(running){
@@ -148,6 +150,7 @@ int interrupts_handler(){
                     if (msg.m_notify.interrupts & irqTimer) {
                         timer_ih();
                         draw();
+                        draw_name_player();
                         /*
                         if(gameMode == MENU_MODE) {drawMenu();}
                             if(counter % 60 == 0){

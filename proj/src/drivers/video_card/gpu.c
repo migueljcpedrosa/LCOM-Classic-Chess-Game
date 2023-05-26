@@ -243,7 +243,7 @@ int (draw_xpm_letters)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16
   for(unsigned int cur_y = y; cur_y < y + sprite.height && cur_y < v_res; cur_y++){
 
     for(unsigned int cur_x = x; cur_x < x + 76 && cur_x < h_res; cur_x++){
-
+ 
       unsigned int img_x = cur_x - x, img_y = cur_y - y;
 
       uint32_t offset =  (letter - 'A') * 76 + 5;
@@ -266,7 +266,6 @@ int (draw_xpm_letters)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16
 int (draw_xpm_word)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y, char* word){
 
   for(size_t i = 0; i < strlen(word); i++){
-
     if(draw_xpm_letters(sprite, img_addr, x + i * 76, y, word[i])) return 1;
   }
 

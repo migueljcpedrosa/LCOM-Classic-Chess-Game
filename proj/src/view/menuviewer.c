@@ -2,6 +2,12 @@
 #include "../model/xpm/xpm.h"
 #include "../drivers/video_card/gpu.h"
 #include "viewer.h"
+#include <stdlib.h>
+#include "../controller/keyboard_controller.h"
+#include <stdio.h>
+
+extern uint16_t player_name_init;
+bool wasKeyPressed[30] = {false};
 
 int load_sprites_menu(){
 
@@ -52,9 +58,28 @@ int draw_menu() {
     return 0;
 }
 
+int draw_name_player() {
+
+  if(draw_word(&alphabet, 100, 100, 0xFF00FF, "PLAYER")) return 1;
+    if(draw_word(&alphabet, 600, 100, 0xFF00FF, "NAME")) return 1;
+
+    char letter[2];
+    if(scancodeLetters(letter)) return 1;
+
+      if(letter[0] >= 'A' && letter[0] <= 'Z'){
+          if(draw_word(&alphabet, player_name_init, 700, 0xFF00FF, letter) == 0){
+              player_name_init += 76; 
+          } 
+          else return 1;
+      }
+       return 0;
+    }
+    
+
 int (menu_screenshot)(){
 
-  if(draw_menu()) return 1;
+  //if(draw_menu()) return 1;
+  draw_name_player();
 
   if (copy_buffer_to_screenshot())
     return 1;
