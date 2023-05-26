@@ -824,6 +824,130 @@
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
   @main.c:126, interrupts_handler
     kbc_ih()
@@ -850,6 +974,10 @@
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
   @main.c:126, interrupts_handler
     kbc_ih()
@@ -861,62 +989,6 @@
       sys_inb(port, &temp)
     > sys_inb(0x60, addr: 0xeffff650)
     < sys_inb(0x60, addr: 0xeffff650 [0xb2 = 0b10110010])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
@@ -1124,18 +1196,6 @@
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
   @main.c:126, interrupts_handler
     kbc_ih()
@@ -1162,6 +1222,10 @@
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
   @main.c:126, interrupts_handler
     kbc_ih()
@@ -1173,10 +1237,6 @@
       sys_inb(port, &temp)
     > sys_inb(0x60, addr: 0xeffff650)
     < sys_inb(0x60, addr: 0xeffff650 [0x94 = 0b10010100])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
@@ -1308,10 +1368,6 @@
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
   @main.c:126, interrupts_handler
     kbc_ih()
@@ -1323,10 +1379,6 @@
       sys_inb(port, &temp)
     > sys_inb(0x60, addr: 0xeffff650)
     < sys_inb(0x60, addr: 0xeffff650 [0x26 = 0b00100110])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
@@ -1372,50 +1424,6 @@
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
   @main.c:126, interrupts_handler
     kbc_ih()
@@ -1427,10 +1435,6 @@
       sys_inb(port, &temp)
     > sys_inb(0x60, addr: 0xeffff650)
     < sys_inb(0x60, addr: 0xeffff650 [0x20 = 0b00100000])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
@@ -1488,10 +1492,6 @@
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
   @main.c:126, interrupts_handler
     kbc_ih()
@@ -1503,6 +1503,10 @@
       sys_inb(port, &temp)
     > sys_inb(0x60, addr: 0xeffff650)
     < sys_inb(0x60, addr: 0xeffff650 [0x12 = 0b00010010])
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
@@ -1672,50 +1676,6 @@
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0x0e = 0b00001110])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0x8e = 0b10001110])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
@@ -1749,110 +1709,6 @@
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0x0e = 0b00001110])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0x8e = 0b10001110])
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
@@ -2020,6 +1876,578 @@
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
+  @main.c:126, interrupts_handler
+    kbc_ih()
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x64, addr: 0xeffff650)
+    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x60, addr: 0xeffff650)
+    < sys_inb(0x60, addr: 0xeffff650 [0x0e = 0b00001110])
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
+  @main.c:126, interrupts_handler
+    kbc_ih()
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x64, addr: 0xeffff650)
+    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x60, addr: 0xeffff650)
+    < sys_inb(0x60, addr: 0xeffff650 [0x8e = 0b10001110])
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
+  @main.c:126, interrupts_handler
+    kbc_ih()
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x64, addr: 0xeffff650)
+    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x60, addr: 0xeffff650)
+    < sys_inb(0x60, addr: 0xeffff650 [0x0e = 0b00001110])
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
+  @main.c:126, interrupts_handler
+    kbc_ih()
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x64, addr: 0xeffff650)
+    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x60, addr: 0xeffff650)
+    < sys_inb(0x60, addr: 0xeffff650 [0x8e = 0b10001110])
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
+  @main.c:126, interrupts_handler
+    kbc_ih()
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x64, addr: 0xeffff650)
+    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x60, addr: 0xeffff650)
+    < sys_inb(0x60, addr: 0xeffff650 [0x0e = 0b00001110])
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
+  @main.c:126, interrupts_handler
+    kbc_ih()
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x64, addr: 0xeffff650)
+    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x60, addr: 0xeffff650)
+    < sys_inb(0x60, addr: 0xeffff650 [0x8e = 0b10001110])
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
+  @main.c:126, interrupts_handler
+    kbc_ih()
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x64, addr: 0xeffff650)
+    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x60, addr: 0xeffff650)
+    < sys_inb(0x60, addr: 0xeffff650 [0x0e = 0b00001110])
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
+  @main.c:126, interrupts_handler
+    kbc_ih()
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x64, addr: 0xeffff650)
+    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x60, addr: 0xeffff650)
+    < sys_inb(0x60, addr: 0xeffff650 [0x8e = 0b10001110])
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
+  @main.c:126, interrupts_handler
+    kbc_ih()
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x64, addr: 0xeffff650)
+    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x60, addr: 0xeffff650)
+    < sys_inb(0x60, addr: 0xeffff650 [0x0e = 0b00001110])
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
+  @main.c:126, interrupts_handler
+    kbc_ih()
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x64, addr: 0xeffff650)
+    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
+    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
+      sys_inb(port, &temp)
+    > sys_inb(0x60, addr: 0xeffff650)
+    < sys_inb(0x60, addr: 0xeffff650 [0x8e = 0b10001110])
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
+  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
+  @main.c:117, interrupts_handler
+    driver_receive(ANY, &msg, &ipc_status)
+  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
   @main.c:126, interrupts_handler
     kbc_ih()
@@ -2120,154 +2548,6 @@
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0x0e = 0b00001110])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0x8e = 0b10001110])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
@@ -2384,158 +2664,6 @@
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0x14 = 0b00010100])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0x94 = 0b10010100])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0x17 = 0b00010111])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0x97 = 0b10010111])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
@@ -2565,20 +2693,6 @@
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0x26 = 0b00100110])
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
@@ -2599,20 +2713,6 @@
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0xa6 = 0b10100110])
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
@@ -2708,20 +2808,6 @@
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0x20 = 0b00100000])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
@@ -2739,20 +2825,6 @@
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0xa0 = 0b10100000])
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
@@ -2777,20 +2849,6 @@
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0x12 = 0b00010010])
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
@@ -2807,20 +2865,6 @@
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
   < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000010]>)
-  @main.c:126, interrupts_handler
-    kbc_ih()
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x64, addr: 0xeffff650)
-    < sys_inb(0x64, addr: 0xeffff650 [0x1d = 0b00011101])
-    @/home/lcom/labs/g3/proj/src/drivers/timer/utils.c:22, util_sys_inb
-      sys_inb(port, &temp)
-    > sys_inb(0x60, addr: 0xeffff650)
-    < sys_inb(0x60, addr: 0xeffff650 [0x92 = 0b10010010])
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
@@ -2975,34 +3019,6 @@
       sys_inb(port, &temp)
     > sys_inb(0x60, addr: 0xeffff650)
     < sys_inb(0x60, addr: 0xeffff650 [0x01 = 0b00000001])
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
-  @main.c:117, interrupts_handler
-    driver_receive(ANY, &msg, &ipc_status)
-  > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
-  < driver_receive(<[HARDWARE: 0b0000000000000000000000000000000000000000000000000000000000000001]>)
   @main.c:117, interrupts_handler
     driver_receive(ANY, &msg, &ipc_status)
   > driver_receive(ANY, addr: 0xeffff740, addr: 0xeffff784)
