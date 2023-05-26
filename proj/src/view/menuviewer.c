@@ -73,20 +73,26 @@ int draw_name_player() {
           } 
           else return 1;
       }
+
       if(letter[0] == '+'){
-          if(delete_letter()) return 1;
+          player_name_init -= 76;
+          if(delete_space()) return 1;
       }
+
+      if(letter[0] == '-'){
+          if(delete_space()) return 1;
+          player_name_init += 76; 
+      }
+
   return 0;
 }
 
-int delete_letter(){
+int delete_space(){
 
-    player_name_init -= 76;
     if(draw_rectangle(player_name_init, 300, 76, 200, 0x000000)) return 1;
 
     return 0;
 }
-    
 
 int (menu_screenshot)(){
 

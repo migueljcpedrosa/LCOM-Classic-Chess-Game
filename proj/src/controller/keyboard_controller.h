@@ -4,7 +4,7 @@
 #include "../drivers/keyboard/keyboard.h"
 
 int scancodeLetters(char* letter);
-int getLetter();
+
 
 #endif
 

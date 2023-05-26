@@ -101,6 +101,9 @@ int scancodeLetters(char *letter){
         case 0x8e:  
           *letter = (char) '+';
           break;
+        case 0xb9:
+          *letter = (char) '-';
+          break;
         default:
           break;
     }
@@ -108,7 +111,3 @@ int scancodeLetters(char *letter){
     return 0;
 }
 
-int getLetter(){
-  if(scancodeLetters(letter_player_name)) return 1;
-  return 0;
-}
