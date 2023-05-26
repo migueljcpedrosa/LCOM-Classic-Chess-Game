@@ -69,7 +69,7 @@ int draw_pieces(){
 
 int erase_timers(){
 
-  int x = h_res - 50 * 5 - 30;
+  int x = h_res - numbers->img.width / 11 * 5 - 30;
   int y = board_start;
   unsigned int width = 50 * 5;
   unsigned int height = numbers->img.height;
@@ -89,7 +89,7 @@ int draw_timer(char timer[], int x, int y){
 
     draw_number(numbers->img, numbers->addr, x, y, timer[i]);
     
-    x += 50;
+    x += numbers->img.width / 11;
   }
 
   return 0;
@@ -97,7 +97,7 @@ int draw_timer(char timer[], int x, int y){
 
 int draw_timers(){
 
-  int x = h_res - 50 * 5 - 30;
+  int x = h_res - numbers->img.width / 11 * 5 - 30;
   int y = board_start;
 
   int count = game->black_player->time_counter;
