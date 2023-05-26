@@ -9,8 +9,8 @@ static Piece* last_moved_pawn = NULL;
 Game* (create_game)(char white_name[], char black_name[]){
     Game* game = malloc(sizeof(Game));
 
-    game->white_player = create_player(white_name, WHITE);
-    game->black_player = create_player(black_name, BLACK);
+    game->white_player = create_player(white_name, WHITE, USER);
+    game->black_player = create_player(black_name, BLACK, AI);
     
     game->board = create_board(game->white_player, game->black_player);
    
@@ -23,8 +23,8 @@ Game* copy_game(Game* game){
 
     Game* copy = malloc(sizeof(Game));
 
-    copy->white_player = create_player(game->white_player->name, WHITE);
-    copy->black_player = create_player(game->black_player->name, BLACK);
+    copy->white_player = create_player(game->white_player->name, WHITE, USER);
+    copy->black_player = create_player(game->black_player->name, BLACK, AI);
 
     copy->board = copy_board(game->board, copy->white_player, copy->black_player);
 
@@ -39,11 +39,14 @@ void destroy_game(Game* game){
     free(game);
 }
 
-Turn switch_turn(Game* game){
+void switch_turn(Game* game){
 
     game->turn = game->turn == WHITE ? BLACK : WHITE;
+}
 
-    return game->turn;
+Player* get_current_player(Game* game){
+
+    return game->turn == WHITE ? game->white_player : game->black_player;
 }
 
 void execute_normal(Game* game, Move move){

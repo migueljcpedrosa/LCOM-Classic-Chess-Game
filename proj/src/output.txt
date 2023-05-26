@@ -1,69 +1,43 @@
 White time: 09:59
-Black time: 10:00
-White time: 09:58
-Black time: 10:00
-White time: 09:58
 Black time: 09:59
-
-White time: 09:58
 Black time: 09:58
-
-White time: 09:57
-Black time: 09:58
-White time: 09:57
 Black time: 09:57
-
-White time: 09:56
-Black time: 09:57
-White time: 09:55
-Black time: 09:57
-White time: 09:55
 Black time: 09:56
-
-White time: 09:55
 Black time: 09:55
-
-White time: 09:55
 Black time: 09:54
-
-White time: 09:55
 Black time: 09:53
-
-White time: 09:54
-Black time: 09:53
-White time: 09:53
-Black time: 09:53
-White time: 09:52
-Black time: 09:53
-White time: 09:51
-Black time: 09:53
-White time: 09:50
-Black time: 09:53
-White time: 09:50
 Black time: 09:52
-
+White time: 09:58
+White time: 09:57
+White time: 09:56
+White time: 09:55
+White time: 09:54
+White time: 09:53
+White time: 09:52
+White time: 09:51
 White time: 09:50
-Black time: 09:51
-
-White time: 09:50
-Black time: 09:50
-
-White time: 09:50
-Black time: 09:49
-
 White time: 09:49
-Black time: 09:49
 White time: 09:48
-Black time: 09:49
-White time: 09:48
-Black time: 09:48
-
-White time: 09:48
-Black time: 09:47
-
 White time: 09:47
-Black time: 09:47
 White time: 09:46
-Black time: 09:47
 White time: 09:45
-Black time: 09:47
+White time: 09:44
+White time: 09:43
+White time: 09:42
+White time: 09:41
+White time: 09:40
+White time: 09:39
+White time: 09:38
+White time: 09:37
+White time: 09:36
+White time: 09:35
+White time: 09:34
+White time: 09:33
+Black time: 09:51
+White time: 09:32
+White time: 09:31
+White time: 09:30
+White time: 09:29
+White time: 09:28
+White time: 09:27
+White time: 09:26

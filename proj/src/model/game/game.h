@@ -24,7 +24,9 @@ Game* copy_game(Game* game);
 
 void destroy_game(Game* game);
 
-Turn switch_turn(Game* game);
+void switch_turn(Game* game);
+
+Player* get_current_player(Game* game);
 
 void execute_move(Game* game, Move move);
 

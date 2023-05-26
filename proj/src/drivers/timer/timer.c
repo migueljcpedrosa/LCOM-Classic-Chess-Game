@@ -4,7 +4,7 @@
 #include "i8254.h"
 
 static int hook_id = 0;
-int counter = 0;
+unsigned int counter = 0;
 
 //Function to change the frequency of any timer to generate interrupts at a given rate.
 int (timer_set_frequency)(uint8_t timer, uint32_t freq) {

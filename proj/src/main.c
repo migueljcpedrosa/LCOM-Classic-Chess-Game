@@ -16,7 +16,7 @@
 #include "model/game/game.h"
 #include "controller/game_ctrl.h"
 
-extern int counter;
+extern unsigned int counter;
 
 extern uint8_t scan_code[2];
 extern bool last_byte_read; 
