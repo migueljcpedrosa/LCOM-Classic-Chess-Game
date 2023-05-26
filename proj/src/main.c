@@ -8,6 +8,7 @@
 #include "drivers/mouse/mouse.h"
 #include "drivers/keyboard/i8042.h"
 #include "drivers/keyboard/keyboard.h"
+#include "drivers/rtc/rtc.h"
 #include "model/modes/utils.h"
 #include "view/viewer.h"
 #include "view/sprite.h"
@@ -69,6 +70,10 @@ int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse){
     if(mouse_subscribe_int(&bit_no)) return 1;
     *irqMouse = BIT(bit_no);
 
+    if(rtc_subscribe_interrupts()) return 1;
+
+    if(rtc_initialize_system()) return 1;
+
     if (set_mode(VBE_MODE)) return 1;
     vbe_mode_info_t vmi_p;
     if (vbe_get_mode_info(VBE_MODE, &vmi_p)) return 1;
@@ -83,6 +88,7 @@ int terminate(){
     if(timer_unsubscribe_int()) return 1;
     if(mouse_unsubscribe_int() || disable_data_reporting()) return 1;
     if(keyboard_unsubscribe_int()) return 1;
+    if(rtc_unsubscribe_interrupts()) return 1;
     if(vg_exit()) return 1;
     
     return 0;
@@ -93,6 +99,7 @@ int interrupts_handler(){
     uint8_t irqTimer;
     uint8_t irqKeyboard;
     uint8_t irqMouse;
+    extern int rtc_irq;
 
     int ipc_status,r;
     message msg;
@@ -157,8 +164,14 @@ int interrupts_handler(){
                             }
                         }*/
                     } 
+
+                    if(msg.m_notify.interrupts & rtc_irq){
+                        rtc_update_current_time();
+                    }
+
                     break;
-                }
+                    }
+
                 default:
                     break;
             }
