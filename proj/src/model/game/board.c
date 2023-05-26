@@ -67,7 +67,6 @@ Board* copy_board(Board* board, Player* white_player, Player* black_player){
 
     for (int i = 0; i < 64; i++){
 
-        printf("i: %d\n", i);
         if (board->squares[i] == NULL){
             copy->squares[i] = NULL;
             continue;

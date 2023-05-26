@@ -40,7 +40,7 @@ Piece* getPiece(Game* game, unsigned int x, unsigned int y);
 
 void filterMoves(Game* game, Piece* piece);
 
-void setMoves(Game* game, Piece* piece);
+void setMoves(Game* game, Piece* piece, bool checkForCheck);
 
 void getPawnMoves(Game* game, Piece* piece);
 
@@ -54,6 +54,6 @@ void getQueenMoves(Game* game, Piece* piece);
 
 void getKnightMoves(Game* game, Piece* piece);
 
-void getKingMoves(Game* game, Piece* piece);
+void getKingMoves(Game* game, Piece* king, bool checkForCheck);
 
 #endif

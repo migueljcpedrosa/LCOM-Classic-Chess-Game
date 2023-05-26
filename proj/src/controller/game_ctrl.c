@@ -12,8 +12,6 @@ void treat_input(CursorInput* input){
             return;
         }
 
-        printf("Click on x: %d, y: %d\n", square_x, square_y);
-
         selected_piece = getPiece(game, square_x, square_y);
 
         if (selected_piece == NULL){
@@ -25,7 +23,7 @@ void treat_input(CursorInput* input){
             return;
         }
 
-        setMoves(game, selected_piece);
+        setMoves(game, selected_piece, false);
 
         if (selected_piece->num_moves == 0){
             take_screenshot();
@@ -35,6 +33,12 @@ void treat_input(CursorInput* input){
         filterMoves(game, selected_piece);
 
         take_screenshot();
+
+    } else if (input->rightClick && selected_piece != NULL){
+        
+        selected_piece = NULL;
+        take_screenshot();
+        return;
 
     } else if (!input->leftClick && selected_piece != NULL){
 
@@ -50,6 +54,7 @@ void treat_input(CursorInput* input){
             unsigned int y = selected_piece->moves[i].destination.y;
             if (x == square_x && y == square_y){
                 execute_move(game, selected_piece->moves[i]);
+                switch_turn(game);
                 break;
             }
         }
@@ -60,10 +65,6 @@ void treat_input(CursorInput* input){
             printf("Stale mate!\n");
         }
         take_screenshot();
-    }
-
-    if (input->rightClick){
-        printf("Right click on (%d, %d) \n", square_x, square_y);
     }
 
     if (input->middleClick){
