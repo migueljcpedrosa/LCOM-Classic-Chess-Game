@@ -6,10 +6,11 @@
 #include "../controller/keyboard_controller.h"
 
 int load_sprites_menu();
-int draw_menu_button(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color);
+int draw_xpm_img(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color);
 int draw_menu_play_exit();
 int draw_title();
 int (menu_screenshot)();
 int draw_name_player();
+int delete_letter();
 
 #endif

@@ -3,6 +3,7 @@
 extern bool last_byte_read;
 extern uint8_t scan_code[2];
 uint8_t last_scan_code = 0;
+char* letter_player_name;
 
 int scancodeLetters(char *letter){
     if (!last_byte_read) {
@@ -97,9 +98,17 @@ int scancodeLetters(char *letter){
         case 0x32:
           *letter = (char) 'M';
           break;
+        case 0x8e:  
+          *letter = (char) '+';
+          break;
         default:
           break;
     }
     letter[1] = '\0';
     return 0;
+}
+
+int getLetter(){
+  if(scancodeLetters(letter_player_name)) return 1;
+  return 0;
 }
