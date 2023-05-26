@@ -31,6 +31,8 @@ GameStates gameStates = PLAYING;
 
 uint16_t player_name_init = 100;
 
+char* player_name = NULL;
+
 int gameTurnCounter = 600;
 
 int main(int argc, char *argv[]) {

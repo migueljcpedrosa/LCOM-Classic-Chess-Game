@@ -9,6 +9,10 @@
 extern uint16_t player_name_init;
 bool wasKeyPressed[30] = {false};
 
+extern char* player_name;
+
+uint8_t index_player_name=0;
+
 int load_sprites_menu(){
 
   if (load_sprite(&playButtonMenu, (xpm_map_t) playButtonMenu_xpm))
@@ -60,21 +64,28 @@ int draw_menu() {
 
 int draw_name_player() {
 
+  player_name = malloc(sizeof(char) * 10);
+
   if(draw_word(&alphabet, 100, 100, 0xFF00FF, "PLAYER")) return 1;
-    if(draw_word(&alphabet, 600, 100, 0xFF00FF, "NAME")) return 1;
+  if(draw_word(&alphabet, 600, 100, 0xFF00FF, "NAME")) return 1;
 
-    char letter[2];
-    if(scancodeLetters(letter)) return 1;
+  char letter[2];
+  
+  if(scancodeLetters(letter)) return 1;
 
-      if(letter[0] >= 'A' && letter[0] <= 'Z'){
-          if(draw_word(&alphabet, player_name_init, 700, 0xFF00FF, letter) == 0){
-              player_name_init += 76; 
-          } 
-          else return 1;
-      }
-       return 0;
-    }
-    
+  if(letter[0] >= 'A' && letter[0] <= 'Z' && index_player_name < 9){
+    player_name[index_player_name] = letter[0];
+    player_name[index_player_name + 1] = '\0';
+
+
+    // Draw the updated player_name string
+    if(draw_word(&alphabet, 100, 700, 0xFF00FF, player_name) == 0){ 
+        index_player_name++;
+    } 
+    else return 1;
+  }
+  return 0;
+}
 
 int (menu_screenshot)(){
 
