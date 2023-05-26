@@ -317,3 +317,29 @@ bool (move_sprite)( uint16_t* xi, uint16_t* yi, uint16_t xf, uint16_t yf, int16_
   }
   return false;
 }
+
+int draw_number(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y, char number){
+
+  for(unsigned int cur_y = y; cur_y < y + sprite.height && cur_y < v_res; cur_y++){
+
+    for(unsigned int cur_x = x; cur_x < x + 50 && cur_x < h_res; cur_x++){
+
+      unsigned int img_x = cur_x - x, img_y = cur_y - y;
+
+      unsigned int offset = (number - '0') * 50;
+
+      uint8_t* color = img_addr + offset * bytes_per_pixel + ((img_y * sprite.width) + img_x) * bytes_per_pixel;
+
+      if (*((uint32_t*)color) == 0xFF00FF){
+        continue;
+      }
+
+      uint8_t* pixel_pos = (uint8_t*)buffer + (cur_y * h_res + cur_x) * bytes_per_pixel;
+
+      memcpy(pixel_pos, color, bytes_per_pixel);
+    }
+  }
+
+  return 0;
+
+}

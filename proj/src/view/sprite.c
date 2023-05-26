@@ -18,6 +18,8 @@ Sprite* white_pawn;
 
 Sprite* mouse;
 
+Sprite* numbers;
+
 int load_sprites(){
 
   black_queen = (Sprite*) malloc(sizeof(Sprite));
@@ -71,6 +73,10 @@ int load_sprites(){
 
   mouse = (Sprite*) malloc(sizeof(Sprite));
   if (load_sprite(mouse, (xpm_map_t) mouse_xpm))
+    return 1;
+
+  numbers = (Sprite*) malloc(sizeof(Sprite));
+  if (load_sprite(numbers, (xpm_map_t) numbers_xpm))
     return 1;
 
   return 0;

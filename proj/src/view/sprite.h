@@ -23,6 +23,8 @@ extern Sprite* white_pawn;
 
 extern Sprite* mouse;
 
+extern Sprite* numbers;
+
 int (load_sprites)();
 
 int (load_sprite)(Sprite* sprite, xpm_map_t xpm);

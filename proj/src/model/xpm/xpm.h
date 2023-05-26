@@ -14,5 +14,6 @@
 #include "whiteRook.xpm"
 #include "whitePawn.xpm"
 #include "mouse.xpm"
+#include "numbers.xpm"
 
 #endif

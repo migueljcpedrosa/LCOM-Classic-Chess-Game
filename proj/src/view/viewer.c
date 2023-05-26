@@ -67,6 +67,66 @@ int draw_pieces(){
   return 0;
 }
 
+int erase_timers(){
+
+  int x = h_res - 50 * 5 - 30;
+  int y = board_start;
+  unsigned int width = 50 * 5;
+  unsigned int height = numbers->img.height;
+
+  draw_screenshot_to_buffer(x, y, width, height);
+
+  y = v_res - board_start - height;
+
+  draw_screenshot_to_buffer(x, y, width, height);
+  
+  return 0;
+}
+
+int draw_timer(char timer[], int x, int y){
+
+  for (int i = 0; i < 5; i++){
+
+    draw_number(numbers->img, numbers->addr, x, y, timer[i]);
+    
+    x += 50;
+  }
+
+  return 0;
+}
+
+int draw_timers(){
+
+  int x = h_res - 50 * 5 - 30;
+  int y = board_start;
+
+  int count = game->black_player->time_counter;
+  int count_in_seconds = count / 60;
+
+  int minutes = count_in_seconds / 60;
+  int seconds = count_in_seconds % 60;
+
+  char time[6];
+
+  sprintf(time, "%02d:%02d", minutes, seconds);
+
+  draw_timer(time, x, y);
+
+  y = v_res - board_start - numbers->img.height;
+
+  count = game->white_player->time_counter;
+  count_in_seconds = count / 60;
+
+  minutes = count_in_seconds / 60;
+  seconds = count_in_seconds % 60;
+
+  sprintf(time, "%02d:%02d", minutes, seconds);
+
+  draw_timer(time, x, y);
+
+  return 0;
+}
+
 int (take_screenshot)(){
 
   board_start = (v_res - (8 * square_size))  / 2;
@@ -86,6 +146,10 @@ unsigned int  selected_piece_old_y = 0;
 int (draw)(){
 
   erase_cursor();
+
+  erase_timers();
+
+  draw_timers();
 
 
   if (draw_cursor())
