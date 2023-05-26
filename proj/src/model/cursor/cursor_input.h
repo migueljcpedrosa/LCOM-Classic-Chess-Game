@@ -15,6 +15,6 @@ typedef struct {
     
 } CursorInput;
 
-CursorInput read_cursor_input(struct packet *packet);
+CursorInput (read_cursor_input)(struct packet *packet);
 
 #endif

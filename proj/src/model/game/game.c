@@ -19,7 +19,7 @@ Game* (create_game)(char white_name[], char black_name[]){
     return game;
 }
 
-Game* copy_game(Game* game){
+Game* (copy_game)(Game* game){
 
     Game* copy = malloc(sizeof(Game));
 
@@ -33,23 +33,131 @@ Game* copy_game(Game* game){
     return copy;
 }
 
-void destroy_game(Game* game){
+void (destroy_game)(Game* game){
 
     destroy_board(game->board);
     free(game);
 }
 
-void switch_turn(Game* game){
+void (switch_turn)(Game* game){
 
     game->turn = game->turn == WHITE ? BLACK : WHITE;
 }
 
-Player* get_current_player(Game* game){
+Player* (get_current_player)(Game* game){
 
     return game->turn == WHITE ? game->white_player : game->black_player;
 }
 
-void execute_normal(Game* game, Move move){
+bool (can_move)(Game* game){
+
+    Player* moving_player = game->turn == WHITE ? game->white_player : game->black_player;
+
+    for (int i = 0; i < 16; i++){
+
+        Piece* piece = moving_player->pieces[i];
+
+        if (piece == NULL){
+            continue;
+        }
+
+        if (piece->status != ALIVE){
+            continue;
+        }
+
+        setMoves(game, piece, false);
+
+        filterMoves(game, piece);
+
+        int num_moves = piece->num_moves;
+
+        if (num_moves > 0){
+            return true;
+        }
+    }
+    return false;
+}
+
+bool (is_check)(Game* game){
+
+    Player* checking_player = game->turn == WHITE ? game->black_player : game->white_player;
+
+    for (int i = 0; i < 16; i++){
+
+        Piece* checking_piece = checking_player->pieces[i];
+
+        if (checking_piece == NULL){
+            continue;
+        }
+
+        if (checking_piece->status != ALIVE){
+            continue;
+        }
+
+        setMoves(game, checking_piece, true);
+
+        int num_moves = checking_piece->num_moves;
+
+        Move* moves = checking_piece->moves;
+
+        for (int j = 0; j < num_moves; j++){
+
+            int destination = moves[j].destination.x + moves[j].destination.y * 8;
+
+            if (game->board->squares[destination] == NULL){
+                continue;
+            }
+
+            if (game->board->squares[destination]->type == KING && game->board->squares[destination]->color != checking_piece->color){
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
+bool (is_check_mate)(Game* game){
+
+    return is_check(game) && !can_move(game);
+}
+
+bool (is_stale_mate)(Game* game){
+
+    return !is_check(game) && !can_move(game);
+}
+
+Piece* (getPiece)(Game* game, unsigned int x, unsigned int y){
+
+    int pos = y * 8 + x;
+
+    return game->board->squares[pos];
+}
+
+void (execute_move)(Game* game, Move move){
+
+    switch(move.type){
+
+        case NORMAL:
+            execute_normal(game, move);
+            break;
+
+        case CAPTURE:
+            execute_capture(game, move);
+            break;
+
+        case CASTLE:
+            execute_castle(game, move);
+            break;
+
+        case EN_PASSANT:
+
+            execute_enPassant(game, move);
+            break;
+    }
+}
+
+void (execute_normal)(Game* game, Move move){
 
     Board* board = game->board;
 
@@ -75,7 +183,7 @@ void execute_normal(Game* game, Move move){
     piece->has_moved = true;
 }
 
-void execute_capture(Game* game, Move move){
+void (execute_capture)(Game* game, Move move){
     
     Board* board = game->board;
 
@@ -101,7 +209,7 @@ void execute_capture(Game* game, Move move){
     piece->has_moved = true;
 }
 
-void execute_castle(Game* game, Move move){
+void (execute_castle)(Game* game, Move move){
 
     Board* board = game->board;
 
@@ -142,7 +250,7 @@ void execute_castle(Game* game, Move move){
     return;
 }
 
-void execute_enPassant(Game* game, Move move){
+void (execute_enPassant)(Game* game, Move move){
 
     Board* board = game->board;
 
@@ -164,116 +272,7 @@ void execute_enPassant(Game* game, Move move){
     pawn->position = move.destination;
 }
 
-
-void execute_move(Game* game, Move move){
-
-    switch(move.type){
-
-        case NORMAL:
-            execute_normal(game, move);
-            break;
-
-        case CAPTURE:
-            execute_capture(game, move);
-            break;
-
-        case CASTLE:
-            execute_castle(game, move);
-            break;
-
-        case EN_PASSANT:
-
-            execute_enPassant(game, move);
-            break;
-    }
-}
-
-bool can_move(Game* game){
-
-    Player* moving_player = game->turn == WHITE ? game->white_player : game->black_player;
-
-    for (int i = 0; i < 16; i++){
-
-        Piece* piece = moving_player->pieces[i];
-
-        if (piece == NULL){
-            continue;
-        }
-
-        if (piece->status != ALIVE){
-            continue;
-        }
-
-        setMoves(game, piece, false);
-
-        filterMoves(game, piece);
-
-        int num_moves = piece->num_moves;
-
-        if (num_moves > 0){
-            return true;
-        }
-    }
-    return false;
-}
-
-bool is_check(Game* game){
-
-    Player* checking_player = game->turn == WHITE ? game->black_player : game->white_player;
-
-    for (int i = 0; i < 16; i++){
-
-        Piece* checking_piece = checking_player->pieces[i];
-
-        if (checking_piece == NULL){
-            continue;
-        }
-
-        if (checking_piece->status != ALIVE){
-            continue;
-        }
-
-        setMoves(game, checking_piece, true);
-
-        int num_moves = checking_piece->num_moves;
-
-        Move* moves = checking_piece->moves;
-
-        for (int j = 0; j < num_moves; j++){
-
-            int destination = moves[j].destination.x + moves[j].destination.y * 8;
-
-            if (game->board->squares[destination] == NULL){
-                continue;
-            }
-
-            if (game->board->squares[destination]->type == KING && game->board->squares[destination]->color != checking_piece->color){
-                return true;
-            }
-        }
-    }
-
-    return false;
-}
-
-bool is_check_mate(Game* game){
-
-    return is_check(game) && !can_move(game);
-}
-
-bool is_stale_mate(Game* game){
-
-    return !is_check(game) && !can_move(game);
-}
-
-Piece* getPiece(Game* game, unsigned int x, unsigned int y){
-
-    int pos = y * 8 + x;
-
-    return game->board->squares[pos];
-}
-
-void filterMoves(Game* game, Piece* piece){
+void (filterMoves)(Game* game, Piece* piece){
 
     Move* filtered_moves = malloc(sizeof(Move) * piece->num_moves);
     int num_filtered_moves = 0;
@@ -313,7 +312,7 @@ void filterMoves(Game* game, Piece* piece){
     piece->moves = filtered_moves;
 }
 
-void setMoves(Game* game, Piece* piece, bool checkForCheck){
+void (setMoves)(Game* game, Piece* piece, bool checkForCheck){
 
 
     piece->num_moves = 0;
@@ -350,7 +349,7 @@ void setMoves(Game* game, Piece* piece, bool checkForCheck){
     }
 }
 
-void getPawnMoves(Game* game, Piece* piece){
+void (getPawnMoves)(Game* game, Piece* piece){
 
     Board* board = game->board;
 
@@ -437,7 +436,7 @@ void getPawnMoves(Game* game, Piece* piece){
     }
 }
 
-void getMovesInLine(Game* game, Piece* piece, Position increment){
+void (getMovesInLine)(Game* game, Piece* piece, Position increment){
 
     Board* board = game->board;
 
@@ -479,7 +478,7 @@ void getMovesInLine(Game* game, Piece* piece, Position increment){
     } 
 }
 
-void getBishopMoves(Game* game, Piece* piece){
+void (getBishopMoves)(Game* game, Piece* piece){
 
     piece->num_moves = 0;
 
@@ -490,7 +489,7 @@ void getBishopMoves(Game* game, Piece* piece){
     }
 }
 
-void getRookMoves(Game* game, Piece* piece){
+void (getRookMoves)(Game* game, Piece* piece){
 
     piece->num_moves = 0;
 
@@ -501,7 +500,7 @@ void getRookMoves(Game* game, Piece* piece){
     }
 }
 
-void getQueenMoves(Game* game, Piece* piece){
+void (getQueenMoves)(Game* game, Piece* piece){
 
     piece->num_moves = 0;
 
@@ -515,7 +514,7 @@ void getQueenMoves(Game* game, Piece* piece){
     }
 }
 
-void getKnightMoves(Game* game, Piece* piece){
+void (getKnightMoves)(Game* game, Piece* piece){
 
     Board* board = game->board;
 
@@ -558,7 +557,7 @@ void getKnightMoves(Game* game, Piece* piece){
     }
 }
 
-void getKingMoves(Game* game, Piece* king, bool checkForCheck){
+void (getKingMoves)(Game* game, Piece* king, bool checkForCheck){
 
     Board* board = game->board;
 

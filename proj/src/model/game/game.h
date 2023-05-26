@@ -20,42 +20,50 @@ extern Game* game;
 
 Game* (create_game)(char white_name[], char black_name[]);
 
-Game* copy_game(Game* game);
+Game* (copy_game)(Game* game);
 
-void destroy_game(Game* game);
+void (destroy_game)(Game* game);
 
-void switch_turn(Game* game);
+void (switch_turn)(Game* game);
 
-Player* get_current_player(Game* game);
+Player* (get_current_player)(Game* game);
 
-void execute_move(Game* game, Move move);
+bool (can_move)(Game* game);
 
-bool can_move(Game* game);
+bool (is_check)(Game* game);
 
-bool is_check(Game* game);
+bool (is_check_mate)(Game* game);
 
-bool is_check_mate(Game* game);
+bool (is_stale_mate)(Game* game);
 
-bool is_stale_mate(Game* game);
+Piece* (getPiece)(Game* game, unsigned int x, unsigned int y);
 
-Piece* getPiece(Game* game, unsigned int x, unsigned int y);
+void (execute_move)(Game* game, Move move);
 
-void filterMoves(Game* game, Piece* piece);
+void (execute_normal)(Game* game, Move move);
 
-void setMoves(Game* game, Piece* piece, bool checkForCheck);
+void (execute_capture)(Game* game, Move move);
 
-void getPawnMoves(Game* game, Piece* piece);
+void (execute_castle)(Game* game, Move move);
 
-void getMovesInLine(Game* game, Piece* piece, Position increment);
+void (execute_enPassant)(Game* game, Move move);
 
-void getBishopMoves(Game* game, Piece* piece);
+void (filterMoves)(Game* game, Piece* piece);
 
-void getRookMoves(Game* game, Piece* piece);
+void (setMoves)(Game* game, Piece* piece, bool checkForCheck);
 
-void getQueenMoves(Game* game, Piece* piece);
+void (getPawnMoves)(Game* game, Piece* piece);
 
-void getKnightMoves(Game* game, Piece* piece);
+void (getMovesInLine)(Game* game, Piece* piece, Position increment);
 
-void getKingMoves(Game* game, Piece* king, bool checkForCheck);
+void (getBishopMoves)(Game* game, Piece* piece);
+
+void (getRookMoves)(Game* game, Piece* piece);
+
+void (getQueenMoves)(Game* game, Piece* piece);
+
+void (getKnightMoves)(Game* game, Piece* piece);
+
+void (getKingMoves)(Game* game, Piece* king, bool checkForCheck);
 
 #endif

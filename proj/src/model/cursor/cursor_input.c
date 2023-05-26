@@ -1,7 +1,7 @@
 #include "cursor_input.h"
 #include <lcom/lcf.h>
 
-CursorInput read_cursor_input(struct packet *packet){
+CursorInput (read_cursor_input)(struct packet *packet){
 
     CursorInput CursorInput;
 

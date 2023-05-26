@@ -6,8 +6,16 @@
 
 extern Piece* selected_piece;
 
-void handle_input(CursorInput* input);
+void (check_game_over)();
 
-void handle_player_timer();
+void (setup_bot_timer)(Player* player);
+
+void (get_all_moves)(Player* bot, Move* possibleMoves, int* num_moves);
+
+void (handle_bot_play)(Player* bot);
+
+void (handle_input)(CursorInput* input);
+
+void (handle_player_timer)();
 
 #endif
