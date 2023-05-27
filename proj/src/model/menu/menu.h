@@ -31,6 +31,8 @@ typedef struct {
   Title title;
   Button playButton;
   Button exitButton;
+  
+
 } Menu;
 
 extern Menu* menu;

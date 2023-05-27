@@ -8,8 +8,6 @@ Menu* menu;
 
 void create_menu(){
 
-  printf("Creating menu\n");
-
   menu = malloc(sizeof(Menu));
 
   Title title;

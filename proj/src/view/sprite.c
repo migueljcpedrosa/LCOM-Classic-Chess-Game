@@ -96,6 +96,8 @@ int load_sprites(){
   if (load_sprite(playButton, (xpm_map_t) playButtonMenu_xpm))
     return 1;
 
+  
+
   return 0;
 }
 

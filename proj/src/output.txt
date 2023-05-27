@@ -1,0 +1,25 @@
+Creating menu
+Menu created
+Length: 0
+Letter M
+Word: 
+Length: 1
+Letter A
+Word: M
+Length: 2
+Letter T
+Word: MA
+Length: 3
+Letter I
+Word: MAT
+Length: 4
+Letter L
+Word: MATI
+Length: 5
+Letter D
+Word: MATIL
+Length: 6
+Letter E
+Word: MATILD
+Creating menu
+Menu created
