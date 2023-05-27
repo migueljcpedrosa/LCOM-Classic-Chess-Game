@@ -345,12 +345,13 @@ int (draw_xpm_letter)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_
 
 int (draw_xpm_word)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y, char* word){
 
+  int back = 0;
   for(size_t i = 0; i < strlen(word); i++){
     
     if (word[i] < 'A' || word[i] > 'Z')
       continue;
       
-    if(draw_xpm_letter(sprite, img_addr, x + i * 76, y, word[i])) 
+    if(draw_xpm_letter(sprite, img_addr, x + (i - back) * 76, y, word[i])) 
       	return 1;
   }
 

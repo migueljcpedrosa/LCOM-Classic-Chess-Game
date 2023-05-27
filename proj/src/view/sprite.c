@@ -21,6 +21,7 @@ Sprite* mouse;
 Sprite* numbers;
 
 Sprite* alphabet;
+Sprite* alphabet_small;
 
 Sprite* exitButton;
 Sprite* playButton;
@@ -86,6 +87,10 @@ int load_sprites(){
 
   alphabet = (Sprite*) malloc(sizeof(Sprite));
   if (load_sprite(alphabet, (xpm_map_t) alphabet_courier_xpm))
+    return 1;
+
+  alphabet_small = (Sprite*) malloc(sizeof(Sprite));
+  if (load_sprite(alphabet_small, (xpm_map_t) alphabet_small_xpm))
     return 1;
 
   exitButton = (Sprite*) malloc(sizeof(Sprite));

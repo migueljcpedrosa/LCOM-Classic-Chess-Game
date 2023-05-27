@@ -1,12 +1,16 @@
 #include "game.h"
 #include <stdlib.h>
 
+char* game_result;
+char* game_winner;
+
 Piece* selected_piece = NULL;
 Game* game;
 
 static Piece* last_moved_pawn = NULL;
 
 void (create_game)(char white_name[], char black_name[]){
+
     game = malloc(sizeof(Game));
 
     game->white_player = create_player(white_name, WHITE, USER);
@@ -35,6 +39,8 @@ void (destroy_game)(){
 
     destroy_board(game->board);
     free(game);
+
+    printf("Game destroyed\n");
 }
 
 void (switch_turn)(Game* game){
@@ -45,6 +51,11 @@ void (switch_turn)(Game* game){
 Player* (get_current_player)(Game* game){
 
     return game->turn == WHITE ? game->white_player : game->black_player;
+}
+
+Player* (get_waiting_player)(Game* game){
+
+    return game->turn == WHITE ? game->black_player : game->white_player;
 }
 
 bool (can_move)(Game* game){

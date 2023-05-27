@@ -4,8 +4,6 @@
 #include "../drivers/video_card/gpu.h"
 #include "sprite.h"
 
-int draw_xpm_img(Sprite* sprite, uint16_t x, uint16_t y);
-
 int draw_buttons();
 
 int draw_title();
