@@ -32,8 +32,8 @@ int (name_screenshot)(){
        return 1;
   }
 
-  if(draw_word(alphabet, 400, 100, "PLAYER")) return 1;
-  if(draw_word(alphabet, 450, 200, "NAME")) return 1;
+  if(draw_word(alphabet, 550, 100, "PLAYER")) return 1;
+  if(draw_word(alphabet, 630, 200, "NAME")) return 1;
 
   if (copy_buffer_to_screenshot())
     return 1;

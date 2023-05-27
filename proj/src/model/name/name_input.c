@@ -10,8 +10,8 @@ void create_name(){
   nameInput->limit = 8;
   nameInput->name = malloc(nameInput->limit * sizeof(char));
   nameInput->name[0] = '\0';
-  nameInput->x = 100;
-  nameInput->y = 300;
+  nameInput->x = 500;
+  nameInput->y = 400;
   nameInput->sprite = alphabet;
 }
 
