@@ -5,7 +5,7 @@
 #include "../../view/sprite.h"
 #include "game_util.h"
 
-typedef struct {
+typedef struct Piece {
 
     Position position;
 

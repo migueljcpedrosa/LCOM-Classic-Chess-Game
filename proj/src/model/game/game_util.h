@@ -31,10 +31,13 @@ typedef enum {
     EN_PASSANT
 } MoveType;
 
+struct Piece;
+
 typedef struct {
     Position origin;
     Position destination;
     MoveType type;
+    struct Piece* secondary_piece;
 
 } Move;
 
