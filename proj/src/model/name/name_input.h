@@ -15,6 +15,8 @@ typedef struct {
 
 extern NameInput* nameInput;
 
+extern char* nameBackup;
+
 void (create_name)();
 
 void (destroy_name)();

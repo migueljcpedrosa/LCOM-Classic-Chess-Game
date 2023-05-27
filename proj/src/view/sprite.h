@@ -26,6 +26,7 @@ extern Sprite* mouse;
 extern Sprite* numbers;
 
 extern Sprite* alphabet;
+extern Sprite* alphabet_small;
 
 extern Sprite* exitButton;
 extern Sprite* playButton;

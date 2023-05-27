@@ -1,20 +1,10 @@
 #include "menu_viewer.h"
 #include "viewer.h"
-#include "../model/xpm/xpm.h"
 #include "../model/menu/menu.h"
 #include "../drivers/video_card/gpu.h"
 #include "viewer.h"
 #include <stdlib.h>
 #include <stdio.h>
-
-bool wasKeyPressed[30] = {false};
-
-int draw_xpm_img(Sprite* sprite, uint16_t x, uint16_t y) {
-  
-  draw_xpm(sprite->img, sprite->addr, x, y);
-
-  return 0;
-}
 
 int draw_title(){
   
@@ -29,11 +19,11 @@ int draw_title(){
 
 int draw_buttons(){
 
-  if(draw_xpm_img(menu->playButton.sprite, menu->playButton.x, menu->playButton.y)){
+  if(draw_sprite(menu->playButton.sprite, menu->playButton.x, menu->playButton.y)){
        return 1;
   }
 
-  if(draw_xpm_img(menu->exitButton.sprite, menu->exitButton.x, menu->exitButton.y)){
+  if(draw_sprite(menu->exitButton.sprite, menu->exitButton.x, menu->exitButton.y)){
        return 1;
   }
 

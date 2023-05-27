@@ -1,25 +1,24 @@
-Creating menu
 Menu created
-Length: 0
-Letter M
-Word: 
-Length: 1
-Letter A
-Word: M
-Length: 2
-Letter T
-Word: MA
-Length: 3
-Letter I
-Word: MAT
-Length: 4
-Letter L
-Word: MATI
-Length: 5
-Letter D
-Word: MATIL
-Length: 6
-Letter E
-Word: MATILD
-Creating menu
+Game destroyed
+Menu created
+Game destroyed
+Menu created
+Game destroyed
+Menu created
+Game destroyed
+Menu created
+Game destroyed
+game_over creating
+Result: CHECK MATE
+Winner: RAMOS WINS
+game_over created
+game_over_screenshot1
+draw_game_over_title
+word: CHECK MATE
+word: RAMOS WINS
+draw_game_over_buttons
+draw_game_over_buttons2
+game_over_screenshot2
+After init Game Over
+Game destroyed
 Menu created

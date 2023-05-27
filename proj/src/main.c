@@ -11,7 +11,6 @@
 #include "view/viewer.h"
 #include "view/sprite.h"
 #include "model/cursor/cursor.h"
-#include "model/utils.h"
 #include "state/state.h"
 
 extern int counter;
@@ -136,7 +135,7 @@ int interrupts_handler(){
                         } 
 
                         if(msg.m_notify.interrupts & irqRtc){
-                            rtc_ih(&current_time);
+                            //rtc_ih(&current_time);
                             //drawDate(&current_time);
                         }
                         break;

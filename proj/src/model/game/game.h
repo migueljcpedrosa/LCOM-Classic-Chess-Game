@@ -15,6 +15,10 @@ typedef struct {
 
 } Game;
 
+
+extern char* game_result;
+extern char* game_winner;
+
 extern Piece* selected_piece;
 extern Game* game;
 
@@ -27,6 +31,8 @@ void (destroy_game)();
 void (switch_turn)(Game* game);
 
 Player* (get_current_player)(Game* game);
+
+Player* (get_waiting_player)(Game* game);
 
 bool (can_move)(Game* game);
 
