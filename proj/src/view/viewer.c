@@ -45,3 +45,28 @@ int (draw_word)(Sprite* sprite, uint16_t x, uint16_t y, char* word){
 
   return 0;
 }
+
+int (drawDate)(rtc_timestamp_t* timestamp) {
+  char date[11];
+  date[0] = timestamp->day / 10 + '0';
+  date[1] = timestamp->day % 10 + '0';
+  date[2] = '/';
+  date[3] = timestamp->month / 10 + '0';
+  date[4] = timestamp->month % 10 + '0';
+  date[5] = '/';
+  date[6] = '2';
+  date[7] = '0';
+  date[8] = timestamp->year / 10 + '0';
+  date[9] = timestamp->year % 10 + '0';
+  date[10] = '\0';
+
+  char time[6];
+  time[0] = timestamp->hours / 10 + '0';
+  time[1] = timestamp->hours % 10 + '0';
+  time[2] = ':';
+  time[3] = timestamp->minutes / 10 + '0';
+  time[4] = timestamp->minutes % 10 + '0';
+  time[5] = '\0';
+  printf("%s %s\n",time,date);
+  return 0;
+}

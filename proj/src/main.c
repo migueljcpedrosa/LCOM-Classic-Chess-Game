@@ -7,6 +7,7 @@
 #include "drivers/mouse/mouse.h"
 #include "drivers/keyboard/i8042.h"
 #include "drivers/keyboard/keyboard.h"
+#include "drivers/rtc/rtc.h"
 #include "view/viewer.h"
 #include "view/sprite.h"
 #include "model/cursor/cursor.h"
@@ -25,6 +26,8 @@ extern bool packet_read;
 
 int gameTurnCounter = 600;
 
+rtc_timestamp_t current_time;
+
 int main(int argc, char *argv[]) {
 
   lcf_set_language("EN-US");
@@ -41,7 +44,7 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
-int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse){
+int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse, uint8_t* irqRtc){
 
     cursor_create(0,0);
 
@@ -61,6 +64,11 @@ int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse){
     if(mouse_subscribe_int(&bit_no)) return 1;
     *irqMouse = BIT(bit_no);
 
+    if(rtc_subscribe_interrupts(&bit_no)) return 1;
+    *irqRtc = bit_no;
+
+    if(rtc_initialize_system()) return 1;
+
     if (set_mode(VBE_MODE)) return 1;
     vbe_mode_info_t vmi_p;
     if (vbe_get_mode_info(VBE_MODE, &vmi_p)) return 1;
@@ -77,6 +85,7 @@ int terminate(){
     if(timer_unsubscribe_int()) return 1;
     if(mouse_unsubscribe_int() || disable_data_reporting()) return 1;
     if(keyboard_unsubscribe_int()) return 1;
+    if(rtc_unsubscribe_interrupts()) return 1;
     if(vg_exit()) return 1;
     
     return 0;
@@ -87,11 +96,12 @@ int interrupts_handler(){
         uint8_t irqTimer;
         uint8_t irqKeyboard;
         uint8_t irqMouse;
+        uint8_t irqRtc;
 
         int ipc_status,r;
         message msg;
 
-        if (initialize(&irqTimer, &irqKeyboard, &irqMouse)){
+        if (initialize(&irqTimer, &irqKeyboard, &irqMouse, &irqRtc)){
             terminate();
             return 1;
         }
@@ -124,7 +134,14 @@ int interrupts_handler(){
                             timer_ih();
                             state_timer_handler();
                         } 
+
+                        if(msg.m_notify.interrupts & irqRtc){
+                            rtc_ih(&current_time);
+                            drawDate(&current_time);
+                        }
                         break;
+
+
                 }
                 default:
                     break;
