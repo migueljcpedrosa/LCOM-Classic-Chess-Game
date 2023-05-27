@@ -137,7 +137,7 @@ int interrupts_handler(){
 
                         if(msg.m_notify.interrupts & irqRtc){
                             rtc_ih(&current_time);
-                            drawDate(&current_time);
+                            //drawDate(&current_time);
                         }
                         break;
 
