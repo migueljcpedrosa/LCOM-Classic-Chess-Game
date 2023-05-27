@@ -112,7 +112,15 @@ int drawDate(rtc_timestamp_t* timestamp) {
   date[8] = timestamp->year / 10 + '0';
   date[9] = timestamp->year % 10 + '0';
   date[10] = '\0';
-  printf("%s\n", date);
+
+  char time[6];
+  time[0] = timestamp->hours / 10 + '0';
+  time[1] = timestamp->hours % 10 + '0';
+  time[2] = ':';
+  time[3] = timestamp->minutes / 10 + '0';
+  time[4] = timestamp->minutes % 10 + '0';
+  time[5] = '\0';
+  printf("%s %s\n",time,date);
   return 0;
 }
 

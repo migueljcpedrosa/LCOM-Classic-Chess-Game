@@ -167,9 +167,9 @@ int interrupts_handler(){
                         }*/
                     } 
                     
-                    //rtc_get_current_time(&current_time);
-                    //drawDate(&current_time);
-                    draw_time(123);
+                    rtc_get_current_time(&current_time);
+                    drawDate(&current_time);
+                    //draw_time(123);
 
                     if(msg.m_notify.interrupts & rtc_irq){
 
