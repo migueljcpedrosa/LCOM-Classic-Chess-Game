@@ -2,33 +2,8 @@
 #define _PIECE_H_
 
 #include <stdbool.h>
-
-typedef struct
-{
-    int x;
-    int y;
-} Position;
-
-typedef enum {
-    WHITE,
-    BLACK,
-} Color;
-
-typedef enum {
-    NONE,
-    PAWN,
-    KNIGHT,
-    ROOK,
-    BISHOP,
-    QUEEN,
-    KING
-} Type;
-
-
-typedef struct {
-    Position origin;
-    Position destination;
-} Move;
+#include "../../view/sprite.h"
+#include "game_util.h"
 
 typedef struct {
 
@@ -39,12 +14,14 @@ typedef struct {
     bool has_moved;
     enum {ALIVE, CAPTURED} status;
     
-    Move moves[64];
+    Move* moves;
     int num_moves;
+
+    Sprite* sprite;
 } Piece;
 
-Position create_position(int boardIndex);
+Position (create_position)(int boardIndex);
 
-Piece* create_piece(Type type, Color color, Position pos);
+Piece* (create_piece)(Type type, Color color, Position pos);
 
 #endif

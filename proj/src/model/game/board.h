@@ -4,28 +4,19 @@
 #include "pieces.h"
 #include "player.h"
 
+extern unsigned int board_start;
+extern unsigned int square_size;
+extern unsigned int square_color; 
+extern unsigned int square_color_alt; 
+
 typedef struct {
     Piece* squares[64];
 } Board;
 
-Board* create_board(Player* white_player, Player* black_player);
+Board* (create_board)(Player* white_player, Player* black_player);
+
+Board* copy_board(Board* board, Player* white_player, Player* black_player);
 
 void destroy_board(Board* board);
-
-Piece* getMoves(Board* board, Piece* piece);
-
-void getPawnMoves(Board* board, Piece* piece);
-
-void getMovesInLine(Board* board, Piece* piece, int increment);
-
-void getBishopMoves(Board* board, Piece* piece);
-
-void getRookMoves(Board* board, Piece* piece);
-
-void getQueenMoves(Board* board, Piece* piece);
-
-void getKnightMoves(Board* board, Piece* piece);
-
-void getKingMoves(Board* board, Piece* piece);
 
 #endif

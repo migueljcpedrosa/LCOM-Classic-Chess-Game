@@ -93,6 +93,13 @@ int (map_info)(vbe_mode_info_t* vmi_p){
   return 0;
 }
 
+int (clean_screen)(){
+  
+    memset(buffer, 0, h_res * v_res * bytes_per_pixel);
+  
+    return 0; 
+}
+
 int (draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color){
 
   if (x < 0 || x >= h_res || y < 0 || y >= v_res) {
@@ -238,43 +245,6 @@ int (draw_xpm)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y){
   return 0;
 }
 
-int (draw_xpm_letters)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y, char letter){
-
-  for(unsigned int cur_y = y; cur_y < y + sprite.height && cur_y < v_res; cur_y++){
-
-    for(unsigned int cur_x = x; cur_x < x + 76 && cur_x < h_res; cur_x++){
- 
-      unsigned int img_x = cur_x - x, img_y = cur_y - y;
-
-      uint32_t offset =  (letter - 'A') * 76 + 5;
-
-      uint8_t* color = img_addr + (offset + (img_y * sprite.width) + img_x)*bytes_per_pixel;
-
-      if (*((uint32_t*)color) == 0xFF00FF){
-        continue;
-      }
-
-      uint8_t* pixel_pos = (uint8_t*)buffer + (cur_y * h_res + cur_x) * bytes_per_pixel;
-
-      memcpy(pixel_pos, color, bytes_per_pixel);
-    }
-  }
-
-  return 0;
-}
-
-int (draw_xpm_word)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y, char* word){
-
-  for(size_t i = 0; i < strlen(word); i++){
-    
-    if(draw_xpm_letters(sprite, img_addr, x + i * 76, y, word[i])) 
-      	return 1;
-  
-  }
-
-  return 0;
-}
-
 
 int (erase_xpm)(xpm_map_t xpm, enum xpm_image_type type, uint16_t x, uint16_t y){
 
@@ -346,4 +316,69 @@ bool (move_sprite)( uint16_t* xi, uint16_t* yi, uint16_t xf, uint16_t yf, int16_
     }
   }
   return false;
+}
+
+int (draw_xpm_letter)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y, char letter){
+
+  for(unsigned int cur_y = y; cur_y < y + sprite.height && cur_y < v_res; cur_y++){
+
+    for(unsigned int cur_x = x; cur_x < x + 76 && cur_x < h_res; cur_x++){
+ 
+      unsigned int img_x = cur_x - x, img_y = cur_y - y;
+
+      uint32_t offset =  (letter - 'A') * 76 + 5;
+
+      uint8_t* color = img_addr + (offset + (img_y * sprite.width) + img_x)*bytes_per_pixel;
+
+      if (*((uint32_t*)color) == 0xFF00FF){
+        continue;
+      }
+
+      uint8_t* pixel_pos = (uint8_t*)buffer + (cur_y * h_res + cur_x) * bytes_per_pixel;
+
+      memcpy(pixel_pos, color, bytes_per_pixel);
+    }
+  }
+
+  return 0;
+}
+
+int (draw_xpm_word)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y, char* word){
+
+  for(size_t i = 0; i < strlen(word); i++){
+    
+    if (word[i] < 'A' || word[i] > 'Z')
+      continue;
+      
+    if(draw_xpm_letter(sprite, img_addr, x + i * 76, y, word[i])) 
+      	return 1;
+  }
+
+  return 0;
+}
+
+int (draw_number)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y, char number){
+
+  for(unsigned int cur_y = y; cur_y < y + sprite.height && cur_y < v_res; cur_y++){
+
+    for(unsigned int cur_x = x; cur_x < x + sprite.width / 11 && cur_x < h_res; cur_x++){
+
+      unsigned int img_x = cur_x - x, img_y = cur_y - y;
+
+      unsigned int offset = (number - '0') * sprite.width / 11;
+
+      uint8_t* color = img_addr + offset * bytes_per_pixel + ((img_y * sprite.width) + img_x) * bytes_per_pixel;
+
+      if (*((uint32_t*)color) == 0xFF00FF){
+        continue;
+      }
+
+      uint8_t* pixel_pos = (uint8_t*)buffer + (cur_y * h_res + cur_x) * bytes_per_pixel;
+
+      memcpy(pixel_pos, color, bytes_per_pixel);
+    }
+  }
+
+  return 0;
+
 }

@@ -12,10 +12,10 @@ typedef struct {
 
 Cursor* cursor;
 
-void cursor_create(int x, int y);
+void (cursor_create)(int x, int y);
 
-void cursor_destroy();
+void (cursor_destroy)();
 
-void cursor_move(int x, int y);
+void (cursor_move)(int x, int y);
 
 #endif 

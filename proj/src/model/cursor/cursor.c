@@ -2,7 +2,7 @@
 #include "../../drivers/video_card/gpu.h"
 #include <stdlib.h>
 
-void cursor_create(int x, int y){
+void (cursor_create)(int x, int y){
 
     cursor = (Cursor*) malloc(sizeof(Cursor));
 
@@ -14,11 +14,11 @@ void cursor_create(int x, int y){
     cursor->height = 26;
 }
 
-void cursor_destroy(){
+void (cursor_destroy)(){
     free(cursor);
 }
 
-void cursor_move(int x, int y){
+void (cursor_move)(int x, int y){
 
     if (cursor->x + x >= 0 && cursor->x + x + cursor->width < (int) h_res)
         cursor->x += x;

@@ -1,7 +1,7 @@
 /* XPM */
 static char * blackKing_xpm[] = {
 "100 100 196 2",
-"  	c None",
+"  	c #FF00FF",
 ". 	c #000000",
 "+ 	c #050505",
 "@ 	c #C2C2C2",

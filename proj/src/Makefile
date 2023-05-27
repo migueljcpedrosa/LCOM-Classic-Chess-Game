@@ -7,7 +7,6 @@ PROG=proj
 .PATH: ${.CURDIR}/drivers/
 .PATH: ${.CURDIR}/model/game/
 .PATH: ${.CURDIR}/model/xpm/
-.PATH: ${.CURDIR}/model/modes/
 .PATH: ${.CURDIR}/model/cursor/
 .PATH: ${.CURDIR}/model/menu/
 .PATH: ${.CURDIR}/model/name/
@@ -15,7 +14,7 @@ PROG=proj
 .PATH: ${.CURDIR}/controller/
 .PATH: ${.CURDIR}/state/
 
-SRCS = 	main.c timer.c mouse.c keyboard.c menu.c gpu.c game.c pieces.c board.c player.c viewer.c utils.c sprite.c cursor.c menu_viewer.c name_viewer.c menu_controller.c name_controller.c state.c name_input.c
+SRCS = 	main.c timer.c mouse.c keyboard.c menu.c gpu.c game.c pieces.c board.c player.c viewer.c utils.c sprite.c cursor.c cursor_input.c game_controller.c menu_viewer.c name_viewer.c menu_controller.c name_controller.c state.c name_input.c game_viewer.c 
 
 CFLAGS += -pedantic
 

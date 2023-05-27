@@ -8,11 +8,27 @@ typedef struct {
   xpm_image_t img;
 } Sprite;
 
-Sprite exitButton;
-Sprite playButton;
-Sprite alphabet;
-Sprite blackQueen;
-Sprite mouse;
+extern Sprite* black_queen;
+extern Sprite* white_queen;
+extern Sprite* black_king;
+extern Sprite* white_king;
+extern Sprite* black_rook;
+extern Sprite* white_rook;
+extern Sprite* black_bishop;
+extern Sprite* white_bishop;
+extern Sprite* black_knight;
+extern Sprite* white_knight;
+extern Sprite* black_pawn;
+extern Sprite* white_pawn;
+
+extern Sprite* mouse;
+
+extern Sprite* numbers;
+
+extern Sprite* alphabet;
+
+extern Sprite* exitButton;
+extern Sprite* playButton;
 
 int (load_sprites)();
 

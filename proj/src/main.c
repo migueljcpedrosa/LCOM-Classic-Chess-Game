@@ -96,8 +96,6 @@ int interrupts_handler(){
             return 1;
         }
 
-        //take_screenshot();
-
         while(state != EXIT){
 
             if ((r = driver_receive(ANY, &msg, &ipc_status)) != 0) {
@@ -117,15 +115,8 @@ int interrupts_handler(){
                         if (msg.m_notify.interrupts & irqMouse) {
                             mouse_ih();
                             if (packet_read){
-                                packet_read = false;
-                                pp_index = 0;
-                                if (packet_pp.rb){
-                                    //running = false;
-                                }
-                                int16_t move_x = (((int16_t) packet_pp.x_ov) << 8) | packet_pp.delta_x;
-                                int16_t move_y = (((int16_t) packet_pp.y_ov) << 8) | packet_pp.delta_y;
-                                
-                                cursor_move(move_x, -move_y);
+                                CursorInput input = read_cursor_input(&packet_pp);
+                                state_mouse_handler(input);
                             }
                         }
 
