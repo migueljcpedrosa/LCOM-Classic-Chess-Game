@@ -117,6 +117,7 @@ int drawDate(rtc_timestamp_t* timestamp) {
 }
 
 
+
 int draw_time(int16_t seconds) {
 
   int minutes = (seconds % 3600) / 60 ;
@@ -132,5 +133,7 @@ int draw_time(int16_t seconds) {
   time[5] = '\0';
 
   printf("%s\n", time);
+  
   return 0;
 }
+
