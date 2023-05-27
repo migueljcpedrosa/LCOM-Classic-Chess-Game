@@ -34,6 +34,8 @@ extern Sprite* chessBackground;
 
 int (load_sprites)();
 
+void (destroy_sprites)(); 
+
 int (load_sprite)(Sprite* sprite, xpm_map_t xpm);
 
 #endif

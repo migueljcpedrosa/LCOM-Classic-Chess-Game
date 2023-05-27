@@ -108,6 +108,34 @@ int load_sprites(){
   return 0;
 }
 
+void (destroy_sprites)(){
+
+  free(black_queen);
+  free(white_queen);
+  free(black_king);
+  free(white_king);
+  free(black_rook);
+  free(white_rook);
+  free(black_bishop);
+  free(white_bishop);
+  free(black_knight);
+  free(white_knight);
+  free(black_pawn);
+  free(white_pawn);
+
+  free(mouse);
+
+  free(numbers);
+
+  free(alphabet);
+  free(alphabet_small);
+
+  free(exitButton);
+  free(playButton);
+
+  free(chessBackground);
+}
+
 int load_sprite(Sprite* sprite, xpm_map_t xpm){
 
   uint8_t* addr;

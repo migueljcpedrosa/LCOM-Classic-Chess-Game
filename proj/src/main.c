@@ -86,6 +86,9 @@ int terminate(){
     if(keyboard_unsubscribe_int()) return 1;
     if(rtc_unsubscribe_interrupts()) return 1;
     if(vg_exit()) return 1;
+
+    leave_state();
+    destroy_sprites();
     
     return 0;
 }
