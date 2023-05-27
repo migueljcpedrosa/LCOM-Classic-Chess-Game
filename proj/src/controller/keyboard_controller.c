@@ -110,4 +110,3 @@ int scancodeLetters(char *letter){
     letter[1] = '\0';
     return 0;
 }
-

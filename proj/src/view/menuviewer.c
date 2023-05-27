@@ -64,25 +64,25 @@ int draw_name_player() {
   if(draw_word(&alphabet, 100, 100, 0xFF00FF, "PLAYER")) return 1;
   if(draw_word(&alphabet, 600, 100, 0xFF00FF, "NAME")) return 1;
 
-    char letter[2];
-    if(scancodeLetters(letter)) return 1;
+  char letter[2];
+  if(scancodeLetters(letter)) return 1;
 
-      if(letter[0] >= 'A' && letter[0] <= 'Z'){
-          if(draw_word(&alphabet, player_name_init, 300, 0xFF00FF, letter) == 0){
-              player_name_init += 76; 
-          } 
-          else return 1;
-      }
+    if(letter[0] >= 'A' && letter[0] <= 'Z'){
+        if(draw_word(&alphabet, player_name_init, 300, 0xFF00FF, letter) == 0){
+            player_name_init += 76; 
+        } 
+        else return 1;
+    }
 
-      if(letter[0] == '+'){
-          player_name_init -= 76;
-          if(delete_space()) return 1;
-      }
+    if(letter[0] == '+'){
+        player_name_init -= 76;
+        if(delete_space()) return 1;
+    }
 
-      if(letter[0] == '-'){
-          if(delete_space()) return 1;
-          player_name_init += 76; 
-      }
+    if(letter[0] == '-'){
+        if(delete_space()) return 1;
+        player_name_init += 76; 
+    }
 
   return 0;
 }

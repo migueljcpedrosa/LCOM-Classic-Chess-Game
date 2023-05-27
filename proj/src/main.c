@@ -8,11 +8,11 @@
 #include "drivers/mouse/mouse.h"
 #include "drivers/keyboard/i8042.h"
 #include "drivers/keyboard/keyboard.h"
-#include "model/modes/utils.h"
 #include "view/viewer.h"
 #include "view/sprite.h"
 #include "model/cursor/cursor.h"
 #include "view/menuviewer.h"
+#include "model/utils.h"
 
 extern int counter;
 
@@ -23,11 +23,6 @@ extern int kbd_index;
 extern struct packet packet_pp;
 extern int pp_index;
 extern bool packet_read;
-
-uint8_t gameMode = MENU_MODE;
-
-typedef enum { WAITING, PLAYING, ENDING} GameStates;
-GameStates gameStates = PLAYING;
 
 uint16_t player_name_init = 100;
 
@@ -94,82 +89,105 @@ int terminate(){
 
 int interrupts_handler(){
 
-    uint8_t irqTimer;
-    uint8_t irqKeyboard;
-    uint8_t irqMouse;
+        uint8_t irqTimer;
+        uint8_t irqKeyboard;
+        uint8_t irqMouse;
 
-    int ipc_status,r;
-    message msg;
+        int ipc_status,r;
+        message msg;
 
-    if (initialize(&irqTimer, &irqKeyboard, &irqMouse)){
-        terminate();
-        return 1;
-    }
-    
-    bool running = true;
-
-
-
-    //take_screenshot();
-
-    while(running){
-
-         if ((r = driver_receive(ANY, &msg, &ipc_status)) != 0) {
-            continue;
+        if (initialize(&irqTimer, &irqKeyboard, &irqMouse)){
+            terminate();
+            return 1;
         }
+        
+        bool running = true;
 
-        if(is_ipc_notify(ipc_status)) {
-            switch(_ENDPOINT_P(msg.m_source)){
-                case HARDWARE:{
-                    
-                    if (msg.m_notify.interrupts & irqKeyboard){
-                        kbc_ih();
-                        if (last_byte_read){
-                            if (scan_code[0] == 0x81)
-                                running = false;
+        //take_screenshot();
+
+        while(running){
+
+            if ((r = driver_receive(ANY, &msg, &ipc_status)) != 0) {
+                continue;
+            }
+
+            if(is_ipc_notify(ipc_status)) {
+                switch(_ENDPOINT_P(msg.m_source)){
+                    case HARDWARE:{
+                        if (msg.m_notify.interrupts & irqKeyboard){
+                            kbc_ih();
+                            if (last_byte_read){
+                                if (scan_code[0] == 0x81)
+                                    running = false;
+                            }
+
+                            switch(game_mode){
+                                case MENU_MODE:
+                                    keyboard_exit(scan_code);
+                                    break;
+                                case NAME_PLAYER_MODE:
+                                    keyboard_player_name(scan_code);
+                                    break;
+                                case GAME_MODE:
+                                    keyboard_exit(scan_code);
+                                    break;
+                                case EXIT_MENU:
+                                    keyboard_exit(scan_code);
+                                    break;
+                                default:
+                                    break;
+                            }
                         }
-                        /*
-                        if(gameMode == MENU_MODE){
-                            if(scan_code[0] == 0x01){
-                                gameStates = ENDING;
+
+                        if (msg.m_notify.interrupts & irqMouse) {
+                            mouse_ih();
+                            if (packet_read){
+                                packet_read = false;
+                                pp_index = 0;
+                                if (packet_pp.rb){
+                                    running = false;
+                                }
+                                int16_t move_x = (((int16_t) packet_pp.x_ov) << 8) | packet_pp.delta_x;
+                                int16_t move_y = (((int16_t) packet_pp.y_ov) << 8) | packet_pp.delta_y;
+                                
+                                cursor_move(move_x, -move_y);
                             }
-                        }*/
-                    }
-                    if (msg.m_notify.interrupts & irqMouse) {
-                        mouse_ih();
-                        if (packet_read){
-                            packet_read = false;
-                            pp_index = 0;
-                            if (packet_pp.rb){
-                                running = false;
-                            }
-                            int16_t move_x = (((int16_t) packet_pp.x_ov) << 8) | packet_pp.delta_x;
-                            int16_t move_y = (((int16_t) packet_pp.y_ov) << 8) | packet_pp.delta_y;
-                            
-                            cursor_move(move_x, -move_y);
                         }
-                    }
-                    if (msg.m_notify.interrupts & irqTimer) {
-                        timer_ih();
-                        draw();
-                        draw_name_player();
-                        /*
-                        if(gameMode == MENU_MODE) {drawMenu();}
-                            if(counter % 60 == 0){
-                            if(gameStates == PLAYING) gameTurnCounter--;
-                            if((gameTurnCounter == 0) && (gameStates == PLAYING)){
-                                gameStates = ENDING;
+
+                        if (msg.m_notify.interrupts & irqTimer) {
+                            timer_ih();
+
+                            switch(game_mode){
+                                case MENU_MODE:
+                                    draw_menu();
+                                    break;
+                                case NAME_PLAYER_MODE:
+                                    draw_name_player();
+                                    break;
+                                case GAME_MODE:
+                                    draw_board();
+                                    break;
+                                case EXIT_MENU:
+                                    draw_final_menu();
+                                    break;
+                                default:
+                                    break;
                             }
-                        }*/
-                    } 
-                    break;
+
+                            if(counter % 60 == 0){  
+                            if(game_state == PLAYING) gameTurnCounter--;
+                            if((gameTurnCounter == 0) && (game_state == PLAYING)){
+                                game_state = ENDING;
+                            }
+                        } 
+                        break;
+                    }
+                    default:
+                        break;
                 }
-                default:
-                    break;
             }
         }
     }
-    
     return 0;
 }
 

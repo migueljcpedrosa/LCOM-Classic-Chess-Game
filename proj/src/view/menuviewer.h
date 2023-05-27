@@ -12,5 +12,7 @@ int draw_title();
 int (menu_screenshot)();
 int draw_name_player();
 int delete_space();
+int draw_menu();
+int draw_final_menu();
 
 #endif
