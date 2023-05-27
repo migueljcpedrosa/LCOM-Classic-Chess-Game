@@ -1,6 +1,6 @@
 #include "rtc.h"
 
-int hook_id = 8;
+int hook_id = 5;
 int rtc_irq = 8;
 
 rtc_timestamp_t current_time;
@@ -30,10 +30,10 @@ int rtc_read_register(uint8_t command, uint8_t *output) {
 }
 
 int rtc_subscribe_interrupts(uint8_t *bit_no) {
-    if(bit_no == NULL) 
-    return 1;
+    hook_id = 5;
 
-     *bit_no = hook_id;
+    *bit_no = hook_id;
+
     return sys_irqsetpolicy(rtc_irq, IRQ_REENABLE, &hook_id);
 }
 
@@ -75,7 +75,7 @@ int rtc_update_current_time() {
     return 0;
 }
 
-int rtc_get_current_time(rtc_timestamp_t* timestamp) {
+int rtc_ih(rtc_timestamp_t* timestamp) {
     if (rtc_update_current_time() != 0) return 1;
     *timestamp = current_time;
     return 0;

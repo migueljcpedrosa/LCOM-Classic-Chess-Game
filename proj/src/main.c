@@ -73,7 +73,7 @@ int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse, uint8
     *irqMouse = BIT(bit_no);
     
     if(rtc_subscribe_interrupts(&bit_no)) return 1;
-    *irqRtc = BIT(bit_no);
+    *irqRtc = bit_no;
 
     if(rtc_initialize_system()) return 1;
 
@@ -102,7 +102,6 @@ int interrupts_handler(){
     uint8_t irqTimer;
     uint8_t irqKeyboard;
     uint8_t irqMouse;
-    extern int rtc_irq;
     uint8_t irqRtc;
 
     int ipc_status,r;
@@ -169,10 +168,8 @@ int interrupts_handler(){
                         }*/
                     } 
                     
-                    printf("before rtc interrupt\n");
                     if(msg.m_notify.interrupts & irqRtc){
-                        printf("rtc interrupt\n");
-                        rtc_get_current_time(&current_time);
+                        rtc_ih(&current_time);
                         drawDate(&current_time);
                     }
 
