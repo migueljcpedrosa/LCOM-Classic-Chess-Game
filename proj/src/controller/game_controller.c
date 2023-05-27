@@ -20,6 +20,8 @@ int (check_game_over)(){
         
     } else if (is_stale_mate(game)){
 
+        game_winner = malloc(sizeof(char) * 30);
+        game_result = malloc(sizeof(char) * 30);
         sprintf(game_winner, "DRAW");
         sprintf(game_result, "STALE MATE");
         set_state(GAME_OVER);

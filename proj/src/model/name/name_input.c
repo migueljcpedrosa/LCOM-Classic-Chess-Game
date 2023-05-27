@@ -7,7 +7,7 @@ char* nameBackup;
 void create_name(){
 
   nameInput = malloc(sizeof(NameInput));
-  nameInput->limit = 12;
+  nameInput->limit = 8;
   nameInput->name = malloc(nameInput->limit * sizeof(char));
   nameInput->name[0] = '\0';
   nameInput->x = 100;

@@ -1,24 +1,15 @@
 Menu created
 Game destroyed
-Menu created
-Game destroyed
-Menu created
-Game destroyed
-Menu created
-Game destroyed
-Menu created
-Game destroyed
 game_over creating
 Result: CHECK MATE
-Winner: RAMOS WINS
+Winner: RASMOOO WINS
 game_over created
 game_over_screenshot1
 draw_game_over_title
 word: CHECK MATE
-word: RAMOS WINS
+word: RASMOOO WINS
 draw_game_over_buttons
 draw_game_over_buttons2
 game_over_screenshot2
 After init Game Over
-Game destroyed
 Menu created
