@@ -36,5 +36,6 @@
 #define SUCCESS       0xFA
 
 #define ESC 0x01
+#define ENTER 0x9c
 
 #endif

@@ -266,7 +266,10 @@ int (draw_xpm_letters)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16
 int (draw_xpm_word)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y, char* word){
 
   for(size_t i = 0; i < strlen(word); i++){
-    if(draw_xpm_letters(sprite, img_addr, x + i * 76, y, word[i])) return 1;
+    
+    if(draw_xpm_letters(sprite, img_addr, x + i * 76, y, word[i])) 
+      	return 1;
+  
   }
 
   return 0;

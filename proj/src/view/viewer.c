@@ -1,7 +1,6 @@
 #include "viewer.h" 
 #include "../model/xpm/xpm.h"
 #include "../drivers/video_card/gpu.h"
-#include "../model/cursor/cursor.h"
 
 uint16_t square_size = 100;
 uint32_t square_color = 0xeeeed2; 
@@ -86,12 +85,14 @@ int draw_piece(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color) {
   return 0;
 }
 
-int (draw_letter)(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color, char letter) {
+int (draw_letter)(Sprite* sprite, uint16_t x, uint16_t y, char letter) {
   draw_xpm_letters(sprite->img, sprite->addr, x, y, letter);
   return 0;
 }
 
-int draw_word(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color, char* word) {
+int draw_word(Sprite* sprite, uint16_t x, uint16_t y, char* word) {
+
+  printf("%s\n", word);
   draw_xpm_word(sprite->img, sprite->addr, x, y, word);
   return 0;
 }
