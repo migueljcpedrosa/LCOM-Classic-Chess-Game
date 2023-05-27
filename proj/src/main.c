@@ -32,6 +32,8 @@ GameStates gameStates = PLAYING;
 
 int gameTurnCounter = 600;
 
+rtc_timestamp_t current_time;
+
 int main(int argc, char *argv[]) {
 
   lcf_set_language("EN-US");
@@ -164,9 +166,15 @@ int interrupts_handler(){
                             }
                         }*/
                     } 
+                    
+                    //rtc_get_current_time(&current_time);
+                    //drawDate(&current_time);
+                    draw_time(123);
 
                     if(msg.m_notify.interrupts & rtc_irq){
-                        rtc_update_current_time();
+
+                        rtc_get_current_time(&current_time);
+                        drawDate(&current_time);
                     }
 
                     break;

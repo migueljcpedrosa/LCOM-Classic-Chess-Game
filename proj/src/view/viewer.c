@@ -2,6 +2,7 @@
 #include "../model/xpm/xpm.h"
 #include "../drivers/video_card/gpu.h"
 #include "../model/cursor/cursor.h"
+#include "../drivers/rtc/rtc.h"
 
 uint16_t square_size = 100;
 uint32_t square_color = 0xeeeed2; 
@@ -95,5 +96,41 @@ int (draw_letter)(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color, char l
 
 int draw_word(Sprite* sprite, uint16_t x, uint16_t y, uint32_t color, char* word) {
   draw_xpm_word(sprite->img, sprite->addr, x, y, word);
+  return 0;
+}
+
+int drawDate(rtc_timestamp_t* timestamp) {
+  char date[11];
+  date[0] = timestamp->day / 10 + '0';
+  date[1] = timestamp->day % 10 + '0';
+  date[2] = '/';
+  date[3] = timestamp->month / 10 + '0';
+  date[4] = timestamp->month % 10 + '0';
+  date[5] = '/';
+  date[6] = '2';
+  date[7] = '0';
+  date[8] = timestamp->year / 10 + '0';
+  date[9] = timestamp->year % 10 + '0';
+  date[10] = '\0';
+  printf("%s\n", date);
+  return 0;
+}
+
+
+int draw_time(int16_t seconds) {
+
+  int minutes = (seconds % 3600) / 60 ;
+
+  int secs = seconds % 60;
+
+  char time[6];
+  time[0] = minutes / 10 + '0';
+  time[1] = minutes % 10 + '0';
+  time[2] = ':';
+  time[3] = secs / 10 + '0';
+  time[4] = secs % 10 + '0';
+  time[5] = '\0';
+
+  printf("%s\n", time);
   return 0;
 }

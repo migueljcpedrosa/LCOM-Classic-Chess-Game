@@ -71,3 +71,9 @@ int rtc_update_current_time() {
     return 0;
 }
 
+int rtc_get_current_time(rtc_timestamp_t* timestamp) {
+    if (rtc_update_current_time() != 0) return 1;
+    *timestamp = current_time;
+    return 0;
+}
+

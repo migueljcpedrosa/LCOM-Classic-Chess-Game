@@ -33,4 +33,5 @@ uint8_t rtc_convert_bcd_to_binary(uint8_t bcd_number);
 bool rtc_currently_updating();
 int rtc_update_current_time();
 int rtc_update_time_unit(uint8_t register_address, uint8_t* time_component);
+int rtc_get_current_time(rtc_timestamp_t* timestamp);
 #endif
