@@ -26,7 +26,7 @@ typedef struct {
 
 int rtc_in_binary_mode();
 int rtc_initialize_system();
-int rtc_subscribe_interrupts();
+int rtc_subscribe_interrupts(uint8_t *bit_no);
 int rtc_unsubscribe_interrupts();
 int rtc_read_register(uint8_t command, uint8_t *output);
 uint8_t rtc_convert_bcd_to_binary(uint8_t bcd_number);

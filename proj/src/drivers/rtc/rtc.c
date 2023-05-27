@@ -29,7 +29,11 @@ int rtc_read_register(uint8_t command, uint8_t *output) {
     return 0;
 }
 
-int rtc_subscribe_interrupts() {
+int rtc_subscribe_interrupts(uint8_t *bit_no) {
+    if(bit_no == NULL) 
+    return 1;
+
+     *bit_no = hook_id;
     return sys_irqsetpolicy(rtc_irq, IRQ_REENABLE, &hook_id);
 }
 
