@@ -11,7 +11,6 @@
 #include "view/viewer.h"
 #include "view/sprite.h"
 #include "model/cursor/cursor.h"
-#include "model/utils.h"
 #include "state/state.h"
 
 extern int counter;

@@ -24,6 +24,7 @@ Sprite* alphabet;
 
 Sprite* exitButton;
 Sprite* playButton;
+Sprite* chessBackground;
 
 int load_sprites(){
 
@@ -38,7 +39,6 @@ int load_sprites(){
   black_king = (Sprite*) malloc(sizeof(Sprite));
   if (load_sprite(black_king, (xpm_map_t) blackKing_xpm))
     return 1;
-
 
   white_king = (Sprite*) malloc(sizeof(Sprite));
   if (load_sprite(white_king, (xpm_map_t) whiteKing_xpm))
@@ -96,7 +96,9 @@ int load_sprites(){
   if (load_sprite(playButton, (xpm_map_t) playButtonMenu_xpm))
     return 1;
 
-  
+  chessBackground = (Sprite*) malloc(sizeof(Sprite));
+  if (load_sprite(chessBackground, (xpm_map_t) chessBackground_xpm))
+    return 1;
 
   return 0;
 }

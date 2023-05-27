@@ -1,7 +1,7 @@
 /* XPM */
 static char * playButtonMenu_xpm[] = {
 "300 100 1397 2",
-"  	c None",
+"  	c #FF00FF",
 ". 	c #508F1A",
 "+ 	c #498F18",
 "@ 	c #498F17",

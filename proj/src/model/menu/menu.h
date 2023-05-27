@@ -21,7 +21,6 @@ typedef struct {
   int y;
   int width;
   int height;
-
   Sprite* sprite;
 
 } Button;
@@ -31,7 +30,7 @@ typedef struct {
   Title title;
   Button playButton;
   Button exitButton;
-  
+  Sprite* background;
 
 } Menu;
 

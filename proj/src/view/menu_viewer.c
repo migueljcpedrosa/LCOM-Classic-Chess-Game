@@ -20,7 +20,7 @@ int draw_title(){
   
   for (int i = 0; i < menu->title.num_words; i++) {
 
-    if(draw_word(alphabet, menu->title.x, menu->title.y + (i * 76), menu->title.words[i]))
+    if(draw_word(alphabet, menu->title.x, menu->title.y + (i * 90), menu->title.words[i]))
        return 1;
   } 
 
@@ -41,6 +41,10 @@ int draw_buttons(){
 }
 
 int draw_menu(){
+
+  if(draw_xpm_img(menu->background, 0, 0)){
+       return 1;
+  }
 
   if (draw_title()) return 1;
 

@@ -27,8 +27,13 @@ int (name_screenshot)(){
   if (clean_screen()) 
     return 1;
 
-  if(draw_word(alphabet, 100, 100, "PLAYER")) return 1;
-  if(draw_word(alphabet, 600, 100, "NAME")) return 1;
+
+ if(draw_sprite(chessBackground, 0, 0)){
+       return 1;
+  }
+
+  if(draw_word(alphabet, 400, 100, "PLAYER")) return 1;
+  if(draw_word(alphabet, 450, 200, "NAME")) return 1;
 
   if (copy_buffer_to_screenshot())
     return 1;

@@ -1,7 +1,7 @@
 /* XPM */
 static char * exitButtonMenu_xpm[] = {
 "300 100 1048 2",
-"  	c None",
+"  	c #FF00FF",
 ". 	c #931E1A",
 "+ 	c #901818",
 "@ 	c #8F1717",

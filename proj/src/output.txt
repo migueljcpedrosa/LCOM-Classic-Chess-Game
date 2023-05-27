@@ -1,5 +1,3 @@
-Creating menu
-Menu created
 Length: 0
 Letter M
 Word: 
@@ -21,5 +19,3 @@ Word: MATIL
 Length: 6
 Letter E
 Word: MATILD
-Creating menu
-Menu created

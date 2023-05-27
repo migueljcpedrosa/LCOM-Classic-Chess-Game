@@ -1,5 +1,5 @@
 /* XPM */
-static char * chess_background_xpm[] = {
+static char * chessBackground_xpm[] = {
 "1152 864 256 2",
 "  	c #252429",
 ". 	c #24252A",

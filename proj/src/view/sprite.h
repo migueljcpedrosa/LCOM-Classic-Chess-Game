@@ -29,6 +29,7 @@ extern Sprite* alphabet;
 
 extern Sprite* exitButton;
 extern Sprite* playButton;
+extern Sprite* chessBackground;
 
 int (load_sprites)();
 

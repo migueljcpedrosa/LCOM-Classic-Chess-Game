@@ -2,7 +2,6 @@
 #include "menu.h"
 #include <stdbool.h>
 #include "drivers/keyboard/i8042.h"
-#include "model/utils.h"
 
 Menu* menu;
 
@@ -12,8 +11,8 @@ void create_menu(){
 
   Title title;
 
-  title.x = 200;
-  title.y = 150;
+  title.x = 600;
+  title.y = 100;
   title.words = malloc(2 * sizeof(char*));
   title.words[0] = "CHESS";
   title.words[1] = "GAME";
@@ -22,14 +21,14 @@ void create_menu(){
   Button playButtonMenu;
   Button exitButtonMenu;
 
-  playButtonMenu.x = 426;
-  playButtonMenu.y = 400;
+  playButtonMenu.x = 650;
+  playButtonMenu.y = 350;
   playButtonMenu.sprite = playButton;
   playButtonMenu.height = playButton->img.height;
   playButtonMenu.width = playButton->img.width;
   
-  exitButtonMenu.x = 426;
-  exitButtonMenu.y = 500;
+  exitButtonMenu.x = 650;
+  exitButtonMenu.y = 450;
   exitButtonMenu.sprite = exitButton;
   exitButtonMenu.height = exitButton->img.height;
   exitButtonMenu.width = exitButton->img.width;
@@ -38,7 +37,7 @@ void create_menu(){
   menu->playButton = playButtonMenu;
   menu->exitButton = exitButtonMenu;
 
-  printf("Menu created\n");
+  menu->background = chessBackground;
 }
 
 void destroy_menu(){
