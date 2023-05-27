@@ -3,6 +3,7 @@
 
 #include "../drivers/video_card/gpu.h"
 #include "../drivers/video_card/vbe.h"
+#include "../drivers/rtc/rtc.h"
 #include "sprite.h"
 
 #define VBE_MODE MODE5
@@ -16,5 +17,7 @@ int (draw_cursor)();
 int (erase_cursor)();
 
 int (draw_word)(Sprite* sprite, uint16_t x, uint16_t y, char* word);
+
+int (drawDate)(rtc_timestamp_t* timestamp);
 
 #endif
