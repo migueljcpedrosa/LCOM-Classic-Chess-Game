@@ -69,8 +69,8 @@ int (drawDate)(rtc_timestamp_t* timestamp) {
   date[15] = timestamp->year % 10 + '0';
   date[16] = '\0';
 
-  int x = 0;
-  int y = 0;
+  int x = 600;
+  int y = 800;
   for (int i = 0; i < 16; i++){
 
     if(date[i] == ' '){
@@ -94,7 +94,7 @@ int (drawDate)(rtc_timestamp_t* timestamp) {
 
 
 int erase_date(){
-  if (draw_screenshot_to_buffer(0, 0, 16 * (numbers->img.width / 11), numbers->img.height))
+  if (draw_screenshot_to_buffer(600, 800, 16 * (numbers->img.width / 11), numbers->img.height))
     return 1;
 
   return 0;
