@@ -2,13 +2,12 @@
  * @file game_util.h
  * @brief This file contains the definition of the game util module.
  * 
- * This includes the definition of the Position, Color, Type, MoveType and Move structs along with other useful constants.
+ * This includes the definition of the Position, Color, Type and MoveType structs along with other useful constants.
  * 
  * @see Position
  * @see Color
  * @see Type
  * @see MoveType
- * @see Move
  */
 
 #ifndef _GAME_UTIL_H_
@@ -81,31 +80,5 @@ typedef enum {
 } MoveType;
 
 struct Piece;
-
-/**
- * @brief Represents a move.
- * 
- * This struct represents a move. It is composed of an origin, a destination, a type, a piece and a secondary piece.
- * 
- * The origin and destination are the positions of the move. \n
- * The type is the type of the move. \n
- * The destination is the position of the move. \n
- * The piece is the piece that is being moved. \n
- * The secondary piece is the piece that is being captured or castled with the move. \n
- * 
- * @see Position
- * @see MoveType
- * @see Piece
- */
-typedef struct {
-    Position origin;
-    Position destination;
-    MoveType type;
-
-    struct Piece* piece;
-    bool had_moved;
-
-    struct Piece* secondary_piece;
-} Move;
 
 #endif

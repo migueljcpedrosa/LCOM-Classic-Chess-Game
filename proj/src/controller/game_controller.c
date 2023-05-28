@@ -90,7 +90,7 @@ void (get_all_moves)(Player* bot, Move* possibleMoves, int* num_moves){
 void (handle_bot_play)(Player* bot){
 
     if (bot->timer.start_time + bot->timer.wait_time < counter / 60){
-            
+
         Move* possibleMoves = malloc(sizeof(Move) * 16 * 28);
         int num_moves = 0;
 
@@ -176,8 +176,9 @@ void (game_cursor)(CursorInput* input){
         }
         selected_piece = NULL;
         
-        if (check_game_over())
+        if (check_game_over()){
             return;
+        }  
 
         game_screenshot();
         
