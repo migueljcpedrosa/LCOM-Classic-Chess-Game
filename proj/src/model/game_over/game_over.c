@@ -5,8 +5,6 @@ GameOver* gameOver;
 
 void create_game_over(){
 
-  printf("game_over creating\n");
-
   Title title;
 
   title.x = 200;

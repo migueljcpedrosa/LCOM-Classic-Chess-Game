@@ -67,6 +67,5 @@ int (drawDate)(rtc_timestamp_t* timestamp) {
   time[3] = timestamp->minutes / 10 + '0';
   time[4] = timestamp->minutes % 10 + '0';
   time[5] = '\0';
-  printf("%s %s\n",time,date);
   return 0;
 }
