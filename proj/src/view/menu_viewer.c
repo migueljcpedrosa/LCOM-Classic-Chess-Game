@@ -49,8 +49,6 @@ int draw_menu(){
 
   if (draw_title()) return 1;
 
-  if(draw_date()) return 1;
-
   if (draw_buttons()) return 1;
 
   return 0;
