@@ -20,6 +20,11 @@
 #define RTC_MONTH   8
 #define RTC_YEAR    9
 
+/**
+ * @brief Structure that represents the rtc timestamp.
+ *
+ * This structure contains the year, month, day, hours, minutes, and seconds.
+ */
 typedef struct {
     uint8_t year;
     uint8_t month;
