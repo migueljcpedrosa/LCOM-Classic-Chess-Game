@@ -7,8 +7,8 @@ void create_game_over(){
 
   Title title;
 
-  title.x = 200;
-  title.y = 150;
+  title.x = 500;
+  title.y = 100;
   title.words = malloc(2 * sizeof(char*));
   
   title.words[0] = game_result;
@@ -19,14 +19,14 @@ void create_game_over(){
   Button playButtonMenu;
   Button exitButtonMenu;
 
-  playButtonMenu.x = 426;
-  playButtonMenu.y = 400;
+  playButtonMenu.x = 650;
+  playButtonMenu.y = 600;
   playButtonMenu.sprite = playButton;
   playButtonMenu.height = playButton->img.height;
   playButtonMenu.width = playButton->img.width;
 
-  exitButtonMenu.x = 426;
-  exitButtonMenu.y = 500;
+  exitButtonMenu.x = 650;
+  exitButtonMenu.y = 700;
   exitButtonMenu.sprite = exitButton;
   exitButtonMenu.height = exitButton->img.height;
   exitButtonMenu.width = exitButton->img.width;
