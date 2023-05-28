@@ -1,10 +1,24 @@
 #include "board.h"
 #include <stdlib.h>
+#include "model/model_utils.h"
 
-unsigned int board_start;
-unsigned int square_size = 100;
-unsigned int square_color = 0xeeeed2; 
-unsigned int square_color_alt = 0x769656; 
+unsigned int square_size = SQUARE_SIZE;
+unsigned int board_start = SCREEN_WIDTH / 2 - 4 * SQUARE_SIZE;
+
+Board* (create_board)(Player* white_player, Player* black_player){
+
+    Board* board = malloc(sizeof(Board));
+
+    set_white_pieces(board, white_player);
+
+    for (int i = 16; i < 48; i++){
+        board->squares[i] = NULL;
+    }
+
+    set_black_pieces(board, black_player);
+
+    return board;
+}
 
 void set_white_pieces(Board* board, Player* white_player){
 
@@ -48,44 +62,6 @@ void set_black_pieces(Board* board, Player* black_player){
     for (int i = 0; i < 16; i++){
         black_player->pieces[i] = board->squares[i];
     }
-}
-
-Board* (create_board)(Player* white_player, Player* black_player){
-
-    Board* board = malloc(sizeof(Board));
-
-    set_white_pieces(board, white_player);
-
-    for (int i = 16; i < 48; i++){
-        board->squares[i] = NULL;
-    }
-
-    set_black_pieces(board, black_player);
-
-    return board;
-}
-
-Board* copy_board(Board* board, Player* white_player, Player* black_player){
-
-    Board* copy = malloc(sizeof(Board));
-
-    for (int i = 0; i < 64; i++){
-
-        if (board->squares[i] == NULL){
-            copy->squares[i] = NULL;
-            continue;
-        }
-
-        copy->squares[i] = create_piece(board->squares[i]->type, board->squares[i]->color, create_position(i));
-
-        if (board->squares[i]->color == WHITE){
-            white_player->pieces[i] = copy->squares[i];
-        } else {
-            black_player->pieces[i] = copy->squares[i];
-        }
-    }
-
-    return copy;
 }
 
 void destroy_board(Board* board){
