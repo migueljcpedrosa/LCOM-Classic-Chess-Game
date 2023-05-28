@@ -20,6 +20,7 @@ extern unsigned int v_res;
  * 
  * @param mode The desired video mode.
  * @param vbe_info Pointer to the vbe_mode_info_t struct to be filled.
+ * 
  * @return Returns 0 upon success and 1 upon failure.
  */
 int (get_vbe_mode_info)(uint16_t mode, vbe_mode_info_t *vbe_info);
@@ -35,6 +36,7 @@ int (get_vbe_mode_info)(uint16_t mode, vbe_mode_info_t *vbe_info);
  * The function will fail if the mode change was not supported or if any error occurred.
  * 
  * @param mode The desired video display mode.
+ * 
  * @return Returns 0 upon success, and 1 upon failure.
  */
 int (set_mode)(uint16_t mode);
