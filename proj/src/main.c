@@ -70,7 +70,7 @@ int initialize(uint8_t* irqTimer, uint8_t* irqKeyboard, uint8_t* irqMouse, uint8
 
     if (set_mode(VBE_MODE)) return 1;
     vbe_mode_info_t vmi_p;
-    if (vbe_get_mode_info(VBE_MODE, &vmi_p)) return 1;
+    if (get_vbe_mode_info(VBE_MODE, &vmi_p)) return 1;
     if (map_info(&vmi_p)) return 1;
 
     init_state();
