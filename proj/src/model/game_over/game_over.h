@@ -16,7 +16,8 @@
  */
 typedef struct {
 
-  Title title;
+  char* result;
+  char* winner; 
 
   Button playButton;
   Button exitButton;

@@ -735,7 +735,6 @@ void (setKingMoves)(Game* game, Piece* king, bool checkForCheck){
         return;
     }
 
-
     if (is_check(game)){
         return;
     }
@@ -753,14 +752,10 @@ void (setKingMoves)(Game* game, Piece* king, bool checkForCheck){
         for (int i = 1; i <= 2; i++){
 
             if (board->squares[boardPos + i] != NULL){
-
                 empty = false;
                 break;
 
-            } else {
-
-
-                
+            } else {        
                 king->num_moves = 1;
                 king->moves[0] = (Move) {pos, {pos.x + i, pos.y}, NORMAL, king, king->has_moved, NULL};
 

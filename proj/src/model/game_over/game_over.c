@@ -5,17 +5,6 @@ GameOver* gameOver;
 
 void create_game_over(){
 
-  Title title;
-
-  title.x = 500;
-  title.y = 100;
-  title.words = malloc(2 * sizeof(char*));
-  
-  title.words[0] = game_result;
-  title.words[1] = game_winner;
-  title.num_words = 2;
-  title.font = alphabet;
-
   Button playButtonMenu;
   Button exitButtonMenu;
 
@@ -32,7 +21,8 @@ void create_game_over(){
   exitButtonMenu.width = exitButton->img.width;
 
   gameOver = malloc(sizeof(GameOver));
-  gameOver->title = title;
+  gameOver->result = game_result;
+  gameOver->winner = game_winner;
   gameOver->playButton = playButtonMenu;
   gameOver->exitButton = exitButtonMenu;
 }
@@ -57,6 +47,5 @@ bool game_over_clicked_exit(CursorInput* input){
 
 void destroy_game_over(){
 
-  free(gameOver->title.words);
   free(gameOver);
 }

@@ -9,16 +9,16 @@
 
 int (draw_game_over_title)(){
 
-  int x = gameOver->title.x;
-  int y = gameOver->title.y;
+  int x = 100;
+  int y = 100;
 
-  Sprite* font = gameOver->title.font;
+  printf("draw_game_over_title\n");
   
-  for (int i = 0; i < gameOver->title.num_words; i++) {
+  draw_word(alphabet, x, y, gameOver->result);
 
-    if(draw_word(font, x, y + i * 100, gameOver->title.words[i]))
-       return 1;
-  }
+  y += 100;
+
+  draw_word(alphabet, x, y, gameOver->winner);
 
   return 0;
 }
