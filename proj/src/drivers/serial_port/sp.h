@@ -1,10 +1,11 @@
-#ifndef _SERIAL_PORT_
-#define _SERIAL_PORT_
+#ifndef SERIAL_PORT
+#define SERIAL_PORT
 
 #include <lcom/lcf.h>
 #include "sp_data_queue.h"
 
 #define COM1_BASE_REGISTER 0x3F8
+#define MOST_SIGNIFICANT_BIT_MASK 0xF0
 
 #define RECEIVER_BUFFER_REGISTER 0x00
 #define TRANSMITTER_HOLDING_REGISTER 0x00
@@ -16,9 +17,6 @@
 #define LINE_STATUS_REGISTER 0x05
 #define MODEM_STATUS_REGISTER 0x06
 #define SCRATCHPAD_REGISTER 0x07
-
-#define DIVISOR_LATCH_LSB 0x00
-#define DIVISOR_LATCH_MSB 0x01
 
 #define LINE_STATUS_DATA_READY BIT(0)
 #define LINE_STATUS_OVERRUN_ERROR BIT(1)
@@ -77,25 +75,6 @@ int serial_port_subscribe_int(uint8_t* bit_no);
 int serial_port_unsubscribe_int();
 
 /**
- * @brief Gets the status of the serial port.
- *
- * This function retrieves the status of the serial port, providing information about the current state of the port,
- * such as the availability of data, transmitter readiness, and any error conditions.
- *
- * @param status Pointer to store the status value.
- * @return Returns 0 on success, 1 otherwise.
- */
-int serial_port_get_status(uint8_t* interrupt_identification_register);
-
-
-/**
- * @brief Cleans up resources used by the serial port.
- *
- * This function cleans up any resources used by the serial port, ensuring proper termination and freeing any allocated memory.
- */
-void serial_port_exit();
-
-/**
  * @brief Interrupt handler for the serial port.
  *
  * This function is called when an interrupt is triggered by the serial port. It handles the interrupt and performs
@@ -112,7 +91,7 @@ void serial_port_interrupt_handler();
  *
  * @return Returns 0 on success, 1 otherwise.
  */
-int serial_port_clear_interrupts();
+int serial_port_reset();
 
 /**
  * @brief Reads a byte from the serial port.
@@ -134,14 +113,4 @@ int serial_port_read_byte();
  * @return Returns 0 on success, 1 otherwise.
  */
 int serial_port_send_byte(uint8_t byte_to_send);
-
-/**
- * @brief Returns the input queue of the serial port.
- *
- * This function returns a pointer to the input queue associated with the serial port. The input queue is used to store
- * received data from the serial port for further processing by the application.
- *
- * @return Pointer to the input queue.
- */
-DataQueue* serial_port_get_input_queue();
 #endif
