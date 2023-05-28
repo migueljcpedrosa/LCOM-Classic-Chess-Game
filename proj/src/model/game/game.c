@@ -22,20 +22,6 @@ void (create_game)(char white_name[], char black_name[]){
     game->turn = WHITE;
 }
 
-Game* (copy_game)(Game* game){
-
-    Game* copy = malloc(sizeof(Game));
-
-    copy->white_player = create_player(game->white_player->name, WHITE, USER);
-    copy->black_player = create_player(game->black_player->name, BLACK, AI);
-
-    copy->board = copy_board(game->board, copy->white_player, copy->black_player);
-
-    copy->turn = game->turn;
-
-    return copy;
-}
-
 void (destroy_game)(){
 
     destroy_board(game->board);
@@ -446,31 +432,29 @@ void (setMoves)(Game* game, Piece* piece, bool checkForCheck){
     switch (piece->type)
     {
     case PAWN:{
-        getPawnMoves(game, piece);
+        setPawnMoves(game, piece);
         break;}
     case ROOK:
-        getRookMoves(game, piece);
+        setRookMoves(game, piece);
         break;
     case KNIGHT:
-        getKnightMoves(game, piece);
+        setKnightMoves(game, piece);
         break;
     case BISHOP:
-        getBishopMoves(game, piece);
+        setBishopMoves(game, piece);
         break;
     case QUEEN:
-        getQueenMoves(game, piece);
+        setQueenMoves(game, piece);
         break;
     case KING:
-        getKingMoves(game, piece, checkForCheck);
-        break;
-    case EMPTY:
+        setKingMoves(game, piece, checkForCheck);
         break;
     default:
         break;
     }
 }
 
-void (getPawnMoves)(Game* game, Piece* piece){
+void (setPawnMoves)(Game* game, Piece* piece){
 
     Board* board = game->board;
 
@@ -573,7 +557,7 @@ void (getPawnMoves)(Game* game, Piece* piece){
     }
 }
 
-void (getMovesInLine)(Game* game, Piece* piece, Position increment){
+void (setMovesInLine)(Game* game, Piece* piece, Position increment){
 
     Board* board = game->board;
 
@@ -621,29 +605,29 @@ void (getMovesInLine)(Game* game, Piece* piece, Position increment){
     } 
 }
 
-void (getBishopMoves)(Game* game, Piece* piece){
+void (setBishopMoves)(Game* game, Piece* piece){
 
     piece->num_moves = 0;
 
     Position direction[] = {{1, 1}, {-1, 1}, {1, -1}, {-1, -1}};
 
     for (int i = 0; i < 4; i++){
-        getMovesInLine(game, piece, direction[i]);
+        setMovesInLine(game, piece, direction[i]);
     }
 }
 
-void (getRookMoves)(Game* game, Piece* piece){
+void (setRookMoves)(Game* game, Piece* piece){
 
     piece->num_moves = 0;
 
     Position direction[] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};  
 
     for (int i = 0; i < 4; i++){
-        getMovesInLine(game, piece, direction[i]);
+        setMovesInLine(game, piece, direction[i]);
     }
 }
 
-void (getQueenMoves)(Game* game, Piece* piece){
+void (setQueenMoves)(Game* game, Piece* piece){
 
     piece->num_moves = 0;
 
@@ -653,11 +637,11 @@ void (getQueenMoves)(Game* game, Piece* piece){
     };
 
     for (int i = 0; i < 8; i++){
-        getMovesInLine(game, piece, direction[i]);
+        setMovesInLine(game, piece, direction[i]);
     }
 }
 
-void (getKnightMoves)(Game* game, Piece* piece){
+void (setKnightMoves)(Game* game, Piece* piece){
 
     Board* board = game->board;
 
@@ -706,7 +690,7 @@ void (getKnightMoves)(Game* game, Piece* piece){
     }
 }
 
-void (getKingMoves)(Game* game, Piece* king, bool checkForCheck){
+void (setKingMoves)(Game* game, Piece* king, bool checkForCheck){
 
     Board* board = game->board;
 

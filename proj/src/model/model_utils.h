@@ -9,6 +9,24 @@
 #include "view/sprite.h"
 
 /**
+ * @brief Constant for the screen width.
+ * 
+ */
+#define SCREEN_WIDTH 1152
+
+/**
+ * @brief Constant for the screen height.
+ * 
+ */
+#define SCREEN_HEIGHT 864
+
+/**
+ * @brief Constant for the square size.
+ * 
+ */
+#define SQUARE_SIZE 100
+
+/**
  * @brief Struct representing a Title.
  *
  * This struct includes the x and y coordinates for positioning the title, a pointer to an array of words, 
