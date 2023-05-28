@@ -361,11 +361,11 @@ int (draw_number)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y,
 
   for(unsigned int cur_y = y; cur_y < y + sprite.height && cur_y < v_res; cur_y++){
 
-    for(unsigned int cur_x = x; cur_x < x + sprite.width / 11 && cur_x < h_res; cur_x++){
+    for(unsigned int cur_x = x; cur_x < x + sprite.width / 12 && cur_x < h_res; cur_x++){
 
       unsigned int img_x = cur_x - x, img_y = cur_y - y;
 
-      unsigned int offset = (number - '0') * sprite.width / 11;
+      unsigned int offset = (number - '/') * sprite.width / 12;
 
       uint8_t* color = img_addr + offset * bytes_per_pixel + ((img_y * sprite.width) + img_x) * bytes_per_pixel;
 

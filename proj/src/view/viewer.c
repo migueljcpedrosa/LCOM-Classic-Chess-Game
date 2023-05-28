@@ -74,19 +74,19 @@ int (drawDate)(rtc_timestamp_t* timestamp) {
   for (int i = 0; i < 16; i++){
 
     if(date[i] == ' '){
-      x += numbers->img.width / 11;
+      x += numbers_small->img.width / 12;
       continue;
     }
 
-    if(date[i] == '/'){
+    /*if(date[i] == '/'){
       draw_xpm(slash->img, slash->addr, x+15, y+10);
       x += numbers->img.width / 11;
       continue;
-    }
+    }*/
 
-    if (draw_number(numbers->img, numbers->addr, x, y, date[i])) return 1;
+    if (draw_number(numbers_small->img, numbers_small->addr, x, y, date[i])) return 1;
     
-    x += numbers->img.width / 11;
+    x += numbers_small->img.width / 12;
     }
 
   return 0;

@@ -24,6 +24,7 @@ extern Sprite* white_pawn;
 extern Sprite* mouse;
 
 extern Sprite* numbers;
+extern Sprite* numbers_small;
 extern Sprite* slash;
 
 extern Sprite* alphabet;

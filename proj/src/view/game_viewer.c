@@ -122,7 +122,7 @@ int (draw_timer)(char timer[], int x, int y){
     if (draw_number(numbers->img, numbers->addr, x, y, timer[i]))
       return 1;
     
-    x += numbers->img.width / 11;
+    x += numbers->img.width / 12;
   }
 
   return 0;
@@ -130,7 +130,7 @@ int (draw_timer)(char timer[], int x, int y){
 
 int (draw_timers)(){
 
-  int x = h_res - numbers->img.width / 11 * 5 - 30;
+  int x = h_res - numbers->img.width / 12 * 5 - 30;
   int y = board_start;
 
   int count = game->black_player->time_counter;
@@ -164,7 +164,7 @@ int (draw_timers)(){
 
 int (erase_timers)(){
 
-  int x = h_res - numbers->img.width / 11 * 5 - 30;
+  int x = h_res - numbers->img.width / 12 * 5 - 30;
   int y = board_start;
   unsigned int width = 50 * 5;
   unsigned int height = numbers->img.height;

@@ -15,6 +15,7 @@
 #include "whitePawn.xpm"
 #include "mouse.xpm"
 #include "numbers.xpm"
+#include "numbers_small.xpm"
 #include "playButtonMenu.xpm"
 #include "exitButtonMenu.xpm"
 #include "alphabet-courier.xpm"
