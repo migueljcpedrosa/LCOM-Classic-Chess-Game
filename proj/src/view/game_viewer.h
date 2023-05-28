@@ -86,6 +86,8 @@ int (draw_timers)();
  * @param timer the timer information to be erased.
  * @param x the x coordinate of the timer.
  * @param y the y coordinate of the timer.
+ * 
+ * @return Returns 0 upon success, non-zero otherwise.
 */
 int (erase_timers)();
 
