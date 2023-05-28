@@ -5,7 +5,7 @@
 
 extern unsigned int counter;
 
-int (check_game_over)(){
+bool (check_game_over)(){
 
     if (is_check_mate(game)){
 
@@ -14,7 +14,7 @@ int (check_game_over)(){
         sprintf(game_winner, "%s WINS", get_waiting_player(game)->name);
         sprintf(game_result, "CHECKMATE");
         set_state(GAME_OVER);
-        return 1;
+        return true;
         
     } else if (is_stale_mate(game)){
 
@@ -23,10 +23,10 @@ int (check_game_over)(){
         sprintf(game_winner, "DRAW");
         sprintf(game_result, "STALEMATE");
         set_state(GAME_OVER);
-        return 1;
+        return true;
     }
 
-    return 0;
+    return false;
 }
 
 void (setup_bot_timer)(Player* bot){

@@ -18,8 +18,10 @@ extern Piece* selected_piece;
  * @brief Checks if the game is over.
  * 
  * This function checks after every move if a stalemate or checkmate has been reached.
+ * 
+ * @return Returns true if the game is over, false otherwise.
  */
-int (check_game_over)();
+bool (check_game_over)();
 
 /**
  * @brief Setup the bot waiting timer for it's move.
