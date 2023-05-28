@@ -3,10 +3,11 @@
 #include "../model/cursor/cursor.h"
 #include "../model/game/game.h"
 
-uint32_t border_size;
+static unsigned int selected_piece_old_x = 0;
+static unsigned int  selected_piece_old_y = 0;
 
-unsigned int selected_piece_old_x = 0;
-unsigned int  selected_piece_old_y = 0;
+static unsigned int square_color = 0xeeeed2; 
+static unsigned int square_color_alt = 0x769656; 
 
 int (game_screenshot)(){
 
