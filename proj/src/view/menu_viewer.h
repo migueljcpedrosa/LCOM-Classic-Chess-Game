@@ -1,6 +1,6 @@
 /**
  * @file menu_viewer
- * @brief This file has the implementation of the functions related to the menus viewer.
+ * @brief This file has the implementation of the functions related to the initial menu viewer.
  */
 
 #ifndef _MENUVIEWER_H_

@@ -1,3 +1,8 @@
+/**
+ * @file game_over_viewer
+ * @brief This file has the implementation of the functions related to the game over menu.
+ */
+
 #include "game_over_viewer.h"
 #include "viewer.h"
 #include "model/game_over/game_over.h"
