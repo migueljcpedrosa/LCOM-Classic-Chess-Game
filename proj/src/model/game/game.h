@@ -54,6 +54,16 @@ void (execute_castle)(Game* game, Move move);
 
 void (execute_enPassant)(Game* game, Move move);
 
+void (undo_move)(Game* game, Move move);
+
+void (undo_normal)(Game* game, Move move);
+
+void (undo_capture)(Game* game, Move move);
+
+void (undo_castle)(Game* game, Move move);
+
+void (undo_enPassant)(Game* game, Move move);
+
 void (filterMoves)(Game* game, Piece* piece);
 
 void (setMoves)(Game* game, Piece* piece, bool checkForCheck);

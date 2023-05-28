@@ -75,7 +75,7 @@ void (get_all_moves)(Player* bot, Move* possibleMoves, int* num_moves){
             continue;
         }
 
-        setMoves(game, piece, true);
+        setMoves(game, piece, false);
 
         filterMoves(game, piece);
 
