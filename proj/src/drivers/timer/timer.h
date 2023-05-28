@@ -22,6 +22,8 @@ int (timer_set_frequency)(uint8_t timer, uint32_t freq);
 /**
  * @brief Timer interrupt handler.
  * Increments a counter variable whenever a timer interrupt occurs.
+ * 
+ * @return void.
  */
 void (timer_ih)(void);
 
