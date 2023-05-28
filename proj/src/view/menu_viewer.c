@@ -83,19 +83,3 @@ int (menu_screenshot)(){
   return 0;
 }
 
-int draw_final_menu() {
-
-  if (draw_word(alphabet, 300, 400, "GAME")) return 1;
-
-  if (draw_word(alphabet, 300, 500, "OVER")) return 1;
-
-  /*if(result == CHECKMATE){
-    if (draw_word(&alphabet, 300, 500, 0xFF00FF, "CHECKMATE")) return 1;
-  }
-
-  if(result == STALEMATE){
-    if (draw_word(&alphabet, 300, 500, 0xFF00FF, "STALEMATE")) return 1;
-  }*/
-  
-  return 0;
-}
