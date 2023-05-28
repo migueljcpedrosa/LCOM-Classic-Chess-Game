@@ -29,7 +29,7 @@ int (set_mode)(uint16_t mode){
   
   memset(&r86, 0, sizeof(r86));	
 
-  r86.intno = 0x10; 
+  r86.intno = INT_10; 
   r86.ah = WRT_FUNC;    
   r86.al = VBE_SET_MODE;  
   r86.bx = mode | LINEAR_FRAME_BUFFER;
@@ -381,4 +381,45 @@ int (draw_number)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y,
 
   return 0;
 
+}
+
+int (get_vbe_mode_info)(uint16_t mode, vbe_mode_info_t *vbe_info) {
+
+  printf("vbe_get_mode_info\n");
+    
+    if (mode != MODE1 && mode != MODE2 && mode != MODE3 && mode != MODE4 && mode != MODE5) {
+        return 1;
+    }
+
+    mmap_t map;
+
+    if (lm_alloc(sizeof(vbe_mode_info_t), &map) == NULL) {
+        return 1;
+    }
+
+    phys_bytes mmap_addr = map.phys;
+
+    reg86_t r86;
+    memset(&r86, 0, sizeof(r86));
+
+    r86.intno = INT_10;
+    r86.ax = VBE_GET_MODE;
+
+    r86.cx = mode;
+    r86.es = PB2BASE(mmap_addr);
+    r86.di = PB2OFF(mmap_addr);
+
+    if (sys_int86(&r86)) {
+        return 1;
+    }
+
+    if (r86.ah != FUNC_SUCCESS) {
+        return 1;
+    }
+
+    memcpy(vbe_info, map.virt, sizeof(vbe_mode_info_t));
+
+    lm_free(&map);
+
+    return 0;
 }

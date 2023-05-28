@@ -179,4 +179,6 @@ int (draw_xpm_word)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t 
  */
 int (draw_number)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y, char number);
 
+int (get_vbe_mode_info)(uint16_t mode, vbe_mode_info_t *vbe_info);
+
 #endif
