@@ -55,11 +55,11 @@ int draw_menu(){
 
 int menu_refresh() {
 
-    /* if(erase_date()) return 1;
+    if(erase_cursor()) return 1;
+
+    if(erase_date()) return 1;
 
     if(draw_date()) return 1;
- */
-    if(erase_cursor()) return 1;
   
     if (draw_cursor()) return 1;
 

@@ -1,6 +1,6 @@
 #include "game_over_controller.h"
 #include "state/state.h"
-#include "drivers/keyboard/i8042.h"
+#include "drivers/keyboard/mkbd.h"
 #include "model/game_over/game_over.h"
 
 void game_over_kbd(uint8_t scan_code[2], int size){

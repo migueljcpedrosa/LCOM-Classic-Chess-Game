@@ -1,6 +1,6 @@
 #include "game_controller.h"
 #include "../view/game_viewer.h"
-#include "../drivers/keyboard/i8042.h"
+#include "../drivers/keyboard/mkbd.h"
 #include "../state/state.h"
 
 extern unsigned int counter;

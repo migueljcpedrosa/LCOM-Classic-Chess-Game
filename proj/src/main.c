@@ -5,7 +5,7 @@
 #include "drivers/timer/i8254.h"
 #include "drivers/mouse/i8042.h"
 #include "drivers/mouse/mouse.h"
-#include "drivers/keyboard/i8042.h"
+#include "drivers/keyboard/mkbd.h"
 #include "drivers/keyboard/keyboard.h"
 #include "drivers/rtc/rtc.h"
 #include "view/viewer.h"
