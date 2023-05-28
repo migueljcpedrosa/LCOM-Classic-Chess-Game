@@ -98,4 +98,3 @@ int erase_date(){
 
   return 0;
 }
-

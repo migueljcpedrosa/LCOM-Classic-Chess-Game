@@ -1,3 +1,8 @@
+/**
+ * @file gpu
+ * @brief This file has the implementation of the functions related to the video graphics.
+ */
+
 #ifndef _GPU_H_
 #define _GPU_H_
 
@@ -9,13 +14,14 @@ extern unsigned int v_res;
 /**
  * @brief Sets the video display mode.
  * @param mode The desired video display mode.
- * @return Returns 0 upon success, and 1 upon failure.
  *
  * The function sets the video mode to the one indicated by the parameter 'mode', 
  * and configures 'index_mode' as true if the mode is MODE1, and false otherwise. 
  * It uses the 0x10 interrupt number for video services, and sets AH register to 
  * the write teletype function (WRT_FUNC) and AL register to set the VBE mode. 
  * The function will fail if the mode change was not supported or if any error occurred.
+ * 
+ * @return Returns 0 upon success, and 1 upon failure.
  */
 int (set_mode)(uint16_t mode);
 

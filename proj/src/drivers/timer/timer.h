@@ -1,3 +1,8 @@
+/**
+ * @file timer
+ * @brief This file has the implementation of the functions related to the timer.
+ */
+
 #ifndef _TIMER_H_
 #define _TIMER_H_
 
@@ -22,6 +27,8 @@ int (timer_set_frequency)(uint8_t timer, uint32_t freq);
 /**
  * @brief Timer interrupt handler.
  * Increments a counter variable whenever a timer interrupt occurs.
+ * 
+ * @return void.
  */
 void (timer_ih)(void);
 
