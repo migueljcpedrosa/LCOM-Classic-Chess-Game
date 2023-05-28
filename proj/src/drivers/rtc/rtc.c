@@ -10,12 +10,11 @@ int rtc_initialize_system() {
     rtc_binary_mode = rtc_in_binary_mode();
     if (rtc_binary_mode != 0) {
         if (rtc_update_current_time() != 0) {
-            return 1;  // Indicates an error occurred.
+            return 1;  
         }
     }
-    return 0;  // Indicates successful execution.
+    return 0;  
 }
-
 
 int rtc_in_binary_mode(){
     uint8_t counting_status;

@@ -21,7 +21,6 @@ int (mouse_unsubscribe_int)(){
   return sys_irqrmpolicy(&hook_id);
 }
 
-
 void (mouse_ih)(){
 
   if (packet_read){
@@ -104,7 +103,7 @@ int (disable_data_reporting)(){
   return write_command(DIS_DATA_REP, NULL, NULL, 0);
 }
 
-int get_response(uint8_t* response){
+int (get_response)(uint8_t* response){
 
   uint8_t st;
 
@@ -120,7 +119,7 @@ int get_response(uint8_t* response){
   return 0;
 }
 
-int wait_for_input_buffer(){
+int (wait_for_input_buffer)(){
 
   uint8_t st;
 
@@ -133,23 +132,7 @@ int wait_for_input_buffer(){
   return 0;
 }
 
-int wait_for_output_buffer(){
-
-  uint8_t st;
-
-  do {
-  
-    if (util_sys_inb(STATUS_PORT, &st))
-      return 1;
-
-    tickdelay(micros_to_ticks(DELAY_US));
-
-  } while (!(st & OUT_BUF_READY));
-
-  return 0;
-}
-
-int write_to_mouse(uint8_t cmd){
+int (write_to_mouse)(uint8_t cmd){
 
   if (wait_for_input_buffer())
     return 1;

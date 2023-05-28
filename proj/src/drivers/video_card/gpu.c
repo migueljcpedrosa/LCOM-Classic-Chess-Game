@@ -4,9 +4,9 @@
 static void *video_mem;
 static void *buffer;
 static void *screenshot;
-unsigned int h_res;	        /* Horizontal resolution in pixels */
-unsigned int v_res;	        /* Vertical resolution in pixels */
-static unsigned int bits_per_pixel; /* Number of VRAM bits per pixel */
+unsigned int h_res;	
+unsigned int v_res;	
+static unsigned int bits_per_pixel; 
 static unsigned int bytes_per_pixel;
 
 static uint8_t red_mask_size;
@@ -244,7 +244,6 @@ int (draw_xpm)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y){
 
   return 0;
 }
-
 
 int (erase_xpm)(xpm_map_t xpm, enum xpm_image_type type, uint16_t x, uint16_t y){
 

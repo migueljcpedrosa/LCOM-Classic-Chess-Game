@@ -3,18 +3,40 @@
 
 #include <lcom/lcf.h>
 
+/**
+ * @brief Reads a timer's configuration.
+ * @param timer Timer to read the configuration of (0, 1, or 2).
+ * @param status Pointer to store the timer's configuration.
+ * @return Returns 0 upon success and non-zero otherwise.
+ */
 int (timer_get_conf)(uint8_t timer, uint8_t *st);
 
-int (timer_display_conf)(uint8_t timer, uint8_t st, enum timer_status_field field);
-
+/**
+ * @brief Sets the operating frequency of a timer.
+ * @param timer Timer to set the frequency for (0, 1, or 2).
+ * @param freq Desired frequency.
+ * @return Returns 0 upon success and non-zero otherwise.
+ */
 int (timer_set_frequency)(uint8_t timer, uint32_t freq);
 
+/**
+ * @brief Timer interrupt handler.
+ * Increments a counter variable whenever a timer interrupt occurs.
+ */
 void (timer_ih)(void);
 
+/**
+ * @brief Subscribes to timer interrupts.
+ * @param bit_no Pointer to store the IRQ line bitmask of the timer.
+ * @return Returns 0 upon success and non-zero otherwise.
+ */
 int (timer_subscribe_int)(uint8_t *bit_no);
 
+/**
+ * @brief Unsubscribes from timer interrupts.
+ * @return Returns 0 upon success and non-zero otherwise.
+ */
 int (timer_unsubscribe_int)();
 
-uint32_t no_interrupts;
 
 #endif

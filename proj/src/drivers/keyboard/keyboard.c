@@ -3,7 +3,6 @@
 #include "../utils.h"
 
 static int hook_id = 1;
-
 uint8_t scan_code[2];
 int kbd_index = 0;
 
@@ -54,26 +53,4 @@ void (kbc_ih)(){
   return;
 }
 
-int (kbd_reset_conf)(){
 
-  uint8_t RD_CMD = 0x20;
-
-  sys_outb(INPUT_CMD, RD_CMD);
-  
-  uint8_t status;
-
-  if (util_sys_inb(STATUS_PORT, &status))
-    return 1;
-
-  status |= BIT(0);
-
-  uint8_t WRT_CMD = 0x60;
-
-  if (sys_outb(INPUT_CMD, WRT_CMD))
-    return 1;
-
-  if (sys_outb(INPUT_DATA, status))
-    return 1;
-
-  return 0;
-}
