@@ -11,9 +11,9 @@
 #include "../cursor/cursor.h"
 
 /**
- * @brief Structure that represents the state of the cursor.
+ * @brief Struct that represents the state of the cursor.
  *
- * This structure contains the state of the cursor, including the state of left, right, 
+ * This struct contains the state of the cursor, including the state of left, right, 
  * and middle clicks, as well as the cursor's position on the x and y axes.
  */
 typedef struct {
@@ -28,6 +28,7 @@ typedef struct {
 
 /**
  * @brief Reads the current cursor input.
+ * 
  * @param packet A pointer to the packet structure to be filled with the mouse data.
  *
  * This function reads the current cursor input by processing the mouse packet data. 

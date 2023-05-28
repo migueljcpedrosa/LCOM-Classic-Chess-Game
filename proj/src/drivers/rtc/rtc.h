@@ -21,9 +21,9 @@
 #define RTC_YEAR    9
 
 /**
- * @brief Structure that represents the rtc timestamp.
+ * @brief Struct that represents the rtc timestamp.
  *
- * This structure contains the year, month, day, hours, minutes, and seconds.
+ * This struct contains the year, month, day, hours, minutes, and seconds.
  */
 typedef struct {
     uint8_t year;
@@ -56,6 +56,7 @@ int rtc_initialize_system();
 
 /**
  * @brief Subscribes RTC interrupts.
+ * 
  * @param bit_no A pointer to the bit number to be set in the mask returned upon an interrupt.
  *
  * This function subscribes RTC interrupts by setting the policy for the 
@@ -76,6 +77,7 @@ int rtc_unsubscribe_interrupts();
 
 /**
  * @brief Reads a value from a specific RTC register.
+ * 
  * @param command The register to read from.
  * @param output A pointer to store the read value.
  *
@@ -88,6 +90,7 @@ int rtc_read_register(uint8_t command, uint8_t *output);
 
 /**
  * @brief Converts a BCD number to binary.
+ * 
  * @param bcd_number The BCD number to convert.
  *
  * This function converts a BCD number to its equivalent binary number.
@@ -118,6 +121,7 @@ int rtc_update_current_time();
 
 /**
  * @brief Updates a specific time unit in the RTC.
+ * 
  * @param register_address The register that stores the time unit to update.
  * @param time_component A pointer to the variable that will hold the updated time unit.
  *
@@ -131,6 +135,7 @@ int rtc_update_time_unit(uint8_t register_address, uint8_t* time_component);
 
 /**
  * @brief Interrupt handler for the RTC.
+ * 
  * @param timestamp A pointer to the variable that will hold the current time upon interrupt.
  *
  * This function handles the RTC interrupts by updating the current time 

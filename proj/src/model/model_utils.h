@@ -3,6 +3,12 @@
 
 #include "view/sprite.h"
 
+/**
+ * @brief Struct representing a Title.
+ *
+ * This struct includes the x and y coordinates for positioning the title, a pointer to an array of words, 
+ * the number of words in the title, and a sprite representing the font.
+ */
 typedef struct {
 
     int x;
@@ -13,6 +19,12 @@ typedef struct {
 
 } Title;
 
+/**
+ * @brief Struct representing a Button.
+ *
+ * This struct includes the x and y coordinates for positioning the button, the width and height of the button,
+ * and a sprite representing the button.
+ */
 typedef struct {
 
   int x;

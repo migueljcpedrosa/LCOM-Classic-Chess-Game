@@ -10,6 +10,7 @@
 
 /**
  * @brief Processes keyboard inputs within the player name context.
+ * 
  * @param scan_code An array of scan codes to process.
  * @param size The size of the scan_code array.
  *
