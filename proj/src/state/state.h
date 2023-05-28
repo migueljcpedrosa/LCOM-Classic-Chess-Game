@@ -4,7 +4,7 @@
 #include <lcom/lcf.h>
 #include "../model/cursor/cursor_input.h"
 
-typedef enum {MENU, GAME, WRITE_NAME, EXIT} State;
+typedef enum {MENU, GAME, WRITE_NAME, GAME_OVER, EXIT} State;
 
 extern State state;
 

@@ -19,5 +19,6 @@
 #define FUNC_SUPPORTED 0x4F
 
 #define TRANSPARENT 0xFF00FF
+#define LETTER_WIDTH 76
 
 #endif

@@ -321,11 +321,11 @@ int (draw_xpm_letter)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_
 
   for(unsigned int cur_y = y; cur_y < y + sprite.height && cur_y < v_res; cur_y++){
 
-    for(unsigned int cur_x = x; cur_x < x + 76 && cur_x < h_res; cur_x++){
+    for(unsigned int cur_x = x; cur_x < x + LETTER_WIDTH && cur_x < h_res; cur_x++){
  
       unsigned int img_x = cur_x - x, img_y = cur_y - y;
 
-      uint32_t offset =  (letter - 'A') * 76 + 5;
+      uint32_t offset =  (letter - 'A') * LETTER_WIDTH + 5;
 
       uint8_t* color = img_addr + (offset + (img_y * sprite.width) + img_x)*bytes_per_pixel;
 
@@ -344,12 +344,13 @@ int (draw_xpm_letter)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_
 
 int (draw_xpm_word)(xpm_image_t sprite, uint8_t* img_addr, uint16_t x, uint16_t y, char* word){
 
+  int back = 0;
   for(size_t i = 0; i < strlen(word); i++){
     
     if (word[i] < 'A' || word[i] > 'Z')
       continue;
       
-    if(draw_xpm_letter(sprite, img_addr, x + i * 76, y, word[i])) 
+    if(draw_xpm_letter(sprite, img_addr, x + (i - back) * LETTER_WIDTH, y, word[i])) 
       	return 1;
   }
 

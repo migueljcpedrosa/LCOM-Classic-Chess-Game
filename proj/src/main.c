@@ -86,6 +86,9 @@ int terminate(){
     if(keyboard_unsubscribe_int()) return 1;
     if(rtc_unsubscribe_interrupts()) return 1;
     if(vg_exit()) return 1;
+
+    leave_state();
+    destroy_sprites();
     
     return 0;
 }
@@ -135,7 +138,7 @@ int interrupts_handler(){
                         } 
 
                         if(msg.m_notify.interrupts & irqRtc){
-                            rtc_ih(&current_time);
+                            //rtc_ih(&current_time);
                             //drawDate(&current_time);
                         }
                         break;

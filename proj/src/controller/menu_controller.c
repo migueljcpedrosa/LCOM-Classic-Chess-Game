@@ -22,10 +22,10 @@ void menu_cursor(CursorInput* input){
 
     if (input->leftClick){
 
-        if (clicked_play(input)){
+        if (menu_clicked_play(input)){
             set_state(WRITE_NAME);
         }
-        else if (clicked_exit(input)){
+        else if (menu_clicked_exit(input)){
             set_state(EXIT);
         }
     }

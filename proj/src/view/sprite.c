@@ -21,6 +21,7 @@ Sprite* mouse;
 Sprite* numbers;
 
 Sprite* alphabet;
+Sprite* alphabet_small;
 
 Sprite* exitButton;
 Sprite* playButton;
@@ -88,6 +89,10 @@ int load_sprites(){
   if (load_sprite(alphabet, (xpm_map_t) alphabet_courier_xpm))
     return 1;
 
+  alphabet_small = (Sprite*) malloc(sizeof(Sprite));
+  if (load_sprite(alphabet_small, (xpm_map_t) alphabet_small_xpm))
+    return 1;
+
   exitButton = (Sprite*) malloc(sizeof(Sprite));
   if (load_sprite(exitButton, (xpm_map_t) exitButtonMenu_xpm))
     return 1;
@@ -101,6 +106,34 @@ int load_sprites(){
     return 1;
 
   return 0;
+}
+
+void (destroy_sprites)(){
+
+  free(black_queen);
+  free(white_queen);
+  free(black_king);
+  free(white_king);
+  free(black_rook);
+  free(white_rook);
+  free(black_bishop);
+  free(white_bishop);
+  free(black_knight);
+  free(white_knight);
+  free(black_pawn);
+  free(white_pawn);
+
+  free(mouse);
+
+  free(numbers);
+
+  free(alphabet);
+  free(alphabet_small);
+
+  free(exitButton);
+  free(playButton);
+
+  free(chessBackground);
 }
 
 int load_sprite(Sprite* sprite, xpm_map_t xpm){

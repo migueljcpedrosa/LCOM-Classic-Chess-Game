@@ -5,7 +5,9 @@ Player* (create_player)(char name[], Color color, PlayerType type){
 
     Player* player = malloc(sizeof(Player));
 
-    player->name = name;
+    char* name_copy = malloc(sizeof(char) * 30);
+    sprintf(name_copy, "%s", name);
+    player->name = name_copy;
     player->color = color;
     player->type = type;
 
@@ -18,5 +20,6 @@ Player* (create_player)(char name[], Color color, PlayerType type){
 
 void destroy_player(Player* player){
     
+    free(player->name);
     free(player);
 }

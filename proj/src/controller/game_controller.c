@@ -5,12 +5,30 @@
 
 extern unsigned int counter;
 
-void (check_game_over)(){
+int (check_game_over)(){
+
     if (is_check_mate(game)){
-        printf("Check mate!\n");
+        
+        // game_winner = game waiting player name wins"
+
+        game_winner = malloc(sizeof(char) * 30);
+        game_result = malloc(sizeof(char) * 30);
+        sprintf(game_winner, "%s WINS", get_waiting_player(game)->name);
+        sprintf(game_result, "CHECK MATE");
+        set_state(GAME_OVER);
+        return 1;
+        
     } else if (is_stale_mate(game)){
-        printf("Stale mate!\n");
-    } 
+
+        game_winner = malloc(sizeof(char) * 30);
+        game_result = malloc(sizeof(char) * 30);
+        sprintf(game_winner, "DRAW");
+        sprintf(game_result, "STALE MATE");
+        set_state(GAME_OVER);
+        return 1;
+    }
+
+    return 0;
 }
 
 void (setup_bot_timer)(Player* bot){
@@ -90,6 +108,10 @@ void (handle_bot_play)(Player* bot){
 
         switch_turn(game);
 
+        if (check_game_over()){
+            return;
+        }
+
         game_screenshot();
     }
 }
@@ -156,7 +178,8 @@ void (game_cursor)(CursorInput* input){
         }
         selected_piece = NULL;
         
-        check_game_over();
+        if (check_game_over())
+            return;
 
         game_screenshot();
         

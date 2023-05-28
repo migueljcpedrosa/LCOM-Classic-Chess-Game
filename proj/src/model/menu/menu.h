@@ -5,25 +5,7 @@
 #include <lcom/lcf.h>
 #include "../../view/sprite.h"
 #include "model/cursor/cursor_input.h"
-
-typedef struct {
-
-    int x;
-    int y;
-    char** words;
-    int num_words;
-
-} Title;
-
-typedef struct {
-
-  int x;
-  int y;
-  int width;
-  int height;
-  Sprite* sprite;
-
-} Button;
+#include "model/model_utils.h"
 
 typedef struct {
 
@@ -40,8 +22,8 @@ void create_menu();
 
 void destroy_menu();
 
-bool clicked_play(CursorInput* cursor);
+bool menu_clicked_play(CursorInput* cursor);
 
-bool clicked_exit(CursorInput* cursor);
+bool menu_clicked_exit(CursorInput* cursor);
 
 #endif

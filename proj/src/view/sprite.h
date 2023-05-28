@@ -26,12 +26,15 @@ extern Sprite* mouse;
 extern Sprite* numbers;
 
 extern Sprite* alphabet;
+extern Sprite* alphabet_small;
 
 extern Sprite* exitButton;
 extern Sprite* playButton;
 extern Sprite* chessBackground;
 
 int (load_sprites)();
+
+void (destroy_sprites)(); 
 
 int (load_sprite)(Sprite* sprite, xpm_map_t xpm);
 

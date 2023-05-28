@@ -6,7 +6,7 @@
 
 extern Piece* selected_piece;
 
-void (check_game_over)();
+int (check_game_over)();
 
 void (setup_bot_timer)(Player* player);
 

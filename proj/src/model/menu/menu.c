@@ -1,7 +1,6 @@
 
 #include "menu.h"
 #include <stdbool.h>
-#include "drivers/keyboard/i8042.h"
 
 Menu* menu;
 
@@ -17,6 +16,7 @@ void create_menu(){
   title.words[0] = "CHESS";
   title.words[1] = "GAME";
   title.num_words = 2;
+  title.font = alphabet;
 
   Button playButtonMenu;
   Button exitButtonMenu;
@@ -46,7 +46,7 @@ void destroy_menu(){
   free(menu);
 }
 
-bool clicked_play(CursorInput* cursor){
+bool menu_clicked_play(CursorInput* cursor){
 
   if (menu->playButton.x <= cursor->x && cursor->x <= menu->playButton.x + menu->playButton.width &&
       menu->playButton.y <= cursor->y && cursor->y <= menu->playButton.y + menu->playButton.height)
@@ -55,7 +55,7 @@ bool clicked_play(CursorInput* cursor){
   return false;
 }
 
-bool clicked_exit(CursorInput* cursor){
+bool menu_clicked_exit(CursorInput* cursor){
 
   if (menu->exitButton.x <= cursor->x && cursor->x <= menu->exitButton.x + menu->exitButton.width &&
       menu->exitButton.y <= cursor->y && cursor->y <= menu->exitButton.y + menu->exitButton.height)

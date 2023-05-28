@@ -19,5 +19,6 @@
 #include "exitButtonMenu.xpm"
 #include "alphabet-courier.xpm"
 #include "chessBackground.xpm"
+#include "alphabet-small.xpm"
 
 #endif
