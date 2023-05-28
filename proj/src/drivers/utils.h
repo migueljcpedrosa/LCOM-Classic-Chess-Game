@@ -10,6 +10,7 @@
 
 /**
  * @brief Reads a byte from the specified port.
+ * 
  * @param port The port to read from.
  * @param value A pointer to the variable that will hold the read byte.
  *
@@ -23,6 +24,7 @@ int (util_sys_inb)(int port, uint8_t* value);
 
 /**
  * @brief Extracts the least significant byte from a word.
+ * 
  * @param val The word to extract the LSB from.
  * @param lsb A pointer to the variable that will hold the extracted LSB.
  *
@@ -36,6 +38,7 @@ int (util_get_LSB)(uint16_t val, uint8_t *lsb);
 
 /**
  * @brief Extracts the most significant byte from a word.
+ * 
  * @param val The word to extract the MSB from.
  * @param msb A pointer to the variable that will hold the extracted MSB.
  *

@@ -12,9 +12,9 @@
 #include "model/model_utils.h"
 
 /**
- * @brief Structure representing the Menu state.
+ * @brief Struct representing the Menu state.
  *
- * This structure includes the title, two buttons (play and exit), and a background sprite.
+ * This struct includes the title, two buttons (play and exit), and a background sprite.
  */
 typedef struct {
 
@@ -48,6 +48,7 @@ void destroy_menu();
 
 /**
  * @brief Checks if the play button in the initial menu has been clicked.
+ * 
  * @param cursor CursorInput struct that contains the current cursor input.
  *
  * This function checks if the current cursor position is within the bounds of the play button in the menu.
@@ -58,6 +59,7 @@ bool menu_clicked_play(CursorInput* cursor);
 
 /**
  * @brief Checks if the exit button in the initial menu has been clicked.
+ * 
  * @param cursor CursorInput struct that contains the current cursor input.
  *
  * This function checks if the current cursor position is within the bounds of the exit button in the menu.

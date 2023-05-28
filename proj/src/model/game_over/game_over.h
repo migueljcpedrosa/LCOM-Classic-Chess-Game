@@ -10,9 +10,9 @@
 #include "model/model_utils.h"
 
 /**
- * @brief Structure that represents the GameOver state.
+ * @brief Struct that represents the GameOver state.
  *
- * This structure contains the title, and two buttons for Play and Exit.
+ * This struct contains the title, and two buttons for Play and Exit.
  */
 typedef struct {
 
@@ -37,6 +37,7 @@ void create_game_over();
 
 /**
  * @brief Checks if the play button has been clicked.
+ * 
  * @param cursor CursorInput struct that contains the current cursor input.
  *
  * This function checks if the current cursor position is within the bounds of the play button.
@@ -47,6 +48,7 @@ bool game_over_clicked_play(CursorInput* cursor);
 
 /**
  * @brief Checks if the exit button has been clicked.
+ * 
  * @param cursor CursorInput struct that contains the current cursor input.
  *
  * This function checks if the current cursor position is within the bounds of the exit button.

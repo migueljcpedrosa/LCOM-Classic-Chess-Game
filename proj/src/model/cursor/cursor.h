@@ -7,9 +7,9 @@
 #define _CURSOR_H_
 
 /**
- * @brief Structure that represents a cursor.
+ * @brief Struct that represents a cursor.
  *
- * This structure contains the current and previous position of the cursor,
+ * This struct contains the current and previous position of the cursor,
  * as well as its width and height.
  */
 typedef struct {
@@ -30,6 +30,7 @@ Cursor* cursor;
 
 /**
  * @brief Creates a new cursor.
+ * 
  * @param x The initial x-coordinate of the cursor.
  * @param y The initial y-coordinate of the cursor.
  *
@@ -50,6 +51,7 @@ void (cursor_destroy)();
 
 /**
  * @brief Moves the cursor by the specified amount.
+ * 
  * @param x The amount to move the cursor along the x-axis.
  * @param y The amount to move the cursor along the y-axis.
  *
