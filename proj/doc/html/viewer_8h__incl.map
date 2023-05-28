@@ -1,10 +1,11 @@
 <map id="view/viewer.h" name="view/viewer.h">
-<area shape="rect" id="node1" title=" " alt="" coords="107,5,202,32"/>
-<area shape="rect" id="node2" href="$gpu_8h.html" title=" " alt="" coords="69,171,205,213"/>
-<area shape="rect" id="node4" href="$vbe_8h.html" title=" " alt="" coords="25,80,161,123"/>
-<area shape="rect" id="node5" href="$rtc_8h.html" title=" " alt="" coords="273,88,393,115"/>
-<area shape="rect" id="node8" href="$sprite_8h.html" title=" " alt="" coords="185,88,249,115"/>
-<area shape="rect" id="node3" title=" " alt="" coords="150,261,228,288"/>
-<area shape="rect" id="node6" title=" " alt="" coords="280,179,386,205"/>
-<area shape="rect" id="node7" title=" " alt="" coords="409,179,483,205"/>
+<area shape="rect" id="node1" title=" " alt="" coords="105,5,201,32"/>
+<area shape="rect" id="node2" href="$gpu_8h.html" title=" " alt="" coords="11,171,146,213"/>
+<area shape="rect" id="node4" href="$vbe_8h.html" title=" " alt="" coords="24,80,159,123"/>
+<area shape="rect" id="node5" href="$rtc_8h.html" title=" " alt="" coords="272,88,391,115"/>
+<area shape="rect" id="node9" href="$sprite_8h.html" title=" " alt="" coords="183,88,248,115"/>
+<area shape="rect" id="node3" title=" " alt="" coords="92,261,169,288"/>
+<area shape="rect" id="node6" title=" " alt="" coords="222,179,327,205"/>
+<area shape="rect" id="node7" title=" " alt="" coords="350,179,425,205"/>
+<area shape="rect" id="node8" href="$mrtc_8h.html" title=" " alt="" coords="449,179,507,205"/>
 </map>

@@ -1,16 +1,17 @@
 <map id="view/game_over_viewer.c" name="view/game_over_viewer.c">
-<area shape="rect" id="node1" title=" " alt="" coords="97,5,261,32"/>
-<area shape="rect" id="node2" href="$game__over__viewer_8h.html" title=" " alt="" coords="5,88,142,115"/>
-<area shape="rect" id="node3" href="$viewer_8h.html" title=" " alt="" coords="140,171,207,197"/>
-<area shape="rect" id="node11" href="$game__over_8h.html" title=" " alt="" coords="221,80,379,123"/>
-<area shape="rect" id="node4" href="$gpu_8h.html" title=" " alt="" coords="51,336,187,379"/>
-<area shape="rect" id="node6" href="$vbe_8h.html" title=" " alt="" coords="45,245,180,288"/>
-<area shape="rect" id="node7" href="$rtc_8h.html" title=" " alt="" coords="293,253,412,280"/>
-<area shape="rect" id="node10" href="$sprite_8h.html" title=" " alt="" coords="204,253,268,280"/>
-<area shape="rect" id="node5" title=" " alt="" coords="315,427,392,453"/>
-<area shape="rect" id="node8" title=" " alt="" coords="210,344,316,371"/>
-<area shape="rect" id="node9" title=" " alt="" coords="391,344,465,371"/>
-<area shape="rect" id="node12" href="$cursor__input_8h.html" title=" " alt="" coords="436,245,572,288"/>
-<area shape="rect" id="node14" href="$model__utils_8h.html" title=" " alt="" coords="232,171,369,197"/>
-<area shape="rect" id="node13" href="$cursor_8h.html" title=" " alt="" coords="540,344,660,371"/>
+<area shape="rect" id="node1" title=" " alt="" coords="289,5,453,32"/>
+<area shape="rect" id="node2" href="$game__over__viewer_8h.html" title=" " alt="" coords="131,88,267,115"/>
+<area shape="rect" id="node3" href="$viewer_8h.html" title=" " alt="" coords="464,171,531,197"/>
+<area shape="rect" id="node12" href="$game__over_8h.html" title=" " alt="" coords="292,80,450,123"/>
+<area shape="rect" id="node4" href="$gpu_8h.html" title=" " alt="" coords="530,336,665,379"/>
+<area shape="rect" id="node6" href="$vbe_8h.html" title=" " alt="" coords="493,245,628,288"/>
+<area shape="rect" id="node7" href="$rtc_8h.html" title=" " alt="" coords="261,253,380,280"/>
+<area shape="rect" id="node11" href="$sprite_8h.html" title=" " alt="" coords="404,253,469,280"/>
+<area shape="rect" id="node5" title=" " alt="" coords="454,427,531,453"/>
+<area shape="rect" id="node8" title=" " alt="" coords="268,344,373,371"/>
+<area shape="rect" id="node9" title=" " alt="" coords="170,344,244,371"/>
+<area shape="rect" id="node10" href="$mrtc_8h.html" title=" " alt="" coords="397,344,455,371"/>
+<area shape="rect" id="node13" href="$cursor__input_8h.html" title=" " alt="" coords="59,245,195,288"/>
+<area shape="rect" id="node15" href="$model__utils_8h.html" title=" " alt="" coords="302,171,440,197"/>
+<area shape="rect" id="node14" href="$cursor_8h.html" title=" " alt="" coords="26,344,146,371"/>
 </map>

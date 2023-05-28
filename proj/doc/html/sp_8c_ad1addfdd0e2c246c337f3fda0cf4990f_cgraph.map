@@ -1,0 +1,5 @@
+<map id="serial_port_initialize" name="serial_port_initialize">
+<area shape="rect" id="node1" title="Initializes the serial port by setting up the necessary parameters." alt="" coords="5,31,141,57"/>
+<area shape="rect" id="node2" href="$sp__data__queue_8c.html#aeb31335a1e7fd3fa94b75e733ac9ca40" title=" " alt="" coords="189,5,301,32"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title="Reads a byte from the specified port." alt="" coords="200,56,290,83"/>
+</map>

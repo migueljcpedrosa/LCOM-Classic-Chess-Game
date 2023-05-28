@@ -1,0 +1,29 @@
+\hypertarget{sp__data__queue_8h_source}{}\doxysection{sp\+\_\+data\+\_\+queue.\+h}
+\label{sp__data__queue_8h_source}\index{drivers/serial\_port/sp\_data\_queue.h@{drivers/serial\_port/sp\_data\_queue.h}}
+\mbox{\hyperlink{sp__data__queue_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_SP\_DATA\_QUEUE\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_SP\_DATA\_QUEUE\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{7     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_data_queue_a72e6d5f8eb54b3f9ad0cb0b91e06b686}{head}}, tail, queue\_size;}
+\DoxyCodeLine{8     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{struct_data_queue_a1da3a6719e692bfc9edef2df1963f91b}{max\_capacity}};}
+\DoxyCodeLine{9     \textcolor{keywordtype}{int}* \mbox{\hyperlink{struct_data_queue_a3471abb2dd3f0b347fd40bd7e6b2b398}{elements}};}
+\DoxyCodeLine{10 \} \mbox{\hyperlink{struct_data_queue}{DataQueue}};}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \mbox{\hyperlink{struct_data_queue}{DataQueue}}* \mbox{\hyperlink{sp__data__queue_8h_aeb31335a1e7fd3fa94b75e733ac9ca40}{data\_queue\_init}}();}
+\DoxyCodeLine{13 \textcolor{keywordtype}{void} \mbox{\hyperlink{sp__data__queue_8h_af964d9f7b4ce17338a9d2a1c4f23bb1e}{data\_queue\_destroy\_queue}}(\mbox{\hyperlink{struct_data_queue}{DataQueue}}* dq);}
+\DoxyCodeLine{14 \textcolor{keywordtype}{bool} \mbox{\hyperlink{sp__data__queue_8h_a49cc701a728063331e2debf35bdbaf99}{data\_queue\_push}}(\mbox{\hyperlink{struct_data_queue}{DataQueue}}* dq, uint8\_t data);}
+\DoxyCodeLine{15 uint8\_t \mbox{\hyperlink{sp__data__queue_8h_a5ca26fc59f9054960a0a2f3ec626ef24}{data\_queue\_pop}}(\mbox{\hyperlink{struct_data_queue}{DataQueue}}* dq);}
+\DoxyCodeLine{16 \textcolor{keywordtype}{int} \mbox{\hyperlink{sp__data__queue_8h_a2e1aedd27e7b03be4df39071186a8530}{data\_queue\_current\_size}}(\mbox{\hyperlink{struct_data_queue}{DataQueue}} *dq);}
+\DoxyCodeLine{17 uint8\_t \mbox{\hyperlink{sp__data__queue_8h_a71bcf0a6c7c00e958b779302f61bcece}{data\_queue\_peek}}(\mbox{\hyperlink{struct_data_queue}{DataQueue}}* dq);}
+\DoxyCodeLine{18 \textcolor{keywordtype}{bool} \mbox{\hyperlink{sp__data__queue_8h_ab88cdba8c65c93c95bc2f88a94670d10}{data\_queue\_contains}}(\mbox{\hyperlink{struct_data_queue}{DataQueue}}* dq, uint8\_t element);}
+\DoxyCodeLine{19 uint8\_t \mbox{\hyperlink{sp__data__queue_8h_aff600086203766e783b80688c69336d7}{data\_queue\_front}}(\mbox{\hyperlink{struct_data_queue}{DataQueue}}* dq);}
+\DoxyCodeLine{20 uint8\_t \mbox{\hyperlink{sp__data__queue_8h_a65821dcd6f522170fd1e3e9b0a80b8f2}{data\_queue\_back}}(\mbox{\hyperlink{struct_data_queue}{DataQueue}}* dq);}
+\DoxyCodeLine{21 \textcolor{keywordtype}{bool} \mbox{\hyperlink{sp__data__queue_8h_a2993ef06d7b018dcb72272ef9c70a5c0}{data\_queue\_is\_full}}(\mbox{\hyperlink{struct_data_queue}{DataQueue}}* dq);}
+\DoxyCodeLine{22 \textcolor{keywordtype}{bool} \mbox{\hyperlink{sp__data__queue_8h_a199ef601b60034aff16df911be59e550}{data\_queue\_is\_empty}}(\mbox{\hyperlink{struct_data_queue}{DataQueue}}* dq);}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

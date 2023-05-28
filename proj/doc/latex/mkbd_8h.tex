@@ -1,0 +1,340 @@
+\hypertarget{mkbd_8h}{}\doxysection{drivers/keyboard/mkbd.h File Reference}
+\label{mkbd_8h}\index{drivers/keyboard/mkbd.h@{drivers/keyboard/mkbd.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mkbd_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mkbd_8h_a5c1072213ce8d8cd43628c4319ae0391}{KBD\+\_\+\+IRQ}}~1
+\begin{DoxyCompactList}\small\item\em Keyboard interrupt request line. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_a923231d2e45aaea2dbab3532b06c2311}{STATUS\+\_\+\+PORT}}~0x64
+\begin{DoxyCompactList}\small\item\em Keyboard status register I/O port. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_aeff3162e464a9081f73e3765f199d7c1}{KBD\+\_\+\+OUT\+\_\+\+BUF}}~0x60
+\begin{DoxyCompactList}\small\item\em Keyboard output buffer I/O port. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_a8db5a0c868d7191d31d2ec5918281645}{INPUT\+\_\+\+CMD}}~0x64
+\begin{DoxyCompactList}\small\item\em Command register I/O port. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_ac5e7493c6b0f7f6cae012a56c0620986}{INPUT\+\_\+\+DATA}}~0x60
+\begin{DoxyCompactList}\small\item\em Data register I/O port. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_a1a522aa19bcb695a9df30032a893bee3}{DELAY\+\_\+\+US}}~20000
+\begin{DoxyCompactList}\small\item\em Delay in microseconds for keyboard operations. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_a85964cb90343bb1a029b1d1b4229f910}{MOUSE\+\_\+\+IRQ}}~12
+\begin{DoxyCompactList}\small\item\em Mouse interrupt request line. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_a6b0609c88f375140a5620a4c02282f39}{MOUSE\+\_\+\+CMD}}~0x\+D4
+\begin{DoxyCompactList}\small\item\em Mouse command register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_a44bd37aeb5f1fffe6bedecf83909a8cb}{MOUSE\+\_\+\+LEFT\+\_\+\+BTN}}~BIT(0)
+\begin{DoxyCompactList}\small\item\em Bitmask for mouse left button. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_abd308ee696dbdeb529174433e406c0f5}{MOUSE\+\_\+\+RIGHT\+\_\+\+BTN}}~BIT(1)
+\begin{DoxyCompactList}\small\item\em Bitmask for mouse right button. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_ad75d8bc2d35560935da74f6aad4fb7d3}{MOUSE\+\_\+\+MIDDLE\+\_\+\+BTN}}~BIT(2)
+\begin{DoxyCompactList}\small\item\em Bitmask for mouse middle button. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_af4d737b43f5b837a7743e8d005056c63}{MOUSE\+\_\+\+SYNC\+\_\+\+BYTE}}~BIT(3)
+\begin{DoxyCompactList}\small\item\em Bitmask for mouse sync byte. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_acf1481862340f014b75931e8d83e5430}{MOUSE\+\_\+\+DX\+\_\+\+BIT9}}~BIT(4)
+\begin{DoxyCompactList}\small\item\em Bitmask for 9th bit of mouse x displacement. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_ac21fe7a10ceb43064c618d9f4b2461b0}{MOUSE\+\_\+\+DY\+\_\+\+BIT9}}~BIT(5)
+\begin{DoxyCompactList}\small\item\em Bitmask for 9th bit of mouse y displacement. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_a0663715bb53ecaf279ac3c18906e8bc6}{MOUSE\+\_\+\+X\+\_\+\+OVF}}~BIT(6)
+\begin{DoxyCompactList}\small\item\em Bitmask for mouse x overflow. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_a637f5d5ecc9244806ca437d9b4f88c7b}{MOUSE\+\_\+\+Y\+\_\+\+OVF}}~BIT(7)
+\begin{DoxyCompactList}\small\item\em Bitmask for mouse y overflow. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_af9d8432ffdd112dfaf78592da14710f4}{OUT\+\_\+\+BUF\+\_\+\+READY}}~BIT(0)
+\begin{DoxyCompactList}\small\item\em Bitmask for output buffer readiness. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_a9494bd3dba976fb2f726d9c3d3b07949}{IN\+\_\+\+BUF\+\_\+\+READY}}~BIT(1)
+\begin{DoxyCompactList}\small\item\em Bitmask for input buffer readiness. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_a1bac1ef5460811dbe6a32e070bdfa9a5}{DATA\+\_\+\+FROM\+\_\+\+MOUSE}}~BIT(5)
+\begin{DoxyCompactList}\small\item\em Bitmask for data source (mouse) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_ab4556e7b441bc247315ea9a2f3afe79c}{TIME\+\_\+\+OUT\+\_\+\+ERROR}}~BIT(6)
+\begin{DoxyCompactList}\small\item\em Bitmask for time out error. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_a81d2ca6759f3f3bf04556b7558aea6bc}{PARITY\+\_\+\+ERROR}}~BIT(7)
+\begin{DoxyCompactList}\small\item\em Bitmask for parity error. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_afee82d91b1076ce0512eb9637c7cea8b}{ENBL\+\_\+\+DATA\+\_\+\+REP}}~0x\+F4
+\begin{DoxyCompactList}\small\item\em Enable data report command. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_a1c84607e844d7b3736a1a3491c18e872}{DIS\+\_\+\+DATA\+\_\+\+REP}}~0x\+F5
+\begin{DoxyCompactList}\small\item\em Disable data report command. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_abfdbff563607dcdc258b03bbe2c6793f}{REQUEST\+\_\+\+FRWD}}~0x\+D4
+\begin{DoxyCompactList}\small\item\em Forward request command. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}}~0x\+FA
+\begin{DoxyCompactList}\small\item\em Command execution success code. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_a4af1b6159e447ba72652bb7fcdfa726e}{ESC}}~0x01
+\begin{DoxyCompactList}\small\item\em Keyboard scan code for the ESC (escape) key. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mkbd_8h_af4bced5cf8ed55746d4b5d34f9a0fe39}{ENTER}}~0x9c
+\begin{DoxyCompactList}\small\item\em Keyboard scan code for the ENTER key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{mkbd_8h_a1bac1ef5460811dbe6a32e070bdfa9a5}\label{mkbd_8h_a1bac1ef5460811dbe6a32e070bdfa9a5}} 
+\index{mkbd.h@{mkbd.h}!DATA\_FROM\_MOUSE@{DATA\_FROM\_MOUSE}}
+\index{DATA\_FROM\_MOUSE@{DATA\_FROM\_MOUSE}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{DATA\_FROM\_MOUSE}{DATA\_FROM\_MOUSE}}
+{\footnotesize\ttfamily \#define DATA\+\_\+\+FROM\+\_\+\+MOUSE~BIT(5)}
+
+
+
+Bitmask for data source (mouse) 
+
+\mbox{\Hypertarget{mkbd_8h_a1a522aa19bcb695a9df30032a893bee3}\label{mkbd_8h_a1a522aa19bcb695a9df30032a893bee3}} 
+\index{mkbd.h@{mkbd.h}!DELAY\_US@{DELAY\_US}}
+\index{DELAY\_US@{DELAY\_US}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{DELAY\_US}{DELAY\_US}}
+{\footnotesize\ttfamily \#define DELAY\+\_\+\+US~20000}
+
+
+
+Delay in microseconds for keyboard operations. 
+
+\mbox{\Hypertarget{mkbd_8h_a1c84607e844d7b3736a1a3491c18e872}\label{mkbd_8h_a1c84607e844d7b3736a1a3491c18e872}} 
+\index{mkbd.h@{mkbd.h}!DIS\_DATA\_REP@{DIS\_DATA\_REP}}
+\index{DIS\_DATA\_REP@{DIS\_DATA\_REP}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{DIS\_DATA\_REP}{DIS\_DATA\_REP}}
+{\footnotesize\ttfamily \#define DIS\+\_\+\+DATA\+\_\+\+REP~0x\+F5}
+
+
+
+Disable data report command. 
+
+\mbox{\Hypertarget{mkbd_8h_afee82d91b1076ce0512eb9637c7cea8b}\label{mkbd_8h_afee82d91b1076ce0512eb9637c7cea8b}} 
+\index{mkbd.h@{mkbd.h}!ENBL\_DATA\_REP@{ENBL\_DATA\_REP}}
+\index{ENBL\_DATA\_REP@{ENBL\_DATA\_REP}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{ENBL\_DATA\_REP}{ENBL\_DATA\_REP}}
+{\footnotesize\ttfamily \#define ENBL\+\_\+\+DATA\+\_\+\+REP~0x\+F4}
+
+
+
+Enable data report command. 
+
+\mbox{\Hypertarget{mkbd_8h_af4bced5cf8ed55746d4b5d34f9a0fe39}\label{mkbd_8h_af4bced5cf8ed55746d4b5d34f9a0fe39}} 
+\index{mkbd.h@{mkbd.h}!ENTER@{ENTER}}
+\index{ENTER@{ENTER}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{ENTER}{ENTER}}
+{\footnotesize\ttfamily \#define ENTER~0x9c}
+
+
+
+Keyboard scan code for the ENTER key. 
+
+\mbox{\Hypertarget{mkbd_8h_a4af1b6159e447ba72652bb7fcdfa726e}\label{mkbd_8h_a4af1b6159e447ba72652bb7fcdfa726e}} 
+\index{mkbd.h@{mkbd.h}!ESC@{ESC}}
+\index{ESC@{ESC}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{ESC}{ESC}}
+{\footnotesize\ttfamily \#define ESC~0x01}
+
+
+
+Keyboard scan code for the ESC (escape) key. 
+
+\mbox{\Hypertarget{mkbd_8h_a9494bd3dba976fb2f726d9c3d3b07949}\label{mkbd_8h_a9494bd3dba976fb2f726d9c3d3b07949}} 
+\index{mkbd.h@{mkbd.h}!IN\_BUF\_READY@{IN\_BUF\_READY}}
+\index{IN\_BUF\_READY@{IN\_BUF\_READY}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{IN\_BUF\_READY}{IN\_BUF\_READY}}
+{\footnotesize\ttfamily \#define IN\+\_\+\+BUF\+\_\+\+READY~BIT(1)}
+
+
+
+Bitmask for input buffer readiness. 
+
+\mbox{\Hypertarget{mkbd_8h_a8db5a0c868d7191d31d2ec5918281645}\label{mkbd_8h_a8db5a0c868d7191d31d2ec5918281645}} 
+\index{mkbd.h@{mkbd.h}!INPUT\_CMD@{INPUT\_CMD}}
+\index{INPUT\_CMD@{INPUT\_CMD}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{INPUT\_CMD}{INPUT\_CMD}}
+{\footnotesize\ttfamily \#define INPUT\+\_\+\+CMD~0x64}
+
+
+
+Command register I/O port. 
+
+\mbox{\Hypertarget{mkbd_8h_ac5e7493c6b0f7f6cae012a56c0620986}\label{mkbd_8h_ac5e7493c6b0f7f6cae012a56c0620986}} 
+\index{mkbd.h@{mkbd.h}!INPUT\_DATA@{INPUT\_DATA}}
+\index{INPUT\_DATA@{INPUT\_DATA}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{INPUT\_DATA}{INPUT\_DATA}}
+{\footnotesize\ttfamily \#define INPUT\+\_\+\+DATA~0x60}
+
+
+
+Data register I/O port. 
+
+\mbox{\Hypertarget{mkbd_8h_a5c1072213ce8d8cd43628c4319ae0391}\label{mkbd_8h_a5c1072213ce8d8cd43628c4319ae0391}} 
+\index{mkbd.h@{mkbd.h}!KBD\_IRQ@{KBD\_IRQ}}
+\index{KBD\_IRQ@{KBD\_IRQ}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{KBD\_IRQ}{KBD\_IRQ}}
+{\footnotesize\ttfamily \#define KBD\+\_\+\+IRQ~1}
+
+
+
+Keyboard interrupt request line. 
+
+\mbox{\Hypertarget{mkbd_8h_aeff3162e464a9081f73e3765f199d7c1}\label{mkbd_8h_aeff3162e464a9081f73e3765f199d7c1}} 
+\index{mkbd.h@{mkbd.h}!KBD\_OUT\_BUF@{KBD\_OUT\_BUF}}
+\index{KBD\_OUT\_BUF@{KBD\_OUT\_BUF}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{KBD\_OUT\_BUF}{KBD\_OUT\_BUF}}
+{\footnotesize\ttfamily \#define KBD\+\_\+\+OUT\+\_\+\+BUF~0x60}
+
+
+
+Keyboard output buffer I/O port. 
+
+\mbox{\Hypertarget{mkbd_8h_a6b0609c88f375140a5620a4c02282f39}\label{mkbd_8h_a6b0609c88f375140a5620a4c02282f39}} 
+\index{mkbd.h@{mkbd.h}!MOUSE\_CMD@{MOUSE\_CMD}}
+\index{MOUSE\_CMD@{MOUSE\_CMD}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_CMD}{MOUSE\_CMD}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+CMD~0x\+D4}
+
+
+
+Mouse command register. 
+
+\mbox{\Hypertarget{mkbd_8h_acf1481862340f014b75931e8d83e5430}\label{mkbd_8h_acf1481862340f014b75931e8d83e5430}} 
+\index{mkbd.h@{mkbd.h}!MOUSE\_DX\_BIT9@{MOUSE\_DX\_BIT9}}
+\index{MOUSE\_DX\_BIT9@{MOUSE\_DX\_BIT9}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_DX\_BIT9}{MOUSE\_DX\_BIT9}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+DX\+\_\+\+BIT9~BIT(4)}
+
+
+
+Bitmask for 9th bit of mouse x displacement. 
+
+\mbox{\Hypertarget{mkbd_8h_ac21fe7a10ceb43064c618d9f4b2461b0}\label{mkbd_8h_ac21fe7a10ceb43064c618d9f4b2461b0}} 
+\index{mkbd.h@{mkbd.h}!MOUSE\_DY\_BIT9@{MOUSE\_DY\_BIT9}}
+\index{MOUSE\_DY\_BIT9@{MOUSE\_DY\_BIT9}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_DY\_BIT9}{MOUSE\_DY\_BIT9}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+DY\+\_\+\+BIT9~BIT(5)}
+
+
+
+Bitmask for 9th bit of mouse y displacement. 
+
+\mbox{\Hypertarget{mkbd_8h_a85964cb90343bb1a029b1d1b4229f910}\label{mkbd_8h_a85964cb90343bb1a029b1d1b4229f910}} 
+\index{mkbd.h@{mkbd.h}!MOUSE\_IRQ@{MOUSE\_IRQ}}
+\index{MOUSE\_IRQ@{MOUSE\_IRQ}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_IRQ}{MOUSE\_IRQ}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+IRQ~12}
+
+
+
+Mouse interrupt request line. 
+
+\mbox{\Hypertarget{mkbd_8h_a44bd37aeb5f1fffe6bedecf83909a8cb}\label{mkbd_8h_a44bd37aeb5f1fffe6bedecf83909a8cb}} 
+\index{mkbd.h@{mkbd.h}!MOUSE\_LEFT\_BTN@{MOUSE\_LEFT\_BTN}}
+\index{MOUSE\_LEFT\_BTN@{MOUSE\_LEFT\_BTN}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_LEFT\_BTN}{MOUSE\_LEFT\_BTN}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+LEFT\+\_\+\+BTN~BIT(0)}
+
+
+
+Bitmask for mouse left button. 
+
+\mbox{\Hypertarget{mkbd_8h_ad75d8bc2d35560935da74f6aad4fb7d3}\label{mkbd_8h_ad75d8bc2d35560935da74f6aad4fb7d3}} 
+\index{mkbd.h@{mkbd.h}!MOUSE\_MIDDLE\_BTN@{MOUSE\_MIDDLE\_BTN}}
+\index{MOUSE\_MIDDLE\_BTN@{MOUSE\_MIDDLE\_BTN}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_MIDDLE\_BTN}{MOUSE\_MIDDLE\_BTN}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+MIDDLE\+\_\+\+BTN~BIT(2)}
+
+
+
+Bitmask for mouse middle button. 
+
+\mbox{\Hypertarget{mkbd_8h_abd308ee696dbdeb529174433e406c0f5}\label{mkbd_8h_abd308ee696dbdeb529174433e406c0f5}} 
+\index{mkbd.h@{mkbd.h}!MOUSE\_RIGHT\_BTN@{MOUSE\_RIGHT\_BTN}}
+\index{MOUSE\_RIGHT\_BTN@{MOUSE\_RIGHT\_BTN}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_RIGHT\_BTN}{MOUSE\_RIGHT\_BTN}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+RIGHT\+\_\+\+BTN~BIT(1)}
+
+
+
+Bitmask for mouse right button. 
+
+\mbox{\Hypertarget{mkbd_8h_af4d737b43f5b837a7743e8d005056c63}\label{mkbd_8h_af4d737b43f5b837a7743e8d005056c63}} 
+\index{mkbd.h@{mkbd.h}!MOUSE\_SYNC\_BYTE@{MOUSE\_SYNC\_BYTE}}
+\index{MOUSE\_SYNC\_BYTE@{MOUSE\_SYNC\_BYTE}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_SYNC\_BYTE}{MOUSE\_SYNC\_BYTE}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+SYNC\+\_\+\+BYTE~BIT(3)}
+
+
+
+Bitmask for mouse sync byte. 
+
+\mbox{\Hypertarget{mkbd_8h_a0663715bb53ecaf279ac3c18906e8bc6}\label{mkbd_8h_a0663715bb53ecaf279ac3c18906e8bc6}} 
+\index{mkbd.h@{mkbd.h}!MOUSE\_X\_OVF@{MOUSE\_X\_OVF}}
+\index{MOUSE\_X\_OVF@{MOUSE\_X\_OVF}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_X\_OVF}{MOUSE\_X\_OVF}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+X\+\_\+\+OVF~BIT(6)}
+
+
+
+Bitmask for mouse x overflow. 
+
+\mbox{\Hypertarget{mkbd_8h_a637f5d5ecc9244806ca437d9b4f88c7b}\label{mkbd_8h_a637f5d5ecc9244806ca437d9b4f88c7b}} 
+\index{mkbd.h@{mkbd.h}!MOUSE\_Y\_OVF@{MOUSE\_Y\_OVF}}
+\index{MOUSE\_Y\_OVF@{MOUSE\_Y\_OVF}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{MOUSE\_Y\_OVF}{MOUSE\_Y\_OVF}}
+{\footnotesize\ttfamily \#define MOUSE\+\_\+\+Y\+\_\+\+OVF~BIT(7)}
+
+
+
+Bitmask for mouse y overflow. 
+
+\mbox{\Hypertarget{mkbd_8h_af9d8432ffdd112dfaf78592da14710f4}\label{mkbd_8h_af9d8432ffdd112dfaf78592da14710f4}} 
+\index{mkbd.h@{mkbd.h}!OUT\_BUF\_READY@{OUT\_BUF\_READY}}
+\index{OUT\_BUF\_READY@{OUT\_BUF\_READY}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{OUT\_BUF\_READY}{OUT\_BUF\_READY}}
+{\footnotesize\ttfamily \#define OUT\+\_\+\+BUF\+\_\+\+READY~BIT(0)}
+
+
+
+Bitmask for output buffer readiness. 
+
+\mbox{\Hypertarget{mkbd_8h_a81d2ca6759f3f3bf04556b7558aea6bc}\label{mkbd_8h_a81d2ca6759f3f3bf04556b7558aea6bc}} 
+\index{mkbd.h@{mkbd.h}!PARITY\_ERROR@{PARITY\_ERROR}}
+\index{PARITY\_ERROR@{PARITY\_ERROR}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{PARITY\_ERROR}{PARITY\_ERROR}}
+{\footnotesize\ttfamily \#define PARITY\+\_\+\+ERROR~BIT(7)}
+
+
+
+Bitmask for parity error. 
+
+\mbox{\Hypertarget{mkbd_8h_abfdbff563607dcdc258b03bbe2c6793f}\label{mkbd_8h_abfdbff563607dcdc258b03bbe2c6793f}} 
+\index{mkbd.h@{mkbd.h}!REQUEST\_FRWD@{REQUEST\_FRWD}}
+\index{REQUEST\_FRWD@{REQUEST\_FRWD}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{REQUEST\_FRWD}{REQUEST\_FRWD}}
+{\footnotesize\ttfamily \#define REQUEST\+\_\+\+FRWD~0x\+D4}
+
+
+
+Forward request command. 
+
+\mbox{\Hypertarget{mkbd_8h_a923231d2e45aaea2dbab3532b06c2311}\label{mkbd_8h_a923231d2e45aaea2dbab3532b06c2311}} 
+\index{mkbd.h@{mkbd.h}!STATUS\_PORT@{STATUS\_PORT}}
+\index{STATUS\_PORT@{STATUS\_PORT}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{STATUS\_PORT}{STATUS\_PORT}}
+{\footnotesize\ttfamily \#define STATUS\+\_\+\+PORT~0x64}
+
+
+
+Keyboard status register I/O port. 
+
+\mbox{\Hypertarget{mkbd_8h_aa90cac659d18e8ef6294c7ae337f6b58}\label{mkbd_8h_aa90cac659d18e8ef6294c7ae337f6b58}} 
+\index{mkbd.h@{mkbd.h}!SUCCESS@{SUCCESS}}
+\index{SUCCESS@{SUCCESS}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{SUCCESS}{SUCCESS}}
+{\footnotesize\ttfamily \#define SUCCESS~0x\+FA}
+
+
+
+Command execution success code. 
+
+\mbox{\Hypertarget{mkbd_8h_ab4556e7b441bc247315ea9a2f3afe79c}\label{mkbd_8h_ab4556e7b441bc247315ea9a2f3afe79c}} 
+\index{mkbd.h@{mkbd.h}!TIME\_OUT\_ERROR@{TIME\_OUT\_ERROR}}
+\index{TIME\_OUT\_ERROR@{TIME\_OUT\_ERROR}!mkbd.h@{mkbd.h}}
+\doxysubsubsection{\texorpdfstring{TIME\_OUT\_ERROR}{TIME\_OUT\_ERROR}}
+{\footnotesize\ttfamily \#define TIME\+\_\+\+OUT\+\_\+\+ERROR~BIT(6)}
+
+
+
+Bitmask for time out error. 
+

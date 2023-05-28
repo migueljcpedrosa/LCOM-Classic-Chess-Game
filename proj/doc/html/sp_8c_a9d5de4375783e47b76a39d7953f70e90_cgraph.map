@@ -1,0 +1,4 @@
+<map id="serial_port_send_byte" name="serial_port_send_byte">
+<area shape="rect" id="node1" title="Sends a byte to the serial port for transmission." alt="" coords="5,5,154,32"/>
+<area shape="rect" id="node2" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title="Reads a byte from the specified port." alt="" coords="202,5,292,32"/>
+</map>

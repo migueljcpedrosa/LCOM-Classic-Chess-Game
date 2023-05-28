@@ -2,8 +2,8 @@ var searchData=
 [
   ['g_0',['G',['../gpu_8c.html#ad7cf38294d5a71e4e68956b86a44a962',1,'G(uint32_t first):&#160;gpu.c'],['../gpu_8h.html#ad7cf38294d5a71e4e68956b86a44a962',1,'G(uint32_t first):&#160;gpu.c']]],
   ['game_1',['Game',['../struct_game.html',1,'']]],
-  ['game_2',['game',['../game_8c.html#a58bdb5643d0814ac4e697a1564b79b70',1,'game():&#160;game.c'],['../game_8h.html#a58bdb5643d0814ac4e697a1564b79b70',1,'game():&#160;game.c']]],
-  ['game_3',['GAME',['../state_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8ad50cf309d7568040619ed26ee6835a84',1,'state.h']]],
+  ['game_2',['GAME',['../state_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8ad50cf309d7568040619ed26ee6835a84',1,'state.h']]],
+  ['game_3',['game',['../game_8c.html#a58bdb5643d0814ac4e697a1564b79b70',1,'game():&#160;game.c'],['../game_8h.html#a58bdb5643d0814ac4e697a1564b79b70',1,'game():&#160;game.c']]],
   ['game_2ec_4',['game.c',['../game_8c.html',1,'']]],
   ['game_2eh_5',['game.h',['../game_8h.html',1,'']]],
   ['game_5fcontroller_2ec_6',['game_controller.c',['../game__controller_8c.html',1,'']]],

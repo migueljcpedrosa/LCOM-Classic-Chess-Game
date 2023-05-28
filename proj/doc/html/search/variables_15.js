@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['y_0',['y',['../struct_cursor.html#a536df6c93667db288cd5ed0326215fec',1,'Cursor::y()'],['../struct_cursor_input.html#acd3561f14087965f5387b67ed755cca8',1,'CursorInput::y()'],['../struct_position.html#a3c08e9213d4726b21caba3073192c4a3',1,'Position::y()'],['../struct_title.html#ab541dbc462afd81d0ea5cb5103bd187b',1,'Title::y()'],['../struct_button.html#afff35ce0c47f662c3b096e5b644648a5',1,'Button::y()'],['../struct_name_input.html#acc8756d0adf0a3cd752a8770754fcc36',1,'NameInput::y()']]],
-  ['year_1',['year',['../structrtc__timestamp__t.html#ad2444e8ba2d9c1ef50c881e4606fc9e1',1,'rtc_timestamp_t']]]
+  ['x_0',['x',['../struct_cursor.html#a15fe4819896d4960f8d33398905a61d5',1,'Cursor::x()'],['../struct_cursor_input.html#ad114c4b7923121a19f9cfb22ad5fc36d',1,'CursorInput::x()'],['../struct_position.html#aeda152ffeee17ae5be9c02327b2408d8',1,'Position::x()'],['../struct_title.html#a5d1edba812ee4aeaab0c5db4e5b65b81',1,'Title::x()'],['../struct_button.html#a2ec3bc40025b64b44319e7464164d61f',1,'Button::x()'],['../struct_name_input.html#a5265b857bd7de25a41c7e89b1e075daf',1,'NameInput::x()']]],
+  ['xpm_5fimg_5ftype_1',['xpm_img_type',['../sprite_8c.html#ac078c7ca8270d57acebe85378f6d85a4',1,'sprite.c']]]
 ];

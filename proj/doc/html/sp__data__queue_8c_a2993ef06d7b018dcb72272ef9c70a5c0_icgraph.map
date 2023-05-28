@@ -1,0 +1,7 @@
+<map id="data_queue_is_full" name="data_queue_is_full">
+<area shape="rect" id="node1" title=" " alt="" coords="553,43,682,69"/>
+<area shape="rect" id="node2" href="$sp__data__queue_8c.html#a49cc701a728063331e2debf35bdbaf99" title=" " alt="" coords="382,43,505,69"/>
+<area shape="rect" id="node3" href="$sp_8c.html#a9ca7cf77d5a40f48ee17c200283affcf" title="Reads a byte from the serial port." alt="" coords="189,43,334,69"/>
+<area shape="rect" id="node4" href="$sp_8c.html#ab047a100fedba6abf4a8138326458311" title="Interrupt handler for the serial port." alt="" coords="5,5,141,48"/>
+<area shape="rect" id="node5" href="$sp_8c.html#a4ff53b55924256cd3f797471953369fc" title="Clears the serial port interrupts." alt="" coords="14,72,132,99"/>
+</map>

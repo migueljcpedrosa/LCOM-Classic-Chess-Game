@@ -3,12 +3,13 @@
 {\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
 {\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
 {\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}mrtc.\+h\char`\"{}}\newline
 Include dependency graph for rtc.\+h\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=309pt]{rtc_8h__incl}
+\includegraphics[width=350pt]{rtc_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -24,25 +25,6 @@ This graph shows which files directly or indirectly include this file\+:
 \item 
 struct \mbox{\hyperlink{structrtc__timestamp__t}{rtc\+\_\+timestamp\+\_\+t}}
 \begin{DoxyCompactList}\small\item\em Struct that represents the rtc timestamp. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \mbox{\hyperlink{rtc_8h_a9d539fc8a44faad591ef8c118adede8a}{RTC\+\_\+\+COMMAND\+\_\+\+REGISTER}}~0x70
-\item 
-\#define \mbox{\hyperlink{rtc_8h_a36e9699ff8409323f773ddd15c0ce6dd}{RTC\+\_\+\+DATA\+\_\+\+REGISTER}}~0x71
-\item 
-\#define \mbox{\hyperlink{rtc_8h_a43f6540c6d3a78b930f9adad56cf7fac}{RTC\+\_\+\+SECONDS}}~0
-\item 
-\#define \mbox{\hyperlink{rtc_8h_aabc0725ac27ea93c913a2a4d7cd51ac7}{RTC\+\_\+\+MINUTES}}~2
-\item 
-\#define \mbox{\hyperlink{rtc_8h_a4d74cdb9a956c4f1783ad5aff00dc2b8}{RTC\+\_\+\+HOURS}}~4
-\item 
-\#define \mbox{\hyperlink{rtc_8h_a8645ae13bb42ddf10d3ca762a8754160}{RTC\+\_\+\+DAY}}~7
-\item 
-\#define \mbox{\hyperlink{rtc_8h_abda0c877ee1a02b8351c0cfe72838088}{RTC\+\_\+\+MONTH}}~8
-\item 
-\#define \mbox{\hyperlink{rtc_8h_a1df5568e6774b73aa4c6e59fc40e9147}{RTC\+\_\+\+YEAR}}~9
-\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -66,57 +48,6 @@ int \mbox{\hyperlink{rtc_8h_a603a03e790a750b23dd019c128317824}{rtc\+\_\+update\+
 \begin{DoxyCompactList}\small\item\em Updates a specific time unit in the RTC. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{rtc_8h_a5813ed4dd88a4d8fb69f773005922e15}{rtc\+\_\+ih}} (\mbox{\hyperlink{structrtc__timestamp__t}{rtc\+\_\+timestamp\+\_\+t}} $\ast$timestamp)
 \begin{DoxyCompactList}\small\item\em Interrupt handler for the RTC. \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-
-\doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{rtc_8h_a9d539fc8a44faad591ef8c118adede8a}\label{rtc_8h_a9d539fc8a44faad591ef8c118adede8a}} 
-\index{rtc.h@{rtc.h}!RTC\_COMMAND\_REGISTER@{RTC\_COMMAND\_REGISTER}}
-\index{RTC\_COMMAND\_REGISTER@{RTC\_COMMAND\_REGISTER}!rtc.h@{rtc.h}}
-\doxysubsubsection{\texorpdfstring{RTC\_COMMAND\_REGISTER}{RTC\_COMMAND\_REGISTER}}
-{\footnotesize\ttfamily \#define RTC\+\_\+\+COMMAND\+\_\+\+REGISTER~0x70}
-
-\mbox{\Hypertarget{rtc_8h_a36e9699ff8409323f773ddd15c0ce6dd}\label{rtc_8h_a36e9699ff8409323f773ddd15c0ce6dd}} 
-\index{rtc.h@{rtc.h}!RTC\_DATA\_REGISTER@{RTC\_DATA\_REGISTER}}
-\index{RTC\_DATA\_REGISTER@{RTC\_DATA\_REGISTER}!rtc.h@{rtc.h}}
-\doxysubsubsection{\texorpdfstring{RTC\_DATA\_REGISTER}{RTC\_DATA\_REGISTER}}
-{\footnotesize\ttfamily \#define RTC\+\_\+\+DATA\+\_\+\+REGISTER~0x71}
-
-\mbox{\Hypertarget{rtc_8h_a8645ae13bb42ddf10d3ca762a8754160}\label{rtc_8h_a8645ae13bb42ddf10d3ca762a8754160}} 
-\index{rtc.h@{rtc.h}!RTC\_DAY@{RTC\_DAY}}
-\index{RTC\_DAY@{RTC\_DAY}!rtc.h@{rtc.h}}
-\doxysubsubsection{\texorpdfstring{RTC\_DAY}{RTC\_DAY}}
-{\footnotesize\ttfamily \#define RTC\+\_\+\+DAY~7}
-
-\mbox{\Hypertarget{rtc_8h_a4d74cdb9a956c4f1783ad5aff00dc2b8}\label{rtc_8h_a4d74cdb9a956c4f1783ad5aff00dc2b8}} 
-\index{rtc.h@{rtc.h}!RTC\_HOURS@{RTC\_HOURS}}
-\index{RTC\_HOURS@{RTC\_HOURS}!rtc.h@{rtc.h}}
-\doxysubsubsection{\texorpdfstring{RTC\_HOURS}{RTC\_HOURS}}
-{\footnotesize\ttfamily \#define RTC\+\_\+\+HOURS~4}
-
-\mbox{\Hypertarget{rtc_8h_aabc0725ac27ea93c913a2a4d7cd51ac7}\label{rtc_8h_aabc0725ac27ea93c913a2a4d7cd51ac7}} 
-\index{rtc.h@{rtc.h}!RTC\_MINUTES@{RTC\_MINUTES}}
-\index{RTC\_MINUTES@{RTC\_MINUTES}!rtc.h@{rtc.h}}
-\doxysubsubsection{\texorpdfstring{RTC\_MINUTES}{RTC\_MINUTES}}
-{\footnotesize\ttfamily \#define RTC\+\_\+\+MINUTES~2}
-
-\mbox{\Hypertarget{rtc_8h_abda0c877ee1a02b8351c0cfe72838088}\label{rtc_8h_abda0c877ee1a02b8351c0cfe72838088}} 
-\index{rtc.h@{rtc.h}!RTC\_MONTH@{RTC\_MONTH}}
-\index{RTC\_MONTH@{RTC\_MONTH}!rtc.h@{rtc.h}}
-\doxysubsubsection{\texorpdfstring{RTC\_MONTH}{RTC\_MONTH}}
-{\footnotesize\ttfamily \#define RTC\+\_\+\+MONTH~8}
-
-\mbox{\Hypertarget{rtc_8h_a43f6540c6d3a78b930f9adad56cf7fac}\label{rtc_8h_a43f6540c6d3a78b930f9adad56cf7fac}} 
-\index{rtc.h@{rtc.h}!RTC\_SECONDS@{RTC\_SECONDS}}
-\index{RTC\_SECONDS@{RTC\_SECONDS}!rtc.h@{rtc.h}}
-\doxysubsubsection{\texorpdfstring{RTC\_SECONDS}{RTC\_SECONDS}}
-{\footnotesize\ttfamily \#define RTC\+\_\+\+SECONDS~0}
-
-\mbox{\Hypertarget{rtc_8h_a1df5568e6774b73aa4c6e59fc40e9147}\label{rtc_8h_a1df5568e6774b73aa4c6e59fc40e9147}} 
-\index{rtc.h@{rtc.h}!RTC\_YEAR@{RTC\_YEAR}}
-\index{RTC\_YEAR@{RTC\_YEAR}!rtc.h@{rtc.h}}
-\doxysubsubsection{\texorpdfstring{RTC\_YEAR}{RTC\_YEAR}}
-{\footnotesize\ttfamily \#define RTC\+\_\+\+YEAR~9}
-
 
 
 \doxysubsection{Function Documentation}

@@ -1,0 +1,6 @@
+<map id="serial_port_read_byte" name="serial_port_read_byte">
+<area shape="rect" id="node1" title="Reads a byte from the serial port." alt="" coords="5,31,151,57"/>
+<area shape="rect" id="node2" href="$sp__data__queue_8c.html#a49cc701a728063331e2debf35bdbaf99" title=" " alt="" coords="199,5,322,32"/>
+<area shape="rect" id="node4" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title="Reads a byte from the specified port." alt="" coords="215,56,306,83"/>
+<area shape="rect" id="node3" href="$sp__data__queue_8c.html#a2993ef06d7b018dcb72272ef9c70a5c0" title=" " alt="" coords="370,5,498,32"/>
+</map>

@@ -1,0 +1,65 @@
+\hypertarget{sp_8h_source}{}\doxysection{sp.\+h}
+\label{sp_8h_source}\index{drivers/serial\_port/sp.h@{drivers/serial\_port/sp.h}}
+\mbox{\hyperlink{sp_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SERIAL\_PORT}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SERIAL\_PORT}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{sp__data__queue_8h}{sp\_data\_queue.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define COM1\_BASE\_REGISTER 0x3F8}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define MOST\_SIGNIFICANT\_BIT\_MASK 0xF0}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define RECEIVER\_BUFFER\_REGISTER 0x00}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define TRANSMITTER\_HOLDING\_REGISTER 0x00}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define INTERRUPT\_ENABLE\_REGISTER 0x01}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define INTERRUPT\_IDENTIFICATION\_REGISTER 0x02}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define FIFO\_CONTROL\_REGISTER 0x02}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define LINE\_CONTROL\_REGISTER 0x03}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define MODEM\_CONTROL\_REGISTER 0x04}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define LINE\_STATUS\_REGISTER 0x05}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define MODEM\_STATUS\_REGISTER 0x06}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define SCRATCHPAD\_REGISTER 0x07}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define LINE\_STATUS\_DATA\_READY BIT(0)}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define LINE\_STATUS\_OVERRUN\_ERROR BIT(1)}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define LINE\_STATUS\_PARITY\_ERROR BIT(2)}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define LINE\_STATUS\_FRAMING\_ERROR BIT(3)}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define LINE\_STATUS\_BREAK\_INTERRUPT BIT(4)}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define LINE\_STATUS\_THR\_EMPTY BIT(5)}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define LINE\_STATUS\_TRANSMITTER\_EMPTY BIT(6)}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define LINE\_STATUS\_RECEIVER\_FIFO\_ERROR BIT(7)}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define INTERRUPT\_ENABLE\_RECEIVER\_DATA\_AVAILABLE BIT(0)}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define INTERRUPT\_ENABLE\_TRANSMITTER\_EMPTY BIT(1)}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define INTERRUPT\_ENABLE\_LINE\_STATUS BIT(2)}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define INTERRUPT\_ENABLE\_MODEM\_STATUS BIT(3)}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define INTERRUPT\_IDENTIFICATION\_NO\_INTERRUPT\_PENDING BIT(0)}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define INTERRUPT\_IDENTIFICATION\_ID BIT(1) | BIT(2) | BIT(3)}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define INTERRUPT\_IDENTIFICATION\_ORIGIN\_LINE\_STATUS BIT(1) | BIT(2)}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define INTERRUPT\_IDENTIFICATION\_ORIGIN\_RECEIVED\_DATA\_AVAILABLE BIT(2)}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define INTERRUPT\_IDENTIFICATION\_FIFO\_CONTROL BIT(3) | BIT(2)}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define INTERRUPT\_IDENTIFICATION\_ORIGIN\_TRANSMITTER\_EMPTY BIT(1)}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define INTERRUPT\_IDENTIFICATION\_INTERRUPT\_PENDING 0x00}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define FIFO\_CONTROL\_CLEAR BIT(0) | BIT(1) | BIT(2)}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{54 \textcolor{keywordtype}{int} \mbox{\hyperlink{sp_8h_ad1addfdd0e2c246c337f3fda0cf4990f}{serial\_port\_initialize}}(); \textcolor{comment}{//sets up the uart}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{65 \textcolor{keywordtype}{int} \mbox{\hyperlink{sp_8h_a9e5988172a95cfb57bedb0be3f5199f6}{serial\_port\_subscribe\_int}}(uint8\_t* bit\_no);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{75 \textcolor{keywordtype}{int} \mbox{\hyperlink{sp_8h_afd52bd27bbf8c2323c4f5e2dddc7bc11}{serial\_port\_unsubscribe\_int}}();}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{84 \textcolor{keywordtype}{void} \mbox{\hyperlink{sp_8h_ab047a100fedba6abf4a8138326458311}{serial\_port\_interrupt\_handler}}();}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{94 \textcolor{keywordtype}{int} \mbox{\hyperlink{sp_8h_a4ff53b55924256cd3f797471953369fc}{serial\_port\_reset}}();}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{104 \textcolor{keywordtype}{int} \mbox{\hyperlink{sp_8h_a9ca7cf77d5a40f48ee17c200283affcf}{serial\_port\_read\_byte}}();}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{115 \textcolor{keywordtype}{int} \mbox{\hyperlink{sp_8h_a9d5de4375783e47b76a39d7953f70e90}{serial\_port\_send\_byte}}(uint8\_t byte\_to\_send);}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

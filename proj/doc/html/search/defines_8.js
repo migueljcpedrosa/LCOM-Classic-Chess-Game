@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parity_5ferror_0',['PARITY_ERROR',['../keyboard_2i8042_8h.html#a81d2ca6759f3f3bf04556b7558aea6bc',1,'PARITY_ERROR():&#160;i8042.h'],['../mouse_2i8042_8h.html#a81d2ca6759f3f3bf04556b7558aea6bc',1,'PARITY_ERROR():&#160;i8042.h']]]
+  ['out_5fbuf_5fready_0',['OUT_BUF_READY',['../mkbd_8h.html#af9d8432ffdd112dfaf78592da14710f4',1,'OUT_BUF_READY():&#160;mkbd.h'],['../i8042_8h.html#af9d8432ffdd112dfaf78592da14710f4',1,'OUT_BUF_READY():&#160;i8042.h']]]
 ];

@@ -1,0 +1,15 @@
+<map id="drivers/rtc/mrtc.h" name="drivers/rtc/mrtc.h">
+<area shape="rect" id="node1" title=" " alt="" coords="116,5,234,32"/>
+<area shape="rect" id="node2" href="$rtc_8h.html" title=" " alt="" coords="121,80,229,107"/>
+<area shape="rect" id="node3" href="$rtc_8c.html" title=" " alt="" coords="5,155,113,181"/>
+<area shape="rect" id="node4" href="$main_8c.html" title=" " alt="" coords="49,229,109,256"/>
+<area shape="rect" id="node5" href="$menu__viewer_8c.html" title=" " alt="" coords="133,229,268,256"/>
+<area shape="rect" id="node6" href="$viewer_8h.html" title=" " alt="" coords="311,155,407,181"/>
+<area shape="rect" id="node7" href="$game__over__viewer_8c.html" title=" " alt="" coords="569,229,733,256"/>
+<area shape="rect" id="node8" href="$game__viewer_8h.html" title="This file contains the definition of the game viewer module." alt="" coords="757,229,892,256"/>
+<area shape="rect" id="node12" href="$name__viewer_8c.html" title=" " alt="" coords="292,229,426,256"/>
+<area shape="rect" id="node13" href="$viewer_8c.html" title=" " alt="" coords="450,229,545,256"/>
+<area shape="rect" id="node9" href="$game__controller_8c.html" title=" " alt="" coords="572,304,754,331"/>
+<area shape="rect" id="node10" href="$state_8c.html" title=" " alt="" coords="777,304,872,331"/>
+<area shape="rect" id="node11" href="$game__viewer_8c.html" title=" " alt="" coords="896,304,1030,331"/>
+</map>

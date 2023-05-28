@@ -1,8 +1,21 @@
 var searchData=
 [
-  ['time_5fcounter_0',['time_counter',['../struct_player.html#aeeb633192734c97d91a27c46e6c86da0',1,'Player']]],
-  ['timer_1',['timer',['../struct_player.html#ab6e1da9d63baa958c58d3621824855d4',1,'Player']]],
-  ['title_2',['title',['../struct_menu.html#a6d5322552cefbd7f6a1c615348cb8fed',1,'Menu']]],
-  ['turn_3',['turn',['../struct_game.html#ac4e645e5e0a62f7a0a5b8bd3c71bf411',1,'Game']]],
-  ['type_4',['type',['../struct_move.html#a88fb2c25370b1e62a52399ddef5d3449',1,'Move::type()'],['../struct_piece.html#a1ec4eb693f262b94162e7007a4c7b77d',1,'Piece::type()'],['../struct_player.html#a06e4a3eec737ef284f7ae42a60c0967f',1,'Player::type()']]]
+  ['scan_5fcode_0',['scan_code',['../keyboard_8c.html#a06a3dd28ec493a423fea6ccd048d441a',1,'scan_code():&#160;keyboard.c'],['../main_8c.html#a06a3dd28ec493a423fea6ccd048d441a',1,'scan_code():&#160;keyboard.c']]],
+  ['screenshot_1',['screenshot',['../gpu_8c.html#a145b74db7c3a3518c6881406cb3e588d',1,'gpu.c']]],
+  ['secondary_5fpiece_2',['secondary_piece',['../struct_move.html#a7f6031b789ea20117ea62cfa29044cd0',1,'Move']]],
+  ['seconds_3',['seconds',['../structrtc__timestamp__t.html#ae84e11b5bc763dd0c9ad9ca2886a07eb',1,'rtc_timestamp_t']]],
+  ['selected_5fpiece_4',['selected_piece',['../game__controller_8h.html#a09da077207c4c32abd079e452cacbc1d',1,'selected_piece():&#160;game.c'],['../game_8c.html#a09da077207c4c32abd079e452cacbc1d',1,'selected_piece():&#160;game.c'],['../game_8h.html#a09da077207c4c32abd079e452cacbc1d',1,'selected_piece():&#160;game.c']]],
+  ['selected_5fpiece_5fold_5fx_5',['selected_piece_old_x',['../game__viewer_8c.html#ad2bb8d3bc4867ccd4d169e93020893d7',1,'game_viewer.c']]],
+  ['selected_5fpiece_5fold_5fy_6',['selected_piece_old_y',['../game__viewer_8c.html#a7e1aabf4c9841a03219c095e92452034',1,'game_viewer.c']]],
+  ['slash_7',['slash',['../sprite_8c.html#a10cb5702d9b0fe7aab8aa05c63186ebd',1,'slash():&#160;sprite.c'],['../sprite_8h.html#a10cb5702d9b0fe7aab8aa05c63186ebd',1,'slash():&#160;sprite.c']]],
+  ['sp_5fhook_5fid_8',['sp_hook_id',['../sp_8c.html#a279e4c9a05cd63c43dd4c18c80c27483',1,'sp.c']]],
+  ['sp_5firq_9',['sp_irq',['../sp_8c.html#a680626da309f03ab63dd03b16dca8050',1,'sp.c']]],
+  ['sprite_10',['sprite',['../struct_piece.html#a61cb00fb509aff894bda052189e6f389',1,'Piece::sprite()'],['../struct_button.html#a51a8770221b4166852ebc54e8736c3f9',1,'Button::sprite()'],['../struct_name_input.html#a084343301c2015f252947db479b5a55a',1,'NameInput::sprite()']]],
+  ['square_5fcolor_11',['square_color',['../game__viewer_8c.html#a26fb11ee8653b7ff52607c69b289963e',1,'game_viewer.c']]],
+  ['square_5fcolor_5falt_12',['square_color_alt',['../game__viewer_8c.html#a2c5653568890601631bcbb32001ef7a3',1,'game_viewer.c']]],
+  ['square_5fsize_13',['square_size',['../board_8c.html#a0baf794bf4a37094b40df7cc0b6125e7',1,'square_size():&#160;board.c'],['../board_8h.html#a0baf794bf4a37094b40df7cc0b6125e7',1,'square_size():&#160;board.c']]],
+  ['squares_14',['squares',['../struct_board.html#a739d174063af76e8f1ea81d4d6a5adfb',1,'Board']]],
+  ['start_5ftime_15',['start_time',['../struct_timer.html#a7a0d70f498381f8a2439b02630687413',1,'Timer']]],
+  ['state_16',['state',['../state_8c.html#a876b486d3a5241a126bd5751c5f70f79',1,'state():&#160;state.c'],['../state_8h.html#a876b486d3a5241a126bd5751c5f70f79',1,'state():&#160;state.c']]],
+  ['status_17',['status',['../struct_piece.html#a3017924b24addc61fa54d2706f5aa2b8',1,'Piece']]]
 ];

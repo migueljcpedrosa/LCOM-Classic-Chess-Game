@@ -1,5 +1,20 @@
 var searchData=
 [
-  ['kbd_5firq_0',['KBD_IRQ',['../keyboard_2i8042_8h.html#a5c1072213ce8d8cd43628c4319ae0391',1,'KBD_IRQ():&#160;i8042.h'],['../mouse_2i8042_8h.html#a5c1072213ce8d8cd43628c4319ae0391',1,'KBD_IRQ():&#160;i8042.h']]],
-  ['kbd_5fout_5fbuf_1',['KBD_OUT_BUF',['../keyboard_2i8042_8h.html#aeff3162e464a9081f73e3765f199d7c1',1,'KBD_OUT_BUF():&#160;i8042.h'],['../mouse_2i8042_8h.html#aeff3162e464a9081f73e3765f199d7c1',1,'KBD_OUT_BUF():&#160;i8042.h']]]
+  ['in_5fbuf_5fready_0',['IN_BUF_READY',['../mkbd_8h.html#a9494bd3dba976fb2f726d9c3d3b07949',1,'IN_BUF_READY():&#160;mkbd.h'],['../i8042_8h.html#a9494bd3dba976fb2f726d9c3d3b07949',1,'IN_BUF_READY():&#160;i8042.h']]],
+  ['input_5fcmd_1',['INPUT_CMD',['../mkbd_8h.html#a8db5a0c868d7191d31d2ec5918281645',1,'INPUT_CMD():&#160;mkbd.h'],['../i8042_8h.html#a8db5a0c868d7191d31d2ec5918281645',1,'INPUT_CMD():&#160;i8042.h']]],
+  ['input_5fdata_2',['INPUT_DATA',['../mkbd_8h.html#ac5e7493c6b0f7f6cae012a56c0620986',1,'INPUT_DATA():&#160;mkbd.h'],['../i8042_8h.html#ac5e7493c6b0f7f6cae012a56c0620986',1,'INPUT_DATA():&#160;i8042.h']]],
+  ['int_5f10_3',['INT_10',['../vbe_8h.html#a6bf63122d6c92ab0e8ba69c88cc1109d',1,'vbe.h']]],
+  ['interrupt_5fenable_5fline_5fstatus_4',['INTERRUPT_ENABLE_LINE_STATUS',['../sp_8h.html#a811fc928b5e1074ce1914ad0fa5299b6',1,'sp.h']]],
+  ['interrupt_5fenable_5fmodem_5fstatus_5',['INTERRUPT_ENABLE_MODEM_STATUS',['../sp_8h.html#a84bf7a20c0222a6f96f844360e945c0e',1,'sp.h']]],
+  ['interrupt_5fenable_5freceiver_5fdata_5favailable_6',['INTERRUPT_ENABLE_RECEIVER_DATA_AVAILABLE',['../sp_8h.html#a5f09d168de17bd5dc2adf2e2847eb2d2',1,'sp.h']]],
+  ['interrupt_5fenable_5fregister_7',['INTERRUPT_ENABLE_REGISTER',['../sp_8h.html#a1fdd05ae98059a34e5793c1bfb82f82e',1,'sp.h']]],
+  ['interrupt_5fenable_5ftransmitter_5fempty_8',['INTERRUPT_ENABLE_TRANSMITTER_EMPTY',['../sp_8h.html#ae80d120bd8e0a9ae915e2b68d63b1006',1,'sp.h']]],
+  ['interrupt_5fidentification_5ffifo_5fcontrol_9',['INTERRUPT_IDENTIFICATION_FIFO_CONTROL',['../sp_8h.html#a0fdf2aa96e1de3538e95c7056d190c4e',1,'sp.h']]],
+  ['interrupt_5fidentification_5fid_10',['INTERRUPT_IDENTIFICATION_ID',['../sp_8h.html#a8ffe083f60bbdfb70ae5cd7d4ed20aee',1,'sp.h']]],
+  ['interrupt_5fidentification_5finterrupt_5fpending_11',['INTERRUPT_IDENTIFICATION_INTERRUPT_PENDING',['../sp_8h.html#a0f426edf20f43a2c1aa075e9d4299fa2',1,'sp.h']]],
+  ['interrupt_5fidentification_5fno_5finterrupt_5fpending_12',['INTERRUPT_IDENTIFICATION_NO_INTERRUPT_PENDING',['../sp_8h.html#aa253969bc098a62e08a4a138d393dfc3',1,'sp.h']]],
+  ['interrupt_5fidentification_5forigin_5fline_5fstatus_13',['INTERRUPT_IDENTIFICATION_ORIGIN_LINE_STATUS',['../sp_8h.html#aee312bf517417d74d929e7354497e362',1,'sp.h']]],
+  ['interrupt_5fidentification_5forigin_5freceived_5fdata_5favailable_14',['INTERRUPT_IDENTIFICATION_ORIGIN_RECEIVED_DATA_AVAILABLE',['../sp_8h.html#a7576154f6fba1a778c38885c4e6989a9',1,'sp.h']]],
+  ['interrupt_5fidentification_5forigin_5ftransmitter_5fempty_15',['INTERRUPT_IDENTIFICATION_ORIGIN_TRANSMITTER_EMPTY',['../sp_8h.html#ad021e9b21074f79bda84396ce3581ad1',1,'sp.h']]],
+  ['interrupt_5fidentification_5fregister_16',['INTERRUPT_IDENTIFICATION_REGISTER',['../sp_8h.html#a31b978688c706f7613e45cd49a78a60f',1,'sp.h']]]
 ];

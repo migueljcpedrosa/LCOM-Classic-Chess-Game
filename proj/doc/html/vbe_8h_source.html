@@ -76,33 +76,32 @@ $(function() {
   <div class="headertitle"><div class="title">vbe.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="vbe_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef _VBE_H_</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define _VBE_H_</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// MODES</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="vbe_8h.html#a443b1268c43b309560d57e34d50b5b3b">    6</a></span><span class="preprocessor">#define MODE1   0x105   </span><span class="comment">// 1024x768     Indexed 8</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="vbe_8h.html#ab2d8aca64e351712eae6f03e3f9d64ad">    7</a></span><span class="preprocessor">#define MODE2   0x110   </span><span class="comment">// 640x480      Direct color    15((1:)5:5:5)</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="vbe_8h.html#aefdb1e345181f5aa4a2105cf0e2ec3da">    8</a></span><span class="preprocessor">#define MODE3   0x115   </span><span class="comment">// 800x600      Direct color    24 (8:8:8)</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="vbe_8h.html#ab13357e814306a95afca4d9c95116c59">    9</a></span><span class="preprocessor">#define MODE4   0x11A   </span><span class="comment">// 1280x1024      Direct color  16 (5:6:5)</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="vbe_8h.html#ade0d902a7ae75bbe01d91411cf41575c">   10</a></span><span class="preprocessor">#define MODE5   0x14C   </span><span class="comment">// 1152x864     Direct color    32 ((8:)8:8:8)</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="vbe_8h.html#a6bf63122d6c92ab0e8ba69c88cc1109d">   12</a></span><span class="preprocessor">#define INT_10       0x10</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="vbe_8h.html#ab41277a20e1e7b827718a29803f6a7e3">   14</a></span><span class="preprocessor">#define WRT_FUNC 0x4F</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="vbe_8h.html#aba209728590d097395cf004cb397e160">   16</a></span><span class="preprocessor">#define VBE_GET_MODE 0x01    </span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="vbe_8h.html#a02477c4996ff058aee590b54f2146eb5">   17</a></span><span class="preprocessor">#define VBE_SET_MODE 0x02</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="vbe_8h.html#a8f091bb0d8cfa4a06da04951dc15abb8">   19</a></span><span class="preprocessor">#define LINEAR_FRAME_BUFFER BIT(14)</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="vbe_8h.html#aa13891e4adc29be25a7a11a5b4a34b78">   21</a></span><span class="preprocessor">#define FUNC_SUPPORTED 0x4F</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="vbe_8h.html#a28f3ce8df1441d9b391da30230732647">   22</a></span><span class="preprocessor">#define FUNC_SUCCESS   0x00</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="vbe_8h.html#a6c54e72c6142d317114a29adbcbb24b6">   24</a></span><span class="preprocessor">#define TRANSPARENT 0xFF00FF</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="vbe_8h.html#a35be84e9d079df30664be87008be9512">   25</a></span><span class="preprocessor">#define LETTER_WIDTH 76</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif</span></div>
+<a href="vbe_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef _VBE_H_</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define _VBE_H_</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="vbe_8h.html#a443b1268c43b309560d57e34d50b5b3b">   10</a></span><span class="preprocessor">#define MODE1   0x105   </span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="vbe_8h.html#ab2d8aca64e351712eae6f03e3f9d64ad">   12</a></span><span class="preprocessor">#define MODE2   0x110   </span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="vbe_8h.html#aefdb1e345181f5aa4a2105cf0e2ec3da">   14</a></span><span class="preprocessor">#define MODE3   0x115   </span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="vbe_8h.html#ab13357e814306a95afca4d9c95116c59">   16</a></span><span class="preprocessor">#define MODE4   0x11A   </span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="vbe_8h.html#ade0d902a7ae75bbe01d91411cf41575c">   18</a></span><span class="preprocessor">#define MODE5   0x14C   </span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="vbe_8h.html#a6bf63122d6c92ab0e8ba69c88cc1109d">   21</a></span><span class="preprocessor">#define INT_10       0x10</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="vbe_8h.html#ab41277a20e1e7b827718a29803f6a7e3">   24</a></span><span class="preprocessor">#define WRT_FUNC 0x4F</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="vbe_8h.html#aba209728590d097395cf004cb397e160">   27</a></span><span class="preprocessor">#define VBE_GET_MODE 0x01    </span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="vbe_8h.html#a02477c4996ff058aee590b54f2146eb5">   29</a></span><span class="preprocessor">#define VBE_SET_MODE 0x02</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="vbe_8h.html#a8f091bb0d8cfa4a06da04951dc15abb8">   32</a></span><span class="preprocessor">#define LINEAR_FRAME_BUFFER BIT(14)</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="vbe_8h.html#aa13891e4adc29be25a7a11a5b4a34b78">   35</a></span><span class="preprocessor">#define FUNC_SUPPORTED 0x4F</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="vbe_8h.html#a28f3ce8df1441d9b391da30230732647">   37</a></span><span class="preprocessor">#define FUNC_SUCCESS   0x00</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="vbe_8h.html#a6c54e72c6142d317114a29adbcbb24b6">   40</a></span><span class="preprocessor">#define TRANSPARENT 0xFF00FF</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="vbe_8h.html#a35be84e9d079df30664be87008be9512">   42</a></span><span class="preprocessor">#define LETTER_WIDTH 76</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

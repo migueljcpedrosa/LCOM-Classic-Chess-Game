@@ -1,0 +1,219 @@
+\hypertarget{sp_8c}{}\doxysection{drivers/serial\+\_\+port/sp.c File Reference}
+\label{sp_8c}\index{drivers/serial\_port/sp.c@{drivers/serial\_port/sp.c}}
+{\ttfamily \#include \char`\"{}sp.\+h\char`\"{}}\newline
+Include dependency graph for sp.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{sp_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sp_8c_ad1addfdd0e2c246c337f3fda0cf4990f}{serial\+\_\+port\+\_\+initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the serial port by setting up the necessary parameters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sp_8c_a2bd68c2b9ab7fc965bcb312c34a650e6}{serial\+\_\+port\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$sp\+\_\+bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes to serial port interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sp_8c_afd52bd27bbf8c2323c4f5e2dddc7bc11}{serial\+\_\+port\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes from serial port interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sp_8c_ab047a100fedba6abf4a8138326458311}{serial\+\_\+port\+\_\+interrupt\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Interrupt handler for the serial port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sp_8c_a4ff53b55924256cd3f797471953369fc}{serial\+\_\+port\+\_\+reset}} ()
+\begin{DoxyCompactList}\small\item\em Clears the serial port interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sp_8c_a9ca7cf77d5a40f48ee17c200283affcf}{serial\+\_\+port\+\_\+read\+\_\+byte}} ()
+\begin{DoxyCompactList}\small\item\em Reads a byte from the serial port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sp_8c_a9d5de4375783e47b76a39d7953f70e90}{serial\+\_\+port\+\_\+send\+\_\+byte}} (uint8\+\_\+t byte\+\_\+to\+\_\+send)
+\begin{DoxyCompactList}\small\item\em Sends a byte to the serial port for transmission. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sp_8c_a279e4c9a05cd63c43dd4c18c80c27483}{sp\+\_\+hook\+\_\+id}} = 7
+\item 
+int \mbox{\hyperlink{sp_8c_a680626da309f03ab63dd03b16dca8050}{sp\+\_\+irq}} = 4
+\item 
+\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$ \mbox{\hyperlink{sp_8c_a0ca7aa7edd6838a15cd5583a7de4eed5}{input\+Queue}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sp_8c_ad1addfdd0e2c246c337f3fda0cf4990f}\label{sp_8c_ad1addfdd0e2c246c337f3fda0cf4990f}} 
+\index{sp.c@{sp.c}!serial\_port\_initialize@{serial\_port\_initialize}}
+\index{serial\_port\_initialize@{serial\_port\_initialize}!sp.c@{sp.c}}
+\doxysubsubsection{\texorpdfstring{serial\_port\_initialize()}{serial\_port\_initialize()}}
+{\footnotesize\ttfamily int serial\+\_\+port\+\_\+initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the serial port by setting up the necessary parameters. 
+
+This function initializes the serial port by enabling the interrupt for the Received Data Available (RDA) event, initializing the input queue, and preparing the serial port for communication.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{sp_8c_ad1addfdd0e2c246c337f3fda0cf4990f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp_8c_ab047a100fedba6abf4a8138326458311}\label{sp_8c_ab047a100fedba6abf4a8138326458311}} 
+\index{sp.c@{sp.c}!serial\_port\_interrupt\_handler@{serial\_port\_interrupt\_handler}}
+\index{serial\_port\_interrupt\_handler@{serial\_port\_interrupt\_handler}!sp.c@{sp.c}}
+\doxysubsubsection{\texorpdfstring{serial\_port\_interrupt\_handler()}{serial\_port\_interrupt\_handler()}}
+{\footnotesize\ttfamily void serial\+\_\+port\+\_\+interrupt\+\_\+handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Interrupt handler for the serial port. 
+
+This function is called when an interrupt is triggered by the serial port. It handles the interrupt and performs the necessary actions based on the specific interrupt event, such as reading data from the port and storing it in the input queue for further processing. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sp_8c_ab047a100fedba6abf4a8138326458311_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp_8c_a9ca7cf77d5a40f48ee17c200283affcf}\label{sp_8c_a9ca7cf77d5a40f48ee17c200283affcf}} 
+\index{sp.c@{sp.c}!serial\_port\_read\_byte@{serial\_port\_read\_byte}}
+\index{serial\_port\_read\_byte@{serial\_port\_read\_byte}!sp.c@{sp.c}}
+\doxysubsubsection{\texorpdfstring{serial\_port\_read\_byte()}{serial\_port\_read\_byte()}}
+{\footnotesize\ttfamily int serial\+\_\+port\+\_\+read\+\_\+byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads a byte from the serial port. 
+
+This function reads a byte from the serial port, retrieving data that has been received and stored in the port\textquotesingle{}s buffer. The received byte is stored in the input queue for further processing.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sp_8c_a9ca7cf77d5a40f48ee17c200283affcf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{sp_8c_a9ca7cf77d5a40f48ee17c200283affcf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp_8c_a4ff53b55924256cd3f797471953369fc}\label{sp_8c_a4ff53b55924256cd3f797471953369fc}} 
+\index{sp.c@{sp.c}!serial\_port\_reset@{serial\_port\_reset}}
+\index{serial\_port\_reset@{serial\_port\_reset}!sp.c@{sp.c}}
+\doxysubsubsection{\texorpdfstring{serial\_port\_reset()}{serial\_port\_reset()}}
+{\footnotesize\ttfamily int serial\+\_\+port\+\_\+reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the serial port interrupts. 
+
+This function clears any pending interrupts in the serial port, ensuring that the interrupt status is reset and the port is ready for further communication.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sp_8c_a4ff53b55924256cd3f797471953369fc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp_8c_a9d5de4375783e47b76a39d7953f70e90}\label{sp_8c_a9d5de4375783e47b76a39d7953f70e90}} 
+\index{sp.c@{sp.c}!serial\_port\_send\_byte@{serial\_port\_send\_byte}}
+\index{serial\_port\_send\_byte@{serial\_port\_send\_byte}!sp.c@{sp.c}}
+\doxysubsubsection{\texorpdfstring{serial\_port\_send\_byte()}{serial\_port\_send\_byte()}}
+{\footnotesize\ttfamily int serial\+\_\+port\+\_\+send\+\_\+byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{byte\+\_\+to\+\_\+send }\end{DoxyParamCaption})}
+
+
+
+Sends a byte to the serial port for transmission. 
+
+This function sends a byte of data to the serial port for transmission. It checks the status of the transmitter to ensure it is ready before sending the data. If the transmitter is not ready, it retries a limited number of times before giving up.
+
+
+\begin{DoxyParams}{Parameters}
+{\em byte\+\_\+to\+\_\+send} & The byte to be sent. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{sp_8c_a9d5de4375783e47b76a39d7953f70e90_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp_8c_a2bd68c2b9ab7fc965bcb312c34a650e6}\label{sp_8c_a2bd68c2b9ab7fc965bcb312c34a650e6}} 
+\index{sp.c@{sp.c}!serial\_port\_subscribe\_int@{serial\_port\_subscribe\_int}}
+\index{serial\_port\_subscribe\_int@{serial\_port\_subscribe\_int}!sp.c@{sp.c}}
+\doxysubsubsection{\texorpdfstring{serial\_port\_subscribe\_int()}{serial\_port\_subscribe\_int()}}
+{\footnotesize\ttfamily int serial\+\_\+port\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribes to serial port interrupts. 
+
+This function subscribes to the interrupts generated by the serial port, allowing the system to receive notifications when specific events occur, such as the availability of data or the readiness of the transmitter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp\+\_\+bit\+\_\+no} & Pointer to store the bit number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sp_8c_afd52bd27bbf8c2323c4f5e2dddc7bc11}\label{sp_8c_afd52bd27bbf8c2323c4f5e2dddc7bc11}} 
+\index{sp.c@{sp.c}!serial\_port\_unsubscribe\_int@{serial\_port\_unsubscribe\_int}}
+\index{serial\_port\_unsubscribe\_int@{serial\_port\_unsubscribe\_int}!sp.c@{sp.c}}
+\doxysubsubsection{\texorpdfstring{serial\_port\_unsubscribe\_int()}{serial\_port\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int serial\+\_\+port\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes from serial port interrupts. 
+
+This function unsubscribes from the interrupts generated by the serial port, stopping the system from receiving further notifications.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sp_8c_a0ca7aa7edd6838a15cd5583a7de4eed5}\label{sp_8c_a0ca7aa7edd6838a15cd5583a7de4eed5}} 
+\index{sp.c@{sp.c}!inputQueue@{inputQueue}}
+\index{inputQueue@{inputQueue}!sp.c@{sp.c}}
+\doxysubsubsection{\texorpdfstring{inputQueue}{inputQueue}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_data_queue}{Data\+Queue}}$\ast$ input\+Queue}
+
+\mbox{\Hypertarget{sp_8c_a279e4c9a05cd63c43dd4c18c80c27483}\label{sp_8c_a279e4c9a05cd63c43dd4c18c80c27483}} 
+\index{sp.c@{sp.c}!sp\_hook\_id@{sp\_hook\_id}}
+\index{sp\_hook\_id@{sp\_hook\_id}!sp.c@{sp.c}}
+\doxysubsubsection{\texorpdfstring{sp\_hook\_id}{sp\_hook\_id}}
+{\footnotesize\ttfamily int sp\+\_\+hook\+\_\+id = 7}
+
+\mbox{\Hypertarget{sp_8c_a680626da309f03ab63dd03b16dca8050}\label{sp_8c_a680626da309f03ab63dd03b16dca8050}} 
+\index{sp.c@{sp.c}!sp\_irq@{sp\_irq}}
+\index{sp\_irq@{sp\_irq}!sp.c@{sp.c}}
+\doxysubsubsection{\texorpdfstring{sp\_irq}{sp\_irq}}
+{\footnotesize\ttfamily int sp\+\_\+irq = 4}
+

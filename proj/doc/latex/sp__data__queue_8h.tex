@@ -1,0 +1,190 @@
+\hypertarget{sp__data__queue_8h}{}\doxysection{drivers/serial\+\_\+port/sp\+\_\+data\+\_\+queue.h File Reference}
+\label{sp__data__queue_8h}\index{drivers/serial\_port/sp\_data\_queue.h@{drivers/serial\_port/sp\_data\_queue.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for sp\+\_\+data\+\_\+queue.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{sp__data__queue_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{sp__data__queue_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_data_queue}{Data\+Queue}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$ \mbox{\hyperlink{sp__data__queue_8h_aeb31335a1e7fd3fa94b75e733ac9ca40}{data\+\_\+queue\+\_\+init}} ()
+\item 
+void \mbox{\hyperlink{sp__data__queue_8h_af964d9f7b4ce17338a9d2a1c4f23bb1e}{data\+\_\+queue\+\_\+destroy\+\_\+queue}} (\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$dq)
+\item 
+bool \mbox{\hyperlink{sp__data__queue_8h_a49cc701a728063331e2debf35bdbaf99}{data\+\_\+queue\+\_\+push}} (\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$dq, uint8\+\_\+t data)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{sp__data__queue_8h_a5ca26fc59f9054960a0a2f3ec626ef24}{data\+\_\+queue\+\_\+pop}} (\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$dq)
+\item 
+int \mbox{\hyperlink{sp__data__queue_8h_a2e1aedd27e7b03be4df39071186a8530}{data\+\_\+queue\+\_\+current\+\_\+size}} (\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$dq)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{sp__data__queue_8h_a71bcf0a6c7c00e958b779302f61bcece}{data\+\_\+queue\+\_\+peek}} (\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$dq)
+\item 
+bool \mbox{\hyperlink{sp__data__queue_8h_ab88cdba8c65c93c95bc2f88a94670d10}{data\+\_\+queue\+\_\+contains}} (\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$dq, uint8\+\_\+t element)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{sp__data__queue_8h_aff600086203766e783b80688c69336d7}{data\+\_\+queue\+\_\+front}} (\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$dq)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{sp__data__queue_8h_a65821dcd6f522170fd1e3e9b0a80b8f2}{data\+\_\+queue\+\_\+back}} (\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$dq)
+\item 
+bool \mbox{\hyperlink{sp__data__queue_8h_a2993ef06d7b018dcb72272ef9c70a5c0}{data\+\_\+queue\+\_\+is\+\_\+full}} (\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$dq)
+\item 
+bool \mbox{\hyperlink{sp__data__queue_8h_a199ef601b60034aff16df911be59e550}{data\+\_\+queue\+\_\+is\+\_\+empty}} (\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$dq)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sp__data__queue_8h_a65821dcd6f522170fd1e3e9b0a80b8f2}\label{sp__data__queue_8h_a65821dcd6f522170fd1e3e9b0a80b8f2}} 
+\index{sp\_data\_queue.h@{sp\_data\_queue.h}!data\_queue\_back@{data\_queue\_back}}
+\index{data\_queue\_back@{data\_queue\_back}!sp\_data\_queue.h@{sp\_data\_queue.h}}
+\doxysubsubsection{\texorpdfstring{data\_queue\_back()}{data\_queue\_back()}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+\_\+queue\+\_\+back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{sp__data__queue_8h_a65821dcd6f522170fd1e3e9b0a80b8f2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp__data__queue_8h_ab88cdba8c65c93c95bc2f88a94670d10}\label{sp__data__queue_8h_ab88cdba8c65c93c95bc2f88a94670d10}} 
+\index{sp\_data\_queue.h@{sp\_data\_queue.h}!data\_queue\_contains@{data\_queue\_contains}}
+\index{data\_queue\_contains@{data\_queue\_contains}!sp\_data\_queue.h@{sp\_data\_queue.h}}
+\doxysubsubsection{\texorpdfstring{data\_queue\_contains()}{data\_queue\_contains()}}
+{\footnotesize\ttfamily bool data\+\_\+queue\+\_\+contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$}]{dq,  }\item[{uint8\+\_\+t}]{element }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sp__data__queue_8h_a2e1aedd27e7b03be4df39071186a8530}\label{sp__data__queue_8h_a2e1aedd27e7b03be4df39071186a8530}} 
+\index{sp\_data\_queue.h@{sp\_data\_queue.h}!data\_queue\_current\_size@{data\_queue\_current\_size}}
+\index{data\_queue\_current\_size@{data\_queue\_current\_size}!sp\_data\_queue.h@{sp\_data\_queue.h}}
+\doxysubsubsection{\texorpdfstring{data\_queue\_current\_size()}{data\_queue\_current\_size()}}
+{\footnotesize\ttfamily int data\+\_\+queue\+\_\+current\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sp__data__queue_8h_af964d9f7b4ce17338a9d2a1c4f23bb1e}\label{sp__data__queue_8h_af964d9f7b4ce17338a9d2a1c4f23bb1e}} 
+\index{sp\_data\_queue.h@{sp\_data\_queue.h}!data\_queue\_destroy\_queue@{data\_queue\_destroy\_queue}}
+\index{data\_queue\_destroy\_queue@{data\_queue\_destroy\_queue}!sp\_data\_queue.h@{sp\_data\_queue.h}}
+\doxysubsubsection{\texorpdfstring{data\_queue\_destroy\_queue()}{data\_queue\_destroy\_queue()}}
+{\footnotesize\ttfamily void data\+\_\+queue\+\_\+destroy\+\_\+queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sp__data__queue_8h_aff600086203766e783b80688c69336d7}\label{sp__data__queue_8h_aff600086203766e783b80688c69336d7}} 
+\index{sp\_data\_queue.h@{sp\_data\_queue.h}!data\_queue\_front@{data\_queue\_front}}
+\index{data\_queue\_front@{data\_queue\_front}!sp\_data\_queue.h@{sp\_data\_queue.h}}
+\doxysubsubsection{\texorpdfstring{data\_queue\_front()}{data\_queue\_front()}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+\_\+queue\+\_\+front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{sp__data__queue_8h_aff600086203766e783b80688c69336d7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp__data__queue_8h_aeb31335a1e7fd3fa94b75e733ac9ca40}\label{sp__data__queue_8h_aeb31335a1e7fd3fa94b75e733ac9ca40}} 
+\index{sp\_data\_queue.h@{sp\_data\_queue.h}!data\_queue\_init@{data\_queue\_init}}
+\index{data\_queue\_init@{data\_queue\_init}!sp\_data\_queue.h@{sp\_data\_queue.h}}
+\doxysubsubsection{\texorpdfstring{data\_queue\_init()}{data\_queue\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$ data\+\_\+queue\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{sp__data__queue_8h_aeb31335a1e7fd3fa94b75e733ac9ca40_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp__data__queue_8h_a199ef601b60034aff16df911be59e550}\label{sp__data__queue_8h_a199ef601b60034aff16df911be59e550}} 
+\index{sp\_data\_queue.h@{sp\_data\_queue.h}!data\_queue\_is\_empty@{data\_queue\_is\_empty}}
+\index{data\_queue\_is\_empty@{data\_queue\_is\_empty}!sp\_data\_queue.h@{sp\_data\_queue.h}}
+\doxysubsubsection{\texorpdfstring{data\_queue\_is\_empty()}{data\_queue\_is\_empty()}}
+{\footnotesize\ttfamily bool data\+\_\+queue\+\_\+is\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{sp__data__queue_8h_a199ef601b60034aff16df911be59e550_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp__data__queue_8h_a2993ef06d7b018dcb72272ef9c70a5c0}\label{sp__data__queue_8h_a2993ef06d7b018dcb72272ef9c70a5c0}} 
+\index{sp\_data\_queue.h@{sp\_data\_queue.h}!data\_queue\_is\_full@{data\_queue\_is\_full}}
+\index{data\_queue\_is\_full@{data\_queue\_is\_full}!sp\_data\_queue.h@{sp\_data\_queue.h}}
+\doxysubsubsection{\texorpdfstring{data\_queue\_is\_full()}{data\_queue\_is\_full()}}
+{\footnotesize\ttfamily bool data\+\_\+queue\+\_\+is\+\_\+full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sp__data__queue_8h_a2993ef06d7b018dcb72272ef9c70a5c0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp__data__queue_8h_a71bcf0a6c7c00e958b779302f61bcece}\label{sp__data__queue_8h_a71bcf0a6c7c00e958b779302f61bcece}} 
+\index{sp\_data\_queue.h@{sp\_data\_queue.h}!data\_queue\_peek@{data\_queue\_peek}}
+\index{data\_queue\_peek@{data\_queue\_peek}!sp\_data\_queue.h@{sp\_data\_queue.h}}
+\doxysubsubsection{\texorpdfstring{data\_queue\_peek()}{data\_queue\_peek()}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+\_\+queue\+\_\+peek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{sp__data__queue_8h_a71bcf0a6c7c00e958b779302f61bcece_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp__data__queue_8h_a5ca26fc59f9054960a0a2f3ec626ef24}\label{sp__data__queue_8h_a5ca26fc59f9054960a0a2f3ec626ef24}} 
+\index{sp\_data\_queue.h@{sp\_data\_queue.h}!data\_queue\_pop@{data\_queue\_pop}}
+\index{data\_queue\_pop@{data\_queue\_pop}!sp\_data\_queue.h@{sp\_data\_queue.h}}
+\doxysubsubsection{\texorpdfstring{data\_queue\_pop()}{data\_queue\_pop()}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+\_\+queue\+\_\+pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$}]{dq }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{sp__data__queue_8h_a5ca26fc59f9054960a0a2f3ec626ef24_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp__data__queue_8h_a49cc701a728063331e2debf35bdbaf99}\label{sp__data__queue_8h_a49cc701a728063331e2debf35bdbaf99}} 
+\index{sp\_data\_queue.h@{sp\_data\_queue.h}!data\_queue\_push@{data\_queue\_push}}
+\index{data\_queue\_push@{data\_queue\_push}!sp\_data\_queue.h@{sp\_data\_queue.h}}
+\doxysubsubsection{\texorpdfstring{data\_queue\_push()}{data\_queue\_push()}}
+{\footnotesize\ttfamily bool data\+\_\+queue\+\_\+push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data_queue}{Data\+Queue}} $\ast$}]{dq,  }\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{sp__data__queue_8h_a49cc701a728063331e2debf35bdbaf99_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sp__data__queue_8h_a49cc701a728063331e2debf35bdbaf99_icgraph}
+\end{center}
+\end{figure}

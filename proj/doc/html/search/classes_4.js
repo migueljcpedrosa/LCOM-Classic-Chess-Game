@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nameinput_0',['NameInput',['../struct_name_input.html',1,'']]]
+  ['menu_0',['Menu',['../struct_menu.html',1,'']]],
+  ['move_1',['Move',['../struct_move.html',1,'']]]
 ];

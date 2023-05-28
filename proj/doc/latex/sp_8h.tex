@@ -1,0 +1,460 @@
+\hypertarget{sp_8h}{}\doxysection{drivers/serial\+\_\+port/sp.h File Reference}
+\label{sp_8h}\index{drivers/serial\_port/sp.h@{drivers/serial\_port/sp.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sp\+\_\+data\+\_\+queue.\+h\char`\"{}}\newline
+Include dependency graph for sp.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{sp_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{sp_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sp_8h_adaeb002107e43ffbcb2abc65076fe8d8}{COM1\+\_\+\+BASE\+\_\+\+REGISTER}}~0x3\+F8
+\item 
+\#define \mbox{\hyperlink{sp_8h_af37b4d2f5b3b9aa5edcf4e23442aac6d}{MOST\+\_\+\+SIGNIFICANT\+\_\+\+BIT\+\_\+\+MASK}}~0x\+F0
+\item 
+\#define \mbox{\hyperlink{sp_8h_a355c452c93c37fdf616a8b16668d4309}{RECEIVER\+\_\+\+BUFFER\+\_\+\+REGISTER}}~0x00
+\item 
+\#define \mbox{\hyperlink{sp_8h_af6077b6aa4724c1786ac8ba83e57041e}{TRANSMITTER\+\_\+\+HOLDING\+\_\+\+REGISTER}}~0x00
+\item 
+\#define \mbox{\hyperlink{sp_8h_a1fdd05ae98059a34e5793c1bfb82f82e}{INTERRUPT\+\_\+\+ENABLE\+\_\+\+REGISTER}}~0x01
+\item 
+\#define \mbox{\hyperlink{sp_8h_a31b978688c706f7613e45cd49a78a60f}{INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+REGISTER}}~0x02
+\item 
+\#define \mbox{\hyperlink{sp_8h_a89b0a13e18e326012e7e500c108138ff}{FIFO\+\_\+\+CONTROL\+\_\+\+REGISTER}}~0x02
+\item 
+\#define \mbox{\hyperlink{sp_8h_acc93c35cd0af684a96993651a976c491}{LINE\+\_\+\+CONTROL\+\_\+\+REGISTER}}~0x03
+\item 
+\#define \mbox{\hyperlink{sp_8h_aab78587bbffcfcd48cb8a198594e780e}{MODEM\+\_\+\+CONTROL\+\_\+\+REGISTER}}~0x04
+\item 
+\#define \mbox{\hyperlink{sp_8h_ae5c2ddcda0fc27229c33dade458f09ff}{LINE\+\_\+\+STATUS\+\_\+\+REGISTER}}~0x05
+\item 
+\#define \mbox{\hyperlink{sp_8h_afee73c7417002c0dc3226d2e313f7c14}{MODEM\+\_\+\+STATUS\+\_\+\+REGISTER}}~0x06
+\item 
+\#define \mbox{\hyperlink{sp_8h_a9d7449437565252d3d86e045c1bf1704}{SCRATCHPAD\+\_\+\+REGISTER}}~0x07
+\item 
+\#define \mbox{\hyperlink{sp_8h_a50fba32cd8c83b1ae1be200ed20b204f}{LINE\+\_\+\+STATUS\+\_\+\+DATA\+\_\+\+READY}}~BIT(0)
+\item 
+\#define \mbox{\hyperlink{sp_8h_ae2396330802756bbeec023c7f459e3c5}{LINE\+\_\+\+STATUS\+\_\+\+OVERRUN\+\_\+\+ERROR}}~BIT(1)
+\item 
+\#define \mbox{\hyperlink{sp_8h_ae7eaa0438142ab0f7ae960b7c4023d9d}{LINE\+\_\+\+STATUS\+\_\+\+PARITY\+\_\+\+ERROR}}~BIT(2)
+\item 
+\#define \mbox{\hyperlink{sp_8h_af59a82295c1736d907b05bfdd40507ec}{LINE\+\_\+\+STATUS\+\_\+\+FRAMING\+\_\+\+ERROR}}~BIT(3)
+\item 
+\#define \mbox{\hyperlink{sp_8h_a18941e843bc99abb5a6f457f8ce763ad}{LINE\+\_\+\+STATUS\+\_\+\+BREAK\+\_\+\+INTERRUPT}}~BIT(4)
+\item 
+\#define \mbox{\hyperlink{sp_8h_aa1e6e3b46d4981d9cbbcf998ebbb346a}{LINE\+\_\+\+STATUS\+\_\+\+THR\+\_\+\+EMPTY}}~BIT(5)
+\item 
+\#define \mbox{\hyperlink{sp_8h_a745215fc57e107d7caa376fd6f1ebb8f}{LINE\+\_\+\+STATUS\+\_\+\+TRANSMITTER\+\_\+\+EMPTY}}~BIT(6)
+\item 
+\#define \mbox{\hyperlink{sp_8h_a970fa19622997c307cc58b31394c8234}{LINE\+\_\+\+STATUS\+\_\+\+RECEIVER\+\_\+\+FIFO\+\_\+\+ERROR}}~BIT(7)
+\item 
+\#define \mbox{\hyperlink{sp_8h_a5f09d168de17bd5dc2adf2e2847eb2d2}{INTERRUPT\+\_\+\+ENABLE\+\_\+\+RECEIVER\+\_\+\+DATA\+\_\+\+AVAILABLE}}~BIT(0)
+\item 
+\#define \mbox{\hyperlink{sp_8h_ae80d120bd8e0a9ae915e2b68d63b1006}{INTERRUPT\+\_\+\+ENABLE\+\_\+\+TRANSMITTER\+\_\+\+EMPTY}}~BIT(1)
+\item 
+\#define \mbox{\hyperlink{sp_8h_a811fc928b5e1074ce1914ad0fa5299b6}{INTERRUPT\+\_\+\+ENABLE\+\_\+\+LINE\+\_\+\+STATUS}}~BIT(2)
+\item 
+\#define \mbox{\hyperlink{sp_8h_a84bf7a20c0222a6f96f844360e945c0e}{INTERRUPT\+\_\+\+ENABLE\+\_\+\+MODEM\+\_\+\+STATUS}}~BIT(3)
+\item 
+\#define \mbox{\hyperlink{sp_8h_aa253969bc098a62e08a4a138d393dfc3}{INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+NO\+\_\+\+INTERRUPT\+\_\+\+PENDING}}~BIT(0)
+\item 
+\#define \mbox{\hyperlink{sp_8h_a8ffe083f60bbdfb70ae5cd7d4ed20aee}{INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+ID}}~BIT(1) $\vert$ BIT(2) $\vert$ BIT(3)
+\item 
+\#define \mbox{\hyperlink{sp_8h_aee312bf517417d74d929e7354497e362}{INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+ORIGIN\+\_\+\+LINE\+\_\+\+STATUS}}~BIT(1) $\vert$ BIT(2)
+\item 
+\#define \mbox{\hyperlink{sp_8h_a7576154f6fba1a778c38885c4e6989a9}{INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+ORIGIN\+\_\+\+RECEIVED\+\_\+\+DATA\+\_\+\+AVAILABLE}}~BIT(2)
+\item 
+\#define \mbox{\hyperlink{sp_8h_a0fdf2aa96e1de3538e95c7056d190c4e}{INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+FIFO\+\_\+\+CONTROL}}~BIT(3) $\vert$ BIT(2)
+\item 
+\#define \mbox{\hyperlink{sp_8h_ad021e9b21074f79bda84396ce3581ad1}{INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+ORIGIN\+\_\+\+TRANSMITTER\+\_\+\+EMPTY}}~BIT(1)
+\item 
+\#define \mbox{\hyperlink{sp_8h_a0f426edf20f43a2c1aa075e9d4299fa2}{INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+INTERRUPT\+\_\+\+PENDING}}~0x00
+\item 
+\#define \mbox{\hyperlink{sp_8h_a2a8d75be15d773e015c734c201a4559d}{FIFO\+\_\+\+CONTROL\+\_\+\+CLEAR}}~BIT(0) $\vert$ BIT(1) $\vert$ BIT(2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sp_8h_ad1addfdd0e2c246c337f3fda0cf4990f}{serial\+\_\+port\+\_\+initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the serial port by setting up the necessary parameters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sp_8h_a9e5988172a95cfb57bedb0be3f5199f6}{serial\+\_\+port\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes to serial port interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sp_8h_afd52bd27bbf8c2323c4f5e2dddc7bc11}{serial\+\_\+port\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes from serial port interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sp_8h_ab047a100fedba6abf4a8138326458311}{serial\+\_\+port\+\_\+interrupt\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Interrupt handler for the serial port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sp_8h_a4ff53b55924256cd3f797471953369fc}{serial\+\_\+port\+\_\+reset}} ()
+\begin{DoxyCompactList}\small\item\em Clears the serial port interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sp_8h_a9ca7cf77d5a40f48ee17c200283affcf}{serial\+\_\+port\+\_\+read\+\_\+byte}} ()
+\begin{DoxyCompactList}\small\item\em Reads a byte from the serial port. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sp_8h_a9d5de4375783e47b76a39d7953f70e90}{serial\+\_\+port\+\_\+send\+\_\+byte}} (uint8\+\_\+t byte\+\_\+to\+\_\+send)
+\begin{DoxyCompactList}\small\item\em Sends a byte to the serial port for transmission. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sp_8h_adaeb002107e43ffbcb2abc65076fe8d8}\label{sp_8h_adaeb002107e43ffbcb2abc65076fe8d8}} 
+\index{sp.h@{sp.h}!COM1\_BASE\_REGISTER@{COM1\_BASE\_REGISTER}}
+\index{COM1\_BASE\_REGISTER@{COM1\_BASE\_REGISTER}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{COM1\_BASE\_REGISTER}{COM1\_BASE\_REGISTER}}
+{\footnotesize\ttfamily \#define COM1\+\_\+\+BASE\+\_\+\+REGISTER~0x3\+F8}
+
+\mbox{\Hypertarget{sp_8h_a2a8d75be15d773e015c734c201a4559d}\label{sp_8h_a2a8d75be15d773e015c734c201a4559d}} 
+\index{sp.h@{sp.h}!FIFO\_CONTROL\_CLEAR@{FIFO\_CONTROL\_CLEAR}}
+\index{FIFO\_CONTROL\_CLEAR@{FIFO\_CONTROL\_CLEAR}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{FIFO\_CONTROL\_CLEAR}{FIFO\_CONTROL\_CLEAR}}
+{\footnotesize\ttfamily \#define FIFO\+\_\+\+CONTROL\+\_\+\+CLEAR~BIT(0) $\vert$ BIT(1) $\vert$ BIT(2)}
+
+\mbox{\Hypertarget{sp_8h_a89b0a13e18e326012e7e500c108138ff}\label{sp_8h_a89b0a13e18e326012e7e500c108138ff}} 
+\index{sp.h@{sp.h}!FIFO\_CONTROL\_REGISTER@{FIFO\_CONTROL\_REGISTER}}
+\index{FIFO\_CONTROL\_REGISTER@{FIFO\_CONTROL\_REGISTER}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{FIFO\_CONTROL\_REGISTER}{FIFO\_CONTROL\_REGISTER}}
+{\footnotesize\ttfamily \#define FIFO\+\_\+\+CONTROL\+\_\+\+REGISTER~0x02}
+
+\mbox{\Hypertarget{sp_8h_a811fc928b5e1074ce1914ad0fa5299b6}\label{sp_8h_a811fc928b5e1074ce1914ad0fa5299b6}} 
+\index{sp.h@{sp.h}!INTERRUPT\_ENABLE\_LINE\_STATUS@{INTERRUPT\_ENABLE\_LINE\_STATUS}}
+\index{INTERRUPT\_ENABLE\_LINE\_STATUS@{INTERRUPT\_ENABLE\_LINE\_STATUS}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_ENABLE\_LINE\_STATUS}{INTERRUPT\_ENABLE\_LINE\_STATUS}}
+{\footnotesize\ttfamily \#define INTERRUPT\+\_\+\+ENABLE\+\_\+\+LINE\+\_\+\+STATUS~BIT(2)}
+
+\mbox{\Hypertarget{sp_8h_a84bf7a20c0222a6f96f844360e945c0e}\label{sp_8h_a84bf7a20c0222a6f96f844360e945c0e}} 
+\index{sp.h@{sp.h}!INTERRUPT\_ENABLE\_MODEM\_STATUS@{INTERRUPT\_ENABLE\_MODEM\_STATUS}}
+\index{INTERRUPT\_ENABLE\_MODEM\_STATUS@{INTERRUPT\_ENABLE\_MODEM\_STATUS}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_ENABLE\_MODEM\_STATUS}{INTERRUPT\_ENABLE\_MODEM\_STATUS}}
+{\footnotesize\ttfamily \#define INTERRUPT\+\_\+\+ENABLE\+\_\+\+MODEM\+\_\+\+STATUS~BIT(3)}
+
+\mbox{\Hypertarget{sp_8h_a5f09d168de17bd5dc2adf2e2847eb2d2}\label{sp_8h_a5f09d168de17bd5dc2adf2e2847eb2d2}} 
+\index{sp.h@{sp.h}!INTERRUPT\_ENABLE\_RECEIVER\_DATA\_AVAILABLE@{INTERRUPT\_ENABLE\_RECEIVER\_DATA\_AVAILABLE}}
+\index{INTERRUPT\_ENABLE\_RECEIVER\_DATA\_AVAILABLE@{INTERRUPT\_ENABLE\_RECEIVER\_DATA\_AVAILABLE}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_ENABLE\_RECEIVER\_DATA\_AVAILABLE}{INTERRUPT\_ENABLE\_RECEIVER\_DATA\_AVAILABLE}}
+{\footnotesize\ttfamily \#define INTERRUPT\+\_\+\+ENABLE\+\_\+\+RECEIVER\+\_\+\+DATA\+\_\+\+AVAILABLE~BIT(0)}
+
+\mbox{\Hypertarget{sp_8h_a1fdd05ae98059a34e5793c1bfb82f82e}\label{sp_8h_a1fdd05ae98059a34e5793c1bfb82f82e}} 
+\index{sp.h@{sp.h}!INTERRUPT\_ENABLE\_REGISTER@{INTERRUPT\_ENABLE\_REGISTER}}
+\index{INTERRUPT\_ENABLE\_REGISTER@{INTERRUPT\_ENABLE\_REGISTER}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_ENABLE\_REGISTER}{INTERRUPT\_ENABLE\_REGISTER}}
+{\footnotesize\ttfamily \#define INTERRUPT\+\_\+\+ENABLE\+\_\+\+REGISTER~0x01}
+
+\mbox{\Hypertarget{sp_8h_ae80d120bd8e0a9ae915e2b68d63b1006}\label{sp_8h_ae80d120bd8e0a9ae915e2b68d63b1006}} 
+\index{sp.h@{sp.h}!INTERRUPT\_ENABLE\_TRANSMITTER\_EMPTY@{INTERRUPT\_ENABLE\_TRANSMITTER\_EMPTY}}
+\index{INTERRUPT\_ENABLE\_TRANSMITTER\_EMPTY@{INTERRUPT\_ENABLE\_TRANSMITTER\_EMPTY}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_ENABLE\_TRANSMITTER\_EMPTY}{INTERRUPT\_ENABLE\_TRANSMITTER\_EMPTY}}
+{\footnotesize\ttfamily \#define INTERRUPT\+\_\+\+ENABLE\+\_\+\+TRANSMITTER\+\_\+\+EMPTY~BIT(1)}
+
+\mbox{\Hypertarget{sp_8h_a0fdf2aa96e1de3538e95c7056d190c4e}\label{sp_8h_a0fdf2aa96e1de3538e95c7056d190c4e}} 
+\index{sp.h@{sp.h}!INTERRUPT\_IDENTIFICATION\_FIFO\_CONTROL@{INTERRUPT\_IDENTIFICATION\_FIFO\_CONTROL}}
+\index{INTERRUPT\_IDENTIFICATION\_FIFO\_CONTROL@{INTERRUPT\_IDENTIFICATION\_FIFO\_CONTROL}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_IDENTIFICATION\_FIFO\_CONTROL}{INTERRUPT\_IDENTIFICATION\_FIFO\_CONTROL}}
+{\footnotesize\ttfamily \#define INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+FIFO\+\_\+\+CONTROL~BIT(3) $\vert$ BIT(2)}
+
+\mbox{\Hypertarget{sp_8h_a8ffe083f60bbdfb70ae5cd7d4ed20aee}\label{sp_8h_a8ffe083f60bbdfb70ae5cd7d4ed20aee}} 
+\index{sp.h@{sp.h}!INTERRUPT\_IDENTIFICATION\_ID@{INTERRUPT\_IDENTIFICATION\_ID}}
+\index{INTERRUPT\_IDENTIFICATION\_ID@{INTERRUPT\_IDENTIFICATION\_ID}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_IDENTIFICATION\_ID}{INTERRUPT\_IDENTIFICATION\_ID}}
+{\footnotesize\ttfamily \#define INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+ID~BIT(1) $\vert$ BIT(2) $\vert$ BIT(3)}
+
+\mbox{\Hypertarget{sp_8h_a0f426edf20f43a2c1aa075e9d4299fa2}\label{sp_8h_a0f426edf20f43a2c1aa075e9d4299fa2}} 
+\index{sp.h@{sp.h}!INTERRUPT\_IDENTIFICATION\_INTERRUPT\_PENDING@{INTERRUPT\_IDENTIFICATION\_INTERRUPT\_PENDING}}
+\index{INTERRUPT\_IDENTIFICATION\_INTERRUPT\_PENDING@{INTERRUPT\_IDENTIFICATION\_INTERRUPT\_PENDING}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_IDENTIFICATION\_INTERRUPT\_PENDING}{INTERRUPT\_IDENTIFICATION\_INTERRUPT\_PENDING}}
+{\footnotesize\ttfamily \#define INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+INTERRUPT\+\_\+\+PENDING~0x00}
+
+\mbox{\Hypertarget{sp_8h_aa253969bc098a62e08a4a138d393dfc3}\label{sp_8h_aa253969bc098a62e08a4a138d393dfc3}} 
+\index{sp.h@{sp.h}!INTERRUPT\_IDENTIFICATION\_NO\_INTERRUPT\_PENDING@{INTERRUPT\_IDENTIFICATION\_NO\_INTERRUPT\_PENDING}}
+\index{INTERRUPT\_IDENTIFICATION\_NO\_INTERRUPT\_PENDING@{INTERRUPT\_IDENTIFICATION\_NO\_INTERRUPT\_PENDING}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_IDENTIFICATION\_NO\_INTERRUPT\_PENDING}{INTERRUPT\_IDENTIFICATION\_NO\_INTERRUPT\_PENDING}}
+{\footnotesize\ttfamily \#define INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+NO\+\_\+\+INTERRUPT\+\_\+\+PENDING~BIT(0)}
+
+\mbox{\Hypertarget{sp_8h_aee312bf517417d74d929e7354497e362}\label{sp_8h_aee312bf517417d74d929e7354497e362}} 
+\index{sp.h@{sp.h}!INTERRUPT\_IDENTIFICATION\_ORIGIN\_LINE\_STATUS@{INTERRUPT\_IDENTIFICATION\_ORIGIN\_LINE\_STATUS}}
+\index{INTERRUPT\_IDENTIFICATION\_ORIGIN\_LINE\_STATUS@{INTERRUPT\_IDENTIFICATION\_ORIGIN\_LINE\_STATUS}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_IDENTIFICATION\_ORIGIN\_LINE\_STATUS}{INTERRUPT\_IDENTIFICATION\_ORIGIN\_LINE\_STATUS}}
+{\footnotesize\ttfamily \#define INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+ORIGIN\+\_\+\+LINE\+\_\+\+STATUS~BIT(1) $\vert$ BIT(2)}
+
+\mbox{\Hypertarget{sp_8h_a7576154f6fba1a778c38885c4e6989a9}\label{sp_8h_a7576154f6fba1a778c38885c4e6989a9}} 
+\index{sp.h@{sp.h}!INTERRUPT\_IDENTIFICATION\_ORIGIN\_RECEIVED\_DATA\_AVAILABLE@{INTERRUPT\_IDENTIFICATION\_ORIGIN\_RECEIVED\_DATA\_AVAILABLE}}
+\index{INTERRUPT\_IDENTIFICATION\_ORIGIN\_RECEIVED\_DATA\_AVAILABLE@{INTERRUPT\_IDENTIFICATION\_ORIGIN\_RECEIVED\_DATA\_AVAILABLE}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_IDENTIFICATION\_ORIGIN\_RECEIVED\_DATA\_AVAILABLE}{INTERRUPT\_IDENTIFICATION\_ORIGIN\_RECEIVED\_DATA\_AVAILABLE}}
+{\footnotesize\ttfamily \#define INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+ORIGIN\+\_\+\+RECEIVED\+\_\+\+DATA\+\_\+\+AVAILABLE~BIT(2)}
+
+\mbox{\Hypertarget{sp_8h_ad021e9b21074f79bda84396ce3581ad1}\label{sp_8h_ad021e9b21074f79bda84396ce3581ad1}} 
+\index{sp.h@{sp.h}!INTERRUPT\_IDENTIFICATION\_ORIGIN\_TRANSMITTER\_EMPTY@{INTERRUPT\_IDENTIFICATION\_ORIGIN\_TRANSMITTER\_EMPTY}}
+\index{INTERRUPT\_IDENTIFICATION\_ORIGIN\_TRANSMITTER\_EMPTY@{INTERRUPT\_IDENTIFICATION\_ORIGIN\_TRANSMITTER\_EMPTY}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_IDENTIFICATION\_ORIGIN\_TRANSMITTER\_EMPTY}{INTERRUPT\_IDENTIFICATION\_ORIGIN\_TRANSMITTER\_EMPTY}}
+{\footnotesize\ttfamily \#define INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+ORIGIN\+\_\+\+TRANSMITTER\+\_\+\+EMPTY~BIT(1)}
+
+\mbox{\Hypertarget{sp_8h_a31b978688c706f7613e45cd49a78a60f}\label{sp_8h_a31b978688c706f7613e45cd49a78a60f}} 
+\index{sp.h@{sp.h}!INTERRUPT\_IDENTIFICATION\_REGISTER@{INTERRUPT\_IDENTIFICATION\_REGISTER}}
+\index{INTERRUPT\_IDENTIFICATION\_REGISTER@{INTERRUPT\_IDENTIFICATION\_REGISTER}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{INTERRUPT\_IDENTIFICATION\_REGISTER}{INTERRUPT\_IDENTIFICATION\_REGISTER}}
+{\footnotesize\ttfamily \#define INTERRUPT\+\_\+\+IDENTIFICATION\+\_\+\+REGISTER~0x02}
+
+\mbox{\Hypertarget{sp_8h_acc93c35cd0af684a96993651a976c491}\label{sp_8h_acc93c35cd0af684a96993651a976c491}} 
+\index{sp.h@{sp.h}!LINE\_CONTROL\_REGISTER@{LINE\_CONTROL\_REGISTER}}
+\index{LINE\_CONTROL\_REGISTER@{LINE\_CONTROL\_REGISTER}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{LINE\_CONTROL\_REGISTER}{LINE\_CONTROL\_REGISTER}}
+{\footnotesize\ttfamily \#define LINE\+\_\+\+CONTROL\+\_\+\+REGISTER~0x03}
+
+\mbox{\Hypertarget{sp_8h_a18941e843bc99abb5a6f457f8ce763ad}\label{sp_8h_a18941e843bc99abb5a6f457f8ce763ad}} 
+\index{sp.h@{sp.h}!LINE\_STATUS\_BREAK\_INTERRUPT@{LINE\_STATUS\_BREAK\_INTERRUPT}}
+\index{LINE\_STATUS\_BREAK\_INTERRUPT@{LINE\_STATUS\_BREAK\_INTERRUPT}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{LINE\_STATUS\_BREAK\_INTERRUPT}{LINE\_STATUS\_BREAK\_INTERRUPT}}
+{\footnotesize\ttfamily \#define LINE\+\_\+\+STATUS\+\_\+\+BREAK\+\_\+\+INTERRUPT~BIT(4)}
+
+\mbox{\Hypertarget{sp_8h_a50fba32cd8c83b1ae1be200ed20b204f}\label{sp_8h_a50fba32cd8c83b1ae1be200ed20b204f}} 
+\index{sp.h@{sp.h}!LINE\_STATUS\_DATA\_READY@{LINE\_STATUS\_DATA\_READY}}
+\index{LINE\_STATUS\_DATA\_READY@{LINE\_STATUS\_DATA\_READY}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{LINE\_STATUS\_DATA\_READY}{LINE\_STATUS\_DATA\_READY}}
+{\footnotesize\ttfamily \#define LINE\+\_\+\+STATUS\+\_\+\+DATA\+\_\+\+READY~BIT(0)}
+
+\mbox{\Hypertarget{sp_8h_af59a82295c1736d907b05bfdd40507ec}\label{sp_8h_af59a82295c1736d907b05bfdd40507ec}} 
+\index{sp.h@{sp.h}!LINE\_STATUS\_FRAMING\_ERROR@{LINE\_STATUS\_FRAMING\_ERROR}}
+\index{LINE\_STATUS\_FRAMING\_ERROR@{LINE\_STATUS\_FRAMING\_ERROR}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{LINE\_STATUS\_FRAMING\_ERROR}{LINE\_STATUS\_FRAMING\_ERROR}}
+{\footnotesize\ttfamily \#define LINE\+\_\+\+STATUS\+\_\+\+FRAMING\+\_\+\+ERROR~BIT(3)}
+
+\mbox{\Hypertarget{sp_8h_ae2396330802756bbeec023c7f459e3c5}\label{sp_8h_ae2396330802756bbeec023c7f459e3c5}} 
+\index{sp.h@{sp.h}!LINE\_STATUS\_OVERRUN\_ERROR@{LINE\_STATUS\_OVERRUN\_ERROR}}
+\index{LINE\_STATUS\_OVERRUN\_ERROR@{LINE\_STATUS\_OVERRUN\_ERROR}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{LINE\_STATUS\_OVERRUN\_ERROR}{LINE\_STATUS\_OVERRUN\_ERROR}}
+{\footnotesize\ttfamily \#define LINE\+\_\+\+STATUS\+\_\+\+OVERRUN\+\_\+\+ERROR~BIT(1)}
+
+\mbox{\Hypertarget{sp_8h_ae7eaa0438142ab0f7ae960b7c4023d9d}\label{sp_8h_ae7eaa0438142ab0f7ae960b7c4023d9d}} 
+\index{sp.h@{sp.h}!LINE\_STATUS\_PARITY\_ERROR@{LINE\_STATUS\_PARITY\_ERROR}}
+\index{LINE\_STATUS\_PARITY\_ERROR@{LINE\_STATUS\_PARITY\_ERROR}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{LINE\_STATUS\_PARITY\_ERROR}{LINE\_STATUS\_PARITY\_ERROR}}
+{\footnotesize\ttfamily \#define LINE\+\_\+\+STATUS\+\_\+\+PARITY\+\_\+\+ERROR~BIT(2)}
+
+\mbox{\Hypertarget{sp_8h_a970fa19622997c307cc58b31394c8234}\label{sp_8h_a970fa19622997c307cc58b31394c8234}} 
+\index{sp.h@{sp.h}!LINE\_STATUS\_RECEIVER\_FIFO\_ERROR@{LINE\_STATUS\_RECEIVER\_FIFO\_ERROR}}
+\index{LINE\_STATUS\_RECEIVER\_FIFO\_ERROR@{LINE\_STATUS\_RECEIVER\_FIFO\_ERROR}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{LINE\_STATUS\_RECEIVER\_FIFO\_ERROR}{LINE\_STATUS\_RECEIVER\_FIFO\_ERROR}}
+{\footnotesize\ttfamily \#define LINE\+\_\+\+STATUS\+\_\+\+RECEIVER\+\_\+\+FIFO\+\_\+\+ERROR~BIT(7)}
+
+\mbox{\Hypertarget{sp_8h_ae5c2ddcda0fc27229c33dade458f09ff}\label{sp_8h_ae5c2ddcda0fc27229c33dade458f09ff}} 
+\index{sp.h@{sp.h}!LINE\_STATUS\_REGISTER@{LINE\_STATUS\_REGISTER}}
+\index{LINE\_STATUS\_REGISTER@{LINE\_STATUS\_REGISTER}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{LINE\_STATUS\_REGISTER}{LINE\_STATUS\_REGISTER}}
+{\footnotesize\ttfamily \#define LINE\+\_\+\+STATUS\+\_\+\+REGISTER~0x05}
+
+\mbox{\Hypertarget{sp_8h_aa1e6e3b46d4981d9cbbcf998ebbb346a}\label{sp_8h_aa1e6e3b46d4981d9cbbcf998ebbb346a}} 
+\index{sp.h@{sp.h}!LINE\_STATUS\_THR\_EMPTY@{LINE\_STATUS\_THR\_EMPTY}}
+\index{LINE\_STATUS\_THR\_EMPTY@{LINE\_STATUS\_THR\_EMPTY}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{LINE\_STATUS\_THR\_EMPTY}{LINE\_STATUS\_THR\_EMPTY}}
+{\footnotesize\ttfamily \#define LINE\+\_\+\+STATUS\+\_\+\+THR\+\_\+\+EMPTY~BIT(5)}
+
+\mbox{\Hypertarget{sp_8h_a745215fc57e107d7caa376fd6f1ebb8f}\label{sp_8h_a745215fc57e107d7caa376fd6f1ebb8f}} 
+\index{sp.h@{sp.h}!LINE\_STATUS\_TRANSMITTER\_EMPTY@{LINE\_STATUS\_TRANSMITTER\_EMPTY}}
+\index{LINE\_STATUS\_TRANSMITTER\_EMPTY@{LINE\_STATUS\_TRANSMITTER\_EMPTY}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{LINE\_STATUS\_TRANSMITTER\_EMPTY}{LINE\_STATUS\_TRANSMITTER\_EMPTY}}
+{\footnotesize\ttfamily \#define LINE\+\_\+\+STATUS\+\_\+\+TRANSMITTER\+\_\+\+EMPTY~BIT(6)}
+
+\mbox{\Hypertarget{sp_8h_aab78587bbffcfcd48cb8a198594e780e}\label{sp_8h_aab78587bbffcfcd48cb8a198594e780e}} 
+\index{sp.h@{sp.h}!MODEM\_CONTROL\_REGISTER@{MODEM\_CONTROL\_REGISTER}}
+\index{MODEM\_CONTROL\_REGISTER@{MODEM\_CONTROL\_REGISTER}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{MODEM\_CONTROL\_REGISTER}{MODEM\_CONTROL\_REGISTER}}
+{\footnotesize\ttfamily \#define MODEM\+\_\+\+CONTROL\+\_\+\+REGISTER~0x04}
+
+\mbox{\Hypertarget{sp_8h_afee73c7417002c0dc3226d2e313f7c14}\label{sp_8h_afee73c7417002c0dc3226d2e313f7c14}} 
+\index{sp.h@{sp.h}!MODEM\_STATUS\_REGISTER@{MODEM\_STATUS\_REGISTER}}
+\index{MODEM\_STATUS\_REGISTER@{MODEM\_STATUS\_REGISTER}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{MODEM\_STATUS\_REGISTER}{MODEM\_STATUS\_REGISTER}}
+{\footnotesize\ttfamily \#define MODEM\+\_\+\+STATUS\+\_\+\+REGISTER~0x06}
+
+\mbox{\Hypertarget{sp_8h_af37b4d2f5b3b9aa5edcf4e23442aac6d}\label{sp_8h_af37b4d2f5b3b9aa5edcf4e23442aac6d}} 
+\index{sp.h@{sp.h}!MOST\_SIGNIFICANT\_BIT\_MASK@{MOST\_SIGNIFICANT\_BIT\_MASK}}
+\index{MOST\_SIGNIFICANT\_BIT\_MASK@{MOST\_SIGNIFICANT\_BIT\_MASK}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{MOST\_SIGNIFICANT\_BIT\_MASK}{MOST\_SIGNIFICANT\_BIT\_MASK}}
+{\footnotesize\ttfamily \#define MOST\+\_\+\+SIGNIFICANT\+\_\+\+BIT\+\_\+\+MASK~0x\+F0}
+
+\mbox{\Hypertarget{sp_8h_a355c452c93c37fdf616a8b16668d4309}\label{sp_8h_a355c452c93c37fdf616a8b16668d4309}} 
+\index{sp.h@{sp.h}!RECEIVER\_BUFFER\_REGISTER@{RECEIVER\_BUFFER\_REGISTER}}
+\index{RECEIVER\_BUFFER\_REGISTER@{RECEIVER\_BUFFER\_REGISTER}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{RECEIVER\_BUFFER\_REGISTER}{RECEIVER\_BUFFER\_REGISTER}}
+{\footnotesize\ttfamily \#define RECEIVER\+\_\+\+BUFFER\+\_\+\+REGISTER~0x00}
+
+\mbox{\Hypertarget{sp_8h_a9d7449437565252d3d86e045c1bf1704}\label{sp_8h_a9d7449437565252d3d86e045c1bf1704}} 
+\index{sp.h@{sp.h}!SCRATCHPAD\_REGISTER@{SCRATCHPAD\_REGISTER}}
+\index{SCRATCHPAD\_REGISTER@{SCRATCHPAD\_REGISTER}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{SCRATCHPAD\_REGISTER}{SCRATCHPAD\_REGISTER}}
+{\footnotesize\ttfamily \#define SCRATCHPAD\+\_\+\+REGISTER~0x07}
+
+\mbox{\Hypertarget{sp_8h_af6077b6aa4724c1786ac8ba83e57041e}\label{sp_8h_af6077b6aa4724c1786ac8ba83e57041e}} 
+\index{sp.h@{sp.h}!TRANSMITTER\_HOLDING\_REGISTER@{TRANSMITTER\_HOLDING\_REGISTER}}
+\index{TRANSMITTER\_HOLDING\_REGISTER@{TRANSMITTER\_HOLDING\_REGISTER}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{TRANSMITTER\_HOLDING\_REGISTER}{TRANSMITTER\_HOLDING\_REGISTER}}
+{\footnotesize\ttfamily \#define TRANSMITTER\+\_\+\+HOLDING\+\_\+\+REGISTER~0x00}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sp_8h_ad1addfdd0e2c246c337f3fda0cf4990f}\label{sp_8h_ad1addfdd0e2c246c337f3fda0cf4990f}} 
+\index{sp.h@{sp.h}!serial\_port\_initialize@{serial\_port\_initialize}}
+\index{serial\_port\_initialize@{serial\_port\_initialize}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{serial\_port\_initialize()}{serial\_port\_initialize()}}
+{\footnotesize\ttfamily int serial\+\_\+port\+\_\+initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the serial port by setting up the necessary parameters. 
+
+This function initializes the serial port by enabling the interrupt for the Received Data Available (RDA) event, initializing the input queue, and preparing the serial port for communication.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{sp_8h_ad1addfdd0e2c246c337f3fda0cf4990f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp_8h_ab047a100fedba6abf4a8138326458311}\label{sp_8h_ab047a100fedba6abf4a8138326458311}} 
+\index{sp.h@{sp.h}!serial\_port\_interrupt\_handler@{serial\_port\_interrupt\_handler}}
+\index{serial\_port\_interrupt\_handler@{serial\_port\_interrupt\_handler}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{serial\_port\_interrupt\_handler()}{serial\_port\_interrupt\_handler()}}
+{\footnotesize\ttfamily void serial\+\_\+port\+\_\+interrupt\+\_\+handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Interrupt handler for the serial port. 
+
+This function is called when an interrupt is triggered by the serial port. It handles the interrupt and performs the necessary actions based on the specific interrupt event, such as reading data from the port and storing it in the input queue for further processing. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sp_8h_ab047a100fedba6abf4a8138326458311_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp_8h_a9ca7cf77d5a40f48ee17c200283affcf}\label{sp_8h_a9ca7cf77d5a40f48ee17c200283affcf}} 
+\index{sp.h@{sp.h}!serial\_port\_read\_byte@{serial\_port\_read\_byte}}
+\index{serial\_port\_read\_byte@{serial\_port\_read\_byte}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{serial\_port\_read\_byte()}{serial\_port\_read\_byte()}}
+{\footnotesize\ttfamily int serial\+\_\+port\+\_\+read\+\_\+byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads a byte from the serial port. 
+
+This function reads a byte from the serial port, retrieving data that has been received and stored in the port\textquotesingle{}s buffer. The received byte is stored in the input queue for further processing.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sp_8h_a9ca7cf77d5a40f48ee17c200283affcf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{sp_8h_a9ca7cf77d5a40f48ee17c200283affcf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp_8h_a4ff53b55924256cd3f797471953369fc}\label{sp_8h_a4ff53b55924256cd3f797471953369fc}} 
+\index{sp.h@{sp.h}!serial\_port\_reset@{serial\_port\_reset}}
+\index{serial\_port\_reset@{serial\_port\_reset}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{serial\_port\_reset()}{serial\_port\_reset()}}
+{\footnotesize\ttfamily int serial\+\_\+port\+\_\+reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the serial port interrupts. 
+
+This function clears any pending interrupts in the serial port, ensuring that the interrupt status is reset and the port is ready for further communication.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sp_8h_a4ff53b55924256cd3f797471953369fc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp_8h_a9d5de4375783e47b76a39d7953f70e90}\label{sp_8h_a9d5de4375783e47b76a39d7953f70e90}} 
+\index{sp.h@{sp.h}!serial\_port\_send\_byte@{serial\_port\_send\_byte}}
+\index{serial\_port\_send\_byte@{serial\_port\_send\_byte}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{serial\_port\_send\_byte()}{serial\_port\_send\_byte()}}
+{\footnotesize\ttfamily int serial\+\_\+port\+\_\+send\+\_\+byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{byte\+\_\+to\+\_\+send }\end{DoxyParamCaption})}
+
+
+
+Sends a byte to the serial port for transmission. 
+
+This function sends a byte of data to the serial port for transmission. It checks the status of the transmitter to ensure it is ready before sending the data. If the transmitter is not ready, it retries a limited number of times before giving up.
+
+
+\begin{DoxyParams}{Parameters}
+{\em byte\+\_\+to\+\_\+send} & The byte to be sent. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{sp_8h_a9d5de4375783e47b76a39d7953f70e90_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sp_8h_a9e5988172a95cfb57bedb0be3f5199f6}\label{sp_8h_a9e5988172a95cfb57bedb0be3f5199f6}} 
+\index{sp.h@{sp.h}!serial\_port\_subscribe\_int@{serial\_port\_subscribe\_int}}
+\index{serial\_port\_subscribe\_int@{serial\_port\_subscribe\_int}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{serial\_port\_subscribe\_int()}{serial\_port\_subscribe\_int()}}
+{\footnotesize\ttfamily int serial\+\_\+port\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribes to serial port interrupts. 
+
+This function subscribes to the interrupts generated by the serial port, allowing the system to receive notifications when specific events occur, such as the availability of data or the readiness of the transmitter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp\+\_\+bit\+\_\+no} & Pointer to store the bit number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sp_8h_afd52bd27bbf8c2323c4f5e2dddc7bc11}\label{sp_8h_afd52bd27bbf8c2323c4f5e2dddc7bc11}} 
+\index{sp.h@{sp.h}!serial\_port\_unsubscribe\_int@{serial\_port\_unsubscribe\_int}}
+\index{serial\_port\_unsubscribe\_int@{serial\_port\_unsubscribe\_int}!sp.h@{sp.h}}
+\doxysubsubsection{\texorpdfstring{serial\_port\_unsubscribe\_int()}{serial\_port\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int serial\+\_\+port\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes from serial port interrupts. 
+
+This function unsubscribes from the interrupts generated by the serial port, stopping the system from receiving further notifications.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}

@@ -1,19 +1,10 @@
 var searchData=
 [
-  ['scan_5fcode_0',['scan_code',['../keyboard_8c.html#a06a3dd28ec493a423fea6ccd048d441a',1,'scan_code():&#160;keyboard.c'],['../main_8c.html#a06a3dd28ec493a423fea6ccd048d441a',1,'scan_code():&#160;keyboard.c']]],
-  ['screenshot_1',['screenshot',['../gpu_8c.html#a145b74db7c3a3518c6881406cb3e588d',1,'gpu.c']]],
-  ['secondary_5fpiece_2',['secondary_piece',['../struct_move.html#a7f6031b789ea20117ea62cfa29044cd0',1,'Move']]],
-  ['seconds_3',['seconds',['../structrtc__timestamp__t.html#ae84e11b5bc763dd0c9ad9ca2886a07eb',1,'rtc_timestamp_t']]],
-  ['selected_5fpiece_4',['selected_piece',['../game__controller_8h.html#a09da077207c4c32abd079e452cacbc1d',1,'selected_piece():&#160;game.c'],['../game_8c.html#a09da077207c4c32abd079e452cacbc1d',1,'selected_piece():&#160;game.c'],['../game_8h.html#a09da077207c4c32abd079e452cacbc1d',1,'selected_piece():&#160;game.c']]],
-  ['selected_5fpiece_5fold_5fx_5',['selected_piece_old_x',['../game__viewer_8c.html#ad2bb8d3bc4867ccd4d169e93020893d7',1,'game_viewer.c']]],
-  ['selected_5fpiece_5fold_5fy_6',['selected_piece_old_y',['../game__viewer_8c.html#a7e1aabf4c9841a03219c095e92452034',1,'game_viewer.c']]],
-  ['slash_7',['slash',['../sprite_8c.html#a10cb5702d9b0fe7aab8aa05c63186ebd',1,'slash():&#160;sprite.c'],['../sprite_8h.html#a10cb5702d9b0fe7aab8aa05c63186ebd',1,'slash():&#160;sprite.c']]],
-  ['sprite_8',['sprite',['../struct_piece.html#a61cb00fb509aff894bda052189e6f389',1,'Piece::sprite()'],['../struct_button.html#a51a8770221b4166852ebc54e8736c3f9',1,'Button::sprite()'],['../struct_name_input.html#a084343301c2015f252947db479b5a55a',1,'NameInput::sprite()']]],
-  ['square_5fcolor_9',['square_color',['../game__viewer_8c.html#a26fb11ee8653b7ff52607c69b289963e',1,'game_viewer.c']]],
-  ['square_5fcolor_5falt_10',['square_color_alt',['../game__viewer_8c.html#a2c5653568890601631bcbb32001ef7a3',1,'game_viewer.c']]],
-  ['square_5fsize_11',['square_size',['../board_8c.html#a0baf794bf4a37094b40df7cc0b6125e7',1,'square_size():&#160;board.c'],['../board_8h.html#a0baf794bf4a37094b40df7cc0b6125e7',1,'square_size():&#160;board.c']]],
-  ['squares_12',['squares',['../struct_board.html#a739d174063af76e8f1ea81d4d6a5adfb',1,'Board']]],
-  ['start_5ftime_13',['start_time',['../struct_timer.html#a7a0d70f498381f8a2439b02630687413',1,'Timer']]],
-  ['state_14',['state',['../state_8c.html#a876b486d3a5241a126bd5751c5f70f79',1,'state():&#160;state.c'],['../state_8h.html#a876b486d3a5241a126bd5751c5f70f79',1,'state():&#160;state.c']]],
-  ['status_15',['status',['../struct_piece.html#a3017924b24addc61fa54d2706f5aa2b8',1,'Piece']]]
+  ['real_5ftime_0',['real_time',['../main_8c.html#ae69afb9c719c5facb93dbae901ee98ad',1,'real_time():&#160;main.c'],['../menu__viewer_8c.html#ae69afb9c719c5facb93dbae901ee98ad',1,'real_time():&#160;main.c']]],
+  ['red_5fmask_5fsize_1',['red_mask_size',['../gpu_8c.html#a4328dbe2d7f76c3be699a60b9e546a1f',1,'gpu.c']]],
+  ['red_5fpos_2',['red_pos',['../gpu_8c.html#a7e871d12fa956ff686bf9d2d39788d70',1,'gpu.c']]],
+  ['result_3',['result',['../struct_game_over.html#a5cf73785ccee8de2ab313785e43ca093',1,'GameOver']]],
+  ['rightclick_4',['rightClick',['../struct_cursor_input.html#af84d5b85e92916169ac41d64311f22cd',1,'CursorInput']]],
+  ['rtc_5fbinary_5fmode_5',['rtc_binary_mode',['../rtc_8c.html#a0bd49abfa44cecde13b3cf541dcdcdcf',1,'rtc.c']]],
+  ['rtc_5firq_6',['rtc_irq',['../rtc_8c.html#a907c3b8e6ea5f112ac8afc0160176b66',1,'rtc.c']]]
 ];

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['rtc_5ftimestamp_5ft_0',['rtc_timestamp_t',['../structrtc__timestamp__t.html',1,'']]]
+  ['piece_0',['Piece',['../struct_piece.html',1,'']]],
+  ['player_1',['Player',['../struct_player.html',1,'']]],
+  ['position_2',['Position',['../struct_position.html',1,'']]]
 ];

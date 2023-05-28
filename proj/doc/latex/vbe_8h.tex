@@ -12,33 +12,33 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{vbe_8h_a443b1268c43b309560d57e34d50b5b3b}{MODE1}}~0x105
-\item 
+\begin{DoxyCompactList}\small\item\em VBE mode 1 -\/ 1024x768 resolution, Indexed color depth of 8. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{vbe_8h_ab2d8aca64e351712eae6f03e3f9d64ad}{MODE2}}~0x110
-\item 
+\begin{DoxyCompactList}\small\item\em VBE mode 2 -\/ 640x480 resolution, Direct color depth of 15 (1\+:5\+:5\+:5) \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{vbe_8h_aefdb1e345181f5aa4a2105cf0e2ec3da}{MODE3}}~0x115
-\item 
+\begin{DoxyCompactList}\small\item\em VBE mode 3 -\/ 800x600 resolution, Direct color depth of 24 (8\+:8\+:8) \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{vbe_8h_ab13357e814306a95afca4d9c95116c59}{MODE4}}~0x11A
-\item 
+\begin{DoxyCompactList}\small\item\em VBE mode 4 -\/ 1280x1024 resolution, Direct color depth of 16 (5\+:6\+:5) \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{vbe_8h_ade0d902a7ae75bbe01d91411cf41575c}{MODE5}}~0x14C
-\item 
+\begin{DoxyCompactList}\small\item\em VBE mode 5 -\/ 1152x864 resolution, Direct color depth of 32 (8\+:8\+:8\+:8) \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{vbe_8h_a6bf63122d6c92ab0e8ba69c88cc1109d}{INT\+\_\+10}}~0x10
-\item 
+\begin{DoxyCompactList}\small\item\em BIOS interrupt call number. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{vbe_8h_ab41277a20e1e7b827718a29803f6a7e3}{WRT\+\_\+\+FUNC}}~0x4F
-\item 
+\begin{DoxyCompactList}\small\item\em VBE function write code. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{vbe_8h_aba209728590d097395cf004cb397e160}{VBE\+\_\+\+GET\+\_\+\+MODE}}~0x01
-\item 
+\begin{DoxyCompactList}\small\item\em VBE function code for getting current video mode. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{vbe_8h_a02477c4996ff058aee590b54f2146eb5}{VBE\+\_\+\+SET\+\_\+\+MODE}}~0x02
-\item 
+\begin{DoxyCompactList}\small\item\em VBE function code for setting a video mode. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{vbe_8h_a8f091bb0d8cfa4a06da04951dc15abb8}{LINEAR\+\_\+\+FRAME\+\_\+\+BUFFER}}~BIT(14)
-\item 
+\begin{DoxyCompactList}\small\item\em Bit mask for linear frame buffer mode. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{vbe_8h_aa13891e4adc29be25a7a11a5b4a34b78}{FUNC\+\_\+\+SUPPORTED}}~0x4F
-\item 
+\begin{DoxyCompactList}\small\item\em VBE function support check return value. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{vbe_8h_a28f3ce8df1441d9b391da30230732647}{FUNC\+\_\+\+SUCCESS}}~0x00
-\item 
+\begin{DoxyCompactList}\small\item\em VBE function successful execution return value. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{vbe_8h_a6c54e72c6142d317114a29adbcbb24b6}{TRANSPARENT}}~0x\+FF00\+FF
-\item 
+\begin{DoxyCompactList}\small\item\em Color code for transparency. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{vbe_8h_a35be84e9d079df30664be87008be9512}{LETTER\+\_\+\+WIDTH}}~76
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Pixel width of a letter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -48,11 +48,19 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsubsection{\texorpdfstring{FUNC\_SUCCESS}{FUNC\_SUCCESS}}
 {\footnotesize\ttfamily \#define FUNC\+\_\+\+SUCCESS~0x00}
 
+
+
+VBE function successful execution return value. 
+
 \mbox{\Hypertarget{vbe_8h_aa13891e4adc29be25a7a11a5b4a34b78}\label{vbe_8h_aa13891e4adc29be25a7a11a5b4a34b78}} 
 \index{vbe.h@{vbe.h}!FUNC\_SUPPORTED@{FUNC\_SUPPORTED}}
 \index{FUNC\_SUPPORTED@{FUNC\_SUPPORTED}!vbe.h@{vbe.h}}
 \doxysubsubsection{\texorpdfstring{FUNC\_SUPPORTED}{FUNC\_SUPPORTED}}
 {\footnotesize\ttfamily \#define FUNC\+\_\+\+SUPPORTED~0x4F}
+
+
+
+VBE function support check return value. 
 
 \mbox{\Hypertarget{vbe_8h_a6bf63122d6c92ab0e8ba69c88cc1109d}\label{vbe_8h_a6bf63122d6c92ab0e8ba69c88cc1109d}} 
 \index{vbe.h@{vbe.h}!INT\_10@{INT\_10}}
@@ -60,11 +68,19 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsubsection{\texorpdfstring{INT\_10}{INT\_10}}
 {\footnotesize\ttfamily \#define INT\+\_\+10~0x10}
 
+
+
+BIOS interrupt call number. 
+
 \mbox{\Hypertarget{vbe_8h_a35be84e9d079df30664be87008be9512}\label{vbe_8h_a35be84e9d079df30664be87008be9512}} 
 \index{vbe.h@{vbe.h}!LETTER\_WIDTH@{LETTER\_WIDTH}}
 \index{LETTER\_WIDTH@{LETTER\_WIDTH}!vbe.h@{vbe.h}}
 \doxysubsubsection{\texorpdfstring{LETTER\_WIDTH}{LETTER\_WIDTH}}
 {\footnotesize\ttfamily \#define LETTER\+\_\+\+WIDTH~76}
+
+
+
+Pixel width of a letter. 
 
 \mbox{\Hypertarget{vbe_8h_a8f091bb0d8cfa4a06da04951dc15abb8}\label{vbe_8h_a8f091bb0d8cfa4a06da04951dc15abb8}} 
 \index{vbe.h@{vbe.h}!LINEAR\_FRAME\_BUFFER@{LINEAR\_FRAME\_BUFFER}}
@@ -72,11 +88,19 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsubsection{\texorpdfstring{LINEAR\_FRAME\_BUFFER}{LINEAR\_FRAME\_BUFFER}}
 {\footnotesize\ttfamily \#define LINEAR\+\_\+\+FRAME\+\_\+\+BUFFER~BIT(14)}
 
+
+
+Bit mask for linear frame buffer mode. 
+
 \mbox{\Hypertarget{vbe_8h_a443b1268c43b309560d57e34d50b5b3b}\label{vbe_8h_a443b1268c43b309560d57e34d50b5b3b}} 
 \index{vbe.h@{vbe.h}!MODE1@{MODE1}}
 \index{MODE1@{MODE1}!vbe.h@{vbe.h}}
 \doxysubsubsection{\texorpdfstring{MODE1}{MODE1}}
 {\footnotesize\ttfamily \#define MODE1~0x105}
+
+
+
+VBE mode 1 -\/ 1024x768 resolution, Indexed color depth of 8. 
 
 \mbox{\Hypertarget{vbe_8h_ab2d8aca64e351712eae6f03e3f9d64ad}\label{vbe_8h_ab2d8aca64e351712eae6f03e3f9d64ad}} 
 \index{vbe.h@{vbe.h}!MODE2@{MODE2}}
@@ -84,11 +108,19 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsubsection{\texorpdfstring{MODE2}{MODE2}}
 {\footnotesize\ttfamily \#define MODE2~0x110}
 
+
+
+VBE mode 2 -\/ 640x480 resolution, Direct color depth of 15 (1\+:5\+:5\+:5) 
+
 \mbox{\Hypertarget{vbe_8h_aefdb1e345181f5aa4a2105cf0e2ec3da}\label{vbe_8h_aefdb1e345181f5aa4a2105cf0e2ec3da}} 
 \index{vbe.h@{vbe.h}!MODE3@{MODE3}}
 \index{MODE3@{MODE3}!vbe.h@{vbe.h}}
 \doxysubsubsection{\texorpdfstring{MODE3}{MODE3}}
 {\footnotesize\ttfamily \#define MODE3~0x115}
+
+
+
+VBE mode 3 -\/ 800x600 resolution, Direct color depth of 24 (8\+:8\+:8) 
 
 \mbox{\Hypertarget{vbe_8h_ab13357e814306a95afca4d9c95116c59}\label{vbe_8h_ab13357e814306a95afca4d9c95116c59}} 
 \index{vbe.h@{vbe.h}!MODE4@{MODE4}}
@@ -96,11 +128,19 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsubsection{\texorpdfstring{MODE4}{MODE4}}
 {\footnotesize\ttfamily \#define MODE4~0x11A}
 
+
+
+VBE mode 4 -\/ 1280x1024 resolution, Direct color depth of 16 (5\+:6\+:5) 
+
 \mbox{\Hypertarget{vbe_8h_ade0d902a7ae75bbe01d91411cf41575c}\label{vbe_8h_ade0d902a7ae75bbe01d91411cf41575c}} 
 \index{vbe.h@{vbe.h}!MODE5@{MODE5}}
 \index{MODE5@{MODE5}!vbe.h@{vbe.h}}
 \doxysubsubsection{\texorpdfstring{MODE5}{MODE5}}
 {\footnotesize\ttfamily \#define MODE5~0x14C}
+
+
+
+VBE mode 5 -\/ 1152x864 resolution, Direct color depth of 32 (8\+:8\+:8\+:8) 
 
 \mbox{\Hypertarget{vbe_8h_a6c54e72c6142d317114a29adbcbb24b6}\label{vbe_8h_a6c54e72c6142d317114a29adbcbb24b6}} 
 \index{vbe.h@{vbe.h}!TRANSPARENT@{TRANSPARENT}}
@@ -108,11 +148,19 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsubsection{\texorpdfstring{TRANSPARENT}{TRANSPARENT}}
 {\footnotesize\ttfamily \#define TRANSPARENT~0x\+FF00\+FF}
 
+
+
+Color code for transparency. 
+
 \mbox{\Hypertarget{vbe_8h_aba209728590d097395cf004cb397e160}\label{vbe_8h_aba209728590d097395cf004cb397e160}} 
 \index{vbe.h@{vbe.h}!VBE\_GET\_MODE@{VBE\_GET\_MODE}}
 \index{VBE\_GET\_MODE@{VBE\_GET\_MODE}!vbe.h@{vbe.h}}
 \doxysubsubsection{\texorpdfstring{VBE\_GET\_MODE}{VBE\_GET\_MODE}}
 {\footnotesize\ttfamily \#define VBE\+\_\+\+GET\+\_\+\+MODE~0x01}
+
+
+
+VBE function code for getting current video mode. 
 
 \mbox{\Hypertarget{vbe_8h_a02477c4996ff058aee590b54f2146eb5}\label{vbe_8h_a02477c4996ff058aee590b54f2146eb5}} 
 \index{vbe.h@{vbe.h}!VBE\_SET\_MODE@{VBE\_SET\_MODE}}
@@ -120,9 +168,17 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsubsection{\texorpdfstring{VBE\_SET\_MODE}{VBE\_SET\_MODE}}
 {\footnotesize\ttfamily \#define VBE\+\_\+\+SET\+\_\+\+MODE~0x02}
 
+
+
+VBE function code for setting a video mode. 
+
 \mbox{\Hypertarget{vbe_8h_ab41277a20e1e7b827718a29803f6a7e3}\label{vbe_8h_ab41277a20e1e7b827718a29803f6a7e3}} 
 \index{vbe.h@{vbe.h}!WRT\_FUNC@{WRT\_FUNC}}
 \index{WRT\_FUNC@{WRT\_FUNC}!vbe.h@{vbe.h}}
 \doxysubsubsection{\texorpdfstring{WRT\_FUNC}{WRT\_FUNC}}
 {\footnotesize\ttfamily \#define WRT\+\_\+\+FUNC~0x4F}
+
+
+
+VBE function write code. 
 
