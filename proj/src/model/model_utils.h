@@ -1,3 +1,8 @@
+/**
+ * @file model_utils
+ * @brief This file has the implementation of the functions related to the utils of the model.
+ */
+
 #ifndef _UTILS_H_
 #define _UTILS_H_
 
