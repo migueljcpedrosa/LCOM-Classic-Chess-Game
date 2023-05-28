@@ -1,3 +1,8 @@
+/**
+ * @file name_controller
+ * @brief This file has the implementation of the functions related to the name controller.
+ */
+
 #ifndef _KEYBOARD_CONTROLLER_H_
 #define _KEYBOARD_CONTROLLER_H_
 

@@ -1,3 +1,8 @@
+/**
+ * @file mouse
+ * @brief This file has the implementation of the functions related to the mouse.
+ */
+
 #ifndef _MOUSE_H_
 #define _MOUSE_H_
 

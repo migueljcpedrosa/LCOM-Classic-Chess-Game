@@ -1,3 +1,8 @@
+/**
+ * @file keyboard
+ * @brief This file has the implementation of the functions related to the keyboard.
+ */
+
 #ifndef _KEYBOARD_H_
 #define _KEYBOARD_H_
 

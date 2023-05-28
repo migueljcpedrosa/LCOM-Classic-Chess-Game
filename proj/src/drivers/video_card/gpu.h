@@ -1,3 +1,8 @@
+/**
+ * @file gpu
+ * @brief This file has the implementation of the functions related to the video graphics.
+ */
+
 #ifndef _GPU_H_
 #define _GPU_H_
 

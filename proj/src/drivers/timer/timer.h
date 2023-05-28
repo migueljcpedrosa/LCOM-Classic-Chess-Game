@@ -1,3 +1,8 @@
+/**
+ * @file timer
+ * @brief This file has the implementation of the functions related to the timer.
+ */
+
 #ifndef _TIMER_H_
 #define _TIMER_H_
 

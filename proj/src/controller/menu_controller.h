@@ -1,3 +1,8 @@
+/**
+ * @file menu_controller
+ * @brief This file has the implementation of the functions related to the menu controller.
+ */
+
 #ifndef _MENU_CONTROLLER_H_
 #define _MENU_CONTROLLER_H_
 

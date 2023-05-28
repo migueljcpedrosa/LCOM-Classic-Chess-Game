@@ -1,3 +1,8 @@
+/**
+ * @file game_over_controller
+ * @brief This file has the implementation of the functions related to the game over controller.
+ */
+
 #ifndef _GAME_OVER_CONTROLLER_
 #define _GAME_OVER_CONTROLLER_
 
