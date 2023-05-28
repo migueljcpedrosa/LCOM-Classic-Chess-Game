@@ -12,16 +12,29 @@ extern unsigned int h_res;
 extern unsigned int v_res;	
 
 /**
- * @brief Sets the video display mode.
+ * @brief Gets the video mode information.
  * 
- * @param mode The desired video display mode.
+ * This function returns the infomation about the video mode provided, in the form of a vbe_mode_info_t struct.
+ * It uses the 0x10 interrupt number for video services, and sets AH register to the write teletype 
+ * function (0x4F) and AL register to specify the function to get the VBE mode information (0x01).
+ * 
+ * @param mode The desired video mode.
+ * @param vbe_info Pointer to the vbe_mode_info_t struct to be filled.
+ * @return Returns 0 upon success and 1 upon failure.
+ */
+int (get_vbe_mode_info)(uint16_t mode, vbe_mode_info_t *vbe_info);
+
+/**
+ * @brief Sets the video display mode.
  *
  * The function sets the video mode to the one indicated by the parameter 'mode', 
  * and configures 'index_mode' as true if the mode is MODE1, and false otherwise. 
  * It uses the 0x10 interrupt number for video services, and sets AH register to 
- * the write teletype function (WRT_FUNC) and AL register to set the VBE mode. 
+ * the write teletype function (0x4F) and AL register to specify the function 
+ * to set the VBE mode (0x02). 
  * The function will fail if the mode change was not supported or if any error occurred.
  * 
+ * @param mode The desired video display mode.
  * @return Returns 0 upon success, and 1 upon failure.
  */
 int (set_mode)(uint16_t mode);

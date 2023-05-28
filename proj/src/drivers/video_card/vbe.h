@@ -9,6 +9,8 @@
 #define MODE4   0x11A	// 1280x1024	  Direct color	16 (5:6:5)
 #define MODE5   0x14C	// 1152x864	    Direct color	32 ((8:)8:8:8)
 
+#define INT_10       0x10
+
 #define WRT_FUNC 0x4F
 
 #define VBE_GET_MODE 0x01    
@@ -17,6 +19,7 @@
 #define LINEAR_FRAME_BUFFER BIT(14)
 
 #define FUNC_SUPPORTED 0x4F
+#define FUNC_SUCCESS   0x00
 
 #define TRANSPARENT 0xFF00FF
 #define LETTER_WIDTH 76
