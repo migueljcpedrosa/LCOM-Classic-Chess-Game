@@ -46,27 +46,45 @@ int (draw_word)(Sprite* sprite, uint16_t x, uint16_t y, char* word){
   return 0;
 }
 
-int (drawDate)(rtc_timestamp_t* timestamp) {
-  char date[11];
-  date[0] = timestamp->day / 10 + '0';
-  date[1] = timestamp->day % 10 + '0';
-  date[2] = '/';
-  date[3] = timestamp->month / 10 + '0';
-  date[4] = timestamp->month % 10 + '0';
-  date[5] = '/';
-  date[6] = '2';
-  date[7] = '0';
-  date[8] = timestamp->year / 10 + '0';
-  date[9] = timestamp->year % 10 + '0';
-  date[10] = '\0';
 
-  char time[6];
-  time[0] = timestamp->hours / 10 + '0';
-  time[1] = timestamp->hours % 10 + '0';
-  time[2] = ':';
-  time[3] = timestamp->minutes / 10 + '0';
-  time[4] = timestamp->minutes % 10 + '0';
-  time[5] = '\0';
-  printf("%s %s\n",time,date);
+int (drawDate)(rtc_timestamp_t* timestamp) {
+  char date[17];
+  date[0] = timestamp->hours / 10 + '0';
+  date[1] = timestamp->hours % 10 + '0';
+  date[2] = ':';
+  date[3] = timestamp->minutes / 10 + '0';
+  date[4] = timestamp->minutes % 10 + '0';
+  date[5] = ' ';
+  date[6] = timestamp->day / 10 + '0';
+  date[7] = timestamp->day % 10 + '0';
+  date[8] = '/';
+  date[9] = timestamp->month / 10 + '0';
+  date[10] = timestamp->month % 10 + '0';
+  date[11] = '/';
+  date[12] = '2';
+  date[13] = '0';
+  date[14] = timestamp->year / 10 + '0';
+  date[15] = timestamp->year % 10 + '0';
+  date[16] = '\0';
+
+  int x = 0;
+  int y = 0;
+  for (int i = 0; i < 15; i++){
+
+    if(date[i] == ' '){
+      x += numbers->img.width / 11;
+      continue;
+    }
+
+    if(date[i] == '/'){
+      x += numbers->img.width / 11;
+      continue;
+    }
+
+    if (draw_number(numbers->img, numbers->addr, x, y, date[i])) return 1;
+    
+    x += numbers->img.width / 11;
+    }
+
   return 0;
 }

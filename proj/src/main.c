@@ -137,10 +137,12 @@ int interrupts_handler(){
                             state_timer_handler();
                         } 
 
+                        
                         if(msg.m_notify.interrupts & irqRtc){
-                            //rtc_ih(&current_time);
-                            //drawDate(&current_time);
+                            rtc_ih(&current_time);
+                            drawDate(&current_time);
                         }
+
                         break;
 
 
