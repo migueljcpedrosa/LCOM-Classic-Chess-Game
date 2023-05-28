@@ -38,6 +38,8 @@ int (erase_cursor)(){
   return 0;
 }
 
+
+
 int (draw_word)(Sprite* sprite, uint16_t x, uint16_t y, char* word){
 
   if (draw_xpm_word(sprite->img, sprite->addr, x, y, word))
@@ -69,7 +71,7 @@ int (drawDate)(rtc_timestamp_t* timestamp) {
 
   int x = 0;
   int y = 0;
-  for (int i = 0; i < 15; i++){
+  for (int i = 0; i < 16; i++){
 
     if(date[i] == ' '){
       x += numbers->img.width / 11;
@@ -88,3 +90,12 @@ int (drawDate)(rtc_timestamp_t* timestamp) {
 
   return 0;
 }
+
+
+int erase_date(){
+  if (draw_screenshot_to_buffer(0, 0, 16 * (numbers->img.width / 11), numbers->img.height))
+    return 1;
+
+  return 0;
+}
+

@@ -16,6 +16,8 @@ int (draw_cursor)();
 
 int (erase_cursor)();
 
+int (erase_date)();
+
 int (draw_word)(Sprite* sprite, uint16_t x, uint16_t y, char* word);
 
 int (drawDate)(rtc_timestamp_t* timestamp);
