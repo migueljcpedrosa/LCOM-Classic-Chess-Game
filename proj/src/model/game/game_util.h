@@ -37,8 +37,11 @@ typedef struct {
     Position origin;
     Position destination;
     MoveType type;
-    struct Piece* secondary_piece;
 
+    struct Piece* piece;
+    bool had_moved;
+
+    struct Piece* secondary_piece;
 } Move;
 
 #endif

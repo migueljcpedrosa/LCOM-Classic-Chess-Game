@@ -122,9 +122,11 @@ int (draw_pieces)(){
 
       Piece* piece = game->board->squares[i];
       if (piece != NULL){
-        if (piece->status == ALIVE && piece != selected_piece)
-          if (draw_piece(piece->sprite, piece->position.x, piece->position.y))
-            return 1;
+        if (piece->status == ALIVE && piece != selected_piece){
+
+            if (draw_piece(piece->sprite, piece->position.x, piece->position.y))
+              return 1;
+          }
       }
     }
   }
