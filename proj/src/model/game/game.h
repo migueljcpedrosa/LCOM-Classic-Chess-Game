@@ -97,6 +97,7 @@ Player* (get_waiting_player)(Game* game);
  * @brief Checks if the current player has any valid moves.
  * 
  * @param game pointer to the game.
+ * @return Returns true if the current player has any valid moves, false otherwise.
  */
 bool (can_move)(Game* game);
 
@@ -104,6 +105,7 @@ bool (can_move)(Game* game);
  * @brief Checks if the current player is in check.
  * 
  * @param game pointer to the game.
+ * @return Returns true if the current player is in check, false otherwise.
  */
 bool (is_check)(Game* game);
 
@@ -111,6 +113,7 @@ bool (is_check)(Game* game);
  * @brief Checks if the current player is in check mate.
  * 
  * @param game pointer to the game.
+ * @return Returns true if the current player is in check mate, false otherwise.
  */
 bool (is_check_mate)(Game* game);
 
@@ -119,6 +122,7 @@ bool (is_check_mate)(Game* game);
  * @brief Checks if the current player is in stale mate.
  * 
  * @param game pointer to the game.
+ * @return Returns true if the current player is in stale mate, false otherwise.
  */
 bool (is_stale_mate)(Game* game);
 
@@ -128,6 +132,7 @@ bool (is_stale_mate)(Game* game);
  * @param game pointer to the game.
  * @param x the x coordinate of the position.
  * @param y the y coordinate of the position.
+ * @return Returns the piece at the given position.
  */
 Piece* (getPiece)(Game* game, unsigned int x, unsigned int y);
 

@@ -60,6 +60,7 @@ Position (create_position)(int boardIndex);
  * @param type the type of the piece.
  * @param color the color of the piece.
  * @param pos the position of the piece.
+ * @return Returns the created piece.
 */
 Piece* (create_piece)(Type type, Color color, Position pos);
 
