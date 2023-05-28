@@ -1,0 +1,15 @@
+var searchData=
+[
+  ['main_0',['main',['../main_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.c']]],
+  ['map_5finfo_1',['map_info',['../gpu_8c.html#a0dc066c9e0ab100c5de2dbc6a81eee34',1,'map_info(vbe_mode_info_t *vmi_p):&#160;gpu.c'],['../gpu_8h.html#a0dc066c9e0ab100c5de2dbc6a81eee34',1,'map_info(vbe_mode_info_t *vmi_p):&#160;gpu.c']]],
+  ['menu_5fclicked_5fexit_2',['menu_clicked_exit',['../menu_8c.html#a0c8f92250230310bd142637e69077e64',1,'menu_clicked_exit(CursorInput *cursor):&#160;menu.c'],['../menu_8h.html#a0c8f92250230310bd142637e69077e64',1,'menu_clicked_exit(CursorInput *cursor):&#160;menu.c']]],
+  ['menu_5fclicked_5fplay_3',['menu_clicked_play',['../menu_8c.html#ac1ad344ca5872dac9cbc09038cd50f38',1,'menu_clicked_play(CursorInput *cursor):&#160;menu.c'],['../menu_8h.html#ac1ad344ca5872dac9cbc09038cd50f38',1,'menu_clicked_play(CursorInput *cursor):&#160;menu.c']]],
+  ['menu_5fcursor_4',['menu_cursor',['../menu__controller_8c.html#ac2dd24dd681a19ccab36ea90eba14d0e',1,'menu_cursor(CursorInput *input):&#160;menu_controller.c'],['../menu__controller_8h.html#ac2dd24dd681a19ccab36ea90eba14d0e',1,'menu_cursor(CursorInput *input):&#160;menu_controller.c']]],
+  ['menu_5fkbd_5',['menu_kbd',['../menu__controller_8c.html#a890ca7f78416e4dbb66f273e7d1f64be',1,'menu_kbd(uint8_t scan_code[2], int size):&#160;menu_controller.c'],['../menu__controller_8h.html#a890ca7f78416e4dbb66f273e7d1f64be',1,'menu_kbd(uint8_t scan_code[2], int size):&#160;menu_controller.c']]],
+  ['menu_5frefresh_6',['menu_refresh',['../menu__viewer_8c.html#a38de34a6ac214cbd9ccab20969463f7a',1,'menu_refresh():&#160;menu_viewer.c'],['../menu__viewer_8h.html#a38de34a6ac214cbd9ccab20969463f7a',1,'menu_refresh():&#160;menu_viewer.c']]],
+  ['menu_5fscreenshot_7',['menu_screenshot',['../menu__viewer_8c.html#ad2fac5dceefd149c428555406b1f6981',1,'menu_screenshot():&#160;menu_viewer.c'],['../menu__viewer_8h.html#ad2fac5dceefd149c428555406b1f6981',1,'menu_screenshot():&#160;menu_viewer.c']]],
+  ['mouse_5fih_8',['mouse_ih',['../mouse_8c.html#a210374b50462acdedab00df64d5cea3c',1,'mouse_ih():&#160;mouse.c'],['../mouse_8h.html#a210374b50462acdedab00df64d5cea3c',1,'mouse_ih():&#160;mouse.c']]],
+  ['mouse_5fsubscribe_5fint_9',['mouse_subscribe_int',['../mouse_8c.html#a20285aed4b3ef45812cd967532dd09db',1,'mouse_subscribe_int(uint8_t *bit_no):&#160;mouse.c'],['../mouse_8h.html#a20285aed4b3ef45812cd967532dd09db',1,'mouse_subscribe_int(uint8_t *bit_no):&#160;mouse.c']]],
+  ['mouse_5funsubscribe_5fint_10',['mouse_unsubscribe_int',['../mouse_8c.html#a3ecf823d80520009ae5e0d76ae40a3c3',1,'mouse_unsubscribe_int():&#160;mouse.c'],['../mouse_8h.html#a3ecf823d80520009ae5e0d76ae40a3c3',1,'mouse_unsubscribe_int():&#160;mouse.c']]],
+  ['move_5fsprite_11',['move_sprite',['../gpu_8c.html#a4c59acdb512a47ce59e98cfe3c55675e',1,'move_sprite(uint16_t *xi, uint16_t *yi, uint16_t xf, uint16_t yf, int16_t speed, uint32_t frame_count):&#160;gpu.c'],['../gpu_8h.html#a4c59acdb512a47ce59e98cfe3c55675e',1,'move_sprite(uint16_t *xi, uint16_t *yi, uint16_t xf, uint16_t yf, int16_t speed, uint32_t frame_count):&#160;gpu.c']]]
+];

@@ -1,0 +1,1074 @@
+\hypertarget{game_8h}{}\doxysection{model/game/game.h File Reference}
+\label{game_8h}\index{model/game/game.h@{model/game/game.h}}
+
+
+This file contains the definition of the game module.  
+
+
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}move.\+h\char`\"{}}\newline
+Include dependency graph for game.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{game_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_game}{Game}}
+\begin{DoxyCompactList}\small\item\em Represents a chess game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \mbox{\hyperlink{game_8h_a528c6fff5b02763e14bd867e05cb08ee}{Turn}}
+\begin{DoxyCompactList}\small\item\em Represents a chess game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{game_8h_a158fca42a7ca505cec86fd46144c741c}{create\+\_\+game}} (char white\+\_\+name\mbox{[}$\,$\mbox{]}, char black\+\_\+name\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Initializes a game. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_abd7a5dc575bf590a0886f372aad1c99e}{destroy\+\_\+game}} ()
+\begin{DoxyCompactList}\small\item\em Destroys a game. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_af5b2aa219d02752bff2a43f472bd0045}{switch\+\_\+turn}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}})
+\begin{DoxyCompactList}\small\item\em Switches the turn of the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_player}{Player}} $\ast$() \mbox{\hyperlink{game_8h_a803b4640fcae2e518e2c46f81ba01d6b}{get\+\_\+current\+\_\+player}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}})
+\begin{DoxyCompactList}\small\item\em Returns the current player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_player}{Player}} $\ast$() \mbox{\hyperlink{game_8h_a5f7f768a3bc9bff2e01189c05e6834b8}{get\+\_\+waiting\+\_\+player}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}})
+\begin{DoxyCompactList}\small\item\em Returns the waiting player. \end{DoxyCompactList}\item 
+bool() \mbox{\hyperlink{game_8h_a2fba28ad51735136eb0063f1e28cc2ac}{can\+\_\+move}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}})
+\begin{DoxyCompactList}\small\item\em Checks if the current player has any valid moves. \end{DoxyCompactList}\item 
+bool() \mbox{\hyperlink{game_8h_aacd5c6b9f24f491169df49994d83ac8d}{is\+\_\+check}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}})
+\begin{DoxyCompactList}\small\item\em Checks if the current player is in check. \end{DoxyCompactList}\item 
+bool() \mbox{\hyperlink{game_8h_a0ffdc13a81e9dfabe4ed6c2b2e83e8d6}{is\+\_\+check\+\_\+mate}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}})
+\begin{DoxyCompactList}\small\item\em Checks if the current player is in check mate. \end{DoxyCompactList}\item 
+bool() \mbox{\hyperlink{game_8h_a7beff665eadc96e3c79becadc098ebd5}{is\+\_\+stale\+\_\+mate}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}})
+\begin{DoxyCompactList}\small\item\em Checks if the current player is in stale mate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_piece}{Piece}} $\ast$() \mbox{\hyperlink{game_8h_aaee1cda131ac3a7a13f8af0713d63b9d}{get\+Piece}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, unsigned int x, unsigned int y)
+\begin{DoxyCompactList}\small\item\em Retrieves the piece at the given position. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_ac4a0de72a2b303612e6d743cc7073f09}{execute\+\_\+move}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_move}{Move}} move)
+\begin{DoxyCompactList}\small\item\em Executes a move within the given game. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_a37a26b57f8d6d9ea0e3e7090b803154b}{execute\+\_\+normal}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_move}{Move}} move)
+\begin{DoxyCompactList}\small\item\em Executes a normal move. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_ae94ec57ec9ca8a04c4af6f49e75104cd}{execute\+\_\+capture}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_move}{Move}} move)
+\begin{DoxyCompactList}\small\item\em Executes a capture move. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_a4cf5771e6bd973cc292351e00165a041}{execute\+\_\+castle}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_move}{Move}} move)
+\begin{DoxyCompactList}\small\item\em Executes a castle move. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_a6c5e3fe6772104f293989db3f1e165e7}{execute\+\_\+en\+Passant}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_move}{Move}} move)
+\begin{DoxyCompactList}\small\item\em Executes an en passant move. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_a42afa1b20be35bd921c925e784805892}{undo\+\_\+move}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_move}{Move}} move)
+\begin{DoxyCompactList}\small\item\em Undoes a move within the given game. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_ae6316bc9b0f46a28e80ddbe0d2b07804}{undo\+\_\+normal}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_move}{Move}} move)
+\begin{DoxyCompactList}\small\item\em Undoes a normal move. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_a379a85e7e59bbd3adb29e0019081d061}{undo\+\_\+capture}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_move}{Move}} move)
+\begin{DoxyCompactList}\small\item\em Undoes a capture move. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_a1dd78d3468faaadf416ce69e769c5fc7}{undo\+\_\+castle}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_move}{Move}} move)
+\begin{DoxyCompactList}\small\item\em Undoes a castle move. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_a46fd109c579ef96fddb1c2c95643769c}{undo\+\_\+en\+Passant}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_move}{Move}} move)
+\begin{DoxyCompactList}\small\item\em Undoes an en passant move. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_a03f13b860db83a4144b5ac8630ee7cbb}{filter\+Moves}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_piece}{Piece}} $\ast$piece)
+\begin{DoxyCompactList}\small\item\em Filters out all the invalid moves of the given piece. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_a3a3a9eb872c4ea58396f0fdaff7a624b}{set\+Moves}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_piece}{Piece}} $\ast$piece, bool check\+For\+Check)
+\begin{DoxyCompactList}\small\item\em Sets the moves of the given piece. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_abb070bf6dd447b4416a3f63868351121}{set\+Pawn\+Moves}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_piece}{Piece}} $\ast$piece)
+\begin{DoxyCompactList}\small\item\em Sets the moves of the given pawn. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_a029ec6f0ce9235992b52ff7879c223e5}{set\+Moves\+In\+Line}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_piece}{Piece}} $\ast$piece, \mbox{\hyperlink{struct_position}{Position}} increment)
+\begin{DoxyCompactList}\small\item\em Sets the moves of the given piece in a line. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_a787c0b2566eb8fda38584d893673ee58}{set\+Bishop\+Moves}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_piece}{Piece}} $\ast$piece)
+\begin{DoxyCompactList}\small\item\em Sets the moves of the give bishop. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_af0b0c5ac9b76d90ebed52452cafa4225}{set\+Rook\+Moves}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_piece}{Piece}} $\ast$piece)
+\begin{DoxyCompactList}\small\item\em Sets the moves of the given rook. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_ad7b57a9417a456e76a6ca52c25967cf6}{set\+Queen\+Moves}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_piece}{Piece}} $\ast$piece)
+\begin{DoxyCompactList}\small\item\em Sets the moves of the given queen. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_a02368aa2f563fecb051410184b125352}{set\+Knight\+Moves}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_piece}{Piece}} $\ast$piece)
+\begin{DoxyCompactList}\small\item\em Sets the moves of the given knight. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game_8h_a39794e52f15e915d2dd94d33253a5669}{set\+King\+Moves}} (\mbox{\hyperlink{struct_game}{Game}} $\ast$\mbox{\hyperlink{game_8c_a58bdb5643d0814ac4e697a1564b79b70}{game}}, \mbox{\hyperlink{struct_piece}{Piece}} $\ast$king, bool check\+For\+Check)
+\begin{DoxyCompactList}\small\item\em Sets the moves of the given king. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{game_8h_addfb6f319c324916745a6ca3fdae6bb0}{game\+\_\+result}}
+\item 
+char $\ast$ \mbox{\hyperlink{game_8h_a937a4db808fc2c57636e37fc7d8253f9}{game\+\_\+winner}}
+\item 
+\mbox{\hyperlink{struct_piece}{Piece}} $\ast$ \mbox{\hyperlink{game_8h_a09da077207c4c32abd079e452cacbc1d}{selected\+\_\+piece}}
+\begin{DoxyCompactList}\small\item\em Represents the currently selected piece. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_game}{Game}} $\ast$ \mbox{\hyperlink{game_8h_a58bdb5643d0814ac4e697a1564b79b70}{game}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of the game module. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_game}{Game}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{game_8h_a528c6fff5b02763e14bd867e05cb08ee}\label{game_8h_a528c6fff5b02763e14bd867e05cb08ee}} 
+\index{game.h@{game.h}!Turn@{Turn}}
+\index{Turn@{Turn}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{Turn}{Turn}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Turn}}}
+
+
+
+Represents a chess game. 
+
+This struct represents a chess game. It is composed of a board, a white player, a black player and a turn. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game_8h_a2fba28ad51735136eb0063f1e28cc2ac}\label{game_8h_a2fba28ad51735136eb0063f1e28cc2ac}} 
+\index{game.h@{game.h}!can\_move@{can\_move}}
+\index{can\_move@{can\_move}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{can\_move()}{can\_move()}}
+{\footnotesize\ttfamily bool() can\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Checks if the current player has any valid moves. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the current player has any valid moves, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a2fba28ad51735136eb0063f1e28cc2ac_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a2fba28ad51735136eb0063f1e28cc2ac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a158fca42a7ca505cec86fd46144c741c}\label{game_8h_a158fca42a7ca505cec86fd46144c741c}} 
+\index{game.h@{game.h}!create\_game@{create\_game}}
+\index{create\_game@{create\_game}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{create\_game()}{create\_game()}}
+{\footnotesize\ttfamily void() create\+\_\+game (\begin{DoxyParamCaption}\item[{char}]{white\+\_\+name\mbox{[}$\,$\mbox{]},  }\item[{char}]{black\+\_\+name\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Initializes a game. 
+
+This function creates a game and initializes it\textquotesingle{}s board and players.
+
+
+\begin{DoxyParams}{Parameters}
+{\em white\+\_\+name} & the name of the player that will control the white pieces. \\
+\hline
+{\em black\+\_\+name} & the name of the player that will control the black pieces.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the created game. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a158fca42a7ca505cec86fd46144c741c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a158fca42a7ca505cec86fd46144c741c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_abd7a5dc575bf590a0886f372aad1c99e}\label{game_8h_abd7a5dc575bf590a0886f372aad1c99e}} 
+\index{game.h@{game.h}!destroy\_game@{destroy\_game}}
+\index{destroy\_game@{destroy\_game}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{destroy\_game()}{destroy\_game()}}
+{\footnotesize\ttfamily void() destroy\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys a game. 
+
+This function destroys a game and frees all the memory allocated to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game that will be destroyed. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{game_8h_abd7a5dc575bf590a0886f372aad1c99e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_abd7a5dc575bf590a0886f372aad1c99e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_ae94ec57ec9ca8a04c4af6f49e75104cd}\label{game_8h_ae94ec57ec9ca8a04c4af6f49e75104cd}} 
+\index{game.h@{game.h}!execute\_capture@{execute\_capture}}
+\index{execute\_capture@{execute\_capture}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{execute\_capture()}{execute\_capture()}}
+{\footnotesize\ttfamily void() execute\+\_\+capture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_move}{Move}}}]{move }\end{DoxyParamCaption})}
+
+
+
+Executes a capture move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em move} & the move that will be executed. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_ae94ec57ec9ca8a04c4af6f49e75104cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a4cf5771e6bd973cc292351e00165a041}\label{game_8h_a4cf5771e6bd973cc292351e00165a041}} 
+\index{game.h@{game.h}!execute\_castle@{execute\_castle}}
+\index{execute\_castle@{execute\_castle}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{execute\_castle()}{execute\_castle()}}
+{\footnotesize\ttfamily void() execute\+\_\+castle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_move}{Move}}}]{move }\end{DoxyParamCaption})}
+
+
+
+Executes a castle move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em move} & the move that will be executed. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a4cf5771e6bd973cc292351e00165a041_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a6c5e3fe6772104f293989db3f1e165e7}\label{game_8h_a6c5e3fe6772104f293989db3f1e165e7}} 
+\index{game.h@{game.h}!execute\_enPassant@{execute\_enPassant}}
+\index{execute\_enPassant@{execute\_enPassant}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{execute\_enPassant()}{execute\_enPassant()}}
+{\footnotesize\ttfamily void() execute\+\_\+en\+Passant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_move}{Move}}}]{move }\end{DoxyParamCaption})}
+
+
+
+Executes an en passant move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em move} & the move that will be executed. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a6c5e3fe6772104f293989db3f1e165e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_ac4a0de72a2b303612e6d743cc7073f09}\label{game_8h_ac4a0de72a2b303612e6d743cc7073f09}} 
+\index{game.h@{game.h}!execute\_move@{execute\_move}}
+\index{execute\_move@{execute\_move}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{execute\_move()}{execute\_move()}}
+{\footnotesize\ttfamily void() execute\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_move}{Move}}}]{move }\end{DoxyParamCaption})}
+
+
+
+Executes a move within the given game. 
+
+This function executes a move within the given game. It changes the pieces positions and statuses and updates the board. This function calls the appropriate function to execute the move, depending on the type of the move.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em move} & the move that will be executed. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{game_8h_ac4a0de72a2b303612e6d743cc7073f09_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_ac4a0de72a2b303612e6d743cc7073f09_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a37a26b57f8d6d9ea0e3e7090b803154b}\label{game_8h_a37a26b57f8d6d9ea0e3e7090b803154b}} 
+\index{game.h@{game.h}!execute\_normal@{execute\_normal}}
+\index{execute\_normal@{execute\_normal}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{execute\_normal()}{execute\_normal()}}
+{\footnotesize\ttfamily void() execute\+\_\+normal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_move}{Move}}}]{move }\end{DoxyParamCaption})}
+
+
+
+Executes a normal move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em move} & the move that will be executed. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a37a26b57f8d6d9ea0e3e7090b803154b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a03f13b860db83a4144b5ac8630ee7cbb}\label{game_8h_a03f13b860db83a4144b5ac8630ee7cbb}} 
+\index{game.h@{game.h}!filterMoves@{filterMoves}}
+\index{filterMoves@{filterMoves}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{filterMoves()}{filterMoves()}}
+{\footnotesize\ttfamily void() filter\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{piece }\end{DoxyParamCaption})}
+
+
+
+Filters out all the invalid moves of the given piece. 
+
+This function filters out all the moves that put the current player in check.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em piece} & pointer to the piece whose moves will be filtered.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the move is valid, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a03f13b860db83a4144b5ac8630ee7cbb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a03f13b860db83a4144b5ac8630ee7cbb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a803b4640fcae2e518e2c46f81ba01d6b}\label{game_8h_a803b4640fcae2e518e2c46f81ba01d6b}} 
+\index{game.h@{game.h}!get\_current\_player@{get\_current\_player}}
+\index{get\_current\_player@{get\_current\_player}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{get\_current\_player()}{get\_current\_player()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_player}{Player}} $\ast$() get\+\_\+current\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Returns the current player. 
+
+This function returns the player that is currently playing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the current player. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a803b4640fcae2e518e2c46f81ba01d6b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a5f7f768a3bc9bff2e01189c05e6834b8}\label{game_8h_a5f7f768a3bc9bff2e01189c05e6834b8}} 
+\index{game.h@{game.h}!get\_waiting\_player@{get\_waiting\_player}}
+\index{get\_waiting\_player@{get\_waiting\_player}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{get\_waiting\_player()}{get\_waiting\_player()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_player}{Player}} $\ast$() get\+\_\+waiting\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Returns the waiting player. 
+
+This function returns the player that is currently waiting for their turn.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the waiting player. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a5f7f768a3bc9bff2e01189c05e6834b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_aaee1cda131ac3a7a13f8af0713d63b9d}\label{game_8h_aaee1cda131ac3a7a13f8af0713d63b9d}} 
+\index{game.h@{game.h}!getPiece@{getPiece}}
+\index{getPiece@{getPiece}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{getPiece()}{getPiece()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_piece}{Piece}} $\ast$() get\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})}
+
+
+
+Retrieves the piece at the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em x} & the x coordinate of the position. \\
+\hline
+{\em y} & the y coordinate of the position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the piece at the given position. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_aaee1cda131ac3a7a13f8af0713d63b9d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_aacd5c6b9f24f491169df49994d83ac8d}\label{game_8h_aacd5c6b9f24f491169df49994d83ac8d}} 
+\index{game.h@{game.h}!is\_check@{is\_check}}
+\index{is\_check@{is\_check}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{is\_check()}{is\_check()}}
+{\footnotesize\ttfamily bool() is\+\_\+check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Checks if the current player is in check. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the current player is in check, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_aacd5c6b9f24f491169df49994d83ac8d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_aacd5c6b9f24f491169df49994d83ac8d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a0ffdc13a81e9dfabe4ed6c2b2e83e8d6}\label{game_8h_a0ffdc13a81e9dfabe4ed6c2b2e83e8d6}} 
+\index{game.h@{game.h}!is\_check\_mate@{is\_check\_mate}}
+\index{is\_check\_mate@{is\_check\_mate}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{is\_check\_mate()}{is\_check\_mate()}}
+{\footnotesize\ttfamily bool() is\+\_\+check\+\_\+mate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Checks if the current player is in check mate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the current player is in check mate, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a0ffdc13a81e9dfabe4ed6c2b2e83e8d6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a0ffdc13a81e9dfabe4ed6c2b2e83e8d6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a7beff665eadc96e3c79becadc098ebd5}\label{game_8h_a7beff665eadc96e3c79becadc098ebd5}} 
+\index{game.h@{game.h}!is\_stale\_mate@{is\_stale\_mate}}
+\index{is\_stale\_mate@{is\_stale\_mate}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{is\_stale\_mate()}{is\_stale\_mate()}}
+{\footnotesize\ttfamily bool() is\+\_\+stale\+\_\+mate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Checks if the current player is in stale mate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the current player is in stale mate, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a7beff665eadc96e3c79becadc098ebd5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a7beff665eadc96e3c79becadc098ebd5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a787c0b2566eb8fda38584d893673ee58}\label{game_8h_a787c0b2566eb8fda38584d893673ee58}} 
+\index{game.h@{game.h}!setBishopMoves@{setBishopMoves}}
+\index{setBishopMoves@{setBishopMoves}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{setBishopMoves()}{setBishopMoves()}}
+{\footnotesize\ttfamily void() set\+Bishop\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{piece }\end{DoxyParamCaption})}
+
+
+
+Sets the moves of the give bishop. 
+
+This function sets the moves of the given bishop, with all possible moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em piece} & pointer to the bishop whose moves will be set. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a787c0b2566eb8fda38584d893673ee58_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a787c0b2566eb8fda38584d893673ee58_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a39794e52f15e915d2dd94d33253a5669}\label{game_8h_a39794e52f15e915d2dd94d33253a5669}} 
+\index{game.h@{game.h}!setKingMoves@{setKingMoves}}
+\index{setKingMoves@{setKingMoves}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{setKingMoves()}{setKingMoves()}}
+{\footnotesize\ttfamily void() set\+King\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{king,  }\item[{bool}]{check\+For\+Check }\end{DoxyParamCaption})}
+
+
+
+Sets the moves of the given king. 
+
+This function sets the moves of the given king, with all possible moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em piece} & pointer to the king whose moves will be set. \\
+\hline
+{\em check\+For\+Check} & boolean value that indicates if the function is being run within a check verification. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a39794e52f15e915d2dd94d33253a5669_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a39794e52f15e915d2dd94d33253a5669_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a02368aa2f563fecb051410184b125352}\label{game_8h_a02368aa2f563fecb051410184b125352}} 
+\index{game.h@{game.h}!setKnightMoves@{setKnightMoves}}
+\index{setKnightMoves@{setKnightMoves}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{setKnightMoves()}{setKnightMoves()}}
+{\footnotesize\ttfamily void() set\+Knight\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{piece }\end{DoxyParamCaption})}
+
+
+
+Sets the moves of the given knight. 
+
+This function sets the moves of the given knight, with all possible moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em piece} & pointer to the knight whose moves will be set. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{game_8h_a02368aa2f563fecb051410184b125352_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a02368aa2f563fecb051410184b125352_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a3a3a9eb872c4ea58396f0fdaff7a624b}\label{game_8h_a3a3a9eb872c4ea58396f0fdaff7a624b}} 
+\index{game.h@{game.h}!setMoves@{setMoves}}
+\index{setMoves@{setMoves}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{setMoves()}{setMoves()}}
+{\footnotesize\ttfamily void() set\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{piece,  }\item[{bool}]{check\+For\+Check }\end{DoxyParamCaption})}
+
+
+
+Sets the moves of the given piece. 
+
+This function sets the moves of the given piece, with all possible moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em piece} & pointer to the piece whose moves will be set. \\
+\hline
+{\em check\+For\+Check} & boolean value that indicates if the function is being run within a check verification. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a3a3a9eb872c4ea58396f0fdaff7a624b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a3a3a9eb872c4ea58396f0fdaff7a624b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a029ec6f0ce9235992b52ff7879c223e5}\label{game_8h_a029ec6f0ce9235992b52ff7879c223e5}} 
+\index{game.h@{game.h}!setMovesInLine@{setMovesInLine}}
+\index{setMovesInLine@{setMovesInLine}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{setMovesInLine()}{setMovesInLine()}}
+{\footnotesize\ttfamily void() set\+Moves\+In\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{piece,  }\item[{\mbox{\hyperlink{struct_position}{Position}}}]{increment }\end{DoxyParamCaption})}
+
+
+
+Sets the moves of the given piece in a line. 
+
+This function sets the moves of the given piece in a line.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em piece} & pointer to the piece whose moves will be set. \\
+\hline
+{\em increment} & the increment that will generate the line. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{game_8h_a029ec6f0ce9235992b52ff7879c223e5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a029ec6f0ce9235992b52ff7879c223e5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_abb070bf6dd447b4416a3f63868351121}\label{game_8h_abb070bf6dd447b4416a3f63868351121}} 
+\index{game.h@{game.h}!setPawnMoves@{setPawnMoves}}
+\index{setPawnMoves@{setPawnMoves}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{setPawnMoves()}{setPawnMoves()}}
+{\footnotesize\ttfamily void() set\+Pawn\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{piece }\end{DoxyParamCaption})}
+
+
+
+Sets the moves of the given pawn. 
+
+This function sets the moves of the given pawn, with all possible moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em piece} & pointer to the pawn whose moves will be set. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{game_8h_abb070bf6dd447b4416a3f63868351121_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_abb070bf6dd447b4416a3f63868351121_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_ad7b57a9417a456e76a6ca52c25967cf6}\label{game_8h_ad7b57a9417a456e76a6ca52c25967cf6}} 
+\index{game.h@{game.h}!setQueenMoves@{setQueenMoves}}
+\index{setQueenMoves@{setQueenMoves}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{setQueenMoves()}{setQueenMoves()}}
+{\footnotesize\ttfamily void() set\+Queen\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{piece }\end{DoxyParamCaption})}
+
+
+
+Sets the moves of the given queen. 
+
+This function sets the moves of the given queen, with all possible moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em piece} & pointer to the queen whose moves will be set. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_ad7b57a9417a456e76a6ca52c25967cf6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_ad7b57a9417a456e76a6ca52c25967cf6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_af0b0c5ac9b76d90ebed52452cafa4225}\label{game_8h_af0b0c5ac9b76d90ebed52452cafa4225}} 
+\index{game.h@{game.h}!setRookMoves@{setRookMoves}}
+\index{setRookMoves@{setRookMoves}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{setRookMoves()}{setRookMoves()}}
+{\footnotesize\ttfamily void() set\+Rook\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{piece }\end{DoxyParamCaption})}
+
+
+
+Sets the moves of the given rook. 
+
+This function sets the moves of the given rook, with all possible moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em piece} & pointer to the rook whose moves will be set. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_af0b0c5ac9b76d90ebed52452cafa4225_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_af0b0c5ac9b76d90ebed52452cafa4225_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_af5b2aa219d02752bff2a43f472bd0045}\label{game_8h_af5b2aa219d02752bff2a43f472bd0045}} 
+\index{game.h@{game.h}!switch\_turn@{switch\_turn}}
+\index{switch\_turn@{switch\_turn}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{switch\_turn()}{switch\_turn()}}
+{\footnotesize\ttfamily void() switch\+\_\+turn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+Switches the turn of the game. 
+
+This function switches the turn of the game.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game whose turn will be switched. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_af5b2aa219d02752bff2a43f472bd0045_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a379a85e7e59bbd3adb29e0019081d061}\label{game_8h_a379a85e7e59bbd3adb29e0019081d061}} 
+\index{game.h@{game.h}!undo\_capture@{undo\_capture}}
+\index{undo\_capture@{undo\_capture}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{undo\_capture()}{undo\_capture()}}
+{\footnotesize\ttfamily void() undo\+\_\+capture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_move}{Move}}}]{move }\end{DoxyParamCaption})}
+
+
+
+Undoes a capture move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em move} & the move that will be undone. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a379a85e7e59bbd3adb29e0019081d061_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a1dd78d3468faaadf416ce69e769c5fc7}\label{game_8h_a1dd78d3468faaadf416ce69e769c5fc7}} 
+\index{game.h@{game.h}!undo\_castle@{undo\_castle}}
+\index{undo\_castle@{undo\_castle}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{undo\_castle()}{undo\_castle()}}
+{\footnotesize\ttfamily void() undo\+\_\+castle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_move}{Move}}}]{move }\end{DoxyParamCaption})}
+
+
+
+Undoes a castle move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em move} & the move that will be undone. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a1dd78d3468faaadf416ce69e769c5fc7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a46fd109c579ef96fddb1c2c95643769c}\label{game_8h_a46fd109c579ef96fddb1c2c95643769c}} 
+\index{game.h@{game.h}!undo\_enPassant@{undo\_enPassant}}
+\index{undo\_enPassant@{undo\_enPassant}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{undo\_enPassant()}{undo\_enPassant()}}
+{\footnotesize\ttfamily void() undo\+\_\+en\+Passant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_move}{Move}}}]{move }\end{DoxyParamCaption})}
+
+
+
+Undoes an en passant move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em move} & the move that will be undone. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a46fd109c579ef96fddb1c2c95643769c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a42afa1b20be35bd921c925e784805892}\label{game_8h_a42afa1b20be35bd921c925e784805892}} 
+\index{game.h@{game.h}!undo\_move@{undo\_move}}
+\index{undo\_move@{undo\_move}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{undo\_move()}{undo\_move()}}
+{\footnotesize\ttfamily void() undo\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_move}{Move}}}]{move }\end{DoxyParamCaption})}
+
+
+
+Undoes a move within the given game. 
+
+This function undoes a move within the given game. It changes the pieces positions and statuses, and the board back to its previous state. This function calls the appropriate function to undo the move, depending on the type of the move.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em move} & the move that will be undone. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{game_8h_a42afa1b20be35bd921c925e784805892_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a42afa1b20be35bd921c925e784805892_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_ae6316bc9b0f46a28e80ddbe0d2b07804}\label{game_8h_ae6316bc9b0f46a28e80ddbe0d2b07804}} 
+\index{game.h@{game.h}!undo\_normal@{undo\_normal}}
+\index{undo\_normal@{undo\_normal}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{undo\_normal()}{undo\_normal()}}
+{\footnotesize\ttfamily void() undo\+\_\+normal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game}{Game}} $\ast$}]{game,  }\item[{\mbox{\hyperlink{struct_move}{Move}}}]{move }\end{DoxyParamCaption})}
+
+
+
+Undoes a normal move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & pointer to the game. \\
+\hline
+{\em move} & the move that will be undone. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_ae6316bc9b0f46a28e80ddbe0d2b07804_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{game_8h_a58bdb5643d0814ac4e697a1564b79b70}\label{game_8h_a58bdb5643d0814ac4e697a1564b79b70}} 
+\index{game.h@{game.h}!game@{game}}
+\index{game@{game}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_game}{Game}}$\ast$ game\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{game_8h_addfb6f319c324916745a6ca3fdae6bb0}\label{game_8h_addfb6f319c324916745a6ca3fdae6bb0}} 
+\index{game.h@{game.h}!game\_result@{game\_result}}
+\index{game\_result@{game\_result}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_result}{game\_result}}
+{\footnotesize\ttfamily char$\ast$ game\+\_\+result\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{game_8h_a937a4db808fc2c57636e37fc7d8253f9}\label{game_8h_a937a4db808fc2c57636e37fc7d8253f9}} 
+\index{game.h@{game.h}!game\_winner@{game\_winner}}
+\index{game\_winner@{game\_winner}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_winner}{game\_winner}}
+{\footnotesize\ttfamily char$\ast$ game\+\_\+winner\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{game_8h_a09da077207c4c32abd079e452cacbc1d}\label{game_8h_a09da077207c4c32abd079e452cacbc1d}} 
+\index{game.h@{game.h}!selected\_piece@{selected\_piece}}
+\index{selected\_piece@{selected\_piece}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{selected\_piece}{selected\_piece}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_piece}{Piece}}$\ast$ selected\+\_\+piece\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Represents the currently selected piece. 
+

@@ -1,0 +1,8 @@
+<map id="get_all_moves" name="get_all_moves">
+<area shape="rect" id="node1" title="Gets all the possible moves for the bot." alt="" coords="818,5,921,32"/>
+<area shape="rect" id="node2" href="$game__controller_8c.html#af1502eddab4bc0f656e006665bb65813" title="Handles move execution for the bot." alt="" coords="655,5,770,32"/>
+<area shape="rect" id="node3" href="$game__controller_8c.html#a8e8fa9732d445b16752cb052248b4c77" title="Handles the timer input." alt="" coords="517,5,607,32"/>
+<area shape="rect" id="node4" href="$state_8c.html#a9d5869e5c565b96193f5aca56adb5b78" title="Function to handle timer events based on the current state." alt="" coords="334,5,469,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#a2e6c36e064d205d81eda4de2d9e94561" title=" " alt="" coords="162,5,286,32"/>
+<area shape="rect" id="node6" href="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,5,114,32"/>
+</map>

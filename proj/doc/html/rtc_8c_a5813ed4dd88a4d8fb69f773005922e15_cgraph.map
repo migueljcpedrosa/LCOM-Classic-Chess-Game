@@ -1,0 +1,9 @@
+<map id="rtc_ih" name="rtc_ih">
+<area shape="rect" id="node1" title="Interrupt handler for the RTC." alt="" coords="5,31,59,57"/>
+<area shape="rect" id="node2" href="$rtc_8c.html#a31b9d04a4fc98dadf67ccb9a682b926f" title="Updates the current time stored in the RTC." alt="" coords="107,31,268,57"/>
+<area shape="rect" id="node3" href="$rtc_8c.html#ab4200c12ca8fcf100c0e9f825e5e93c9" title="Checks if the RTC is currently updating." alt="" coords="316,5,465,32"/>
+<area shape="rect" id="node6" href="$rtc_8c.html#a603a03e790a750b23dd019c128317824" title="Updates a specific time unit in the RTC." alt="" coords="320,56,462,83"/>
+<area shape="rect" id="node4" href="$rtc_8c.html#adad56ed559d74b535482c751a0f1cd8f" title="Reads a value from a specific RTC register." alt="" coords="519,5,638,32"/>
+<area shape="rect" id="node5" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title="Reads a byte from the specified port." alt="" coords="692,5,782,32"/>
+<area shape="rect" id="node7" href="$rtc_8c.html#a43b18290dcd8121141c99d2e3c78b43a" title="Converts a BCD number to binary." alt="" coords="513,56,644,99"/>
+</map>

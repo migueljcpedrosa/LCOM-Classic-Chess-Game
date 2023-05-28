@@ -1,0 +1,98 @@
+\hypertarget{struct_player}{}\doxysection{Player Struct Reference}
+\label{struct_player}\index{Player@{Player}}
+
+
+Represents a player.  
+
+
+
+
+{\ttfamily \#include $<$player.\+h$>$}
+
+
+
+Collaboration diagram for Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_player__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{struct_player_a4af4a10433f33834b59d0c3793358a40}{name}}
+\item 
+\mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \mbox{\hyperlink{struct_player_aa7f0feeeb4363458125970c251fbf8ab}{color}}
+\item 
+\mbox{\hyperlink{struct_piece}{Piece}} $\ast$ \mbox{\hyperlink{struct_player_a8abb145f3a4a8ce4b46d264643208975}{pieces}} \mbox{[}16\mbox{]}
+\item 
+unsigned int \mbox{\hyperlink{struct_player_aeeb633192734c97d91a27c46e6c86da0}{time\+\_\+counter}}
+\item 
+\mbox{\hyperlink{struct_timer}{Timer}} \mbox{\hyperlink{struct_player_ab6e1da9d63baa958c58d3621824855d4}{timer}}
+\item 
+\mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{struct_player_a06e4a3eec737ef284f7ae42a60c0967f}{type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a player. 
+
+This struct represents a player. It is composed of a name, a color, an array of pieces, a timer and a type.
+
+The array of pieces contains all the pieces that the player controls. These have the same color as the player.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} 
+
+\mbox{\hyperlink{struct_piece}{Piece}} 
+
+\mbox{\hyperlink{struct_timer}{Timer}} 
+
+\mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_player_aa7f0feeeb4363458125970c251fbf8ab}\label{struct_player_aa7f0feeeb4363458125970c251fbf8ab}} 
+\index{Player@{Player}!color@{color}}
+\index{color@{color}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} Player\+::color}
+
+\mbox{\Hypertarget{struct_player_a4af4a10433f33834b59d0c3793358a40}\label{struct_player_a4af4a10433f33834b59d0c3793358a40}} 
+\index{Player@{Player}!name@{name}}
+\index{name@{name}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char$\ast$ Player\+::name}
+
+\mbox{\Hypertarget{struct_player_a8abb145f3a4a8ce4b46d264643208975}\label{struct_player_a8abb145f3a4a8ce4b46d264643208975}} 
+\index{Player@{Player}!pieces@{pieces}}
+\index{pieces@{pieces}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{pieces}{pieces}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_piece}{Piece}}$\ast$ Player\+::pieces\mbox{[}16\mbox{]}}
+
+\mbox{\Hypertarget{struct_player_aeeb633192734c97d91a27c46e6c86da0}\label{struct_player_aeeb633192734c97d91a27c46e6c86da0}} 
+\index{Player@{Player}!time\_counter@{time\_counter}}
+\index{time\_counter@{time\_counter}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{time\_counter}{time\_counter}}
+{\footnotesize\ttfamily unsigned int Player\+::time\+\_\+counter}
+
+\mbox{\Hypertarget{struct_player_ab6e1da9d63baa958c58d3621824855d4}\label{struct_player_ab6e1da9d63baa958c58d3621824855d4}} 
+\index{Player@{Player}!timer@{timer}}
+\index{timer@{timer}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_timer}{Timer}} Player\+::timer}
+
+\mbox{\Hypertarget{struct_player_a06e4a3eec737ef284f7ae42a60c0967f}\label{struct_player_a06e4a3eec737ef284f7ae42a60c0967f}} 
+\index{Player@{Player}!type@{type}}
+\index{type@{type}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} Player\+::type}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+model/game/\mbox{\hyperlink{player_8h}{player.\+h}}\end{DoxyCompactItemize}

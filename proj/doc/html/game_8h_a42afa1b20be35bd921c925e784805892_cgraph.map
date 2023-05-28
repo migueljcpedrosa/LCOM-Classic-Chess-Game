@@ -1,0 +1,7 @@
+<map id="undo_move" name="undo_move">
+<area shape="rect" id="node1" title="Undoes a move within the given game." alt="" coords="5,81,92,108"/>
+<area shape="rect" id="node2" href="$game_8c.html#a379a85e7e59bbd3adb29e0019081d061" title="Undoes a capture move." alt="" coords="149,5,249,32"/>
+<area shape="rect" id="node3" href="$game_8c.html#a1dd78d3468faaadf416ce69e769c5fc7" title="Undoes a castle move." alt="" coords="153,56,245,83"/>
+<area shape="rect" id="node4" href="$game_8c.html#a46fd109c579ef96fddb1c2c95643769c" title="Undoes an en passant move." alt="" coords="140,107,258,133"/>
+<area shape="rect" id="node5" href="$game_8c.html#ae6316bc9b0f46a28e80ddbe0d2b07804" title="Undoes a normal move." alt="" coords="151,157,247,184"/>
+</map>

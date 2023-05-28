@@ -1,0 +1,56 @@
+\hypertarget{gpu_8h_source}{}\doxysection{gpu.\+h}
+\label{gpu_8h_source}\index{drivers/video\_card/gpu.h@{drivers/video\_card/gpu.h}}
+\mbox{\hyperlink{gpu_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef \_GPU\_H\_}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define \_GPU\_H\_}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{extern} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{gpu_8h_aad78699a28fcff05a576be78215409e0}{h\_res}};      }
+\DoxyCodeLine{12 \textcolor{keyword}{extern} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{gpu_8h_a760a0e9058448397344fe15fb9852def}{v\_res}}; }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{26 int (\mbox{\hyperlink{gpu_8h_a3b95976f1c1f2460aca11c5c81d94342}{get\_vbe\_mode\_info}})(uint16\_t mode, vbe\_mode\_info\_t *vbe\_info);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{42 int (\mbox{\hyperlink{gpu_8h_ada3e20ea63a4f7e572c329f56f8dda44}{set\_mode}})(uint16\_t mode);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{51 int (\mbox{\hyperlink{gpu_8h_a0dc066c9e0ab100c5de2dbc6a81eee34}{map\_info}})(vbe\_mode\_info\_t* vmi\_p);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{58 int (\mbox{\hyperlink{gpu_8h_a7a2f89855e5cd27a774cd210d7f1ec2c}{clean\_screen}})();}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{71 int (\mbox{\hyperlink{gpu_8h_a31178cc71e7af0d6045707842517b225}{draw\_rectangle}})(uint16\_t x, uint16\_t y, uint16\_t width, uint16\_t height, uint32\_t color);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{78 int (\mbox{\hyperlink{gpu_8h_a86409f7d16ee31f736ba797968fcf5dc}{copy\_buffer\_to\_screenshot}})();}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{90 int (\mbox{\hyperlink{gpu_8h_a6901dcf3355f24bf3014ac42d5eaeb0a}{draw\_screenshot\_to\_buffer}})(uint32\_t x, uint32\_t y, uint32\_t width, uint32\_t height);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{97 int (\mbox{\hyperlink{gpu_8h_a6fdef7fe34a010689884865dda4f29b8}{copy\_buffer\_to\_video\_mem}})();}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{108 int (\mbox{\hyperlink{gpu_8h_abd983f84d9522b6deec0e784324357bb}{draw\_pattern}})(uint8\_t no\_rectangles, uint32\_t first, uint8\_t step);}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{117 uint8\_t \mbox{\hyperlink{gpu_8h_acf2ad11de36739df5ad308bea3b8d760}{R}}(uint32\_t first);}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{126 uint8\_t \mbox{\hyperlink{gpu_8h_ad7cf38294d5a71e4e68956b86a44a962}{G}}(uint32\_t first);}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{135 uint8\_t \mbox{\hyperlink{gpu_8h_a97628dd73687be84c567cf9f5b3fc4b6}{B}}(uint32\_t first);}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{145 int (\mbox{\hyperlink{gpu_8h_a3dd3c1e8fc58f779c967e3e0d53398db}{get\_xpm\_image\_type}})(\textcolor{keyword}{enum} xpm\_image\_type* type, uint16\_t mode);}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{157 int (\mbox{\hyperlink{gpu_8h_ac05b4b406bf9a2749435ef6a1d5a9969}{load\_xpm}})(xpm\_map\_t xpm, \textcolor{keyword}{enum} xpm\_image\_type type, xpm\_image\_t* sprite,  uint8\_t** img\_addr);}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{169 int (\mbox{\hyperlink{gpu_8h_af5a1ad16f3790e99340bede93eb96372}{draw\_xpm}})(xpm\_image\_t sprite, uint8\_t* img\_addr, uint16\_t x, uint16\_t y);}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{181 int (\mbox{\hyperlink{gpu_8h_a02cfc35393c3fd284940aca98071ef82}{erase\_xpm}})(xpm\_map\_t xpm, \textcolor{keyword}{enum} xpm\_image\_type type, uint16\_t x, uint16\_t y);}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{195 bool (\mbox{\hyperlink{gpu_8h_a4c59acdb512a47ce59e98cfe3c55675e}{move\_sprite}})( uint16\_t* xi, uint16\_t* yi, uint16\_t xf, uint16\_t yf, int16\_t speed, uint32\_t frame\_count);}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{208 int (\mbox{\hyperlink{gpu_8h_a8d9a52951e31bda064a3c35846c96f28}{draw\_xpm\_letter}})(xpm\_image\_t sprite, uint8\_t* img\_addr, uint16\_t x, uint16\_t y, \textcolor{keywordtype}{char} letter);}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{221 int (\mbox{\hyperlink{gpu_8h_a6d12f2e078c761f78261b8235d6410ac}{draw\_xpm\_word}})(xpm\_image\_t sprite, uint8\_t* img\_addr, uint16\_t x, uint16\_t y, \textcolor{keywordtype}{char}* word);}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{234 int (\mbox{\hyperlink{gpu_8h_ad946d9d4d766cdf8d58ebb088baad3b1}{draw\_number}})(xpm\_image\_t sprite, uint8\_t* img\_addr, uint16\_t x, uint16\_t y, \textcolor{keywordtype}{char} number);}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

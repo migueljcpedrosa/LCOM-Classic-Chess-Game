@@ -1,0 +1,4 @@
+<map id="wait_for_input_buffer" name="wait_for_input_buffer">
+<area shape="rect" id="node1" title="Waits until the input buffer is free to write to." alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node2" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title="Reads a byte from the specified port." alt="" coords="192,5,282,32"/>
+</map>

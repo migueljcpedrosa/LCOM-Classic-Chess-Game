@@ -1,0 +1,11 @@
+<map id="view/game_viewer.h" name="view/game_viewer.h">
+<area shape="rect" id="node1" title="This file contains the definition of the game viewer module." alt="" coords="87,5,221,32"/>
+<area shape="rect" id="node2" href="$viewer_8h.html" title=" " alt="" coords="121,80,188,107"/>
+<area shape="rect" id="node3" href="$gpu_8h.html" title=" " alt="" coords="69,245,205,288"/>
+<area shape="rect" id="node5" href="$vbe_8h.html" title=" " alt="" coords="25,155,161,197"/>
+<area shape="rect" id="node6" href="$rtc_8h.html" title=" " alt="" coords="273,163,393,189"/>
+<area shape="rect" id="node9" href="$sprite_8h.html" title=" " alt="" coords="185,163,249,189"/>
+<area shape="rect" id="node4" title=" " alt="" coords="150,336,228,363"/>
+<area shape="rect" id="node7" title=" " alt="" coords="280,253,386,280"/>
+<area shape="rect" id="node8" title=" " alt="" coords="409,253,483,280"/>
+</map>

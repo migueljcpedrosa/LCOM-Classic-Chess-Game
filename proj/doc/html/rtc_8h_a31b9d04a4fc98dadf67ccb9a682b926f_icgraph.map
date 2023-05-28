@@ -1,0 +1,8 @@
+<map id="rtc_update_current_time" name="rtc_update_current_time">
+<area shape="rect" id="node1" title="Updates the current time stored in the RTC." alt="" coords="639,31,800,57"/>
+<area shape="rect" id="node2" href="$rtc_8c.html#a5813ed4dd88a4d8fb69f773005922e15" title="Interrupt handler for the RTC." alt="" coords="342,5,395,32"/>
+<area shape="rect" id="node5" href="$rtc_8c.html#a71cdb1583d1f8cabbbadd632c10e6f99" title="Initializes the RTC system." alt="" coords="450,56,591,83"/>
+<area shape="rect" id="node3" href="$main_8c.html#a2e6c36e064d205d81eda4de2d9e94561" title=" " alt="" coords="162,31,286,57"/>
+<area shape="rect" id="node4" href="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,31,114,57"/>
+<area shape="rect" id="node6" href="$main_8c.html#a0b22669bd9e92d10c96045d9abd26b6b" title=" " alt="" coords="334,56,402,83"/>
+</map>

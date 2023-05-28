@@ -1,0 +1,107 @@
+\hypertarget{name__controller_8c}{}\doxysection{controller/name\+\_\+controller.c File Reference}
+\label{name__controller_8c}\index{controller/name\_controller.c@{controller/name\_controller.c}}
+{\ttfamily \#include \char`\"{}name\+\_\+controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/keyboard/i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../state/state.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../model/name/name\+\_\+input.\+h\char`\"{}}\newline
+Include dependency graph for name\+\_\+controller.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name__controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{name__controller_8c_a6d8c65f0903ec7b087ad65cf32e6add1}{player\+\_\+name\+\_\+kbd}} (uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_a06a3dd28ec493a423fea6ccd048d441a}{scan\+\_\+code}}\mbox{[}2\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em Processes keyboard inputs within the player name context. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{name__controller_8c_abee8a6d116dc92b7fc3f8c838fa08681}{letter\+\_\+input}} (unsigned char code)
+\begin{DoxyCompactList}\small\item\em Processes a keyboard scan code into a corresponding letter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{name__controller_8c_a435e5230ff387cd90b502bcfd17c7015}{last\+\_\+scan\+\_\+code}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{name__controller_8c_abee8a6d116dc92b7fc3f8c838fa08681}\label{name__controller_8c_abee8a6d116dc92b7fc3f8c838fa08681}} 
+\index{name\_controller.c@{name\_controller.c}!letter\_input@{letter\_input}}
+\index{letter\_input@{letter\_input}!name\_controller.c@{name\_controller.c}}
+\doxysubsubsection{\texorpdfstring{letter\_input()}{letter\_input()}}
+{\footnotesize\ttfamily int() letter\+\_\+input (\begin{DoxyParamCaption}\item[{unsigned char}]{code }\end{DoxyParamCaption})}
+
+
+
+Processes a keyboard scan code into a corresponding letter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & The scan code to process.\\
+\hline
+\end{DoxyParams}
+This function translates a scan code into a character corresponding to a keyboard key, and adds the character to the players name input. The space bar adds a space to the name, and backspace deletes the last character from the name.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 upon successful letter conversion, and 1 if the letter is the same as the previous keystroke. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{name__controller_8c_abee8a6d116dc92b7fc3f8c838fa08681_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name__controller_8c_abee8a6d116dc92b7fc3f8c838fa08681_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{name__controller_8c_a6d8c65f0903ec7b087ad65cf32e6add1}\label{name__controller_8c_a6d8c65f0903ec7b087ad65cf32e6add1}} 
+\index{name\_controller.c@{name\_controller.c}!player\_name\_kbd@{player\_name\_kbd}}
+\index{player\_name\_kbd@{player\_name\_kbd}!name\_controller.c@{name\_controller.c}}
+\doxysubsubsection{\texorpdfstring{player\_name\_kbd()}{player\_name\_kbd()}}
+{\footnotesize\ttfamily void() player\+\_\+name\+\_\+kbd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scan\+\_\+code\mbox{[}2\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Processes keyboard inputs within the player name context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scan\+\_\+code} & An array of scan codes to process. \\
+\hline
+{\em size} & The size of the scan\+\_\+code array.\\
+\hline
+\end{DoxyParams}
+This function listens for keyboard inputs when in the player name state. It changes the state to MENU when the ESC key is pressed, and to GAME when the ENTER key is pressed. For any other key press, it calls letter\+\_\+input function to process the keystroke. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name__controller_8c_a6d8c65f0903ec7b087ad65cf32e6add1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name__controller_8c_a6d8c65f0903ec7b087ad65cf32e6add1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{name__controller_8c_a435e5230ff387cd90b502bcfd17c7015}\label{name__controller_8c_a435e5230ff387cd90b502bcfd17c7015}} 
+\index{name\_controller.c@{name\_controller.c}!last\_scan\_code@{last\_scan\_code}}
+\index{last\_scan\_code@{last\_scan\_code}!name\_controller.c@{name\_controller.c}}
+\doxysubsubsection{\texorpdfstring{last\_scan\_code}{last\_scan\_code}}
+{\footnotesize\ttfamily uint8\+\_\+t last\+\_\+scan\+\_\+code = 0}
+

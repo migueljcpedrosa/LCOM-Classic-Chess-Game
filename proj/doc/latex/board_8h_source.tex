@@ -1,0 +1,30 @@
+\hypertarget{board_8h_source}{}\doxysection{board.\+h}
+\label{board_8h_source}\index{model/game/board.h@{model/game/board.h}}
+\mbox{\hyperlink{board_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef \_BOARD\_H\_}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define \_BOARD\_H\_}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{pieces_8h}{pieces.h}}"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{player_8h}{player.h}}"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{extern} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{board_8h_af39ef002935f37561ac28cf2c305c43c}{board\_start}};}
+\DoxyCodeLine{19 \textcolor{keyword}{extern} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{board_8h_a0baf794bf4a37094b40df7cc0b6125e7}{square\_size}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{29 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{30     \mbox{\hyperlink{struct_piece}{Piece}}* squares[64];}
+\DoxyCodeLine{31 \} \mbox{\hyperlink{struct_board}{Board}};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{44 \mbox{\hyperlink{struct_board}{Board}}* (\mbox{\hyperlink{board_8h_a203276d2183c9776b2e3d2f559670549}{create\_board}})(\mbox{\hyperlink{struct_player}{Player}}* white\_player, \mbox{\hyperlink{struct_player}{Player}}* black\_player);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{55 void (\mbox{\hyperlink{board_8h_a867f8e63b71eefbbb20d5b20a15f425e}{set\_black\_pieces}})(\mbox{\hyperlink{struct_board}{Board}}* board, \mbox{\hyperlink{struct_player}{Player}}* black\_player);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 }
+\DoxyCodeLine{67 void (\mbox{\hyperlink{board_8h_a64416cde3ab1d89aadce1df7206828a2}{set\_white\_pieces}})(\mbox{\hyperlink{struct_board}{Board}}* board, \mbox{\hyperlink{struct_player}{Player}}* white\_player);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{76 void (\mbox{\hyperlink{board_8h_a1c78612bc748218d0211179149cf616e}{destroy\_board}})(\mbox{\hyperlink{struct_board}{Board}}* board);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

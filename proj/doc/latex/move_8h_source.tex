@@ -1,0 +1,34 @@
+\hypertarget{move_8h_source}{}\doxysection{move.\+h}
+\label{move_8h_source}\index{model/game/move.h@{model/game/move.h}}
+\mbox{\hyperlink{move_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef \_MOVE\_H\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define \_MOVE\_H\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{game__util_8h}{game\_util.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{29 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{30     \mbox{\hyperlink{struct_position}{Position}} \mbox{\hyperlink{struct_move_a5688bad1270a245161eb4756b2bf8c49}{origin}};}
+\DoxyCodeLine{31     \mbox{\hyperlink{struct_position}{Position}} \mbox{\hyperlink{struct_move_a26a71d18eee15d58ebc488a188435d21}{destination}};}
+\DoxyCodeLine{32     \mbox{\hyperlink{game__util_8h_ab152e38addc9865a033ed991583c1395}{MoveType}} \mbox{\hyperlink{struct_move_a88fb2c25370b1e62a52399ddef5d3449}{type}};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_piece}{Piece}}* \mbox{\hyperlink{struct_move_afcc69416ef9a0270d7f42c6b2661acbe}{piece}};}
+\DoxyCodeLine{35     \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_move_aacc0e4b1896b74eb1b4b2b5bb4a47a87}{had\_moved}};}
+\DoxyCodeLine{36     \mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} \mbox{\hyperlink{struct_move_af58adda6219fd8dad381ec63aadc63e4}{old\_type}};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_piece}{Piece}}* \mbox{\hyperlink{struct_move_a7f6031b789ea20117ea62cfa29044cd0}{secondary\_piece}};}
+\DoxyCodeLine{39 \} \mbox{\hyperlink{struct_move}{Move}};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{50 \mbox{\hyperlink{struct_move}{Move}} \mbox{\hyperlink{move_8h_aac51cec4fc63cba16e34a97066645d15}{create\_normal\_move}}(\mbox{\hyperlink{struct_position}{Position}} origin, \mbox{\hyperlink{struct_position}{Position}} destination, \textcolor{keyword}{struct} \mbox{\hyperlink{struct_piece}{Piece}}* piece, \textcolor{keyword}{struct} \mbox{\hyperlink{struct_piece}{Piece}}* secondary\_piece);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{61 \mbox{\hyperlink{struct_move}{Move}} \mbox{\hyperlink{move_8h_ac1cb727b717e97de319add56b1b09ee2}{create\_capture}}(\mbox{\hyperlink{struct_position}{Position}} origin, \mbox{\hyperlink{struct_position}{Position}} destination, \textcolor{keyword}{struct} \mbox{\hyperlink{struct_piece}{Piece}}* piece, \textcolor{keyword}{struct} \mbox{\hyperlink{struct_piece}{Piece}}* secondary\_piece);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{72 \mbox{\hyperlink{struct_move}{Move}} \mbox{\hyperlink{move_8h_a13899c447fbd13263bb08b014ee51b2a}{create\_castle}}(\mbox{\hyperlink{struct_position}{Position}} origin, \mbox{\hyperlink{struct_position}{Position}} destination, \textcolor{keyword}{struct} \mbox{\hyperlink{struct_piece}{Piece}}* piece, \textcolor{keyword}{struct} \mbox{\hyperlink{struct_piece}{Piece}}* secondary\_piece);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{83 \mbox{\hyperlink{struct_move}{Move}} \mbox{\hyperlink{move_8h_a2c6bb304fb46e5094028c196f8365ebd}{create\_en\_passant}}(\mbox{\hyperlink{struct_position}{Position}} origin, \mbox{\hyperlink{struct_position}{Position}} destination, \textcolor{keyword}{struct} \mbox{\hyperlink{struct_piece}{Piece}}* piece, \textcolor{keyword}{struct} \mbox{\hyperlink{struct_piece}{Piece}}* secondary\_piece);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

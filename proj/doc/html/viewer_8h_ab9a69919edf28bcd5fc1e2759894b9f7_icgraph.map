@@ -1,0 +1,10 @@
+<map id="erase_cursor" name="erase_cursor">
+<area shape="rect" id="node1" title="Function to erase the cursor from the screen." alt="" coords="695,81,791,108"/>
+<area shape="rect" id="node2" href="$game__over__viewer_8c.html#a0d680b80ae3f71039226a635be23aee4" title="Refreshes the game over screen." alt="" coords="517,5,647,32"/>
+<area shape="rect" id="node6" href="$game__viewer_8c.html#af3bb5cb0b7e5f7f3de6175ea0b412f63" title="Refreshes the game screen." alt="" coords="532,56,632,83"/>
+<area shape="rect" id="node7" href="$menu__viewer_8c.html#a38de34a6ac214cbd9ccab20969463f7a" title="Refreshes the menu screen." alt="" coords="532,107,632,133"/>
+<area shape="rect" id="node8" href="$name__viewer_8c.html#a28aa8b2b3de56bc6533c7a54837b744b" title="Function to draw the name input view." alt="" coords="532,157,632,184"/>
+<area shape="rect" id="node3" href="$state_8c.html#a9d5869e5c565b96193f5aca56adb5b78" title="Function to handle timer events based on the current state." alt="" coords="334,81,469,108"/>
+<area shape="rect" id="node4" href="$main_8c.html#a2e6c36e064d205d81eda4de2d9e94561" title=" " alt="" coords="162,81,286,108"/>
+<area shape="rect" id="node5" href="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,81,114,108"/>
+</map>

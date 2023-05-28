@@ -1,0 +1,204 @@
+\hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}drivers/video\+\_\+card/gpu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drivers/video\+\_\+card/vbe.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drivers/timer/timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drivers/timer/i8254.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drivers/mouse/i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drivers/mouse/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drivers/keyboard/i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drivers/keyboard/keyboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drivers/rtc/rtc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}view/viewer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}view/sprite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}model/cursor/cursor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}state/state.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+int \mbox{\hyperlink{main_8c_a0b22669bd9e92d10c96045d9abd26b6b}{initialize}} (uint8\+\_\+t $\ast$irq\+Timer, uint8\+\_\+t $\ast$irq\+Keyboard, uint8\+\_\+t $\ast$irq\+Mouse, uint8\+\_\+t $\ast$irq\+Rtc)
+\item 
+int \mbox{\hyperlink{main_8c_ab565b98afe74cf9e2bb77aab76c5b2f7}{terminate}} ()
+\item 
+int \mbox{\hyperlink{main_8c_a2e6c36e064d205d81eda4de2d9e94561}{interrupts\+\_\+handler}} ()
+\item 
+int() \mbox{\hyperlink{main_8c_a2a16f651eccbd248e1ad3b3b924b143b}{proj\+\_\+main\+\_\+loop}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a617a47c70795bcff659815ad0efd2266}{counter}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a06a3dd28ec493a423fea6ccd048d441a}{scan\+\_\+code}} \mbox{[}2\mbox{]}
+\item 
+bool \mbox{\hyperlink{main_8c_aa6bce29d6c0291c4204cb6381611f03e}{last\+\_\+byte\+\_\+read}}
+\item 
+int \mbox{\hyperlink{main_8c_a292c9dfd6bd1567fca7e760ac8135f60}{kbd\+\_\+index}}
+\item 
+struct packet \mbox{\hyperlink{main_8c_acacf38ac26a9a3441e986e176ee16e2a}{packet\+\_\+pp}}
+\item 
+int \mbox{\hyperlink{main_8c_a73622256ac3865f283bd638b0242cf7f}{pp\+\_\+index}}
+\item 
+bool \mbox{\hyperlink{main_8c_ab46aaaebfa6fdf3b46597d82eff01cd0}{packet\+\_\+read}}
+\item 
+int \mbox{\hyperlink{main_8c_a8a6371628d2a242fc4e764b7d0c6001b}{game\+Turn\+Counter}} = 600
+\item 
+\mbox{\hyperlink{structrtc__timestamp__t}{rtc\+\_\+timestamp\+\_\+t}} \mbox{\hyperlink{main_8c_ae69afb9c719c5facb93dbae901ee98ad}{real\+\_\+time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a0b22669bd9e92d10c96045d9abd26b6b}\label{main_8c_a0b22669bd9e92d10c96045d9abd26b6b}} 
+\index{main.c@{main.c}!initialize@{initialize}}
+\index{initialize@{initialize}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily int initialize (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{irq\+Timer,  }\item[{uint8\+\_\+t $\ast$}]{irq\+Keyboard,  }\item[{uint8\+\_\+t $\ast$}]{irq\+Mouse,  }\item[{uint8\+\_\+t $\ast$}]{irq\+Rtc }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a0b22669bd9e92d10c96045d9abd26b6b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a0b22669bd9e92d10c96045d9abd26b6b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a2e6c36e064d205d81eda4de2d9e94561}\label{main_8c_a2e6c36e064d205d81eda4de2d9e94561}} 
+\index{main.c@{main.c}!interrupts\_handler@{interrupts\_handler}}
+\index{interrupts\_handler@{interrupts\_handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{interrupts\_handler()}{interrupts\_handler()}}
+{\footnotesize\ttfamily int interrupts\+\_\+handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{main_8c_a2e6c36e064d205d81eda4de2d9e94561_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{main_8c_a2e6c36e064d205d81eda4de2d9e94561_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a2a16f651eccbd248e1ad3b3b924b143b}\label{main_8c_a2a16f651eccbd248e1ad3b3b924b143b}} 
+\index{main.c@{main.c}!proj\_main\_loop@{proj\_main\_loop}}
+\index{proj\_main\_loop@{proj\_main\_loop}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{proj\_main\_loop()}{proj\_main\_loop()}}
+{\footnotesize\ttfamily int() proj\+\_\+main\+\_\+loop (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{main_8c_a2a16f651eccbd248e1ad3b3b924b143b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_ab565b98afe74cf9e2bb77aab76c5b2f7}\label{main_8c_ab565b98afe74cf9e2bb77aab76c5b2f7}} 
+\index{main.c@{main.c}!terminate@{terminate}}
+\index{terminate@{terminate}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily int terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_ab565b98afe74cf9e2bb77aab76c5b2f7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_ab565b98afe74cf9e2bb77aab76c5b2f7_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a617a47c70795bcff659815ad0efd2266}\label{main_8c_a617a47c70795bcff659815ad0efd2266}} 
+\index{main.c@{main.c}!counter@{counter}}
+\index{counter@{counter}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily int counter\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8c_a8a6371628d2a242fc4e764b7d0c6001b}\label{main_8c_a8a6371628d2a242fc4e764b7d0c6001b}} 
+\index{main.c@{main.c}!gameTurnCounter@{gameTurnCounter}}
+\index{gameTurnCounter@{gameTurnCounter}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{gameTurnCounter}{gameTurnCounter}}
+{\footnotesize\ttfamily int game\+Turn\+Counter = 600}
+
+\mbox{\Hypertarget{main_8c_a292c9dfd6bd1567fca7e760ac8135f60}\label{main_8c_a292c9dfd6bd1567fca7e760ac8135f60}} 
+\index{main.c@{main.c}!kbd\_index@{kbd\_index}}
+\index{kbd\_index@{kbd\_index}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{kbd\_index}{kbd\_index}}
+{\footnotesize\ttfamily int kbd\+\_\+index\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8c_aa6bce29d6c0291c4204cb6381611f03e}\label{main_8c_aa6bce29d6c0291c4204cb6381611f03e}} 
+\index{main.c@{main.c}!last\_byte\_read@{last\_byte\_read}}
+\index{last\_byte\_read@{last\_byte\_read}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{last\_byte\_read}{last\_byte\_read}}
+{\footnotesize\ttfamily bool last\+\_\+byte\+\_\+read\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8c_acacf38ac26a9a3441e986e176ee16e2a}\label{main_8c_acacf38ac26a9a3441e986e176ee16e2a}} 
+\index{main.c@{main.c}!packet\_pp@{packet\_pp}}
+\index{packet\_pp@{packet\_pp}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{packet\_pp}{packet\_pp}}
+{\footnotesize\ttfamily struct packet packet\+\_\+pp\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8c_ab46aaaebfa6fdf3b46597d82eff01cd0}\label{main_8c_ab46aaaebfa6fdf3b46597d82eff01cd0}} 
+\index{main.c@{main.c}!packet\_read@{packet\_read}}
+\index{packet\_read@{packet\_read}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{packet\_read}{packet\_read}}
+{\footnotesize\ttfamily bool packet\+\_\+read\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8c_a73622256ac3865f283bd638b0242cf7f}\label{main_8c_a73622256ac3865f283bd638b0242cf7f}} 
+\index{main.c@{main.c}!pp\_index@{pp\_index}}
+\index{pp\_index@{pp\_index}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{pp\_index}{pp\_index}}
+{\footnotesize\ttfamily int pp\+\_\+index\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8c_ae69afb9c719c5facb93dbae901ee98ad}\label{main_8c_ae69afb9c719c5facb93dbae901ee98ad}} 
+\index{main.c@{main.c}!real\_time@{real\_time}}
+\index{real\_time@{real\_time}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{real\_time}{real\_time}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrtc__timestamp__t}{rtc\+\_\+timestamp\+\_\+t}} real\+\_\+time}
+
+\mbox{\Hypertarget{main_8c_a06a3dd28ec493a423fea6ccd048d441a}\label{main_8c_a06a3dd28ec493a423fea6ccd048d441a}} 
+\index{main.c@{main.c}!scan\_code@{scan\_code}}
+\index{scan\_code@{scan\_code}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{scan\_code}{scan\_code}}
+{\footnotesize\ttfamily uint8\+\_\+t scan\+\_\+code\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+

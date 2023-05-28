@@ -1,0 +1,4 @@
+<map id="load_sprite" name="load_sprite">
+<area shape="rect" id="node1" title="Function to load a sprite from an xpm file." alt="" coords="5,5,90,32"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#ac05b4b406bf9a2749435ef6a1d5a9969" title="Loads an XPM image." alt="" coords="138,5,215,32"/>
+</map>

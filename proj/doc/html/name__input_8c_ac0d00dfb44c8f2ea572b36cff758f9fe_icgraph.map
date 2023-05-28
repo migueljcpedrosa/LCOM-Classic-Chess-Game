@@ -1,0 +1,8 @@
+<map id="delete_letter" name="delete_letter">
+<area shape="rect" id="node1" title="Deletes the last letter from the current name." alt="" coords="814,5,906,32"/>
+<area shape="rect" id="node2" href="$name__controller_8c.html#abee8a6d116dc92b7fc3f8c838fa08681" title="Processes a keyboard scan code into a corresponding letter." alt="" coords="681,5,766,32"/>
+<area shape="rect" id="node3" href="$name__controller_8c.html#a6d8c65f0903ec7b087ad65cf32e6add1" title="Processes keyboard inputs within the player name context." alt="" coords="509,5,633,32"/>
+<area shape="rect" id="node4" href="$state_8c.html#a87eccb760b8181684900ee2ff431cc53" title="Function to handle keyboard input based on the current state." alt="" coords="334,5,461,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#a2e6c36e064d205d81eda4de2d9e94561" title=" " alt="" coords="162,5,286,32"/>
+<area shape="rect" id="node6" href="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,5,114,32"/>
+</map>

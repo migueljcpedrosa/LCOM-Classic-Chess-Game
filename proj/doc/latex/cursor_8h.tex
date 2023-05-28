@@ -1,0 +1,129 @@
+\hypertarget{cursor_8h}{}\doxysection{model/cursor/cursor.h File Reference}
+\label{cursor_8h}\index{model/cursor/cursor.h@{model/cursor/cursor.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cursor}{Cursor}}
+\begin{DoxyCompactList}\small\item\em Struct that represents a cursor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \mbox{\hyperlink{cursor_8h_a5930081ff3acc98b8a64464415ac7499}{cursor\+\_\+create}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Creates a new cursor. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{cursor_8h_a2395aa9e6ee9d8c5c296d04875cf83ba}{cursor\+\_\+destroy}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the cursor. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{cursor_8h_add5cb23e815348b7321306219c9bd41a}{cursor\+\_\+move}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Moves the cursor by the specified amount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_cursor}{Cursor}} $\ast$ \mbox{\hyperlink{cursor_8h_a8a6bb85bf44d1392b588a65de57652c0}{cursor}}
+\begin{DoxyCompactList}\small\item\em The cursor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cursor_8h_a5930081ff3acc98b8a64464415ac7499}\label{cursor_8h_a5930081ff3acc98b8a64464415ac7499}} 
+\index{cursor.h@{cursor.h}!cursor\_create@{cursor\_create}}
+\index{cursor\_create@{cursor\_create}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{cursor\_create()}{cursor\_create()}}
+{\footnotesize\ttfamily void() cursor\+\_\+create (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Creates a new cursor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The initial x-\/coordinate of the cursor. \\
+\hline
+{\em y} & The initial y-\/coordinate of the cursor.\\
+\hline
+\end{DoxyParams}
+This function initializes a new cursor at the given coordinates with a predefined width and height.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a5930081ff3acc98b8a64464415ac7499_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{cursor_8h_a2395aa9e6ee9d8c5c296d04875cf83ba}\label{cursor_8h_a2395aa9e6ee9d8c5c296d04875cf83ba}} 
+\index{cursor.h@{cursor.h}!cursor\_destroy@{cursor\_destroy}}
+\index{cursor\_destroy@{cursor\_destroy}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{cursor\_destroy()}{cursor\_destroy()}}
+{\footnotesize\ttfamily void() cursor\+\_\+destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the cursor. 
+
+This function frees the memory allocated for the cursor.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a2395aa9e6ee9d8c5c296d04875cf83ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{cursor_8h_add5cb23e815348b7321306219c9bd41a}\label{cursor_8h_add5cb23e815348b7321306219c9bd41a}} 
+\index{cursor.h@{cursor.h}!cursor\_move@{cursor\_move}}
+\index{cursor\_move@{cursor\_move}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{cursor\_move()}{cursor\_move()}}
+{\footnotesize\ttfamily void() cursor\+\_\+move (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Moves the cursor by the specified amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The amount to move the cursor along the x-\/axis. \\
+\hline
+{\em y} & The amount to move the cursor along the y-\/axis.\\
+\hline
+\end{DoxyParams}
+This function moves the cursor by the specified amounts along the x and y axes. The function checks if the new position is within the screen resolution before moving the cursor.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_add5cb23e815348b7321306219c9bd41a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{cursor_8h_a8a6bb85bf44d1392b588a65de57652c0}\label{cursor_8h_a8a6bb85bf44d1392b588a65de57652c0}} 
+\index{cursor.h@{cursor.h}!cursor@{cursor}}
+\index{cursor@{cursor}!cursor.h@{cursor.h}}
+\doxysubsubsection{\texorpdfstring{cursor}{cursor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_cursor}{Cursor}}$\ast$ cursor}
+
+
+
+The cursor. 
+
+This variable contains the cursor. 

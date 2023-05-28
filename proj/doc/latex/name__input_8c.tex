@@ -1,0 +1,144 @@
+\hypertarget{name__input_8c}{}\doxysection{model/name/name\+\_\+input.c File Reference}
+\label{name__input_8c}\index{model/name/name\_input.c@{model/name/name\_input.c}}
+{\ttfamily \#include \char`\"{}name\+\_\+input.\+h\char`\"{}}\newline
+Include dependency graph for name\+\_\+input.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{name__input_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{name__input_8c_aa8cd2a94e55172787bc48d74a23a0fd5}{create\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Creates the player name menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{name__input_8c_a1d81131e1a5b5ce0d6b67cb403bfa9f2}{destroy\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the player name menu and backs up the current name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{name__input_8c_ab6ee46bb34acb87ba1f843450c2321c1}{add\+\_\+letter}} (char letter)
+\begin{DoxyCompactList}\small\item\em Adds a letter to the current name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{name__input_8c_ac0d00dfb44c8f2ea572b36cff758f9fe}{delete\+\_\+letter}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the last letter from the current name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_name_input}{Name\+Input}} $\ast$ \mbox{\hyperlink{name__input_8c_a3b76b7824b1d9dc7b7ec47d438ab19c2}{name\+Input}}
+\item 
+char $\ast$ \mbox{\hyperlink{name__input_8c_a54dffc5165e4c0ace70a2488356739f7}{name\+Backup}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{name__input_8c_ab6ee46bb34acb87ba1f843450c2321c1}\label{name__input_8c_ab6ee46bb34acb87ba1f843450c2321c1}} 
+\index{name\_input.c@{name\_input.c}!add\_letter@{add\_letter}}
+\index{add\_letter@{add\_letter}!name\_input.c@{name\_input.c}}
+\doxysubsubsection{\texorpdfstring{add\_letter()}{add\_letter()}}
+{\footnotesize\ttfamily void add\+\_\+letter (\begin{DoxyParamCaption}\item[{char}]{letter }\end{DoxyParamCaption})}
+
+
+
+Adds a letter to the current name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em letter} & The character to be added to the name.\\
+\hline
+\end{DoxyParams}
+This function adds the given character to the end of the current name if it doesn\textquotesingle{}t exceed the character limit. It also updates the null terminator at the end of the string.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name__input_8c_ab6ee46bb34acb87ba1f843450c2321c1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{name__input_8c_aa8cd2a94e55172787bc48d74a23a0fd5}\label{name__input_8c_aa8cd2a94e55172787bc48d74a23a0fd5}} 
+\index{name\_input.c@{name\_input.c}!create\_name@{create\_name}}
+\index{create\_name@{create\_name}!name\_input.c@{name\_input.c}}
+\doxysubsubsection{\texorpdfstring{create\_name()}{create\_name()}}
+{\footnotesize\ttfamily void create\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates the player name menu. 
+
+This function initializes the menu with a defined character limit, sprite, and positioning coordinates. The name is initially set as an empty string.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name__input_8c_aa8cd2a94e55172787bc48d74a23a0fd5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{name__input_8c_ac0d00dfb44c8f2ea572b36cff758f9fe}\label{name__input_8c_ac0d00dfb44c8f2ea572b36cff758f9fe}} 
+\index{name\_input.c@{name\_input.c}!delete\_letter@{delete\_letter}}
+\index{delete\_letter@{delete\_letter}!name\_input.c@{name\_input.c}}
+\doxysubsubsection{\texorpdfstring{delete\_letter()}{delete\_letter()}}
+{\footnotesize\ttfamily void delete\+\_\+letter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deletes the last letter from the current name. 
+
+This function removes the last character from the current name and updates the null terminator at the end of the string.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name__input_8c_ac0d00dfb44c8f2ea572b36cff758f9fe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{name__input_8c_a1d81131e1a5b5ce0d6b67cb403bfa9f2}\label{name__input_8c_a1d81131e1a5b5ce0d6b67cb403bfa9f2}} 
+\index{name\_input.c@{name\_input.c}!destroy\_name@{destroy\_name}}
+\index{destroy\_name@{destroy\_name}!name\_input.c@{name\_input.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_name()}{destroy\_name()}}
+{\footnotesize\ttfamily void destroy\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the player name menu and backs up the current name. 
+
+This function creates a backup of the current name and then frees the memory allocated for the name string. The backup is stored in a global variable.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name__input_8c_a1d81131e1a5b5ce0d6b67cb403bfa9f2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{name__input_8c_a54dffc5165e4c0ace70a2488356739f7}\label{name__input_8c_a54dffc5165e4c0ace70a2488356739f7}} 
+\index{name\_input.c@{name\_input.c}!nameBackup@{nameBackup}}
+\index{nameBackup@{nameBackup}!name\_input.c@{name\_input.c}}
+\doxysubsubsection{\texorpdfstring{nameBackup}{nameBackup}}
+{\footnotesize\ttfamily char$\ast$ name\+Backup}
+
+\mbox{\Hypertarget{name__input_8c_a3b76b7824b1d9dc7b7ec47d438ab19c2}\label{name__input_8c_a3b76b7824b1d9dc7b7ec47d438ab19c2}} 
+\index{name\_input.c@{name\_input.c}!nameInput@{nameInput}}
+\index{nameInput@{nameInput}!name\_input.c@{name\_input.c}}
+\doxysubsubsection{\texorpdfstring{nameInput}{nameInput}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_name_input}{Name\+Input}}$\ast$ name\+Input}
+

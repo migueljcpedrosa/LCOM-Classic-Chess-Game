@@ -1,0 +1,321 @@
+\hypertarget{game__viewer_8h}{}\doxysection{view/game\+\_\+viewer.h File Reference}
+\label{game__viewer_8h}\index{view/game\_viewer.h@{view/game\_viewer.h}}
+
+
+This file contains the definition of the game viewer module.  
+
+
+{\ttfamily \#include \char`\"{}viewer.\+h\char`\"{}}\newline
+Include dependency graph for game\+\_\+viewer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__viewer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__viewer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{game__viewer_8h_a1dcc98c6c718be26d4d237d9af736cb4}{game\+\_\+screenshot}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the screenshot for the game. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{game__viewer_8h_af3bb5cb0b7e5f7f3de6175ea0b412f63}{game\+\_\+refresh}} ()
+\begin{DoxyCompactList}\small\item\em Refreshes the game screen. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{game__viewer_8h_a365fbe76a553e0f2afd696b409a29b9f}{draw\+\_\+board}} ()
+\begin{DoxyCompactList}\small\item\em Draws the board. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{game__viewer_8h_a4bb1aceb1a214453131ffc12622a09d1}{draw\+\_\+piece}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sprite, uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Draws a piece. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{game__viewer_8h_a24229272a61f2feaedf3241d7a150684}{draw\+\_\+pieces}} ()
+\begin{DoxyCompactList}\small\item\em Draws all the pieces. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{game__viewer_8h_aef0783e8665e16aa71a601bc4d95a6a5}{draw\+\_\+timer}} (char timer\mbox{[}$\,$\mbox{]}, int x, int y)
+\begin{DoxyCompactList}\small\item\em Draws a timer. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{game__viewer_8h_a205427da946b10d5f0ce6ab785e79149}{draw\+\_\+timers}} ()
+\begin{DoxyCompactList}\small\item\em Draws both players timers. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{game__viewer_8h_aaa6c37d05ab5b0c22fe04fc440b52566}{erase\+\_\+timers}} ()
+\begin{DoxyCompactList}\small\item\em Erases a timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of the game viewer module. 
+
+This includes the definition of the game viewer functions that display all the game information\+: the board, the pieces, the moves and timers. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game__viewer_8h_a365fbe76a553e0f2afd696b409a29b9f}\label{game__viewer_8h_a365fbe76a553e0f2afd696b409a29b9f}} 
+\index{game\_viewer.h@{game\_viewer.h}!draw\_board@{draw\_board}}
+\index{draw\_board@{draw\_board}!game\_viewer.h@{game\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_board()}{draw\_board()}}
+{\footnotesize\ttfamily int() draw\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the board. 
+
+This function draws the board on the screen.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{game__viewer_8h_a365fbe76a553e0f2afd696b409a29b9f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__viewer_8h_a365fbe76a553e0f2afd696b409a29b9f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__viewer_8h_a4bb1aceb1a214453131ffc12622a09d1}\label{game__viewer_8h_a4bb1aceb1a214453131ffc12622a09d1}} 
+\index{game\_viewer.h@{game\_viewer.h}!draw\_piece@{draw\_piece}}
+\index{draw\_piece@{draw\_piece}!game\_viewer.h@{game\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_piece()}{draw\_piece()}}
+{\footnotesize\ttfamily int() draw\+\_\+piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sprite,  }\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+Draws a piece. 
+
+This function draws a piece on the screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & the sprite of the piece. \\
+\hline
+{\em x} & the x coordinate of the piece. \\
+\hline
+{\em y} & the y coordinate of the piece.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{game__viewer_8h_a4bb1aceb1a214453131ffc12622a09d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__viewer_8h_a4bb1aceb1a214453131ffc12622a09d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__viewer_8h_a24229272a61f2feaedf3241d7a150684}\label{game__viewer_8h_a24229272a61f2feaedf3241d7a150684}} 
+\index{game\_viewer.h@{game\_viewer.h}!draw\_pieces@{draw\_pieces}}
+\index{draw\_pieces@{draw\_pieces}!game\_viewer.h@{game\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_pieces()}{draw\_pieces()}}
+{\footnotesize\ttfamily int() draw\+\_\+pieces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws all the pieces. 
+
+This function draws all the pieces on the screen.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__viewer_8h_a24229272a61f2feaedf3241d7a150684_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__viewer_8h_a24229272a61f2feaedf3241d7a150684_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__viewer_8h_aef0783e8665e16aa71a601bc4d95a6a5}\label{game__viewer_8h_aef0783e8665e16aa71a601bc4d95a6a5}} 
+\index{game\_viewer.h@{game\_viewer.h}!draw\_timer@{draw\_timer}}
+\index{draw\_timer@{draw\_timer}!game\_viewer.h@{game\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_timer()}{draw\_timer()}}
+{\footnotesize\ttfamily int() draw\+\_\+timer (\begin{DoxyParamCaption}\item[{char}]{timer\mbox{[}$\,$\mbox{]},  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Draws a timer. 
+
+This function draws a player timer on the screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & the timer information to be drawn. \\
+\hline
+{\em x} & the x coordinate of the timer. \\
+\hline
+{\em y} & the y coordinate of the timer. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{game__viewer_8h_aef0783e8665e16aa71a601bc4d95a6a5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__viewer_8h_aef0783e8665e16aa71a601bc4d95a6a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__viewer_8h_a205427da946b10d5f0ce6ab785e79149}\label{game__viewer_8h_a205427da946b10d5f0ce6ab785e79149}} 
+\index{game\_viewer.h@{game\_viewer.h}!draw\_timers@{draw\_timers}}
+\index{draw\_timers@{draw\_timers}!game\_viewer.h@{game\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_timers()}{draw\_timers()}}
+{\footnotesize\ttfamily int() draw\+\_\+timers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws both players timers. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__viewer_8h_a205427da946b10d5f0ce6ab785e79149_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__viewer_8h_a205427da946b10d5f0ce6ab785e79149_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__viewer_8h_aaa6c37d05ab5b0c22fe04fc440b52566}\label{game__viewer_8h_aaa6c37d05ab5b0c22fe04fc440b52566}} 
+\index{game\_viewer.h@{game\_viewer.h}!erase\_timers@{erase\_timers}}
+\index{erase\_timers@{erase\_timers}!game\_viewer.h@{game\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{erase\_timers()}{erase\_timers()}}
+{\footnotesize\ttfamily int() erase\+\_\+timers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Erases a timer. 
+
+This function erases a player timer from the screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & the timer information to be erased. \\
+\hline
+{\em x} & the x coordinate of the timer. \\
+\hline
+{\em y} & the y coordinate of the timer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{game__viewer_8h_aaa6c37d05ab5b0c22fe04fc440b52566_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__viewer_8h_aaa6c37d05ab5b0c22fe04fc440b52566_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__viewer_8h_af3bb5cb0b7e5f7f3de6175ea0b412f63}\label{game__viewer_8h_af3bb5cb0b7e5f7f3de6175ea0b412f63}} 
+\index{game\_viewer.h@{game\_viewer.h}!game\_refresh@{game\_refresh}}
+\index{game\_refresh@{game\_refresh}!game\_viewer.h@{game\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{game\_refresh()}{game\_refresh()}}
+{\footnotesize\ttfamily int() game\+\_\+refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Refreshes the game screen. 
+
+This function refreshes the game screen, displaying the mouse, selected piece and timers.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__viewer_8h_af3bb5cb0b7e5f7f3de6175ea0b412f63_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__viewer_8h_af3bb5cb0b7e5f7f3de6175ea0b412f63_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__viewer_8h_a1dcc98c6c718be26d4d237d9af736cb4}\label{game__viewer_8h_a1dcc98c6c718be26d4d237d9af736cb4}} 
+\index{game\_viewer.h@{game\_viewer.h}!game\_screenshot@{game\_screenshot}}
+\index{game\_screenshot@{game\_screenshot}!game\_viewer.h@{game\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{game\_screenshot()}{game\_screenshot()}}
+{\footnotesize\ttfamily int() game\+\_\+screenshot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets up the screenshot for the game. 
+
+This function loads the screenshot, which will serve as background.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__viewer_8h_a1dcc98c6c718be26d4d237d9af736cb4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__viewer_8h_a1dcc98c6c718be26d4d237d9af736cb4_icgraph}
+\end{center}
+\end{figure}

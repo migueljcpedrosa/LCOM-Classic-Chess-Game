@@ -1,0 +1,4 @@
+<map id="get_response" name="get_response">
+<area shape="rect" id="node1" title="Waits until a response is ready to be read from the output buffer." alt="" coords="5,5,105,32"/>
+<area shape="rect" id="node2" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title="Reads a byte from the specified port." alt="" coords="153,5,243,32"/>
+</map>

@@ -1,0 +1,335 @@
+\hypertarget{state_8h}{}\doxysection{state/state.h File Reference}
+\label{state_8h}\index{state/state.h@{state/state.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../model/cursor/cursor\+\_\+input.\+h\char`\"{}}\newline
+Include dependency graph for state.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{state_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \{ \newline
+\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4c40e60bc71a32b924ce1f08d57f9721}{MENU}}
+, \mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8ad50cf309d7568040619ed26ee6835a84}{GAME}}
+, \mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8ad9d88d5e7eb5e782db40519a43b728bf}{WRITE\+\_\+\+NAME}}
+, \mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a871723195985a4ae22d7e10d99bf8a00}{GAME\+\_\+\+OVER}}
+, \newline
+\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7a10b5d68d31711288e1fe0fa17dbf4f}{EXIT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum representing different states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{state_8h_a261eb6b07e23e328efe8d156005ec614}{init\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Function to initialize the state. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{state_8h_a9df078faf57977ac2915303f14fbb675}{leave\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Function to clean up resources as the game leaves a state. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{state_8h_a159c1631df227c138f5f83e818473f2d}{load\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Function to load resources as the game enters a state. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{state_8h_af7ba017087161066faed01c8bbe8a0bf}{set\+\_\+state}} (\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} new\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Function to set the state. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{state_8h_a87eccb760b8181684900ee2ff431cc53}{state\+\_\+kbd\+\_\+handler}} (uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_a06a3dd28ec493a423fea6ccd048d441a}{scan\+\_\+code}}\mbox{[}2\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em Function to handle keyboard input based on the current state. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{state_8h_a49fe2fcc4529f2c2d97146dd748c6738}{state\+\_\+mouse\+\_\+handler}} (\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} input)
+\begin{DoxyCompactList}\small\item\em Function to handle mouse input based on the current state. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{state_8h_a9d5869e5c565b96193f5aca56adb5b78}{state\+\_\+timer\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Function to handle timer events based on the current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \mbox{\hyperlink{state_8h_a876b486d3a5241a126bd5751c5f70f79}{state}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}\label{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}} 
+\index{state.h@{state.h}!State@{State}}
+\index{State@{State}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}}
+
+
+
+Enum representing different states. 
+
+This enum represents the different states, which include \mbox{\hyperlink{struct_menu}{Menu}}, \mbox{\hyperlink{struct_game}{Game}}, Writing Name, \mbox{\hyperlink{struct_game}{Game}} Over, and Exit. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MENU@{MENU}!state.h@{state.h}}\index{state.h@{state.h}!MENU@{MENU}}}\mbox{\Hypertarget{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4c40e60bc71a32b924ce1f08d57f9721}\label{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a4c40e60bc71a32b924ce1f08d57f9721}} 
+MENU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME@{GAME}!state.h@{state.h}}\index{state.h@{state.h}!GAME@{GAME}}}\mbox{\Hypertarget{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8ad50cf309d7568040619ed26ee6835a84}\label{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8ad50cf309d7568040619ed26ee6835a84}} 
+GAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WRITE\_NAME@{WRITE\_NAME}!state.h@{state.h}}\index{state.h@{state.h}!WRITE\_NAME@{WRITE\_NAME}}}\mbox{\Hypertarget{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8ad9d88d5e7eb5e782db40519a43b728bf}\label{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8ad9d88d5e7eb5e782db40519a43b728bf}} 
+WRITE\+\_\+\+NAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_OVER@{GAME\_OVER}!state.h@{state.h}}\index{state.h@{state.h}!GAME\_OVER@{GAME\_OVER}}}\mbox{\Hypertarget{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a871723195985a4ae22d7e10d99bf8a00}\label{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a871723195985a4ae22d7e10d99bf8a00}} 
+GAME\+\_\+\+OVER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXIT@{EXIT}!state.h@{state.h}}\index{state.h@{state.h}!EXIT@{EXIT}}}\mbox{\Hypertarget{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7a10b5d68d31711288e1fe0fa17dbf4f}\label{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8a7a10b5d68d31711288e1fe0fa17dbf4f}} 
+EXIT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{state_8h_a261eb6b07e23e328efe8d156005ec614}\label{state_8h_a261eb6b07e23e328efe8d156005ec614}} 
+\index{state.h@{state.h}!init\_state@{init\_state}}
+\index{init\_state@{init\_state}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{init\_state()}{init\_state()}}
+{\footnotesize\ttfamily int() init\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to initialize the state. 
+
+This function initializes the state of the game to \mbox{\hyperlink{struct_menu}{Menu}} and loads the state.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h_a261eb6b07e23e328efe8d156005ec614_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h_a261eb6b07e23e328efe8d156005ec614_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{state_8h_a9df078faf57977ac2915303f14fbb675}\label{state_8h_a9df078faf57977ac2915303f14fbb675}} 
+\index{state.h@{state.h}!leave\_state@{leave\_state}}
+\index{leave\_state@{leave\_state}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{leave\_state()}{leave\_state()}}
+{\footnotesize\ttfamily int() leave\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to clean up resources as the game leaves a state. 
+
+Depending on the current state, this function will free up resources associated with that state.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h_a9df078faf57977ac2915303f14fbb675_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h_a9df078faf57977ac2915303f14fbb675_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{state_8h_a159c1631df227c138f5f83e818473f2d}\label{state_8h_a159c1631df227c138f5f83e818473f2d}} 
+\index{state.h@{state.h}!load\_state@{load\_state}}
+\index{load\_state@{load\_state}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{load\_state()}{load\_state()}}
+{\footnotesize\ttfamily int() load\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to load resources as the game enters a state. 
+
+Depending on the target state, this function will create resources associated with that state.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h_a159c1631df227c138f5f83e818473f2d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h_a159c1631df227c138f5f83e818473f2d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{state_8h_af7ba017087161066faed01c8bbe8a0bf}\label{state_8h_af7ba017087161066faed01c8bbe8a0bf}} 
+\index{state.h@{state.h}!set\_state@{set\_state}}
+\index{set\_state@{set\_state}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{set\_state()}{set\_state()}}
+{\footnotesize\ttfamily int() set\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}}]{new\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+Function to set the state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+state} & The new state to which the game should transition.\\
+\hline
+\end{DoxyParams}
+This function changes the current state to the new state provided as an argument, and handles loading and unloading of resources accordingly.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h_af7ba017087161066faed01c8bbe8a0bf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h_af7ba017087161066faed01c8bbe8a0bf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{state_8h_a87eccb760b8181684900ee2ff431cc53}\label{state_8h_a87eccb760b8181684900ee2ff431cc53}} 
+\index{state.h@{state.h}!state\_kbd\_handler@{state\_kbd\_handler}}
+\index{state\_kbd\_handler@{state\_kbd\_handler}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{state\_kbd\_handler()}{state\_kbd\_handler()}}
+{\footnotesize\ttfamily int() state\+\_\+kbd\+\_\+handler (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scan\+\_\+code\mbox{[}2\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Function to handle keyboard input based on the current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scan\+\_\+code} & The keyboard scancode. \\
+\hline
+{\em size} & The size of the scancode.\\
+\hline
+\end{DoxyParams}
+This function delegates keyboard event handling to the relevant function depending on the current state.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h_a87eccb760b8181684900ee2ff431cc53_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h_a87eccb760b8181684900ee2ff431cc53_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{state_8h_a49fe2fcc4529f2c2d97146dd748c6738}\label{state_8h_a49fe2fcc4529f2c2d97146dd748c6738}} 
+\index{state.h@{state.h}!state\_mouse\_handler@{state\_mouse\_handler}}
+\index{state\_mouse\_handler@{state\_mouse\_handler}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{state\_mouse\_handler()}{state\_mouse\_handler()}}
+{\footnotesize\ttfamily int() state\+\_\+mouse\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}}}]{input }\end{DoxyParamCaption})}
+
+
+
+Function to handle mouse input based on the current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The mouse event input.\\
+\hline
+\end{DoxyParams}
+This function delegates mouse event handling to the relevant function depending on the current state.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h_a49fe2fcc4529f2c2d97146dd748c6738_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h_a49fe2fcc4529f2c2d97146dd748c6738_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{state_8h_a9d5869e5c565b96193f5aca56adb5b78}\label{state_8h_a9d5869e5c565b96193f5aca56adb5b78}} 
+\index{state.h@{state.h}!state\_timer\_handler@{state\_timer\_handler}}
+\index{state\_timer\_handler@{state\_timer\_handler}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{state\_timer\_handler()}{state\_timer\_handler()}}
+{\footnotesize\ttfamily int() state\+\_\+timer\+\_\+handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to handle timer events based on the current state. 
+
+This function delegates timer event handling to the relevant function depending on the current state.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h_a9d5869e5c565b96193f5aca56adb5b78_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8h_a9d5869e5c565b96193f5aca56adb5b78_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{state_8h_a876b486d3a5241a126bd5751c5f70f79}\label{state_8h_a876b486d3a5241a126bd5751c5f70f79}} 
+\index{state.h@{state.h}!state@{state}}
+\index{state@{state}!state.h@{state.h}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{state_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} state\hspace{0.3cm}{\ttfamily [extern]}}
+

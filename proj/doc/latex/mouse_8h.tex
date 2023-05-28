@@ -1,0 +1,317 @@
+\hypertarget{mouse_8h}{}\doxysection{drivers/mouse/mouse.h File Reference}
+\label{mouse_8h}\index{drivers/mouse/mouse.h@{drivers/mouse/mouse.h}}
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for mouse.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{mouse_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{mouse_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{mouse_8h_a20285aed4b3ef45812cd967532dd09db}{mouse\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes to mouse interrupts with policies IRQ\+\_\+\+EXCLUSIVE and IRQ\+\_\+\+REENABLE. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}{mouse\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes from mouse interrupts. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse_8h_a210374b50462acdedab00df64d5cea3c}{mouse\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Mouse interrupt handler function. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_ac3eeb38c1e623ff629657b1f91ce7586}{write\+\_\+command}} (uint8\+\_\+t cmd, uint8\+\_\+t $\ast$response, uint8\+\_\+t args\mbox{[}$\,$\mbox{]}, uint32\+\_\+t arg\+\_\+n)
+\begin{DoxyCompactList}\small\item\em Writes a command with optional arguments to the mouse, and optionally reads a response. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_a213d5f0c93d25fe21ae6ee3ba7b50a15}{disable\+\_\+data\+\_\+reporting}} ()
+\begin{DoxyCompactList}\small\item\em Disables the data reporting from the mouse. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_abe20128c397b0e728b58316a8e1a6e14}{enable\+\_\+data\+\_\+reporting}} ()
+\begin{DoxyCompactList}\small\item\em Enables the data reporting from the mouse. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_aeed3ea5f7d5c6cce38b318b7e81284a5}{get\+\_\+response}} (uint8\+\_\+t $\ast$response)
+\begin{DoxyCompactList}\small\item\em Waits until a response is ready to be read from the output buffer. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_a9f548277a462b7b504365f8c182fb8fc}{wait\+\_\+for\+\_\+input\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Waits until the input buffer is free to write to. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_a21eff784bff74deb6f2c2c6660424d06}{write\+\_\+to\+\_\+mouse}} (uint8\+\_\+t cmd)
+\begin{DoxyCompactList}\small\item\em Writes a command byte to the mouse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mouse_8h_a213d5f0c93d25fe21ae6ee3ba7b50a15}\label{mouse_8h_a213d5f0c93d25fe21ae6ee3ba7b50a15}} 
+\index{mouse.h@{mouse.h}!disable\_data\_reporting@{disable\_data\_reporting}}
+\index{disable\_data\_reporting@{disable\_data\_reporting}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{disable\_data\_reporting()}{disable\_data\_reporting()}}
+{\footnotesize\ttfamily int() disable\+\_\+data\+\_\+reporting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disables the data reporting from the mouse. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success and non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_a213d5f0c93d25fe21ae6ee3ba7b50a15_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_a213d5f0c93d25fe21ae6ee3ba7b50a15_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8h_abe20128c397b0e728b58316a8e1a6e14}\label{mouse_8h_abe20128c397b0e728b58316a8e1a6e14}} 
+\index{mouse.h@{mouse.h}!enable\_data\_reporting@{enable\_data\_reporting}}
+\index{enable\_data\_reporting@{enable\_data\_reporting}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{enable\_data\_reporting()}{enable\_data\_reporting()}}
+{\footnotesize\ttfamily int() enable\+\_\+data\+\_\+reporting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables the data reporting from the mouse. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success and non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_abe20128c397b0e728b58316a8e1a6e14_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_abe20128c397b0e728b58316a8e1a6e14_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8h_aeed3ea5f7d5c6cce38b318b7e81284a5}\label{mouse_8h_aeed3ea5f7d5c6cce38b318b7e81284a5}} 
+\index{mouse.h@{mouse.h}!get\_response@{get\_response}}
+\index{get\_response@{get\_response}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{get\_response()}{get\_response()}}
+{\footnotesize\ttfamily int() get\+\_\+response (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{response }\end{DoxyParamCaption})}
+
+
+
+Waits until a response is ready to be read from the output buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & Pointer to store the read response.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success and non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{mouse_8h_aeed3ea5f7d5c6cce38b318b7e81284a5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_aeed3ea5f7d5c6cce38b318b7e81284a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8h_a210374b50462acdedab00df64d5cea3c}\label{mouse_8h_a210374b50462acdedab00df64d5cea3c}} 
+\index{mouse.h@{mouse.h}!mouse\_ih@{mouse\_ih}}
+\index{mouse\_ih@{mouse\_ih}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_ih()}{mouse\_ih()}}
+{\footnotesize\ttfamily void() mouse\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mouse interrupt handler function. 
+
+Checks the status of the mouse buffer, reads a byte from the buffer if available, decodes it, and adds it to a packet of mouse data. The packet is ready when three bytes have been read.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{mouse_8h_a210374b50462acdedab00df64d5cea3c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_a210374b50462acdedab00df64d5cea3c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8h_a20285aed4b3ef45812cd967532dd09db}\label{mouse_8h_a20285aed4b3ef45812cd967532dd09db}} 
+\index{mouse.h@{mouse.h}!mouse\_subscribe\_int@{mouse\_subscribe\_int}}
+\index{mouse\_subscribe\_int@{mouse\_subscribe\_int}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_subscribe\_int()}{mouse\_subscribe\_int()}}
+{\footnotesize\ttfamily int() mouse\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribes to mouse interrupts with policies IRQ\+\_\+\+EXCLUSIVE and IRQ\+\_\+\+REENABLE. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & Pointer to store the IRQ line bitmask of the mouse.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success and non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_a20285aed4b3ef45812cd967532dd09db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}\label{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}} 
+\index{mouse.h@{mouse.h}!mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}}
+\index{mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_unsubscribe\_int()}{mouse\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() mouse\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes from mouse interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success and non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8h_a9f548277a462b7b504365f8c182fb8fc}\label{mouse_8h_a9f548277a462b7b504365f8c182fb8fc}} 
+\index{mouse.h@{mouse.h}!wait\_for\_input\_buffer@{wait\_for\_input\_buffer}}
+\index{wait\_for\_input\_buffer@{wait\_for\_input\_buffer}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{wait\_for\_input\_buffer()}{wait\_for\_input\_buffer()}}
+{\footnotesize\ttfamily int() wait\+\_\+for\+\_\+input\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Waits until the input buffer is free to write to. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success and non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{mouse_8h_a9f548277a462b7b504365f8c182fb8fc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_a9f548277a462b7b504365f8c182fb8fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8h_ac3eeb38c1e623ff629657b1f91ce7586}\label{mouse_8h_ac3eeb38c1e623ff629657b1f91ce7586}} 
+\index{mouse.h@{mouse.h}!write\_command@{write\_command}}
+\index{write\_command@{write\_command}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{write\_command()}{write\_command()}}
+{\footnotesize\ttfamily int() write\+\_\+command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cmd,  }\item[{uint8\+\_\+t $\ast$}]{response,  }\item[{uint8\+\_\+t}]{args\mbox{[}$\,$\mbox{]},  }\item[{uint32\+\_\+t}]{arg\+\_\+n }\end{DoxyParamCaption})}
+
+
+
+Writes a command with optional arguments to the mouse, and optionally reads a response. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & The command to be written. \\
+\hline
+{\em response} & Pointer to store the read response. If NULL, no response is read. \\
+\hline
+{\em args} & Array of command arguments to be written. If NULL, no arguments are written. \\
+\hline
+{\em arg\+\_\+n} & The number of command arguments.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success and non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_ac3eeb38c1e623ff629657b1f91ce7586_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_ac3eeb38c1e623ff629657b1f91ce7586_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8h_a21eff784bff74deb6f2c2c6660424d06}\label{mouse_8h_a21eff784bff74deb6f2c2c6660424d06}} 
+\index{mouse.h@{mouse.h}!write\_to\_mouse@{write\_to\_mouse}}
+\index{write\_to\_mouse@{write\_to\_mouse}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{write\_to\_mouse()}{write\_to\_mouse()}}
+{\footnotesize\ttfamily int() write\+\_\+to\+\_\+mouse (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cmd }\end{DoxyParamCaption})}
+
+
+
+Writes a command byte to the mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & The command to be written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success, 1 if there was an error, and 2 if the mouse did not acknowledge the command. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_a21eff784bff74deb6f2c2c6660424d06_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h_a21eff784bff74deb6f2c2c6660424d06_icgraph}
+\end{center}
+\end{figure}

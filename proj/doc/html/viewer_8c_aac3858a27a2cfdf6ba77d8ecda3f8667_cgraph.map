@@ -1,0 +1,4 @@
+<map id="erase_date" name="erase_date">
+<area shape="rect" id="node1" title="Function to erase a date from the screen." alt="" coords="5,13,91,40"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#a6901dcf3355f24bf3014ac42d5eaeb0a" title="Draws the screenshot content into the buffer, using given coordinates and size." alt="" coords="139,5,276,48"/>
+</map>

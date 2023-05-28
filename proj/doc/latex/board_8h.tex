@@ -1,0 +1,209 @@
+\hypertarget{board_8h}{}\doxysection{model/game/board.h File Reference}
+\label{board_8h}\index{model/game/board.h@{model/game/board.h}}
+
+
+This file contains the definition of the board module.  
+
+
+{\ttfamily \#include \char`\"{}pieces.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
+Include dependency graph for board.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{board_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_board}{Board}}
+\begin{DoxyCompactList}\small\item\em Represents a chess board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_board}{Board}} $\ast$() \mbox{\hyperlink{board_8h_a203276d2183c9776b2e3d2f559670549}{create\+\_\+board}} (\mbox{\hyperlink{struct_player}{Player}} $\ast$white\+\_\+player, \mbox{\hyperlink{struct_player}{Player}} $\ast$black\+\_\+player)
+\begin{DoxyCompactList}\small\item\em Initializes a board and it\textquotesingle{}s pieces. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{board_8h_a867f8e63b71eefbbb20d5b20a15f425e}{set\+\_\+black\+\_\+pieces}} (\mbox{\hyperlink{struct_board}{Board}} $\ast$board, \mbox{\hyperlink{struct_player}{Player}} $\ast$black\+\_\+player)
+\begin{DoxyCompactList}\small\item\em Sets the black pieces in their initial positions. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{board_8h_a64416cde3ab1d89aadce1df7206828a2}{set\+\_\+white\+\_\+pieces}} (\mbox{\hyperlink{struct_board}{Board}} $\ast$board, \mbox{\hyperlink{struct_player}{Player}} $\ast$white\+\_\+player)
+\begin{DoxyCompactList}\small\item\em Sets the white pieces in their initial positions. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{board_8h_a1c78612bc748218d0211179149cf616e}{destroy\+\_\+board}} (\mbox{\hyperlink{struct_board}{Board}} $\ast$board)
+\begin{DoxyCompactList}\small\item\em Destroys a board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{board_8h_af39ef002935f37561ac28cf2c305c43c}{board\+\_\+start}}
+\item 
+unsigned int \mbox{\hyperlink{board_8h_a0baf794bf4a37094b40df7cc0b6125e7}{square\+\_\+size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of the board module. 
+
+This includes the definition of the \mbox{\hyperlink{struct_board}{Board}} struct, along with methods for it.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_board}{Board}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{board_8h_a203276d2183c9776b2e3d2f559670549}\label{board_8h_a203276d2183c9776b2e3d2f559670549}} 
+\index{board.h@{board.h}!create\_board@{create\_board}}
+\index{create\_board@{create\_board}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{create\_board()}{create\_board()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_board}{Board}} $\ast$() create\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_player}{Player}} $\ast$}]{white\+\_\+player,  }\item[{\mbox{\hyperlink{struct_player}{Player}} $\ast$}]{black\+\_\+player }\end{DoxyParamCaption})}
+
+
+
+Initializes a board and it\textquotesingle{}s pieces. 
+
+This function creates the board and places the pieces in their initial positions. It also associates the pieces with their respective players.
+
+
+\begin{DoxyParams}{Parameters}
+{\em white\+\_\+player} & pointer to the player that will control the white pieces. \\
+\hline
+{\em black\+\_\+player} & pointer to the player that will control the black pieces.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the created board. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8h_a203276d2183c9776b2e3d2f559670549_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8h_a203276d2183c9776b2e3d2f559670549_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{board_8h_a1c78612bc748218d0211179149cf616e}\label{board_8h_a1c78612bc748218d0211179149cf616e}} 
+\index{board.h@{board.h}!destroy\_board@{destroy\_board}}
+\index{destroy\_board@{destroy\_board}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{destroy\_board()}{destroy\_board()}}
+{\footnotesize\ttfamily void() destroy\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_board}{Board}} $\ast$}]{board }\end{DoxyParamCaption})}
+
+
+
+Destroys a board. 
+
+This function destroys a board and all of it\textquotesingle{}s pieces.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & pointer to the board to be destroyed. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8h_a1c78612bc748218d0211179149cf616e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{board_8h_a867f8e63b71eefbbb20d5b20a15f425e}\label{board_8h_a867f8e63b71eefbbb20d5b20a15f425e}} 
+\index{board.h@{board.h}!set\_black\_pieces@{set\_black\_pieces}}
+\index{set\_black\_pieces@{set\_black\_pieces}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{set\_black\_pieces()}{set\_black\_pieces()}}
+{\footnotesize\ttfamily void() set\+\_\+black\+\_\+pieces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_board}{Board}} $\ast$}]{board,  }\item[{\mbox{\hyperlink{struct_player}{Player}} $\ast$}]{black\+\_\+player }\end{DoxyParamCaption})}
+
+
+
+Sets the black pieces in their initial positions. 
+
+This function sets the black pieces in their initial positions and associates each with the black player.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & pointer to the board where the pieces will be placed. \\
+\hline
+{\em black\+\_\+player} & pointer to the player that will control the black pieces. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8h_a867f8e63b71eefbbb20d5b20a15f425e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8h_a867f8e63b71eefbbb20d5b20a15f425e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{board_8h_a64416cde3ab1d89aadce1df7206828a2}\label{board_8h_a64416cde3ab1d89aadce1df7206828a2}} 
+\index{board.h@{board.h}!set\_white\_pieces@{set\_white\_pieces}}
+\index{set\_white\_pieces@{set\_white\_pieces}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{set\_white\_pieces()}{set\_white\_pieces()}}
+{\footnotesize\ttfamily void() set\+\_\+white\+\_\+pieces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_board}{Board}} $\ast$}]{board,  }\item[{\mbox{\hyperlink{struct_player}{Player}} $\ast$}]{white\+\_\+player }\end{DoxyParamCaption})}
+
+
+
+Sets the white pieces in their initial positions. 
+
+This function sets the white pieces in their initial positions and associates each with the white player.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & pointer to the board where the pieces will be placed. \\
+\hline
+{\em white\+\_\+player} & pointer to the player that will control the white pieces. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8h_a64416cde3ab1d89aadce1df7206828a2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8h_a64416cde3ab1d89aadce1df7206828a2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{board_8h_af39ef002935f37561ac28cf2c305c43c}\label{board_8h_af39ef002935f37561ac28cf2c305c43c}} 
+\index{board.h@{board.h}!board\_start@{board\_start}}
+\index{board\_start@{board\_start}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{board\_start}{board\_start}}
+{\footnotesize\ttfamily unsigned int board\+\_\+start\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{board_8h_a0baf794bf4a37094b40df7cc0b6125e7}\label{board_8h_a0baf794bf4a37094b40df7cc0b6125e7}} 
+\index{board.h@{board.h}!square\_size@{square\_size}}
+\index{square\_size@{square\_size}!board.h@{board.h}}
+\doxysubsubsection{\texorpdfstring{square\_size}{square\_size}}
+{\footnotesize\ttfamily unsigned int square\+\_\+size\hspace{0.3cm}{\ttfamily [extern]}}
+

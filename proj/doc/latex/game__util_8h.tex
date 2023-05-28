@@ -1,0 +1,188 @@
+\hypertarget{game__util_8h}{}\doxysection{model/game/game\+\_\+util.h File Reference}
+\label{game__util_8h}\index{model/game/game\_util.h@{model/game/game\_util.h}}
+
+
+This file contains the definition of the game util module.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__util_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_position}{Position}}
+\begin{DoxyCompactList}\small\item\em Represents a position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{game__util_8h_a37bad4005d5d95ac04be8e1066a15ba3}{ROUND\+\_\+\+TIME}}~600
+\begin{DoxyCompactList}\small\item\em Defines the default round time in seconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \{ \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}}
+, \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}{BLACK}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents a chess color. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} \{ \newline
+\mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a1f189a15a64c7c4a1553e876b56c6bf2}{PAWN}}
+, \mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7ad4a86ac7d51335fcb5756203a88612d6}{KNIGHT}}
+, \mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a49b75ad9a5137e805c60f32ed9cc2820}{ROOK}}
+, \mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a6bc4b5ac244475b6bd2595d608f18814}{BISHOP}}
+, \newline
+\mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a58561257be7e2f96f82c0fdb51d7f964}{QUEEN}}
+, \mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a157524408d6f0fc4b7dc5e52f3dd3b80}{KING}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents a chess piece type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{game__util_8h_ab152e38addc9865a033ed991583c1395}{Move\+Type}} \{ \mbox{\hyperlink{game__util_8h_ab152e38addc9865a033ed991583c1395a50d1448013c6f17125caee18aa418af7}{NORMAL}}
+, \mbox{\hyperlink{game__util_8h_ab152e38addc9865a033ed991583c1395a2a90047fe45c6934034c89fd9fb5dbbb}{CAPTURE}}
+, \mbox{\hyperlink{game__util_8h_ab152e38addc9865a033ed991583c1395abd1c3204d9046c798b90b1b25bd9d8f1}{CASTLE}}
+, \mbox{\hyperlink{game__util_8h_ab152e38addc9865a033ed991583c1395ac608cc3f14dc1210771ae0bf90590fb8}{EN\+\_\+\+PASSANT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents a move type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of the game util module. 
+
+This includes the definition of the \mbox{\hyperlink{struct_position}{Position}}, Color, Type and Move\+Type structs along with other useful constants.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_position}{Position}} 
+
+\mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} 
+
+\mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} 
+
+\mbox{\hyperlink{game__util_8h_ab152e38addc9865a033ed991583c1395}{Move\+Type}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{game__util_8h_a37bad4005d5d95ac04be8e1066a15ba3}\label{game__util_8h_a37bad4005d5d95ac04be8e1066a15ba3}} 
+\index{game\_util.h@{game\_util.h}!ROUND\_TIME@{ROUND\_TIME}}
+\index{ROUND\_TIME@{ROUND\_TIME}!game\_util.h@{game\_util.h}}
+\doxysubsubsection{\texorpdfstring{ROUND\_TIME}{ROUND\_TIME}}
+{\footnotesize\ttfamily \#define ROUND\+\_\+\+TIME~600}
+
+
+
+Defines the default round time in seconds. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}\label{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}} 
+\index{game\_util.h@{game\_util.h}!Color@{Color}}
+\index{Color@{Color}!game\_util.h@{game\_util.h}}
+\doxysubsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}
+
+
+
+Represents a chess color. 
+
+This enum represents a chess color. It can be either white or black.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_piece}{Piece}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WHITE@{WHITE}!game\_util.h@{game\_util.h}}\index{game\_util.h@{game\_util.h}!WHITE@{WHITE}}}\mbox{\Hypertarget{game__util_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}\label{game__util_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}} 
+WHITE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLACK@{BLACK}!game\_util.h@{game\_util.h}}\index{game\_util.h@{game\_util.h}!BLACK@{BLACK}}}\mbox{\Hypertarget{game__util_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}\label{game__util_8h_ab87bacfdad76e61b9412d7124be44c1caf77fb67151d0c18d397069ad8c271ba3}} 
+BLACK&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{game__util_8h_ab152e38addc9865a033ed991583c1395}\label{game__util_8h_ab152e38addc9865a033ed991583c1395}} 
+\index{game\_util.h@{game\_util.h}!MoveType@{MoveType}}
+\index{MoveType@{MoveType}!game\_util.h@{game\_util.h}}
+\doxysubsubsection{\texorpdfstring{MoveType}{MoveType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{game__util_8h_ab152e38addc9865a033ed991583c1395}{Move\+Type}}}
+
+
+
+Represents a move type. 
+
+This enum represents a move type. It can be either be\+: ~\newline
+
+\begin{DoxyItemize}
+\item Normal\+: a simple movimentation in the board. ~\newline
+
+\item Capture\+: a movimentation that captures a piece. ~\newline
+
+\item Castle\+: a movimentation that castles the king and a rook. ~\newline
+
+\item En Passant\+: a movimentation that captures a pawn with the en passant rule. ~\newline
+ \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_move}{Move}} 
+\end{DoxySeeAlso}
+
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NORMAL@{NORMAL}!game\_util.h@{game\_util.h}}\index{game\_util.h@{game\_util.h}!NORMAL@{NORMAL}}}\mbox{\Hypertarget{game__util_8h_ab152e38addc9865a033ed991583c1395a50d1448013c6f17125caee18aa418af7}\label{game__util_8h_ab152e38addc9865a033ed991583c1395a50d1448013c6f17125caee18aa418af7}} 
+NORMAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAPTURE@{CAPTURE}!game\_util.h@{game\_util.h}}\index{game\_util.h@{game\_util.h}!CAPTURE@{CAPTURE}}}\mbox{\Hypertarget{game__util_8h_ab152e38addc9865a033ed991583c1395a2a90047fe45c6934034c89fd9fb5dbbb}\label{game__util_8h_ab152e38addc9865a033ed991583c1395a2a90047fe45c6934034c89fd9fb5dbbb}} 
+CAPTURE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CASTLE@{CASTLE}!game\_util.h@{game\_util.h}}\index{game\_util.h@{game\_util.h}!CASTLE@{CASTLE}}}\mbox{\Hypertarget{game__util_8h_ab152e38addc9865a033ed991583c1395abd1c3204d9046c798b90b1b25bd9d8f1}\label{game__util_8h_ab152e38addc9865a033ed991583c1395abd1c3204d9046c798b90b1b25bd9d8f1}} 
+CASTLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EN\_PASSANT@{EN\_PASSANT}!game\_util.h@{game\_util.h}}\index{game\_util.h@{game\_util.h}!EN\_PASSANT@{EN\_PASSANT}}}\mbox{\Hypertarget{game__util_8h_ab152e38addc9865a033ed991583c1395ac608cc3f14dc1210771ae0bf90590fb8}\label{game__util_8h_ab152e38addc9865a033ed991583c1395ac608cc3f14dc1210771ae0bf90590fb8}} 
+EN\+\_\+\+PASSANT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}\label{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}} 
+\index{game\_util.h@{game\_util.h}!Type@{Type}}
+\index{Type@{Type}!game\_util.h@{game\_util.h}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}}
+
+
+
+Represents a chess piece type. 
+
+This enum represents a chess piece type. It can be either a pawn, a knight, a rook, a bishop, a queen or a king.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_piece}{Piece}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PAWN@{PAWN}!game\_util.h@{game\_util.h}}\index{game\_util.h@{game\_util.h}!PAWN@{PAWN}}}\mbox{\Hypertarget{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a1f189a15a64c7c4a1553e876b56c6bf2}\label{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a1f189a15a64c7c4a1553e876b56c6bf2}} 
+PAWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KNIGHT@{KNIGHT}!game\_util.h@{game\_util.h}}\index{game\_util.h@{game\_util.h}!KNIGHT@{KNIGHT}}}\mbox{\Hypertarget{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7ad4a86ac7d51335fcb5756203a88612d6}\label{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7ad4a86ac7d51335fcb5756203a88612d6}} 
+KNIGHT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROOK@{ROOK}!game\_util.h@{game\_util.h}}\index{game\_util.h@{game\_util.h}!ROOK@{ROOK}}}\mbox{\Hypertarget{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a49b75ad9a5137e805c60f32ed9cc2820}\label{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a49b75ad9a5137e805c60f32ed9cc2820}} 
+ROOK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BISHOP@{BISHOP}!game\_util.h@{game\_util.h}}\index{game\_util.h@{game\_util.h}!BISHOP@{BISHOP}}}\mbox{\Hypertarget{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a6bc4b5ac244475b6bd2595d608f18814}\label{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a6bc4b5ac244475b6bd2595d608f18814}} 
+BISHOP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QUEEN@{QUEEN}!game\_util.h@{game\_util.h}}\index{game\_util.h@{game\_util.h}!QUEEN@{QUEEN}}}\mbox{\Hypertarget{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a58561257be7e2f96f82c0fdb51d7f964}\label{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a58561257be7e2f96f82c0fdb51d7f964}} 
+QUEEN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KING@{KING}!game\_util.h@{game\_util.h}}\index{game\_util.h@{game\_util.h}!KING@{KING}}}\mbox{\Hypertarget{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a157524408d6f0fc4b7dc5e52f3dd3b80}\label{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7a157524408d6f0fc4b7dc5e52f3dd3b80}} 
+KING&\\
+\hline
+
+\end{DoxyEnumFields}

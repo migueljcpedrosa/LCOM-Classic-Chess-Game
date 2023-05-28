@@ -1,0 +1,4 @@
+<map id="erase_timers" name="erase_timers">
+<area shape="rect" id="node1" title="Erases a timer." alt="" coords="5,13,102,40"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#a6901dcf3355f24bf3014ac42d5eaeb0a" title="Draws the screenshot content into the buffer, using given coordinates and size." alt="" coords="150,5,287,48"/>
+</map>

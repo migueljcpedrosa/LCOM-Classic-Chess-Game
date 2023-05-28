@@ -1,0 +1,98 @@
+\hypertarget{game__over__controller_8c}{}\doxysection{controller/game\+\_\+over\+\_\+controller.c File Reference}
+\label{game__over__controller_8c}\index{controller/game\_over\_controller.c@{controller/game\_over\_controller.c}}
+{\ttfamily \#include \char`\"{}game\+\_\+over\+\_\+controller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}state/state.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drivers/keyboard/i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}model/game\+\_\+over/game\+\_\+over.\+h\char`\"{}}\newline
+Include dependency graph for game\+\_\+over\+\_\+controller.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__over__controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{game__over__controller_8c_aa1664c556a312b180365ee008ead7495}{game\+\_\+over\+\_\+kbd}} (uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_a06a3dd28ec493a423fea6ccd048d441a}{scan\+\_\+code}}\mbox{[}2\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em Processes keyboard inputs within the game over context. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__over__controller_8c_a65d75a74ef94faa5447cf1c303219a74}{game\+\_\+over\+\_\+cursor}} (\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} $\ast$input)
+\begin{DoxyCompactList}\small\item\em Handles cursor inputs within the game over context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game__over__controller_8c_a65d75a74ef94faa5447cf1c303219a74}\label{game__over__controller_8c_a65d75a74ef94faa5447cf1c303219a74}} 
+\index{game\_over\_controller.c@{game\_over\_controller.c}!game\_over\_cursor@{game\_over\_cursor}}
+\index{game\_over\_cursor@{game\_over\_cursor}!game\_over\_controller.c@{game\_over\_controller.c}}
+\doxysubsubsection{\texorpdfstring{game\_over\_cursor()}{game\_over\_cursor()}}
+{\footnotesize\ttfamily void game\+\_\+over\+\_\+cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} $\ast$}]{input }\end{DoxyParamCaption})}
+
+
+
+Handles cursor inputs within the game over context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The cursor input to handle.\\
+\hline
+\end{DoxyParams}
+This function manages mouse click events in the game over screen. If the \textquotesingle{}Play Again\textquotesingle{} option is clicked, the state is changed to GAME. If the \textquotesingle{}Exit\textquotesingle{} option is clicked, the state is set to MENU.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__over__controller_8c_a65d75a74ef94faa5447cf1c303219a74_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__over__controller_8c_a65d75a74ef94faa5447cf1c303219a74_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__over__controller_8c_aa1664c556a312b180365ee008ead7495}\label{game__over__controller_8c_aa1664c556a312b180365ee008ead7495}} 
+\index{game\_over\_controller.c@{game\_over\_controller.c}!game\_over\_kbd@{game\_over\_kbd}}
+\index{game\_over\_kbd@{game\_over\_kbd}!game\_over\_controller.c@{game\_over\_controller.c}}
+\doxysubsubsection{\texorpdfstring{game\_over\_kbd()}{game\_over\_kbd()}}
+{\footnotesize\ttfamily void game\+\_\+over\+\_\+kbd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scan\+\_\+code\mbox{[}2\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Processes keyboard inputs within the game over context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scan\+\_\+code} & An array of scan codes to process. \\
+\hline
+{\em size} & The size of the scan\+\_\+code array.\\
+\hline
+\end{DoxyParams}
+This function listens for keyboard inputs when in the game over state. It changes the state to MENU when the ESC key is pressed, and to GAME when the ENTER key is pressed.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__over__controller_8c_aa1664c556a312b180365ee008ead7495_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__over__controller_8c_aa1664c556a312b180365ee008ead7495_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,191 @@
+\hypertarget{menu__viewer_8h}{}\doxysection{view/menu\+\_\+viewer.h File Reference}
+\label{menu__viewer_8h}\index{view/menu\_viewer.h@{view/menu\_viewer.h}}
+{\ttfamily \#include \char`\"{}../drivers/video\+\_\+card/gpu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprite.\+h\char`\"{}}\newline
+Include dependency graph for menu\+\_\+viewer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{menu__viewer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{menu__viewer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{menu__viewer_8h_ac18e010824ad635c7ef6d5dfea1d8abd}{draw\+\_\+buttons}} ()
+\begin{DoxyCompactList}\small\item\em Draws buttons on the menu screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{menu__viewer_8h_a9ebde04cad28d4f0beb9ed92abe7f744}{draw\+\_\+title}} ()
+\begin{DoxyCompactList}\small\item\em Draws title on menu screen. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{menu__viewer_8h_ad2fac5dceefd149c428555406b1f6981}{menu\+\_\+screenshot}} ()
+\begin{DoxyCompactList}\small\item\em Takes a screenshot of the menu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{menu__viewer_8h_a7d771989b41395d6d703f523c6fc22eb}{draw\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Draws the complete menu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{menu__viewer_8h_a38de34a6ac214cbd9ccab20969463f7a}{menu\+\_\+refresh}} ()
+\begin{DoxyCompactList}\small\item\em Refreshes the menu screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{menu__viewer_8h_ac18e010824ad635c7ef6d5dfea1d8abd}\label{menu__viewer_8h_ac18e010824ad635c7ef6d5dfea1d8abd}} 
+\index{menu\_viewer.h@{menu\_viewer.h}!draw\_buttons@{draw\_buttons}}
+\index{draw\_buttons@{draw\_buttons}!menu\_viewer.h@{menu\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_buttons()}{draw\_buttons()}}
+{\footnotesize\ttfamily int draw\+\_\+buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws buttons on the menu screen. 
+
+This function draws the play button and the exit button on the menu screen.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu__viewer_8h_ac18e010824ad635c7ef6d5dfea1d8abd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu__viewer_8h_ac18e010824ad635c7ef6d5dfea1d8abd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu__viewer_8h_a7d771989b41395d6d703f523c6fc22eb}\label{menu__viewer_8h_a7d771989b41395d6d703f523c6fc22eb}} 
+\index{menu\_viewer.h@{menu\_viewer.h}!draw\_menu@{draw\_menu}}
+\index{draw\_menu@{draw\_menu}!menu\_viewer.h@{menu\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_menu()}{draw\_menu()}}
+{\footnotesize\ttfamily int draw\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the complete menu. 
+
+This function draws the background, title, and buttons of the menu.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu__viewer_8h_a7d771989b41395d6d703f523c6fc22eb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu__viewer_8h_a7d771989b41395d6d703f523c6fc22eb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu__viewer_8h_a9ebde04cad28d4f0beb9ed92abe7f744}\label{menu__viewer_8h_a9ebde04cad28d4f0beb9ed92abe7f744}} 
+\index{menu\_viewer.h@{menu\_viewer.h}!draw\_title@{draw\_title}}
+\index{draw\_title@{draw\_title}!menu\_viewer.h@{menu\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{draw\_title()}{draw\_title()}}
+{\footnotesize\ttfamily int draw\+\_\+title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws title on menu screen. 
+
+This function iterates over the words in the title and draws them on the menu screen.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu__viewer_8h_a9ebde04cad28d4f0beb9ed92abe7f744_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu__viewer_8h_a9ebde04cad28d4f0beb9ed92abe7f744_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu__viewer_8h_a38de34a6ac214cbd9ccab20969463f7a}\label{menu__viewer_8h_a38de34a6ac214cbd9ccab20969463f7a}} 
+\index{menu\_viewer.h@{menu\_viewer.h}!menu\_refresh@{menu\_refresh}}
+\index{menu\_refresh@{menu\_refresh}!menu\_viewer.h@{menu\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{menu\_refresh()}{menu\_refresh()}}
+{\footnotesize\ttfamily int menu\+\_\+refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Refreshes the menu screen. 
+
+This function erases the date and cursor, draws the new date and cursor, and finally renders the screen.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu__viewer_8h_a38de34a6ac214cbd9ccab20969463f7a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu__viewer_8h_a38de34a6ac214cbd9ccab20969463f7a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu__viewer_8h_ad2fac5dceefd149c428555406b1f6981}\label{menu__viewer_8h_ad2fac5dceefd149c428555406b1f6981}} 
+\index{menu\_viewer.h@{menu\_viewer.h}!menu\_screenshot@{menu\_screenshot}}
+\index{menu\_screenshot@{menu\_screenshot}!menu\_viewer.h@{menu\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{menu\_screenshot()}{menu\_screenshot()}}
+{\footnotesize\ttfamily int() menu\+\_\+screenshot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Takes a screenshot of the menu. 
+
+This function cleans the screen, draws the menu, and copies the buffer to a screenshot.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu__viewer_8h_ad2fac5dceefd149c428555406b1f6981_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu__viewer_8h_ad2fac5dceefd149c428555406b1f6981_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,6 @@
+<map id="Move" name="Move">
+<area shape="rect" id="node1" title="Represents a move." alt="" coords="36,112,87,139"/>
+<area shape="rect" id="node3" href="$struct_piece.html" title="Represents a chess piece." alt="" coords="93,219,147,245"/>
+<area shape="rect" id="node2" href="$struct_position.html" title="Represents a position." alt="" coords="86,5,154,32"/>
+<area shape="rect" id="node4" href="$struct_sprite.html" title="Struct representing a sprite." alt="" coords="254,112,309,139"/>
+</map>

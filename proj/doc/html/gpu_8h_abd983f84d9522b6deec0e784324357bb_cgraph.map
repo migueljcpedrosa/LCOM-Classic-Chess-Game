@@ -1,0 +1,7 @@
+<map id="draw_pattern" name="draw_pattern">
+<area shape="rect" id="node1" title="Draws a pattern of rectangles on the screen." alt="" coords="5,81,101,108"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#a97628dd73687be84c567cf9f5b3fc4b6" title="Extracts the blue value from a given color." alt="" coords="184,5,222,32"/>
+<area shape="rect" id="node3" href="$gpu_8c.html#a31178cc71e7af0d6045707842517b225" title="Draws a rectangle in the buffer." alt="" coords="149,56,257,83"/>
+<area shape="rect" id="node4" href="$gpu_8c.html#ad7cf38294d5a71e4e68956b86a44a962" title="Extracts the green value from a given color." alt="" coords="184,107,222,133"/>
+<area shape="rect" id="node5" href="$gpu_8c.html#acf2ad11de36739df5ad308bea3b8d760" title="Extracts the red value from a given color." alt="" coords="184,157,222,184"/>
+</map>

@@ -1,0 +1,71 @@
+\hypertarget{player_8c}{}\doxysection{model/game/player.c File Reference}
+\label{player_8c}\index{model/game/player.c@{model/game/player.c}}
+{\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for player.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{player_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_player}{Player}} $\ast$() \mbox{\hyperlink{player_8c_af04ee4e3df6bd1a05d6027557be99804}{create\+\_\+player}} (char name\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color, \mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Creates a player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player_8c_a2cbe20d0f858f5cbe571c48535063c6a}{destroy\+\_\+player}} (\mbox{\hyperlink{struct_player}{Player}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Destroys a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{player_8c_af04ee4e3df6bd1a05d6027557be99804}\label{player_8c_af04ee4e3df6bd1a05d6027557be99804}} 
+\index{player.c@{player.c}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_player}{Player}} $\ast$() create\+\_\+player (\begin{DoxyParamCaption}\item[{char}]{name\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color,  }\item[{\mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Creates a player. 
+
+This function creates a player with the given name, color and type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the player. \\
+\hline
+{\em color} & the color of the player. \\
+\hline
+{\em type} & the type of the player.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the created player. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{player_8c_af04ee4e3df6bd1a05d6027557be99804_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{player_8c_a2cbe20d0f858f5cbe571c48535063c6a}\label{player_8c_a2cbe20d0f858f5cbe571c48535063c6a}} 
+\index{player.c@{player.c}!destroy\_player@{destroy\_player}}
+\index{destroy\_player@{destroy\_player}!player.c@{player.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_player()}{destroy\_player()}}
+{\footnotesize\ttfamily void destroy\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_player}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Destroys a player. 
+
+This function destroys a player and frees all the memory allocated to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & pointer to the player to be destroyed. \\
+\hline
+\end{DoxyParams}

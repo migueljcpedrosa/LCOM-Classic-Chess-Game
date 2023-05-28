@@ -1,0 +1,10 @@
+<map id="name_screenshot" name="name_screenshot">
+<area shape="rect" id="node1" title="Function to take a screenshot of the name input view." alt="" coords="5,81,130,108"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#a7a2f89855e5cd27a774cd210d7f1ec2c" title="Cleans the screen." alt="" coords="217,5,315,32"/>
+<area shape="rect" id="node3" href="$gpu_8c.html#a86409f7d16ee31f736ba797968fcf5dc" title="Copies the current buffer content to the screenshot buffer." alt="" coords="178,56,354,83"/>
+<area shape="rect" id="node4" href="$viewer_8c.html#ae80435a9c94d201a75a53489c0252e60" title="Function to draw a sprite at given coordinates." alt="" coords="222,107,310,133"/>
+<area shape="rect" id="node6" href="$viewer_8c.html#a16fcba3b0d3baba459213e36b51e6b35" title="Function to draw a word on the screen at given coordinates." alt="" coords="225,157,307,184"/>
+<area shape="rect" id="node5" href="$gpu_8c.html#af5a1ad16f3790e99340bede93eb96372" title="Draws an XPM image on the screen." alt="" coords="419,107,499,133"/>
+<area shape="rect" id="node7" href="$gpu_8c.html#a6d12f2e078c761f78261b8235d6410ac" title="Draws a word using XPM letters on the screen." alt="" coords="402,157,516,184"/>
+<area shape="rect" id="node8" href="$gpu_8c.html#a8d9a52951e31bda064a3c35846c96f28" title="Draws a letter from an XPM image on the screen." alt="" coords="564,157,681,184"/>
+</map>

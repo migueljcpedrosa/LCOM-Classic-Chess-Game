@@ -1,0 +1,107 @@
+\hypertarget{struct_move}{}\doxysection{Move Struct Reference}
+\label{struct_move}\index{Move@{Move}}
+
+
+Represents a move.  
+
+
+
+
+{\ttfamily \#include $<$move.\+h$>$}
+
+
+
+Collaboration diagram for Move\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{struct_move__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_position}{Position}} \mbox{\hyperlink{struct_move_a5688bad1270a245161eb4756b2bf8c49}{origin}}
+\item 
+\mbox{\hyperlink{struct_position}{Position}} \mbox{\hyperlink{struct_move_a26a71d18eee15d58ebc488a188435d21}{destination}}
+\item 
+\mbox{\hyperlink{game__util_8h_ab152e38addc9865a033ed991583c1395}{Move\+Type}} \mbox{\hyperlink{struct_move_a88fb2c25370b1e62a52399ddef5d3449}{type}}
+\item 
+struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$ \mbox{\hyperlink{struct_move_afcc69416ef9a0270d7f42c6b2661acbe}{piece}}
+\item 
+bool \mbox{\hyperlink{struct_move_aacc0e4b1896b74eb1b4b2b5bb4a47a87}{had\+\_\+moved}}
+\item 
+\mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} \mbox{\hyperlink{struct_move_af58adda6219fd8dad381ec63aadc63e4}{old\+\_\+type}}
+\item 
+struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$ \mbox{\hyperlink{struct_move_a7f6031b789ea20117ea62cfa29044cd0}{secondary\+\_\+piece}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a move. 
+
+This struct represents a move. It is composed of an origin, a destination, a type, a piece and a secondary piece.
+
+The origin and destination are the positions of the move. ~\newline
+The type is the type of the move. ~\newline
+The destination is the position of the move. ~\newline
+The piece is the piece that is being moved. ~\newline
+The secondary piece is the piece that is being captured or castled with the move. ~\newline
+ \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_position}{Position}} 
+
+\mbox{\hyperlink{game__util_8h_ab152e38addc9865a033ed991583c1395}{Move\+Type}} 
+
+\mbox{\hyperlink{struct_piece}{Piece}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_move_a26a71d18eee15d58ebc488a188435d21}\label{struct_move_a26a71d18eee15d58ebc488a188435d21}} 
+\index{Move@{Move}!destination@{destination}}
+\index{destination@{destination}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{destination}{destination}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_position}{Position}} Move\+::destination}
+
+\mbox{\Hypertarget{struct_move_aacc0e4b1896b74eb1b4b2b5bb4a47a87}\label{struct_move_aacc0e4b1896b74eb1b4b2b5bb4a47a87}} 
+\index{Move@{Move}!had\_moved@{had\_moved}}
+\index{had\_moved@{had\_moved}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{had\_moved}{had\_moved}}
+{\footnotesize\ttfamily bool Move\+::had\+\_\+moved}
+
+\mbox{\Hypertarget{struct_move_af58adda6219fd8dad381ec63aadc63e4}\label{struct_move_af58adda6219fd8dad381ec63aadc63e4}} 
+\index{Move@{Move}!old\_type@{old\_type}}
+\index{old\_type@{old\_type}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{old\_type}{old\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} Move\+::old\+\_\+type}
+
+\mbox{\Hypertarget{struct_move_a5688bad1270a245161eb4756b2bf8c49}\label{struct_move_a5688bad1270a245161eb4756b2bf8c49}} 
+\index{Move@{Move}!origin@{origin}}
+\index{origin@{origin}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{origin}{origin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_position}{Position}} Move\+::origin}
+
+\mbox{\Hypertarget{struct_move_afcc69416ef9a0270d7f42c6b2661acbe}\label{struct_move_afcc69416ef9a0270d7f42c6b2661acbe}} 
+\index{Move@{Move}!piece@{piece}}
+\index{piece@{piece}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{piece}{piece}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_piece}{Piece}}$\ast$ Move\+::piece}
+
+\mbox{\Hypertarget{struct_move_a7f6031b789ea20117ea62cfa29044cd0}\label{struct_move_a7f6031b789ea20117ea62cfa29044cd0}} 
+\index{Move@{Move}!secondary\_piece@{secondary\_piece}}
+\index{secondary\_piece@{secondary\_piece}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{secondary\_piece}{secondary\_piece}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_piece}{Piece}}$\ast$ Move\+::secondary\+\_\+piece}
+
+\mbox{\Hypertarget{struct_move_a88fb2c25370b1e62a52399ddef5d3449}\label{struct_move_a88fb2c25370b1e62a52399ddef5d3449}} 
+\index{Move@{Move}!type@{type}}
+\index{type@{type}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game__util_8h_ab152e38addc9865a033ed991583c1395}{Move\+Type}} Move\+::type}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+model/game/\mbox{\hyperlink{move_8h}{move.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="setMovesInLine" name="setMovesInLine">
+<area shape="rect" id="node1" title="Sets the moves of the given piece in a line." alt="" coords="5,31,116,57"/>
+<area shape="rect" id="node2" href="$move_8c.html#ac1cb727b717e97de319add56b1b09ee2" title="Creates a capture move." alt="" coords="180,5,288,32"/>
+<area shape="rect" id="node3" href="$move_8c.html#aac51cec4fc63cba16e34a97066645d15" title="Creates a normal move." alt="" coords="164,56,304,83"/>
+</map>

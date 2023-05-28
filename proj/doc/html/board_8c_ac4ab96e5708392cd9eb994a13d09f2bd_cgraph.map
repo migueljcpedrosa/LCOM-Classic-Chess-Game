@@ -1,0 +1,7 @@
+<map id="set_black_pieces" name="set_black_pieces">
+<area shape="rect" id="node1" title="Sets the black pieces in their initial positions." alt="" coords="5,56,128,83"/>
+<area shape="rect" id="node2" href="$pieces_8c.html#a11894ff655f41d4e464200fa57775ffb" title="Creates a piece." alt="" coords="183,31,278,57"/>
+<area shape="rect" id="node5" href="$pieces_8c.html#a635528417a24944ef174b32fc5eeee8a" title="Creates a position." alt="" coords="176,81,285,108"/>
+<area shape="rect" id="node3" href="$pieces_8c.html#a20b34bd310e4bdf9d248c6394c32dbed" title=" " alt="" coords="333,5,487,32"/>
+<area shape="rect" id="node4" href="$pieces_8c.html#a2a8d4acb782cd8f93b1d910f71b36be7" title=" " alt="" coords="334,56,487,83"/>
+</map>

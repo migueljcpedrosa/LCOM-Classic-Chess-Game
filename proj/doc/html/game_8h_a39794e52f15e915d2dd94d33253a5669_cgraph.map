@@ -1,0 +1,26 @@
+<map id="setKingMoves" name="setKingMoves">
+<area shape="rect" id="node1" title="Sets the moves of the given king." alt="" coords="5,122,108,149"/>
+<area shape="rect" id="node2" href="$move_8c.html#ac1cb727b717e97de319add56b1b09ee2" title="Creates a capture move." alt="" coords="982,148,1089,174"/>
+<area shape="rect" id="node3" href="$move_8c.html#a13899c447fbd13263bb08b014ee51b2a" title="Creates a promotion move." alt="" coords="156,46,255,73"/>
+<area shape="rect" id="node4" href="$move_8c.html#aac51cec4fc63cba16e34a97066645d15" title="Creates a normal move." alt="" coords="965,198,1106,225"/>
+<area shape="rect" id="node5" href="$game_8c.html#a03f13b860db83a4144b5ac8630ee7cbb" title="Filters out all the invalid moves of the given piece." alt="" coords="164,198,247,225"/>
+<area shape="rect" id="node11" href="$game_8c.html#aacd5c6b9f24f491169df49994d83ac8d" title="Checks if the current player is in check." alt="" coords="319,148,392,174"/>
+<area shape="rect" id="node6" href="$game_8c.html#ac4a0de72a2b303612e6d743cc7073f09" title="Executes a move within the given game." alt="" coords="303,198,407,225"/>
+<area shape="rect" id="node20" href="$game_8c.html#a42afa1b20be35bd921c925e784805892" title="Undoes a move within the given game." alt="" coords="312,401,398,428"/>
+<area shape="rect" id="node7" href="$game_8c.html#ae94ec57ec9ca8a04c4af6f49e75104cd" title="Executes a capture move." alt="" coords="465,198,582,225"/>
+<area shape="rect" id="node8" href="$game_8c.html#a4cf5771e6bd973cc292351e00165a041" title="Executes a castle move." alt="" coords="469,249,578,276"/>
+<area shape="rect" id="node9" href="$game_8c.html#a6c5e3fe6772104f293989db3f1e165e7" title="Executes an en passant move." alt="" coords="455,300,592,326"/>
+<area shape="rect" id="node10" href="$game_8c.html#a37a26b57f8d6d9ea0e3e7090b803154b" title="Executes a normal move." alt="" coords="467,148,580,174"/>
+<area shape="rect" id="node12" href="$game_8c.html#a3a3a9eb872c4ea58396f0fdaff7a624b" title="Sets the moves of the given piece." alt="" coords="485,97,562,124"/>
+<area shape="rect" id="node13" href="$game_8c.html#a787c0b2566eb8fda38584d893673ee58" title="Sets the moves of the give bishop." alt="" coords="640,148,756,174"/>
+<area shape="rect" id="node15" href="$game_8c.html#a02368aa2f563fecb051410184b125352" title="Sets the moves of the given knight." alt="" coords="804,198,917,225"/>
+<area shape="rect" id="node16" href="$game_8c.html#abb070bf6dd447b4416a3f63868351121" title="Sets the moves of the given pawn." alt="" coords="807,97,915,124"/>
+<area shape="rect" id="node18" href="$game_8c.html#ad7b57a9417a456e76a6ca52c25967cf6" title="Sets the moves of the given queen." alt="" coords="641,198,755,225"/>
+<area shape="rect" id="node19" href="$game_8c.html#af0b0c5ac9b76d90ebed52452cafa4225" title="Sets the moves of the given rook." alt="" coords="645,97,751,124"/>
+<area shape="rect" id="node14" href="$game_8c.html#a029ec6f0ce9235992b52ff7879c223e5" title="Sets the moves of the given piece in a line." alt="" coords="806,148,916,174"/>
+<area shape="rect" id="node17" href="$move_8c.html#a2c6bb304fb46e5094028c196f8365ebd" title="Creates a promotion move." alt="" coords="970,97,1101,124"/>
+<area shape="rect" id="node21" href="$game_8c.html#a379a85e7e59bbd3adb29e0019081d061" title="Undoes a capture move." alt="" coords="474,401,573,428"/>
+<area shape="rect" id="node22" href="$game_8c.html#a1dd78d3468faaadf416ce69e769c5fc7" title="Undoes a castle move." alt="" coords="478,452,569,478"/>
+<area shape="rect" id="node23" href="$game_8c.html#a46fd109c579ef96fddb1c2c95643769c" title="Undoes an en passant move." alt="" coords="464,502,583,529"/>
+<area shape="rect" id="node24" href="$game_8c.html#ae6316bc9b0f46a28e80ddbe0d2b07804" title="Undoes a normal move." alt="" coords="476,350,571,377"/>
+</map>

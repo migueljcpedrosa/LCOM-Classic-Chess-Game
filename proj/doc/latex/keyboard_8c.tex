@@ -1,0 +1,141 @@
+\hypertarget{keyboard_8c}{}\doxysection{drivers/keyboard/keyboard.c File Reference}
+\label{keyboard_8c}\index{drivers/keyboard/keyboard.c@{drivers/keyboard/keyboard.c}}
+{\ttfamily \#include \char`\"{}keyboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../utils.\+h\char`\"{}}\newline
+Include dependency graph for keyboard.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{keyboard_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{keyboard_8c_a178b1db0b319dccad2840cc3fd273132}{keyboard\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes to keyboard interrupts with policies IRQ\+\_\+\+REENABLE and IRQ\+\_\+\+EXCLUSIVE. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8c_a32cc4de66854f8a7bd909e7aa8b901ed}{keyboard\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes from keyboard interrupts. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{keyboard_8c_aea970a154161a35f6894898a092ed70a}{kbc\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Keyboard interrupt handler function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{keyboard_8c_a96f78a87d064e47d627d222f67a8d012}{hook\+\_\+id}} = 1
+\item 
+uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_a06a3dd28ec493a423fea6ccd048d441a}{scan\+\_\+code}} \mbox{[}2\mbox{]}
+\item 
+int \mbox{\hyperlink{keyboard_8c_a292c9dfd6bd1567fca7e760ac8135f60}{kbd\+\_\+index}} = 0
+\item 
+bool \mbox{\hyperlink{keyboard_8c_aa6bce29d6c0291c4204cb6381611f03e}{last\+\_\+byte\+\_\+read}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{keyboard_8c_aea970a154161a35f6894898a092ed70a}\label{keyboard_8c_aea970a154161a35f6894898a092ed70a}} 
+\index{keyboard.c@{keyboard.c}!kbc\_ih@{kbc\_ih}}
+\index{kbc\_ih@{kbc\_ih}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_ih()}{kbc\_ih()}}
+{\footnotesize\ttfamily void() kbc\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Keyboard interrupt handler function. 
+
+Checks the status of the keyboard buffer, reads a byte from the buffer if available. If the byte read is part of a multi-\/byte scan code, it waits for the next interrupt to read the rest of the scan code.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{keyboard_8c_aea970a154161a35f6894898a092ed70a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8c_aea970a154161a35f6894898a092ed70a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{keyboard_8c_a178b1db0b319dccad2840cc3fd273132}\label{keyboard_8c_a178b1db0b319dccad2840cc3fd273132}} 
+\index{keyboard.c@{keyboard.c}!keyboard\_subscribe\_int@{keyboard\_subscribe\_int}}
+\index{keyboard\_subscribe\_int@{keyboard\_subscribe\_int}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{keyboard\_subscribe\_int()}{keyboard\_subscribe\_int()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribes to keyboard interrupts with policies IRQ\+\_\+\+REENABLE and IRQ\+\_\+\+EXCLUSIVE. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & Pointer to store the IRQ line bitmask of the keyboard.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success and non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8c_a178b1db0b319dccad2840cc3fd273132_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{keyboard_8c_a32cc4de66854f8a7bd909e7aa8b901ed}\label{keyboard_8c_a32cc4de66854f8a7bd909e7aa8b901ed}} 
+\index{keyboard.c@{keyboard.c}!keyboard\_unsubscribe\_int@{keyboard\_unsubscribe\_int}}
+\index{keyboard\_unsubscribe\_int@{keyboard\_unsubscribe\_int}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{keyboard\_unsubscribe\_int()}{keyboard\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes from keyboard interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success and non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8c_a32cc4de66854f8a7bd909e7aa8b901ed_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{keyboard_8c_a96f78a87d064e47d627d222f67a8d012}\label{keyboard_8c_a96f78a87d064e47d627d222f67a8d012}} 
+\index{keyboard.c@{keyboard.c}!hook\_id@{hook\_id}}
+\index{hook\_id@{hook\_id}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{hook\_id}{hook\_id}}
+{\footnotesize\ttfamily int hook\+\_\+id = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{keyboard_8c_a292c9dfd6bd1567fca7e760ac8135f60}\label{keyboard_8c_a292c9dfd6bd1567fca7e760ac8135f60}} 
+\index{keyboard.c@{keyboard.c}!kbd\_index@{kbd\_index}}
+\index{kbd\_index@{kbd\_index}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{kbd\_index}{kbd\_index}}
+{\footnotesize\ttfamily int kbd\+\_\+index = 0}
+
+\mbox{\Hypertarget{keyboard_8c_aa6bce29d6c0291c4204cb6381611f03e}\label{keyboard_8c_aa6bce29d6c0291c4204cb6381611f03e}} 
+\index{keyboard.c@{keyboard.c}!last\_byte\_read@{last\_byte\_read}}
+\index{last\_byte\_read@{last\_byte\_read}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{last\_byte\_read}{last\_byte\_read}}
+{\footnotesize\ttfamily bool last\+\_\+byte\+\_\+read = false}
+
+\mbox{\Hypertarget{keyboard_8c_a06a3dd28ec493a423fea6ccd048d441a}\label{keyboard_8c_a06a3dd28ec493a423fea6ccd048d441a}} 
+\index{keyboard.c@{keyboard.c}!scan\_code@{scan\_code}}
+\index{scan\_code@{scan\_code}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{scan\_code}{scan\_code}}
+{\footnotesize\ttfamily uint8\+\_\+t scan\+\_\+code\mbox{[}2\mbox{]}}
+

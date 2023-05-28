@@ -1,0 +1,155 @@
+\hypertarget{game__over_8h}{}\doxysection{model/game\+\_\+over/game\+\_\+over.h File Reference}
+\label{game__over_8h}\index{model/game\_over/game\_over.h@{model/game\_over/game\_over.h}}
+{\ttfamily \#include \char`\"{}model/cursor/cursor\+\_\+input.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}model/model\+\_\+utils.\+h\char`\"{}}\newline
+Include dependency graph for game\+\_\+over.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__over_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__over_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_game_over}{Game\+Over}}
+\begin{DoxyCompactList}\small\item\em Struct that represents the \mbox{\hyperlink{struct_game_over}{Game\+Over}} state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{game__over_8h_a85495a0de79bcf3250b26296366bd99c}{create\+\_\+game\+\_\+over}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new game over state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{game__over_8h_a2b7c06312badb1fd6092c5780d3de10c}{game\+\_\+over\+\_\+clicked\+\_\+play}} (\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} $\ast$\mbox{\hyperlink{cursor_8h_a8a6bb85bf44d1392b588a65de57652c0}{cursor}})
+\begin{DoxyCompactList}\small\item\em Checks if the play button has been clicked. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{game__over_8h_a033a37519289d84bbf5c5b49dd981dc0}{game\+\_\+over\+\_\+clicked\+\_\+exit}} (\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} $\ast$\mbox{\hyperlink{cursor_8h_a8a6bb85bf44d1392b588a65de57652c0}{cursor}})
+\begin{DoxyCompactList}\small\item\em Checks if the exit button has been clicked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__over_8h_a762a55a68d1f6a9ebfc4acd4dba63d7c}{destroy\+\_\+game\+\_\+over}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the game over state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_game_over}{Game\+Over}} $\ast$ \mbox{\hyperlink{game__over_8h_aa6faaab4df431d6e3a9ff12292e5c9ca}{game\+Over}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game__over_8h_a85495a0de79bcf3250b26296366bd99c}\label{game__over_8h_a85495a0de79bcf3250b26296366bd99c}} 
+\index{game\_over.h@{game\_over.h}!create\_game\_over@{create\_game\_over}}
+\index{create\_game\_over@{create\_game\_over}!game\_over.h@{game\_over.h}}
+\doxysubsubsection{\texorpdfstring{create\_game\_over()}{create\_game\_over()}}
+{\footnotesize\ttfamily void create\+\_\+game\+\_\+over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new game over state. 
+
+This function initializes a new game over state with a title and two buttons for Play and Exit. The positions of the title and buttons are set, and their sprites are linked.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__over_8h_a85495a0de79bcf3250b26296366bd99c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__over_8h_a762a55a68d1f6a9ebfc4acd4dba63d7c}\label{game__over_8h_a762a55a68d1f6a9ebfc4acd4dba63d7c}} 
+\index{game\_over.h@{game\_over.h}!destroy\_game\_over@{destroy\_game\_over}}
+\index{destroy\_game\_over@{destroy\_game\_over}!game\_over.h@{game\_over.h}}
+\doxysubsubsection{\texorpdfstring{destroy\_game\_over()}{destroy\_game\_over()}}
+{\footnotesize\ttfamily void destroy\+\_\+game\+\_\+over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the game over state. 
+
+This function frees the memory allocated for the game over state and its associated elements.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__over_8h_a762a55a68d1f6a9ebfc4acd4dba63d7c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__over_8h_a033a37519289d84bbf5c5b49dd981dc0}\label{game__over_8h_a033a37519289d84bbf5c5b49dd981dc0}} 
+\index{game\_over.h@{game\_over.h}!game\_over\_clicked\_exit@{game\_over\_clicked\_exit}}
+\index{game\_over\_clicked\_exit@{game\_over\_clicked\_exit}!game\_over.h@{game\_over.h}}
+\doxysubsubsection{\texorpdfstring{game\_over\_clicked\_exit()}{game\_over\_clicked\_exit()}}
+{\footnotesize\ttfamily bool game\+\_\+over\+\_\+clicked\+\_\+exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} $\ast$}]{cursor }\end{DoxyParamCaption})}
+
+
+
+Checks if the exit button has been clicked. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cursor} & \mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} struct that contains the current cursor input.\\
+\hline
+\end{DoxyParams}
+This function checks if the current cursor position is within the bounds of the exit button.
+
+\begin{DoxyReturn}{Returns}
+true if the exit button was clicked, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__over_8h_a033a37519289d84bbf5c5b49dd981dc0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__over_8h_a2b7c06312badb1fd6092c5780d3de10c}\label{game__over_8h_a2b7c06312badb1fd6092c5780d3de10c}} 
+\index{game\_over.h@{game\_over.h}!game\_over\_clicked\_play@{game\_over\_clicked\_play}}
+\index{game\_over\_clicked\_play@{game\_over\_clicked\_play}!game\_over.h@{game\_over.h}}
+\doxysubsubsection{\texorpdfstring{game\_over\_clicked\_play()}{game\_over\_clicked\_play()}}
+{\footnotesize\ttfamily bool game\+\_\+over\+\_\+clicked\+\_\+play (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} $\ast$}]{cursor }\end{DoxyParamCaption})}
+
+
+
+Checks if the play button has been clicked. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cursor} & \mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} struct that contains the current cursor input.\\
+\hline
+\end{DoxyParams}
+This function checks if the current cursor position is within the bounds of the play button.
+
+\begin{DoxyReturn}{Returns}
+true if the play button was clicked, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__over_8h_a2b7c06312badb1fd6092c5780d3de10c_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{game__over_8h_aa6faaab4df431d6e3a9ff12292e5c9ca}\label{game__over_8h_aa6faaab4df431d6e3a9ff12292e5c9ca}} 
+\index{game\_over.h@{game\_over.h}!gameOver@{gameOver}}
+\index{gameOver@{gameOver}!game\_over.h@{game\_over.h}}
+\doxysubsubsection{\texorpdfstring{gameOver}{gameOver}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_game_over}{Game\+Over}}$\ast$ game\+Over\hspace{0.3cm}{\ttfamily [extern]}}
+

@@ -1,0 +1,6 @@
+<map id="draw_title" name="draw_title">
+<area shape="rect" id="node1" title="Draws title on menu screen." alt="" coords="5,5,82,32"/>
+<area shape="rect" id="node2" href="$viewer_8c.html#a16fcba3b0d3baba459213e36b51e6b35" title="Function to draw a word on the screen at given coordinates." alt="" coords="130,5,212,32"/>
+<area shape="rect" id="node3" href="$gpu_8c.html#a6d12f2e078c761f78261b8235d6410ac" title="Draws a word using XPM letters on the screen." alt="" coords="260,5,374,32"/>
+<area shape="rect" id="node4" href="$gpu_8c.html#a8d9a52951e31bda064a3c35846c96f28" title="Draws a letter from an XPM image on the screen." alt="" coords="422,5,539,32"/>
+</map>

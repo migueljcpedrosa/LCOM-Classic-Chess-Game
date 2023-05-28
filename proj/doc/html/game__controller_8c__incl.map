@@ -1,0 +1,23 @@
+<map id="controller/game_controller.c" name="controller/game_controller.c">
+<area shape="rect" id="node1" title=" " alt="" coords="350,5,531,32"/>
+<area shape="rect" id="node2" href="$game__controller_8h.html" title="This file contains the definition of the game controller module." alt="" coords="242,88,366,115"/>
+<area shape="rect" id="node15" href="$game__viewer_8h.html" title="This file contains the definition of the game viewer module." alt="" coords="495,171,641,197"/>
+<area shape="rect" id="node20" href="$keyboard_2i8042_8h.html" title=" " alt="" coords="503,80,631,123"/>
+<area shape="rect" id="node21" href="$state_8h.html" title=" " alt="" coords="362,395,468,421"/>
+<area shape="rect" id="node3" href="$cursor__input_8h.html" title=" " alt="" coords="230,469,378,512"/>
+<area shape="rect" id="node7" href="$game_8h.html" title="This file contains the definition of the game module." alt="" coords="97,171,248,197"/>
+<area shape="rect" id="node4" title=" " alt="" coords="118,568,192,595"/>
+<area shape="rect" id="node5" title=" " alt="" coords="438,651,515,677"/>
+<area shape="rect" id="node6" href="$cursor_8h.html" title=" " alt="" coords="267,568,387,595"/>
+<area shape="rect" id="node8" href="$board_8h.html" title="This file contains the definition of the board module." alt="" coords="140,245,204,272"/>
+<area shape="rect" id="node13" href="$move_8h.html" title="This file contains the definition of the move module." alt="" coords="34,477,97,504"/>
+<area shape="rect" id="node9" href="$pieces_8h.html" title="This file contains the definition of the piece module." alt="" coords="136,395,206,421"/>
+<area shape="rect" id="node14" href="$player_8h.html" title="This file contains the definition of the player module." alt="" coords="181,320,249,347"/>
+<area shape="rect" id="node10" href="$sprite_8h.html" title=" " alt="" coords="458,477,574,504"/>
+<area shape="rect" id="node12" href="$game__util_8h.html" title="This file contains the definition of the game util module." alt="" coords="5,568,94,595"/>
+<area shape="rect" id="node11" href="$gpu_8h.html" title=" " alt="" coords="462,560,597,603"/>
+<area shape="rect" id="node16" href="$viewer_8h.html" title=" " alt="" coords="579,395,646,421"/>
+<area shape="rect" id="node17" href="$vbe_8h.html" title=" " alt="" coords="794,469,929,512"/>
+<area shape="rect" id="node18" href="$rtc_8h.html" title=" " alt="" coords="650,477,769,504"/>
+<area shape="rect" id="node19" title=" " alt="" coords="673,568,778,595"/>
+</map>

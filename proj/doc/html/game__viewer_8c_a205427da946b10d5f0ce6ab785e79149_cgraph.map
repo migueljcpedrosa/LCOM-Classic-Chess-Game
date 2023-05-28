@@ -1,0 +1,5 @@
+<map id="draw_timers" name="draw_timers">
+<area shape="rect" id="node1" title="Draws both players timers." alt="" coords="5,5,97,32"/>
+<area shape="rect" id="node2" href="$game__viewer_8c.html#aef0783e8665e16aa71a601bc4d95a6a5" title="Draws a timer." alt="" coords="145,5,229,32"/>
+<area shape="rect" id="node3" href="$gpu_8c.html#ad946d9d4d766cdf8d58ebb088baad3b1" title="Draws a number using an XPM image on the screen." alt="" coords="277,5,375,32"/>
+</map>

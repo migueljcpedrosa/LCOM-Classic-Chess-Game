@@ -1,0 +1,4 @@
+<map id="destroy_game" name="destroy_game">
+<area shape="rect" id="node1" title="Destroys a game." alt="" coords="5,5,109,32"/>
+<area shape="rect" id="node2" href="$board_8c.html#a2bd9df095efd565768ac9528c02c7166" title="Destroys a board." alt="" coords="157,5,260,32"/>
+</map>

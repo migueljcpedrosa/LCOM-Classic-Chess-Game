@@ -1,0 +1,157 @@
+\hypertarget{menu_8h}{}\doxysection{model/menu/menu.h File Reference}
+\label{menu_8h}\index{model/menu/menu.h@{model/menu/menu.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../../view/sprite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}model/cursor/cursor\+\_\+input.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}model/model\+\_\+utils.\+h\char`\"{}}\newline
+Include dependency graph for menu.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_menu}{Menu}}
+\begin{DoxyCompactList}\small\item\em Struct representing the \mbox{\hyperlink{struct_menu}{Menu}} state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_8h_a90c7936066ecc402268fe2959dcaf322}{create\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Creates the initial menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a031ace1fb525cf179ad6bf00dafac684}{destroy\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the initial menu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{menu_8h_ac1ad344ca5872dac9cbc09038cd50f38}{menu\+\_\+clicked\+\_\+play}} (\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} $\ast$\mbox{\hyperlink{cursor_8h_a8a6bb85bf44d1392b588a65de57652c0}{cursor}})
+\begin{DoxyCompactList}\small\item\em Checks if the play button in the initial menu has been clicked. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{menu_8h_a0c8f92250230310bd142637e69077e64}{menu\+\_\+clicked\+\_\+exit}} (\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} $\ast$\mbox{\hyperlink{cursor_8h_a8a6bb85bf44d1392b588a65de57652c0}{cursor}})
+\begin{DoxyCompactList}\small\item\em Checks if the exit button in the initial menu has been clicked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_menu}{Menu}} $\ast$ \mbox{\hyperlink{menu_8h_a529b480d3d81a86e882c4d6ab8afa8bb}{menu}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{menu_8h_a90c7936066ecc402268fe2959dcaf322}\label{menu_8h_a90c7936066ecc402268fe2959dcaf322}} 
+\index{menu.h@{menu.h}!create\_menu@{create\_menu}}
+\index{create\_menu@{create\_menu}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{create\_menu()}{create\_menu()}}
+{\footnotesize\ttfamily void create\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates the initial menu. 
+
+This function initializes the menu with a title, two buttons (play and exit) and a background sprite. The positions of the title and buttons, and the pointers to their sprites are set.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a90c7936066ecc402268fe2959dcaf322_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8h_a031ace1fb525cf179ad6bf00dafac684}\label{menu_8h_a031ace1fb525cf179ad6bf00dafac684}} 
+\index{menu.h@{menu.h}!destroy\_menu@{destroy\_menu}}
+\index{destroy\_menu@{destroy\_menu}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{destroy\_menu()}{destroy\_menu()}}
+{\footnotesize\ttfamily void destroy\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the initial menu. 
+
+This function frees the memory allocated for the menu state and its associated elements.
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a031ace1fb525cf179ad6bf00dafac684_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8h_a0c8f92250230310bd142637e69077e64}\label{menu_8h_a0c8f92250230310bd142637e69077e64}} 
+\index{menu.h@{menu.h}!menu\_clicked\_exit@{menu\_clicked\_exit}}
+\index{menu\_clicked\_exit@{menu\_clicked\_exit}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{menu\_clicked\_exit()}{menu\_clicked\_exit()}}
+{\footnotesize\ttfamily bool menu\+\_\+clicked\+\_\+exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} $\ast$}]{cursor }\end{DoxyParamCaption})}
+
+
+
+Checks if the exit button in the initial menu has been clicked. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cursor} & \mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} struct that contains the current cursor input.\\
+\hline
+\end{DoxyParams}
+This function checks if the current cursor position is within the bounds of the exit button in the menu.
+
+\begin{DoxyReturn}{Returns}
+true if the exit button was clicked, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a0c8f92250230310bd142637e69077e64_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menu_8h_ac1ad344ca5872dac9cbc09038cd50f38}\label{menu_8h_ac1ad344ca5872dac9cbc09038cd50f38}} 
+\index{menu.h@{menu.h}!menu\_clicked\_play@{menu\_clicked\_play}}
+\index{menu\_clicked\_play@{menu\_clicked\_play}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{menu\_clicked\_play()}{menu\_clicked\_play()}}
+{\footnotesize\ttfamily bool menu\+\_\+clicked\+\_\+play (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} $\ast$}]{cursor }\end{DoxyParamCaption})}
+
+
+
+Checks if the play button in the initial menu has been clicked. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cursor} & \mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} struct that contains the current cursor input.\\
+\hline
+\end{DoxyParams}
+This function checks if the current cursor position is within the bounds of the play button in the menu.
+
+\begin{DoxyReturn}{Returns}
+true if the play button was clicked, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_ac1ad344ca5872dac9cbc09038cd50f38_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{menu_8h_a529b480d3d81a86e882c4d6ab8afa8bb}\label{menu_8h_a529b480d3d81a86e882c4d6ab8afa8bb}} 
+\index{menu.h@{menu.h}!menu@{menu}}
+\index{menu@{menu}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{menu}{menu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_menu}{Menu}}$\ast$ menu\hspace{0.3cm}{\ttfamily [extern]}}
+

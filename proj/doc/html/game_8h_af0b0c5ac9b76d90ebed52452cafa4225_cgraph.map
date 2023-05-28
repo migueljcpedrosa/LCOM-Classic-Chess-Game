@@ -1,0 +1,6 @@
+<map id="setRookMoves" name="setRookMoves">
+<area shape="rect" id="node1" title="Sets the moves of the given rook." alt="" coords="5,31,112,57"/>
+<area shape="rect" id="node2" href="$game_8c.html#a029ec6f0ce9235992b52ff7879c223e5" title="Sets the moves of the given piece in a line." alt="" coords="160,31,270,57"/>
+<area shape="rect" id="node3" href="$move_8c.html#ac1cb727b717e97de319add56b1b09ee2" title="Creates a capture move." alt="" coords="335,5,442,32"/>
+<area shape="rect" id="node4" href="$move_8c.html#aac51cec4fc63cba16e34a97066645d15" title="Creates a normal move." alt="" coords="318,56,458,83"/>
+</map>

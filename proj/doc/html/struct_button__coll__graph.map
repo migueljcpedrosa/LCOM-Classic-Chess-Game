@@ -1,0 +1,4 @@
+<map id="Button" name="Button">
+<area shape="rect" id="node1" title="Struct representing a Button." alt="" coords="5,96,65,123"/>
+<area shape="rect" id="node2" href="$struct_sprite.html" title="Struct representing a sprite." alt="" coords="7,5,63,32"/>
+</map>

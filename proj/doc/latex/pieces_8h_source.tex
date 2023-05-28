@@ -1,0 +1,35 @@
+\hypertarget{pieces_8h_source}{}\doxysection{pieces.\+h}
+\label{pieces_8h_source}\index{model/game/pieces.h@{model/game/pieces.h}}
+\mbox{\hyperlink{pieces_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef \_PIECE\_H\_}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define \_PIECE\_H\_}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}../../view/sprite.h"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{game__util_8h}{game\_util.h}}"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{move_8h}{move.h}}"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{30 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_piece}{Piece}} \{}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \mbox{\hyperlink{struct_position}{Position}} \mbox{\hyperlink{struct_piece_a818688fca11efe2957b0605bb2976f49}{position}};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keyword}{enum} \{\mbox{\hyperlink{struct_piece_a17587811950858e31b415e8d81b2b7e1a3723f16815fdd8f31b1df997ab2fbf79}{WHITE}}, \mbox{\hyperlink{struct_piece_a17587811950858e31b415e8d81b2b7e1ae2ee0f43f26856404507c13f0a82a0ff}{BLACK}}\} \mbox{\hyperlink{struct_piece_a535979606efd6987674e055f22bf3e59}{color}};}
+\DoxyCodeLine{35     \mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} \mbox{\hyperlink{struct_piece_a1ec4eb693f262b94162e7007a4c7b77d}{type}};}
+\DoxyCodeLine{36     \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_piece_a2d620b634808fc62b3b862050a233882}{has\_moved}};}
+\DoxyCodeLine{37     \textcolor{keyword}{enum} \{\mbox{\hyperlink{struct_piece_a197a13f012938863aff3c43a0362d2a4a3a8d28a4e1f1e95514878df953a335a1}{ALIVE}}, \mbox{\hyperlink{struct_piece_a197a13f012938863aff3c43a0362d2a4adcc1213c4db295c87b49cd4256813255}{CAPTURED}}\} \mbox{\hyperlink{struct_piece_a3017924b24addc61fa54d2706f5aa2b8}{status}};}
+\DoxyCodeLine{38     }
+\DoxyCodeLine{39     \mbox{\hyperlink{struct_move}{Move}}* \mbox{\hyperlink{struct_piece_a0339c558da00f93cc1cf0d382532cf73}{moves}};}
+\DoxyCodeLine{40     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_piece_a3f830f64bae51a57eb798eeee7336ed6}{num\_moves}};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{struct_piece_a61cb00fb509aff894bda052189e6f389}{sprite}};}
+\DoxyCodeLine{43 \} \mbox{\hyperlink{struct_piece}{Piece}};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{54 \mbox{\hyperlink{struct_position}{Position}} (\mbox{\hyperlink{pieces_8h_a635528417a24944ef174b32fc5eeee8a}{create\_position}})(\textcolor{keywordtype}{int} boardIndex);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{66 \mbox{\hyperlink{struct_piece}{Piece}}* (\mbox{\hyperlink{pieces_8h_a11894ff655f41d4e464200fa57775ffb}{create\_piece}})(\mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} type, \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color, \mbox{\hyperlink{struct_position}{Position}} pos);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

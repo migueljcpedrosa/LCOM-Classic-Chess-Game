@@ -1,0 +1,12 @@
+<map id="rtc_read_register" name="rtc_read_register">
+<area shape="rect" id="node1" title="Reads a value from a specific RTC register." alt="" coords="1045,56,1164,83"/>
+<area shape="rect" id="node2" href="$rtc_8c.html#ab4200c12ca8fcf100c0e9f825e5e93c9" title="Checks if the RTC is currently updating." alt="" coords="848,5,997,32"/>
+<area shape="rect" id="node9" href="$rtc_8c.html#ad5b4bbd3e481eb459c63fddee3f7e2b1" title="Checks if the RTC is in binary mode." alt="" coords="652,107,787,133"/>
+<area shape="rect" id="node10" href="$rtc_8c.html#a603a03e790a750b23dd019c128317824" title="Updates a specific time unit in the RTC." alt="" coords="852,56,994,83"/>
+<area shape="rect" id="node3" href="$rtc_8c.html#a31b9d04a4fc98dadf67ccb9a682b926f" title="Updates the current time stored in the RTC." alt="" coords="639,56,800,83"/>
+<area shape="rect" id="node4" href="$rtc_8c.html#a5813ed4dd88a4d8fb69f773005922e15" title="Interrupt handler for the RTC." alt="" coords="342,56,395,83"/>
+<area shape="rect" id="node7" href="$rtc_8c.html#a71cdb1583d1f8cabbbadd632c10e6f99" title="Initializes the RTC system." alt="" coords="450,107,591,133"/>
+<area shape="rect" id="node5" href="$main_8c.html#a2e6c36e064d205d81eda4de2d9e94561" title=" " alt="" coords="162,81,286,108"/>
+<area shape="rect" id="node6" href="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,81,114,108"/>
+<area shape="rect" id="node8" href="$main_8c.html#a0b22669bd9e92d10c96045d9abd26b6b" title=" " alt="" coords="334,107,402,133"/>
+</map>

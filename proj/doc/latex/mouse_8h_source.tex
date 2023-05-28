@@ -1,0 +1,32 @@
+\hypertarget{mouse_8h_source}{}\doxysection{mouse.\+h}
+\label{mouse_8h_source}\index{drivers/mouse/mouse.h@{drivers/mouse/mouse.h}}
+\mbox{\hyperlink{mouse_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef \_MOUSE\_H\_}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define \_MOUSE\_H\_}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mouse_2i8042_8h}{i8042.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <lcom/lcf.h>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{19 int (\mbox{\hyperlink{mouse_8h_a20285aed4b3ef45812cd967532dd09db}{mouse\_subscribe\_int}})(uint8\_t* bit\_no);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{26 int (\mbox{\hyperlink{mouse_8h_a3ecf823d80520009ae5e0d76ae40a3c3}{mouse\_unsubscribe\_int}})();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{36 void (\mbox{\hyperlink{mouse_8h_a210374b50462acdedab00df64d5cea3c}{mouse\_ih}})();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{48 int (\mbox{\hyperlink{mouse_8h_ac3eeb38c1e623ff629657b1f91ce7586}{write\_command}})(uint8\_t cmd, uint8\_t* response, uint8\_t args[], uint32\_t arg\_n);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{55 int (\mbox{\hyperlink{mouse_8h_a213d5f0c93d25fe21ae6ee3ba7b50a15}{disable\_data\_reporting}})();}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{62 int (\mbox{\hyperlink{mouse_8h_abe20128c397b0e728b58316a8e1a6e14}{enable\_data\_reporting}})();}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{71 int (\mbox{\hyperlink{mouse_8h_aeed3ea5f7d5c6cce38b318b7e81284a5}{get\_response}})(uint8\_t* response);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{78 int (\mbox{\hyperlink{mouse_8h_a9f548277a462b7b504365f8c182fb8fc}{wait\_for\_input\_buffer}})();}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{87 int (\mbox{\hyperlink{mouse_8h_a21eff784bff74deb6f2c2c6660424d06}{write\_to\_mouse}})(uint8\_t cmd);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,42 @@
+\hypertarget{player_8h_source}{}\doxysection{player.\+h}
+\label{player_8h_source}\index{model/game/player.h@{model/game/player.h}}
+\mbox{\hyperlink{player_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef \_PLAYER\_H\_}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define \_PLAYER\_H\_}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{pieces_8h}{pieces.h}}"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{22 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{23     \mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccfae2d30a195cee6b2961cc2c23ea4b520b}{USER}},}
+\DoxyCodeLine{24     \mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccfa9c74caa56a3c05723eb1dbad44bc9bc3}{AI}}}
+\DoxyCodeLine{25 \} \mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{36 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_timer_a4766ea4a11046bda5db1d01ee77b85b2}{wait\_time}};}
+\DoxyCodeLine{39     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_timer_a7a0d70f498381f8a2439b02630687413}{start\_time}};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \} \mbox{\hyperlink{struct_timer}{Timer}};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{55 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{keywordtype}{char}* \mbox{\hyperlink{struct_player_a4af4a10433f33834b59d0c3793358a40}{name}};}
+\DoxyCodeLine{58     \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \mbox{\hyperlink{struct_player_aa7f0feeeb4363458125970c251fbf8ab}{color}};}
+\DoxyCodeLine{59     \mbox{\hyperlink{struct_piece}{Piece}}* pieces[16];}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_player_aeeb633192734c97d91a27c46e6c86da0}{time\_counter}};}
+\DoxyCodeLine{62     \mbox{\hyperlink{struct_timer}{Timer}} \mbox{\hyperlink{struct_player_ab6e1da9d63baa958c58d3621824855d4}{timer}};}
+\DoxyCodeLine{63     \mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}} \mbox{\hyperlink{struct_player_a06e4a3eec737ef284f7ae42a60c0967f}{type}};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \} \mbox{\hyperlink{struct_player}{Player}};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{78 \mbox{\hyperlink{struct_player}{Player}}* (\mbox{\hyperlink{player_8h_af04ee4e3df6bd1a05d6027557be99804}{create\_player}})(\textcolor{keywordtype}{char} name[], \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color, \mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}} type);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{87 void (\mbox{\hyperlink{player_8h_aa968cf4447e8c6c8b5068ac847e578fa}{destroy\_player}})(\mbox{\hyperlink{struct_player}{Player}}* player);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

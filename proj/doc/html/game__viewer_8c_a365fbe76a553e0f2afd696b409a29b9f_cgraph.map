@@ -1,0 +1,4 @@
+<map id="draw_board" name="draw_board">
+<area shape="rect" id="node1" title="Draws the board." alt="" coords="5,5,93,32"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#a31178cc71e7af0d6045707842517b225" title="Draws a rectangle in the buffer." alt="" coords="141,5,249,32"/>
+</map>

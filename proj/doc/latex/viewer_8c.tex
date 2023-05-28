@@ -1,0 +1,263 @@
+\hypertarget{viewer_8c}{}\doxysection{view/viewer.c File Reference}
+\label{viewer_8c}\index{view/viewer.c@{view/viewer.c}}
+{\ttfamily \#include \char`\"{}viewer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../model/xpm/xpm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/video\+\_\+card/gpu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../model/cursor/cursor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../model/game/game.\+h\char`\"{}}\newline
+Include dependency graph for viewer.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{viewer_8c_ae80435a9c94d201a75a53489c0252e60}{draw\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sprite, uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Function to draw a sprite at given coordinates. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{viewer_8c_a1ae023515579ad292db7b3886b0260fe}{render\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em Function to render the screen. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{viewer_8c_a1209cc537c04f860f7bf0301ad7a4987}{draw\+\_\+cursor}} ()
+\begin{DoxyCompactList}\small\item\em Function to draw a cursor on the screen. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{viewer_8c_ab9a69919edf28bcd5fc1e2759894b9f7}{erase\+\_\+cursor}} ()
+\begin{DoxyCompactList}\small\item\em Function to erase the cursor from the screen. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{viewer_8c_a16fcba3b0d3baba459213e36b51e6b35}{draw\+\_\+word}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sprite, uint16\+\_\+t x, uint16\+\_\+t y, char $\ast$word)
+\begin{DoxyCompactList}\small\item\em Function to draw a word on the screen at given coordinates. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{viewer_8c_abc72a7f7cb453f1ea1576a37dae1612f}{draw\+Date}} (\mbox{\hyperlink{structrtc__timestamp__t}{rtc\+\_\+timestamp\+\_\+t}} $\ast$timestamp)
+\begin{DoxyCompactList}\small\item\em Function to draw a date on the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{viewer_8c_aac3858a27a2cfdf6ba77d8ecda3f8667}{erase\+\_\+date}} ()
+\begin{DoxyCompactList}\small\item\em Function to erase a date from the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{viewer_8c_a1209cc537c04f860f7bf0301ad7a4987}\label{viewer_8c_a1209cc537c04f860f7bf0301ad7a4987}} 
+\index{viewer.c@{viewer.c}!draw\_cursor@{draw\_cursor}}
+\index{draw\_cursor@{draw\_cursor}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_cursor()}{draw\_cursor()}}
+{\footnotesize\ttfamily int() draw\+\_\+cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to draw a cursor on the screen. 
+
+This function draws the cursor at the current cursor position.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{viewer_8c_a1209cc537c04f860f7bf0301ad7a4987_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c_a1209cc537c04f860f7bf0301ad7a4987_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_ae80435a9c94d201a75a53489c0252e60}\label{viewer_8c_ae80435a9c94d201a75a53489c0252e60}} 
+\index{viewer.c@{viewer.c}!draw\_sprite@{draw\_sprite}}
+\index{draw\_sprite@{draw\_sprite}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_sprite()}{draw\_sprite()}}
+{\footnotesize\ttfamily int() draw\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sprite,  }\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+Function to draw a sprite at given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & The sprite to be drawn. \\
+\hline
+{\em x} & The x-\/coordinate at which the sprite should be drawn. \\
+\hline
+{\em y} & The y-\/coordinate at which the sprite should be drawn.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{viewer_8c_ae80435a9c94d201a75a53489c0252e60_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c_ae80435a9c94d201a75a53489c0252e60_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_a16fcba3b0d3baba459213e36b51e6b35}\label{viewer_8c_a16fcba3b0d3baba459213e36b51e6b35}} 
+\index{viewer.c@{viewer.c}!draw\_word@{draw\_word}}
+\index{draw\_word@{draw\_word}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{draw\_word()}{draw\_word()}}
+{\footnotesize\ttfamily int() draw\+\_\+word (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sprite,  }\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{char $\ast$}]{word }\end{DoxyParamCaption})}
+
+
+
+Function to draw a word on the screen at given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & The sprite representing the font to use. \\
+\hline
+{\em x} & The x-\/coordinate at which the word should be drawn. \\
+\hline
+{\em y} & The y-\/coordinate at which the word should be drawn. \\
+\hline
+{\em word} & The word to be drawn.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c_a16fcba3b0d3baba459213e36b51e6b35_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c_a16fcba3b0d3baba459213e36b51e6b35_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_abc72a7f7cb453f1ea1576a37dae1612f}\label{viewer_8c_abc72a7f7cb453f1ea1576a37dae1612f}} 
+\index{viewer.c@{viewer.c}!drawDate@{drawDate}}
+\index{drawDate@{drawDate}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{drawDate()}{drawDate()}}
+{\footnotesize\ttfamily int() draw\+Date (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrtc__timestamp__t}{rtc\+\_\+timestamp\+\_\+t}} $\ast$}]{timestamp }\end{DoxyParamCaption})}
+
+
+
+Function to draw a date on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timestamp} & The date and time to draw.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{viewer_8c_abc72a7f7cb453f1ea1576a37dae1612f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{viewer_8c_abc72a7f7cb453f1ea1576a37dae1612f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_ab9a69919edf28bcd5fc1e2759894b9f7}\label{viewer_8c_ab9a69919edf28bcd5fc1e2759894b9f7}} 
+\index{viewer.c@{viewer.c}!erase\_cursor@{erase\_cursor}}
+\index{erase\_cursor@{erase\_cursor}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{erase\_cursor()}{erase\_cursor()}}
+{\footnotesize\ttfamily int() erase\+\_\+cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to erase the cursor from the screen. 
+
+This function redraws a section of the screen to erase the cursor.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{viewer_8c_ab9a69919edf28bcd5fc1e2759894b9f7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c_ab9a69919edf28bcd5fc1e2759894b9f7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_aac3858a27a2cfdf6ba77d8ecda3f8667}\label{viewer_8c_aac3858a27a2cfdf6ba77d8ecda3f8667}} 
+\index{viewer.c@{viewer.c}!erase\_date@{erase\_date}}
+\index{erase\_date@{erase\_date}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{erase\_date()}{erase\_date()}}
+{\footnotesize\ttfamily int erase\+\_\+date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to erase a date from the screen. 
+
+This function redraws a section of the screen to erase the date.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{viewer_8c_aac3858a27a2cfdf6ba77d8ecda3f8667_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{viewer_8c_a1ae023515579ad292db7b3886b0260fe}\label{viewer_8c_a1ae023515579ad292db7b3886b0260fe}} 
+\index{viewer.c@{viewer.c}!render\_screen@{render\_screen}}
+\index{render\_screen@{render\_screen}!viewer.c@{viewer.c}}
+\doxysubsubsection{\texorpdfstring{render\_screen()}{render\_screen()}}
+{\footnotesize\ttfamily int() render\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to render the screen. 
+
+This function copies the buffer to the video memory to display the current screen.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{viewer_8c_a1ae023515579ad292db7b3886b0260fe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{viewer_8c_a1ae023515579ad292db7b3886b0260fe_icgraph}
+\end{center}
+\end{figure}

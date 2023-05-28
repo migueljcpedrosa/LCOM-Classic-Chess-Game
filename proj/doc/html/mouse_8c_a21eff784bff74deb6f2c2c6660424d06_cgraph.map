@@ -1,0 +1,5 @@
+<map id="write_to_mouse" name="write_to_mouse">
+<area shape="rect" id="node1" title="Writes a command byte to the mouse." alt="" coords="5,5,118,32"/>
+<area shape="rect" id="node2" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title="Reads a byte from the specified port." alt="" coords="352,5,442,32"/>
+<area shape="rect" id="node3" href="$mouse_8c.html#a9f548277a462b7b504365f8c182fb8fc" title="Waits until the input buffer is free to write to." alt="" coords="166,31,304,57"/>
+</map>

@@ -1,0 +1,50 @@
+\hypertarget{sprite_8h_source}{}\doxysection{sprite.\+h}
+\label{sprite_8h_source}\index{view/sprite.h@{view/sprite.h}}
+\mbox{\hyperlink{sprite_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef \_SPRITE\_H\_}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define \_SPRITE\_H\_}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}../drivers/video\_card/gpu.h"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{16 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{17   uint8\_t* \mbox{\hyperlink{struct_sprite_a69ea4ed1ecdf06b1f1cd8265367246cd}{addr}};}
+\DoxyCodeLine{18   xpm\_image\_t \mbox{\hyperlink{struct_sprite_a6f952b6bcbc1aaccaa2e42083f06889b}{img}};}
+\DoxyCodeLine{19 \} \mbox{\hyperlink{struct_sprite}{Sprite}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_a88dbe6298b7f00dbb5d695f1d4fc25c1}{black\_queen}};}
+\DoxyCodeLine{22 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_af91408dc1a71632b79027a15ca29cddd}{white\_queen}};}
+\DoxyCodeLine{23 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_a0b91e76784db990bc0676fa476fd7023}{black\_king}};}
+\DoxyCodeLine{24 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_a93bf3b2ebbf8ce7d6bc431a46fab2dc4}{white\_king}};}
+\DoxyCodeLine{25 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_af372b4f54e014a3558dd580861aacf41}{black\_rook}};}
+\DoxyCodeLine{26 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_aeaa9076dd1c285d65a45cb425a7aa741}{white\_rook}};}
+\DoxyCodeLine{27 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_a8ee57ce033918fd6aff2db11bf903d76}{black\_bishop}};}
+\DoxyCodeLine{28 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_affbbbe1d01c21f844b5da944697dced5}{white\_bishop}};}
+\DoxyCodeLine{29 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_a480b35dcdbd69cdc01e4c6ef22282947}{black\_knight}};}
+\DoxyCodeLine{30 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_a64ab23318bb36c96b5897aead828036d}{white\_knight}};}
+\DoxyCodeLine{31 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_a2bc0ae1ce343929119419964350df6b7}{black\_pawn}};}
+\DoxyCodeLine{32 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_ae44993170c4a4f844c35129fbf7715e9}{white\_pawn}};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_af03a383fdcfdf7501006a5c8d68be42b}{mouse}};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_aa7b1a2c071197abd1acda68c8cab9633}{numbers}};}
+\DoxyCodeLine{37 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_a4cf50ea75cb64d277c68a755ef3262eb}{numbers\_small}};}
+\DoxyCodeLine{38 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_a10cb5702d9b0fe7aab8aa05c63186ebd}{slash}};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_ac2cc4d13c5d963b6f87d983dc1d4a5e7}{alphabet}};}
+\DoxyCodeLine{41 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_a4f5e09524991b32c1962a7a0d297a4d4}{alphabet\_small}};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_ab4144d9018817e4da5d1a06f95674b8a}{exitButton}};}
+\DoxyCodeLine{44 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_a16a55717bea60e0a64d2e489a8736446}{playButton}};}
+\DoxyCodeLine{45 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_sprite}{Sprite}}* \mbox{\hyperlink{sprite_8h_ac4a4c583161d47b251be3c2f82c76359}{chessBackground}};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{54 int (\mbox{\hyperlink{sprite_8h_ad3fbb4c63e5b865523a7a5333b2dbe50}{load\_sprites}})();}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{63 void (\mbox{\hyperlink{sprite_8h_a4f202337f90040263c518c9fbc82d2f3}{destroy\_sprites}})(); }
+\DoxyCodeLine{64 }
+\DoxyCodeLine{76 int (\mbox{\hyperlink{sprite_8h_a8457d723b839122b6e0f67f1071b09b5}{load\_sprite}})(\mbox{\hyperlink{struct_sprite}{Sprite}}* sprite, xpm\_map\_t xpm);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

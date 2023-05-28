@@ -1,0 +1,8 @@
+<map id="leave_state" name="leave_state">
+<area shape="rect" id="node1" title="Function to clean up resources as the game leaves a state." alt="" coords="5,81,92,108"/>
+<area shape="rect" id="node2" href="$game_8c.html#abd7a5dc575bf590a0886f372aad1c99e" title="Destroys a game." alt="" coords="155,5,258,32"/>
+<area shape="rect" id="node4" href="$game__over_8c.html#a762a55a68d1f6a9ebfc4acd4dba63d7c" title="Destroys the game over state." alt="" coords="140,56,273,83"/>
+<area shape="rect" id="node5" href="$menu_8c.html#a031ace1fb525cf179ad6bf00dafac684" title="Destroys the initial menu." alt="" coords="155,107,258,133"/>
+<area shape="rect" id="node6" href="$name__input_8c.html#a1d81131e1a5b5ce0d6b67cb403bfa9f2" title="Destroys the player name menu and backs up the current name." alt="" coords="155,157,258,184"/>
+<area shape="rect" id="node3" href="$board_8c.html#a2bd9df095efd565768ac9528c02c7166" title="Destroys a board." alt="" coords="321,5,424,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="letter_input" name="letter_input">
+<area shape="rect" id="node1" title="Processes a keyboard scan code into a corresponding letter." alt="" coords="5,31,91,57"/>
+<area shape="rect" id="node2" href="$name__input_8c.html#ab6ee46bb34acb87ba1f843450c2321c1" title="Adds a letter to the current name." alt="" coords="146,5,224,32"/>
+<area shape="rect" id="node3" href="$name__input_8c.html#ac0d00dfb44c8f2ea572b36cff758f9fe" title="Deletes the last letter from the current name." alt="" coords="139,56,231,83"/>
+</map>

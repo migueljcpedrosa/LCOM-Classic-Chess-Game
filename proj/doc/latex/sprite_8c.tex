@@ -1,0 +1,298 @@
+\hypertarget{sprite_8c}{}\doxysection{view/sprite.c File Reference}
+\label{sprite_8c}\index{view/sprite.c@{view/sprite.c}}
+{\ttfamily \#include \char`\"{}sprite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../model/xpm/xpm.\+h\char`\"{}}\newline
+Include dependency graph for sprite.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sprite_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sprite_8c_a3d39d1edf4dd00233efcecf5a3f6507e}{load\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Function to load all sprites. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{sprite_8c_a4f202337f90040263c518c9fbc82d2f3}{destroy\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Function to load all sprites. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{sprite_8c_a7252128896b98c3188b0dd0952561fd0}{load\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$sprite, xpm\+\_\+map\+\_\+t xpm)
+\begin{DoxyCompactList}\small\item\em Function to load a sprite from an xpm file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static enum xpm\+\_\+image\+\_\+type \mbox{\hyperlink{sprite_8c_ac078c7ca8270d57acebe85378f6d85a4}{xpm\+\_\+img\+\_\+type}} = XPM\+\_\+8\+\_\+8\+\_\+8\+\_\+8
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_a88dbe6298b7f00dbb5d695f1d4fc25c1}{black\+\_\+queen}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_af91408dc1a71632b79027a15ca29cddd}{white\+\_\+queen}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_a0b91e76784db990bc0676fa476fd7023}{black\+\_\+king}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_a93bf3b2ebbf8ce7d6bc431a46fab2dc4}{white\+\_\+king}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_af372b4f54e014a3558dd580861aacf41}{black\+\_\+rook}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_aeaa9076dd1c285d65a45cb425a7aa741}{white\+\_\+rook}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_a8ee57ce033918fd6aff2db11bf903d76}{black\+\_\+bishop}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_affbbbe1d01c21f844b5da944697dced5}{white\+\_\+bishop}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_a480b35dcdbd69cdc01e4c6ef22282947}{black\+\_\+knight}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_a64ab23318bb36c96b5897aead828036d}{white\+\_\+knight}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_a2bc0ae1ce343929119419964350df6b7}{black\+\_\+pawn}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_ae44993170c4a4f844c35129fbf7715e9}{white\+\_\+pawn}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_af03a383fdcfdf7501006a5c8d68be42b}{mouse}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_aa7b1a2c071197abd1acda68c8cab9633}{numbers}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_a4cf50ea75cb64d277c68a755ef3262eb}{numbers\+\_\+small}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_a10cb5702d9b0fe7aab8aa05c63186ebd}{slash}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_ac2cc4d13c5d963b6f87d983dc1d4a5e7}{alphabet}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_a4f5e09524991b32c1962a7a0d297a4d4}{alphabet\+\_\+small}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_ab4144d9018817e4da5d1a06f95674b8a}{exit\+Button}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_a16a55717bea60e0a64d2e489a8736446}{play\+Button}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprite_8c_ac4a4c583161d47b251be3c2f82c76359}{chess\+Background}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sprite_8c_a4f202337f90040263c518c9fbc82d2f3}\label{sprite_8c_a4f202337f90040263c518c9fbc82d2f3}} 
+\index{sprite.c@{sprite.c}!destroy\_sprites@{destroy\_sprites}}
+\index{destroy\_sprites@{destroy\_sprites}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_sprites()}{destroy\_sprites()}}
+{\footnotesize\ttfamily void() destroy\+\_\+sprites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to load all sprites. 
+
+This function allocates memory for all the sprites and loads them from xpm files.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sprite_8c_a4f202337f90040263c518c9fbc82d2f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sprite_8c_a7252128896b98c3188b0dd0952561fd0}\label{sprite_8c_a7252128896b98c3188b0dd0952561fd0}} 
+\index{sprite.c@{sprite.c}!load\_sprite@{load\_sprite}}
+\index{load\_sprite@{load\_sprite}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{load\_sprite()}{load\_sprite()}}
+{\footnotesize\ttfamily int load\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$}]{sprite,  }\item[{xpm\+\_\+map\+\_\+t}]{xpm }\end{DoxyParamCaption})}
+
+
+
+Function to load a sprite from an xpm file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & A pointer to the sprite to be loaded. \\
+\hline
+{\em xpm} & The xpm file from which the sprite should be loaded.\\
+\hline
+\end{DoxyParams}
+This function allocates memory for a sprite, loads the sprite from the specified xpm file, and assigns its address and xpm\+\_\+image\+\_\+t structure to the sprite.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{sprite_8c_a7252128896b98c3188b0dd0952561fd0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sprite_8c_a7252128896b98c3188b0dd0952561fd0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sprite_8c_a3d39d1edf4dd00233efcecf5a3f6507e}\label{sprite_8c_a3d39d1edf4dd00233efcecf5a3f6507e}} 
+\index{sprite.c@{sprite.c}!load\_sprites@{load\_sprites}}
+\index{load\_sprites@{load\_sprites}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{load\_sprites()}{load\_sprites()}}
+{\footnotesize\ttfamily int load\+\_\+sprites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to load all sprites. 
+
+This function allocates memory for all the sprites and loads them from xpm files.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{sprite_8c_a3d39d1edf4dd00233efcecf5a3f6507e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sprite_8c_a3d39d1edf4dd00233efcecf5a3f6507e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sprite_8c_ac2cc4d13c5d963b6f87d983dc1d4a5e7}\label{sprite_8c_ac2cc4d13c5d963b6f87d983dc1d4a5e7}} 
+\index{sprite.c@{sprite.c}!alphabet@{alphabet}}
+\index{alphabet@{alphabet}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{alphabet}{alphabet}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ alphabet}
+
+\mbox{\Hypertarget{sprite_8c_a4f5e09524991b32c1962a7a0d297a4d4}\label{sprite_8c_a4f5e09524991b32c1962a7a0d297a4d4}} 
+\index{sprite.c@{sprite.c}!alphabet\_small@{alphabet\_small}}
+\index{alphabet\_small@{alphabet\_small}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{alphabet\_small}{alphabet\_small}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ alphabet\+\_\+small}
+
+\mbox{\Hypertarget{sprite_8c_a8ee57ce033918fd6aff2db11bf903d76}\label{sprite_8c_a8ee57ce033918fd6aff2db11bf903d76}} 
+\index{sprite.c@{sprite.c}!black\_bishop@{black\_bishop}}
+\index{black\_bishop@{black\_bishop}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{black\_bishop}{black\_bishop}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ black\+\_\+bishop}
+
+\mbox{\Hypertarget{sprite_8c_a0b91e76784db990bc0676fa476fd7023}\label{sprite_8c_a0b91e76784db990bc0676fa476fd7023}} 
+\index{sprite.c@{sprite.c}!black\_king@{black\_king}}
+\index{black\_king@{black\_king}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{black\_king}{black\_king}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ black\+\_\+king}
+
+\mbox{\Hypertarget{sprite_8c_a480b35dcdbd69cdc01e4c6ef22282947}\label{sprite_8c_a480b35dcdbd69cdc01e4c6ef22282947}} 
+\index{sprite.c@{sprite.c}!black\_knight@{black\_knight}}
+\index{black\_knight@{black\_knight}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{black\_knight}{black\_knight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ black\+\_\+knight}
+
+\mbox{\Hypertarget{sprite_8c_a2bc0ae1ce343929119419964350df6b7}\label{sprite_8c_a2bc0ae1ce343929119419964350df6b7}} 
+\index{sprite.c@{sprite.c}!black\_pawn@{black\_pawn}}
+\index{black\_pawn@{black\_pawn}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{black\_pawn}{black\_pawn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ black\+\_\+pawn}
+
+\mbox{\Hypertarget{sprite_8c_a88dbe6298b7f00dbb5d695f1d4fc25c1}\label{sprite_8c_a88dbe6298b7f00dbb5d695f1d4fc25c1}} 
+\index{sprite.c@{sprite.c}!black\_queen@{black\_queen}}
+\index{black\_queen@{black\_queen}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{black\_queen}{black\_queen}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ black\+\_\+queen}
+
+\mbox{\Hypertarget{sprite_8c_af372b4f54e014a3558dd580861aacf41}\label{sprite_8c_af372b4f54e014a3558dd580861aacf41}} 
+\index{sprite.c@{sprite.c}!black\_rook@{black\_rook}}
+\index{black\_rook@{black\_rook}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{black\_rook}{black\_rook}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ black\+\_\+rook}
+
+\mbox{\Hypertarget{sprite_8c_ac4a4c583161d47b251be3c2f82c76359}\label{sprite_8c_ac4a4c583161d47b251be3c2f82c76359}} 
+\index{sprite.c@{sprite.c}!chessBackground@{chessBackground}}
+\index{chessBackground@{chessBackground}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{chessBackground}{chessBackground}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ chess\+Background}
+
+\mbox{\Hypertarget{sprite_8c_ab4144d9018817e4da5d1a06f95674b8a}\label{sprite_8c_ab4144d9018817e4da5d1a06f95674b8a}} 
+\index{sprite.c@{sprite.c}!exitButton@{exitButton}}
+\index{exitButton@{exitButton}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{exitButton}{exitButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ exit\+Button}
+
+\mbox{\Hypertarget{sprite_8c_af03a383fdcfdf7501006a5c8d68be42b}\label{sprite_8c_af03a383fdcfdf7501006a5c8d68be42b}} 
+\index{sprite.c@{sprite.c}!mouse@{mouse}}
+\index{mouse@{mouse}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{mouse}{mouse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ mouse}
+
+\mbox{\Hypertarget{sprite_8c_aa7b1a2c071197abd1acda68c8cab9633}\label{sprite_8c_aa7b1a2c071197abd1acda68c8cab9633}} 
+\index{sprite.c@{sprite.c}!numbers@{numbers}}
+\index{numbers@{numbers}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{numbers}{numbers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ numbers}
+
+\mbox{\Hypertarget{sprite_8c_a4cf50ea75cb64d277c68a755ef3262eb}\label{sprite_8c_a4cf50ea75cb64d277c68a755ef3262eb}} 
+\index{sprite.c@{sprite.c}!numbers\_small@{numbers\_small}}
+\index{numbers\_small@{numbers\_small}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{numbers\_small}{numbers\_small}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ numbers\+\_\+small}
+
+\mbox{\Hypertarget{sprite_8c_a16a55717bea60e0a64d2e489a8736446}\label{sprite_8c_a16a55717bea60e0a64d2e489a8736446}} 
+\index{sprite.c@{sprite.c}!playButton@{playButton}}
+\index{playButton@{playButton}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{playButton}{playButton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ play\+Button}
+
+\mbox{\Hypertarget{sprite_8c_a10cb5702d9b0fe7aab8aa05c63186ebd}\label{sprite_8c_a10cb5702d9b0fe7aab8aa05c63186ebd}} 
+\index{sprite.c@{sprite.c}!slash@{slash}}
+\index{slash@{slash}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{slash}{slash}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ slash}
+
+\mbox{\Hypertarget{sprite_8c_affbbbe1d01c21f844b5da944697dced5}\label{sprite_8c_affbbbe1d01c21f844b5da944697dced5}} 
+\index{sprite.c@{sprite.c}!white\_bishop@{white\_bishop}}
+\index{white\_bishop@{white\_bishop}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{white\_bishop}{white\_bishop}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ white\+\_\+bishop}
+
+\mbox{\Hypertarget{sprite_8c_a93bf3b2ebbf8ce7d6bc431a46fab2dc4}\label{sprite_8c_a93bf3b2ebbf8ce7d6bc431a46fab2dc4}} 
+\index{sprite.c@{sprite.c}!white\_king@{white\_king}}
+\index{white\_king@{white\_king}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{white\_king}{white\_king}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ white\+\_\+king}
+
+\mbox{\Hypertarget{sprite_8c_a64ab23318bb36c96b5897aead828036d}\label{sprite_8c_a64ab23318bb36c96b5897aead828036d}} 
+\index{sprite.c@{sprite.c}!white\_knight@{white\_knight}}
+\index{white\_knight@{white\_knight}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{white\_knight}{white\_knight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ white\+\_\+knight}
+
+\mbox{\Hypertarget{sprite_8c_ae44993170c4a4f844c35129fbf7715e9}\label{sprite_8c_ae44993170c4a4f844c35129fbf7715e9}} 
+\index{sprite.c@{sprite.c}!white\_pawn@{white\_pawn}}
+\index{white\_pawn@{white\_pawn}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{white\_pawn}{white\_pawn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ white\+\_\+pawn}
+
+\mbox{\Hypertarget{sprite_8c_af91408dc1a71632b79027a15ca29cddd}\label{sprite_8c_af91408dc1a71632b79027a15ca29cddd}} 
+\index{sprite.c@{sprite.c}!white\_queen@{white\_queen}}
+\index{white\_queen@{white\_queen}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{white\_queen}{white\_queen}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ white\+\_\+queen}
+
+\mbox{\Hypertarget{sprite_8c_aeaa9076dd1c285d65a45cb425a7aa741}\label{sprite_8c_aeaa9076dd1c285d65a45cb425a7aa741}} 
+\index{sprite.c@{sprite.c}!white\_rook@{white\_rook}}
+\index{white\_rook@{white\_rook}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{white\_rook}{white\_rook}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_sprite}{Sprite}}$\ast$ white\+\_\+rook}
+
+\mbox{\Hypertarget{sprite_8c_ac078c7ca8270d57acebe85378f6d85a4}\label{sprite_8c_ac078c7ca8270d57acebe85378f6d85a4}} 
+\index{sprite.c@{sprite.c}!xpm\_img\_type@{xpm\_img\_type}}
+\index{xpm\_img\_type@{xpm\_img\_type}!sprite.c@{sprite.c}}
+\doxysubsubsection{\texorpdfstring{xpm\_img\_type}{xpm\_img\_type}}
+{\footnotesize\ttfamily enum xpm\+\_\+image\+\_\+type xpm\+\_\+img\+\_\+type = XPM\+\_\+8\+\_\+8\+\_\+8\+\_\+8\hspace{0.3cm}{\ttfamily [static]}}
+

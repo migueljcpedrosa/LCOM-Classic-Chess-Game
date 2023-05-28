@@ -1,0 +1,293 @@
+\hypertarget{game__controller_8h}{}\doxysection{controller/game\+\_\+controller.h File Reference}
+\label{game__controller_8h}\index{controller/game\_controller.h@{controller/game\_controller.h}}
+
+
+This file contains the definition of the game controller module.  
+
+
+{\ttfamily \#include \char`\"{}../model/cursor/cursor\+\_\+input.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../model/game/game.\+h\char`\"{}}\newline
+Include dependency graph for game\+\_\+controller.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__controller_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{game__controller_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool() \mbox{\hyperlink{game__controller_8h_afec8966be4edea897999b659cb2298fa}{check\+\_\+game\+\_\+over}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the game is over. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game__controller_8h_a66b4ecb473e9747824c06ff55dfcc0d1}{setup\+\_\+bot\+\_\+timer}} (\mbox{\hyperlink{struct_player}{Player}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Setup the bot waiting timer for it\textquotesingle{}s move. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game__controller_8h_ad0d056131b6a0f4bf89e8ef82b9c4142}{get\+\_\+all\+\_\+moves}} (\mbox{\hyperlink{struct_player}{Player}} $\ast$bot, \mbox{\hyperlink{struct_move}{Move}} $\ast$possible\+Moves, int $\ast$num\+\_\+moves)
+\begin{DoxyCompactList}\small\item\em Gets all the possible moves for the bot. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game__controller_8h_af1502eddab4bc0f656e006665bb65813}{handle\+\_\+bot\+\_\+play}} (\mbox{\hyperlink{struct_player}{Player}} $\ast$bot)
+\begin{DoxyCompactList}\small\item\em Handles move execution for the bot. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game__controller_8h_acce4237a2da25f7fa8533427e679628a}{game\+\_\+cursor}} (\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} $\ast$input)
+\begin{DoxyCompactList}\small\item\em Handles the cursor input. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game__controller_8h_a8e8fa9732d445b16752cb052248b4c77}{game\+\_\+timer}} ()
+\begin{DoxyCompactList}\small\item\em Handles the timer input. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{game__controller_8h_af7b40b27f9bffb881873f98c9690303f}{game\+\_\+kbd}} (uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_a06a3dd28ec493a423fea6ccd048d441a}{scan\+\_\+code}}\mbox{[}2\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em Handles the keyboard input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_piece}{Piece}} $\ast$ \mbox{\hyperlink{game__controller_8h_a09da077207c4c32abd079e452cacbc1d}{selected\+\_\+piece}}
+\begin{DoxyCompactList}\small\item\em Represents the currently selected piece. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of the game controller module. 
+
+This handles all inputs of the game. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game__controller_8h_afec8966be4edea897999b659cb2298fa}\label{game__controller_8h_afec8966be4edea897999b659cb2298fa}} 
+\index{game\_controller.h@{game\_controller.h}!check\_game\_over@{check\_game\_over}}
+\index{check\_game\_over@{check\_game\_over}!game\_controller.h@{game\_controller.h}}
+\doxysubsubsection{\texorpdfstring{check\_game\_over()}{check\_game\_over()}}
+{\footnotesize\ttfamily bool() check\+\_\+game\+\_\+over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the game is over. 
+
+This function checks after every move if a stalemate or checkmate has been reached.
+
+\begin{DoxyReturn}{Returns}
+Returns true if the game is over, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__controller_8h_afec8966be4edea897999b659cb2298fa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__controller_8h_afec8966be4edea897999b659cb2298fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__controller_8h_acce4237a2da25f7fa8533427e679628a}\label{game__controller_8h_acce4237a2da25f7fa8533427e679628a}} 
+\index{game\_controller.h@{game\_controller.h}!game\_cursor@{game\_cursor}}
+\index{game\_cursor@{game\_cursor}!game\_controller.h@{game\_controller.h}}
+\doxysubsubsection{\texorpdfstring{game\_cursor()}{game\_cursor()}}
+{\footnotesize\ttfamily void() game\+\_\+cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} $\ast$}]{input }\end{DoxyParamCaption})}
+
+
+
+Handles the cursor input. 
+
+This function handles the cursor input, by selecting a piece or moving it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & the cursor input. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__controller_8h_acce4237a2da25f7fa8533427e679628a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__controller_8h_acce4237a2da25f7fa8533427e679628a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__controller_8h_af7b40b27f9bffb881873f98c9690303f}\label{game__controller_8h_af7b40b27f9bffb881873f98c9690303f}} 
+\index{game\_controller.h@{game\_controller.h}!game\_kbd@{game\_kbd}}
+\index{game\_kbd@{game\_kbd}!game\_controller.h@{game\_controller.h}}
+\doxysubsubsection{\texorpdfstring{game\_kbd()}{game\_kbd()}}
+{\footnotesize\ttfamily void() game\+\_\+kbd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scan\+\_\+code\mbox{[}2\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Handles the keyboard input. 
+
+This function handles the keyboard input. It may be used to quit the game.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scan\+\_\+code} & the scan code of the key pressed. \\
+\hline
+{\em size} & the size of the scan code. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__controller_8h_af7b40b27f9bffb881873f98c9690303f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__controller_8h_af7b40b27f9bffb881873f98c9690303f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__controller_8h_a8e8fa9732d445b16752cb052248b4c77}\label{game__controller_8h_a8e8fa9732d445b16752cb052248b4c77}} 
+\index{game\_controller.h@{game\_controller.h}!game\_timer@{game\_timer}}
+\index{game\_timer@{game\_timer}!game\_controller.h@{game\_controller.h}}
+\doxysubsubsection{\texorpdfstring{game\_timer()}{game\_timer()}}
+{\footnotesize\ttfamily void() game\+\_\+timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the timer input. 
+
+This function updates the players timers and handles the bot move. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__controller_8h_a8e8fa9732d445b16752cb052248b4c77_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__controller_8h_a8e8fa9732d445b16752cb052248b4c77_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__controller_8h_ad0d056131b6a0f4bf89e8ef82b9c4142}\label{game__controller_8h_ad0d056131b6a0f4bf89e8ef82b9c4142}} 
+\index{game\_controller.h@{game\_controller.h}!get\_all\_moves@{get\_all\_moves}}
+\index{get\_all\_moves@{get\_all\_moves}!game\_controller.h@{game\_controller.h}}
+\doxysubsubsection{\texorpdfstring{get\_all\_moves()}{get\_all\_moves()}}
+{\footnotesize\ttfamily void() get\+\_\+all\+\_\+moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_player}{Player}} $\ast$}]{bot,  }\item[{\mbox{\hyperlink{struct_move}{Move}} $\ast$}]{possible\+Moves,  }\item[{int $\ast$}]{num\+\_\+moves }\end{DoxyParamCaption})}
+
+
+
+Gets all the possible moves for the bot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bot} & the bot player. \\
+\hline
+{\em possible\+Moves} & the array where the possible moves will be stored. \\
+\hline
+{\em num\+\_\+moves} & the number of possible moves. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__controller_8h_ad0d056131b6a0f4bf89e8ef82b9c4142_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__controller_8h_ad0d056131b6a0f4bf89e8ef82b9c4142_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__controller_8h_af1502eddab4bc0f656e006665bb65813}\label{game__controller_8h_af1502eddab4bc0f656e006665bb65813}} 
+\index{game\_controller.h@{game\_controller.h}!handle\_bot\_play@{handle\_bot\_play}}
+\index{handle\_bot\_play@{handle\_bot\_play}!game\_controller.h@{game\_controller.h}}
+\doxysubsubsection{\texorpdfstring{handle\_bot\_play()}{handle\_bot\_play()}}
+{\footnotesize\ttfamily void() handle\+\_\+bot\+\_\+play (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_player}{Player}} $\ast$}]{bot }\end{DoxyParamCaption})}
+
+
+
+Handles move execution for the bot. 
+
+It chooses a random move from the possible moves and executes it, after a random amount of time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bot} & the bot player. \\
+\hline
+{\em possible\+Moves} & the array where the possible moves will be stored. \\
+\hline
+{\em num\+\_\+moves} & the number of possible moves.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the best move for the bot. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__controller_8h_af1502eddab4bc0f656e006665bb65813_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__controller_8h_af1502eddab4bc0f656e006665bb65813_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game__controller_8h_a66b4ecb473e9747824c06ff55dfcc0d1}\label{game__controller_8h_a66b4ecb473e9747824c06ff55dfcc0d1}} 
+\index{game\_controller.h@{game\_controller.h}!setup\_bot\_timer@{setup\_bot\_timer}}
+\index{setup\_bot\_timer@{setup\_bot\_timer}!game\_controller.h@{game\_controller.h}}
+\doxysubsubsection{\texorpdfstring{setup\_bot\_timer()}{setup\_bot\_timer()}}
+{\footnotesize\ttfamily void() setup\+\_\+bot\+\_\+timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_player}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Setup the bot waiting timer for it\textquotesingle{}s move. 
+
+This function sets up the bot timer, so that it waits a random amount of time. Lower times have a higher chance of being generated.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & the bot player. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__controller_8h_a66b4ecb473e9747824c06ff55dfcc0d1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{game__controller_8h_a09da077207c4c32abd079e452cacbc1d}\label{game__controller_8h_a09da077207c4c32abd079e452cacbc1d}} 
+\index{game\_controller.h@{game\_controller.h}!selected\_piece@{selected\_piece}}
+\index{selected\_piece@{selected\_piece}!game\_controller.h@{game\_controller.h}}
+\doxysubsubsection{\texorpdfstring{selected\_piece}{selected\_piece}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_piece}{Piece}}$\ast$ selected\+\_\+piece\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Represents the currently selected piece. 
+

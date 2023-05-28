@@ -1,0 +1,13 @@
+<map id="game_over_screenshot" name="game_over_screenshot">
+<area shape="rect" id="node1" title="Takes a screenshot of the game over screen." alt="" coords="5,56,160,83"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#a7a2f89855e5cd27a774cd210d7f1ec2c" title="Cleans the screen." alt="" coords="247,5,345,32"/>
+<area shape="rect" id="node3" href="$gpu_8c.html#a86409f7d16ee31f736ba797968fcf5dc" title="Copies the current buffer content to the screenshot buffer." alt="" coords="208,56,384,83"/>
+<area shape="rect" id="node4" href="$game__over__viewer_8c.html#a4456a9677d030e52a3dbd8698a3943f8" title="Draws the complete game over screen." alt="" coords="237,107,355,133"/>
+<area shape="rect" id="node5" href="$game__over__viewer_8c.html#adc7a393e209c062d92157869d007fe3b" title="Draws the buttons on the game over screen." alt="" coords="432,56,599,83"/>
+<area shape="rect" id="node6" href="$viewer_8c.html#ae80435a9c94d201a75a53489c0252e60" title="Function to draw a sprite at given coordinates." alt="" coords="647,81,735,108"/>
+<area shape="rect" id="node8" href="$game__over__viewer_8c.html#a90abd4f24e84d63379ef6869189cdd2b" title="Draws the title of the game over screen." alt="" coords="443,157,588,184"/>
+<area shape="rect" id="node7" href="$gpu_8c.html#af5a1ad16f3790e99340bede93eb96372" title="Draws an XPM image on the screen." alt="" coords="800,81,880,108"/>
+<area shape="rect" id="node9" href="$viewer_8c.html#a16fcba3b0d3baba459213e36b51e6b35" title="Function to draw a word on the screen at given coordinates." alt="" coords="650,157,732,184"/>
+<area shape="rect" id="node10" href="$gpu_8c.html#a6d12f2e078c761f78261b8235d6410ac" title="Draws a word using XPM letters on the screen." alt="" coords="783,157,897,184"/>
+<area shape="rect" id="node11" href="$gpu_8c.html#a8d9a52951e31bda064a3c35846c96f28" title="Draws a letter from an XPM image on the screen." alt="" coords="945,157,1061,184"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="GameOver" name="GameOver">
+<area shape="rect" id="node1" title="Struct that represents the GameOver state." alt="" coords="5,203,88,229"/>
+<area shape="rect" id="node2" href="$struct_button.html" title="Struct representing a Button." alt="" coords="17,96,76,123"/>
+<area shape="rect" id="node3" href="$struct_sprite.html" title="Struct representing a sprite." alt="" coords="19,5,74,32"/>
+</map>

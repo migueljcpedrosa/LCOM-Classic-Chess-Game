@@ -1,0 +1,82 @@
+\hypertarget{name__viewer_8h}{}\doxysection{view/name\+\_\+viewer.h File Reference}
+\label{name__viewer_8h}\index{view/name\_viewer.h@{view/name\_viewer.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{name__viewer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{name__viewer_8h_a28aa8b2b3de56bc6533c7a54837b744b}{name\+\_\+refresh}} ()
+\begin{DoxyCompactList}\small\item\em Function to draw the name input view. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{name__viewer_8h_a4db90c398144c8697737ff3ddeb81d80}{name\+\_\+screenshot}} ()
+\begin{DoxyCompactList}\small\item\em Function to take a screenshot of the name input view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{name__viewer_8h_a28aa8b2b3de56bc6533c7a54837b744b}\label{name__viewer_8h_a28aa8b2b3de56bc6533c7a54837b744b}} 
+\index{name\_viewer.h@{name\_viewer.h}!name\_refresh@{name\_refresh}}
+\index{name\_refresh@{name\_refresh}!name\_viewer.h@{name\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{name\_refresh()}{name\_refresh()}}
+{\footnotesize\ttfamily int() name\+\_\+refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to draw the name input view. 
+
+This function erases the cursor, draws a screenshot to a buffer, then draws the entered word and the cursor again, and finally renders the screen.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name__viewer_8h_a28aa8b2b3de56bc6533c7a54837b744b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name__viewer_8h_a28aa8b2b3de56bc6533c7a54837b744b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{name__viewer_8h_a4db90c398144c8697737ff3ddeb81d80}\label{name__viewer_8h_a4db90c398144c8697737ff3ddeb81d80}} 
+\index{name\_viewer.h@{name\_viewer.h}!name\_screenshot@{name\_screenshot}}
+\index{name\_screenshot@{name\_screenshot}!name\_viewer.h@{name\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{name\_screenshot()}{name\_screenshot()}}
+{\footnotesize\ttfamily int() name\+\_\+screenshot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to take a screenshot of the name input view. 
+
+This function cleans the screen, draws the background and the words \char`\"{}\+PLAYER\char`\"{} and \char`\"{}\+NAME\char`\"{}, and then copies the buffer to a screenshot.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name__viewer_8h_a4db90c398144c8697737ff3ddeb81d80_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{name__viewer_8h_a4db90c398144c8697737ff3ddeb81d80_icgraph}
+\end{center}
+\end{figure}

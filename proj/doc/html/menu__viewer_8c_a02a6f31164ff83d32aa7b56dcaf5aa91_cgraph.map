@@ -1,0 +1,5 @@
+<map id="draw_date" name="draw_date">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,86,32"/>
+<area shape="rect" id="node2" href="$viewer_8c.html#abc72a7f7cb453f1ea1576a37dae1612f" title="Function to draw a date on the screen." alt="" coords="134,5,209,32"/>
+<area shape="rect" id="node3" href="$gpu_8c.html#ad946d9d4d766cdf8d58ebb088baad3b1" title="Draws a number using an XPM image on the screen." alt="" coords="257,5,355,32"/>
+</map>

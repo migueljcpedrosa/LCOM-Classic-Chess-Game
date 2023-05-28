@@ -1,0 +1,31 @@
+<map id="draw_xpm_word" name="draw_xpm_word">
+<area shape="rect" id="node1" title="Draws a word using XPM letters on the screen." alt="" coords="2028,239,2143,265"/>
+<area shape="rect" id="node2" href="$viewer_8c.html#a16fcba3b0d3baba459213e36b51e6b35" title="Function to draw a word on the screen at given coordinates." alt="" coords="1898,239,1980,265"/>
+<area shape="rect" id="node3" href="$game__over__viewer_8c.html#a90abd4f24e84d63379ef6869189cdd2b" title="Draws the title of the game over screen." alt="" coords="1705,213,1850,240"/>
+<area shape="rect" id="node25" href="$menu__viewer_8c.html#a9ebde04cad28d4f0beb9ed92abe7f744" title="Draws title on menu screen." alt="" coords="1739,264,1816,291"/>
+<area shape="rect" id="node28" href="$name__viewer_8c.html#a28aa8b2b3de56bc6533c7a54837b744b" title="Function to draw the name input view." alt="" coords="1183,404,1282,431"/>
+<area shape="rect" id="node29" href="$name__viewer_8c.html#a4db90c398144c8697737ff3ddeb81d80" title="Function to take a screenshot of the name input view." alt="" coords="1532,163,1657,189"/>
+<area shape="rect" id="node4" href="$game__over__viewer_8c.html#a4456a9677d030e52a3dbd8698a3943f8" title="Draws the complete game over screen." alt="" coords="1536,213,1653,240"/>
+<area shape="rect" id="node5" href="$game__over__viewer_8c.html#a9eb138c0be53868dec17e71fc44ee202" title="Takes a screenshot of the game over screen." alt="" coords="1330,213,1484,240"/>
+<area shape="rect" id="node6" href="$state_8c.html#a159c1631df227c138f5f83e818473f2d" title="Function to load resources as the game enters a state." alt="" coords="1192,201,1273,228"/>
+<area shape="rect" id="node7" href="$state_8c.html#a261eb6b07e23e328efe8d156005ec614" title="Function to initialize the state." alt="" coords="1060,63,1134,89"/>
+<area shape="rect" id="node11" href="$state_8c.html#af7ba017087161066faed01c8bbe8a0bf" title="Function to set the state." alt="" coords="1059,201,1135,228"/>
+<area shape="rect" id="node8" href="$main_8c.html#a0b22669bd9e92d10c96045d9abd26b6b" title=" " alt="" coords="368,19,436,45"/>
+<area shape="rect" id="node9" href="$main_8c.html#a2e6c36e064d205d81eda4de2d9e94561" title=" " alt="" coords="162,176,286,203"/>
+<area shape="rect" id="node10" href="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,176,114,203"/>
+<area shape="rect" id="node12" href="$game__controller_8c.html#afec8966be4edea897999b659cb2298fa" title="Checks if the game is over." alt="" coords="886,125,1011,152"/>
+<area shape="rect" id="node16" href="$game__controller_8c.html#a8e8fa9732d445b16752cb052248b4c77" title="Handles the timer input." alt="" coords="545,201,635,228"/>
+<area shape="rect" id="node18" href="$game__controller_8c.html#af7b40b27f9bffb881873f98c9690303f" title="Handles the keyboard input." alt="" coords="908,277,989,304"/>
+<area shape="rect" id="node20" href="$game__over__controller_8c.html#a65d75a74ef94faa5447cf1c303219a74" title="Handles cursor inputs within the game over context." alt="" coords="711,75,838,101"/>
+<area shape="rect" id="node21" href="$game__over__controller_8c.html#aa1664c556a312b180365ee008ead7495" title="Processes keyboard inputs within the game over context." alt="" coords="893,328,1004,355"/>
+<area shape="rect" id="node22" href="$menu__controller_8c.html#ac2dd24dd681a19ccab36ea90eba14d0e" title="Handles cursor inputs within the menu context." alt="" coords="726,24,823,51"/>
+<area shape="rect" id="node23" href="$menu__controller_8c.html#a890ca7f78416e4dbb66f273e7d1f64be" title="Processes keyboard inputs within the menu context." alt="" coords="908,379,989,405"/>
+<area shape="rect" id="node24" href="$name__controller_8c.html#a6d8c65f0903ec7b087ad65cf32e6add1" title="Processes keyboard inputs within the player name context." alt="" coords="887,227,1010,253"/>
+<area shape="rect" id="node13" href="$game__controller_8c.html#acce4237a2da25f7fa8533427e679628a" title="Handles the cursor input." alt="" coords="726,125,823,152"/>
+<area shape="rect" id="node15" href="$game__controller_8c.html#af1502eddab4bc0f656e006665bb65813" title="Handles move execution for the bot." alt="" coords="717,176,832,203"/>
+<area shape="rect" id="node14" href="$state_8c.html#a49fe2fcc4529f2c2d97146dd748c6738" title="Function to handle mouse input based on the current state." alt="" coords="517,93,663,120"/>
+<area shape="rect" id="node17" href="$state_8c.html#a9d5869e5c565b96193f5aca56adb5b78" title="Function to handle timer events based on the current state." alt="" coords="334,201,469,228"/>
+<area shape="rect" id="node19" href="$state_8c.html#a87eccb760b8181684900ee2ff431cc53" title="Function to handle keyboard input based on the current state." alt="" coords="711,328,838,355"/>
+<area shape="rect" id="node26" href="$menu__viewer_8c.html#a7d771989b41395d6d703f523c6fc22eb" title="Draws the complete menu." alt="" coords="1551,264,1638,291"/>
+<area shape="rect" id="node27" href="$menu__viewer_8c.html#ad2fac5dceefd149c428555406b1f6981" title="Takes a screenshot of the menu." alt="" coords="1345,264,1469,291"/>
+</map>

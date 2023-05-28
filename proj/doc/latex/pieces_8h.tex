@@ -1,0 +1,151 @@
+\hypertarget{pieces_8h}{}\doxysection{model/game/pieces.h File Reference}
+\label{pieces_8h}\index{model/game/pieces.h@{model/game/pieces.h}}
+
+
+This file contains the definition of the piece module.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../../view/sprite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}move.\+h\char`\"{}}\newline
+Include dependency graph for pieces.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{pieces_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pieces_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_piece}{Piece}}
+\begin{DoxyCompactList}\small\item\em Represents a chess piece. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_piece}{Piece}} \mbox{\hyperlink{pieces_8h_aa4af7edfda369a730cbb122096033fa6}{Piece}}
+\begin{DoxyCompactList}\small\item\em Represents a chess piece. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_position}{Position}}() \mbox{\hyperlink{pieces_8h_a635528417a24944ef174b32fc5eeee8a}{create\+\_\+position}} (int board\+Index)
+\begin{DoxyCompactList}\small\item\em Creates a position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_piece}{Piece}} $\ast$() \mbox{\hyperlink{pieces_8h_a11894ff655f41d4e464200fa57775ffb}{create\+\_\+piece}} (\mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} type, \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color, \mbox{\hyperlink{struct_position}{Position}} pos)
+\begin{DoxyCompactList}\small\item\em Creates a piece. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of the piece module. 
+
+This includes the definition of the \mbox{\hyperlink{struct_piece}{Piece}} struct, along with methods for them.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_piece}{Piece}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{pieces_8h_aa4af7edfda369a730cbb122096033fa6}\label{pieces_8h_aa4af7edfda369a730cbb122096033fa6}} 
+\index{pieces.h@{pieces.h}!Piece@{Piece}}
+\index{Piece@{Piece}!pieces.h@{pieces.h}}
+\doxysubsubsection{\texorpdfstring{Piece}{Piece}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_piece}{Piece}} \mbox{\hyperlink{struct_piece}{Piece}}}
+
+
+
+Represents a chess piece. 
+
+This struct represents a chess piece. It is composed of a position, a color, a type, a status and a sprite.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_position}{Position}} 
+
+\mbox{\hyperlink{struct_sprite}{Sprite}} 
+
+\mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} 
+
+\mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} 
+
+Status 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pieces_8h_a11894ff655f41d4e464200fa57775ffb}\label{pieces_8h_a11894ff655f41d4e464200fa57775ffb}} 
+\index{pieces.h@{pieces.h}!create\_piece@{create\_piece}}
+\index{create\_piece@{create\_piece}!pieces.h@{pieces.h}}
+\doxysubsubsection{\texorpdfstring{create\_piece()}{create\_piece()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_piece}{Piece}} $\ast$() create\+\_\+piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}}]{type,  }\item[{\mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color,  }\item[{\mbox{\hyperlink{struct_position}{Position}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+Creates a piece. 
+
+This function creates a piece with the given type, color and position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & the type of the piece. \\
+\hline
+{\em color} & the color of the piece. \\
+\hline
+{\em pos} & the position of the piece. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the created piece. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{pieces_8h_a11894ff655f41d4e464200fa57775ffb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pieces_8h_a11894ff655f41d4e464200fa57775ffb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pieces_8h_a635528417a24944ef174b32fc5eeee8a}\label{pieces_8h_a635528417a24944ef174b32fc5eeee8a}} 
+\index{pieces.h@{pieces.h}!create\_position@{create\_position}}
+\index{create\_position@{create\_position}!pieces.h@{pieces.h}}
+\doxysubsubsection{\texorpdfstring{create\_position()}{create\_position()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_position}{Position}}() create\+\_\+position (\begin{DoxyParamCaption}\item[{int}]{board\+Index }\end{DoxyParamCaption})}
+
+
+
+Creates a position. 
+
+This function creates a position with the given board index.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\+Index} & the index of the position in the board.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the created position. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pieces_8h_a635528417a24944ef174b32fc5eeee8a_icgraph}
+\end{center}
+\end{figure}

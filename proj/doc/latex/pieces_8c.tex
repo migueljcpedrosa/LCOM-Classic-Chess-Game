@@ -1,0 +1,124 @@
+\hypertarget{pieces_8c}{}\doxysection{model/game/pieces.c File Reference}
+\label{pieces_8c}\index{model/game/pieces.c@{model/game/pieces.c}}
+{\ttfamily \#include \char`\"{}pieces.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for pieces.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pieces_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_position}{Position}}() \mbox{\hyperlink{pieces_8c_a635528417a24944ef174b32fc5eeee8a}{create\+\_\+position}} (int board\+Index)
+\begin{DoxyCompactList}\small\item\em Creates a position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pieces_8c_a2a8d4acb782cd8f93b1d910f71b36be7}{get\+\_\+white\+\_\+piece\+\_\+sprite}} (\mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} type, \mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$$\ast$sprite)
+\item 
+void \mbox{\hyperlink{pieces_8c_a20b34bd310e4bdf9d248c6394c32dbed}{get\+\_\+black\+\_\+piece\+\_\+sprite}} (\mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} type, \mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$$\ast$sprite)
+\item 
+\mbox{\hyperlink{struct_piece}{Piece}} $\ast$() \mbox{\hyperlink{pieces_8c_a11894ff655f41d4e464200fa57775ffb}{create\+\_\+piece}} (\mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} type, \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color, \mbox{\hyperlink{struct_position}{Position}} pos)
+\begin{DoxyCompactList}\small\item\em Creates a piece. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pieces_8c_a11894ff655f41d4e464200fa57775ffb}\label{pieces_8c_a11894ff655f41d4e464200fa57775ffb}} 
+\index{pieces.c@{pieces.c}!create\_piece@{create\_piece}}
+\index{create\_piece@{create\_piece}!pieces.c@{pieces.c}}
+\doxysubsubsection{\texorpdfstring{create\_piece()}{create\_piece()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_piece}{Piece}} $\ast$() create\+\_\+piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}}]{type,  }\item[{\mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color,  }\item[{\mbox{\hyperlink{struct_position}{Position}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+Creates a piece. 
+
+This function creates a piece with the given type, color and position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & the type of the piece. \\
+\hline
+{\em color} & the color of the piece. \\
+\hline
+{\em pos} & the position of the piece. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the created piece. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{pieces_8c_a11894ff655f41d4e464200fa57775ffb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pieces_8c_a11894ff655f41d4e464200fa57775ffb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pieces_8c_a635528417a24944ef174b32fc5eeee8a}\label{pieces_8c_a635528417a24944ef174b32fc5eeee8a}} 
+\index{pieces.c@{pieces.c}!create\_position@{create\_position}}
+\index{create\_position@{create\_position}!pieces.c@{pieces.c}}
+\doxysubsubsection{\texorpdfstring{create\_position()}{create\_position()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_position}{Position}}() create\+\_\+position (\begin{DoxyParamCaption}\item[{int}]{board\+Index }\end{DoxyParamCaption})}
+
+
+
+Creates a position. 
+
+This function creates a position with the given board index.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\+Index} & the index of the position in the board.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the created position. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pieces_8c_a635528417a24944ef174b32fc5eeee8a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pieces_8c_a20b34bd310e4bdf9d248c6394c32dbed}\label{pieces_8c_a20b34bd310e4bdf9d248c6394c32dbed}} 
+\index{pieces.c@{pieces.c}!get\_black\_piece\_sprite@{get\_black\_piece\_sprite}}
+\index{get\_black\_piece\_sprite@{get\_black\_piece\_sprite}!pieces.c@{pieces.c}}
+\doxysubsubsection{\texorpdfstring{get\_black\_piece\_sprite()}{get\_black\_piece\_sprite()}}
+{\footnotesize\ttfamily void get\+\_\+black\+\_\+piece\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}}]{type,  }\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$$\ast$}]{sprite }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pieces_8c_a20b34bd310e4bdf9d248c6394c32dbed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pieces_8c_a2a8d4acb782cd8f93b1d910f71b36be7}\label{pieces_8c_a2a8d4acb782cd8f93b1d910f71b36be7}} 
+\index{pieces.c@{pieces.c}!get\_white\_piece\_sprite@{get\_white\_piece\_sprite}}
+\index{get\_white\_piece\_sprite@{get\_white\_piece\_sprite}!pieces.c@{pieces.c}}
+\doxysubsubsection{\texorpdfstring{get\_white\_piece\_sprite()}{get\_white\_piece\_sprite()}}
+{\footnotesize\ttfamily void get\+\_\+white\+\_\+piece\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game__util_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}}]{type,  }\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} $\ast$$\ast$}]{sprite }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pieces_8c_a2a8d4acb782cd8f93b1d910f71b36be7_icgraph}
+\end{center}
+\end{figure}

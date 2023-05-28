@@ -1,0 +1,52 @@
+<map id="state_timer_handler" name="state_timer_handler">
+<area shape="rect" id="node1" title="Function to handle timer events based on the current state." alt="" coords="5,208,141,235"/>
+<area shape="rect" id="node2" href="$game__over__viewer_8c.html#a0d680b80ae3f71039226a635be23aee4" title="Refreshes the game over screen." alt="" coords="189,157,318,184"/>
+<area shape="rect" id="node10" href="$game__viewer_8c.html#af3bb5cb0b7e5f7f3de6175ea0b412f63" title="Refreshes the game screen." alt="" coords="204,259,303,285"/>
+<area shape="rect" id="node15" href="$game__controller_8c.html#a8e8fa9732d445b16752cb052248b4c77" title="Handles the timer input." alt="" coords="209,683,298,709"/>
+<area shape="rect" id="node47" href="$menu__viewer_8c.html#a38de34a6ac214cbd9ccab20969463f7a" title="Refreshes the menu screen." alt="" coords="204,208,303,235"/>
+<area shape="rect" id="node48" href="$name__viewer_8c.html#a28aa8b2b3de56bc6533c7a54837b744b" title="Function to draw the name input view." alt="" coords="204,107,303,133"/>
+<area shape="rect" id="node3" href="$viewer_8c.html#a1209cc537c04f860f7bf0301ad7a4987" title="Function to draw a cursor on the screen." alt="" coords="385,208,476,235"/>
+<area shape="rect" id="node6" href="$viewer_8c.html#ab9a69919edf28bcd5fc1e2759894b9f7" title="Function to erase the cursor from the screen." alt="" coords="382,157,478,184"/>
+<area shape="rect" id="node8" href="$viewer_8c.html#a1ae023515579ad292db7b3886b0260fe" title="Function to render the screen." alt="" coords="379,107,482,133"/>
+<area shape="rect" id="node4" href="$viewer_8c.html#ae80435a9c94d201a75a53489c0252e60" title="Function to draw a sprite at given coordinates." alt="" coords="587,301,675,328"/>
+<area shape="rect" id="node5" href="$gpu_8c.html#af5a1ad16f3790e99340bede93eb96372" title="Draws an XPM image on the screen." alt="" coords="792,301,872,328"/>
+<area shape="rect" id="node7" href="$gpu_8c.html#a6901dcf3355f24bf3014ac42d5eaeb0a" title="Draws the screenshot content into the buffer, using given coordinates and size." alt="" coords="562,183,700,225"/>
+<area shape="rect" id="node9" href="$gpu_8c.html#a6fdef7fe34a010689884865dda4f29b8" title="Copies the buffer content to the video memory." alt="" coords="542,107,720,133"/>
+<area shape="rect" id="node11" href="$game__viewer_8c.html#a205427da946b10d5f0ce6ab785e79149" title="Draws both players timers." alt="" coords="385,411,476,437"/>
+<area shape="rect" id="node14" href="$game__viewer_8c.html#aaa6c37d05ab5b0c22fe04fc440b52566" title="Erases a timer." alt="" coords="382,309,478,336"/>
+<area shape="rect" id="node12" href="$game__viewer_8c.html#aef0783e8665e16aa71a601bc4d95a6a5" title="Draws a timer." alt="" coords="589,404,673,431"/>
+<area shape="rect" id="node13" href="$gpu_8c.html#ad946d9d4d766cdf8d58ebb088baad3b1" title="Draws a number using an XPM image on the screen." alt="" coords="783,379,881,405"/>
+<area shape="rect" id="node16" href="$game_8c.html#a803b4640fcae2e518e2c46f81ba01d6b" title="Returns the current player." alt="" coords="366,835,494,861"/>
+<area shape="rect" id="node17" href="$game_8c.html#a5f7f768a3bc9bff2e01189c05e6834b8" title="Returns the waiting player." alt="" coords="768,429,896,456"/>
+<area shape="rect" id="node18" href="$game__controller_8c.html#af1502eddab4bc0f656e006665bb65813" title="Handles move execution for the bot." alt="" coords="373,683,488,709"/>
+<area shape="rect" id="node22" href="$state_8c.html#af7ba017087161066faed01c8bbe8a0bf" title="Function to set the state." alt="" coords="794,784,870,811"/>
+<area shape="rect" id="node19" href="$game__controller_8c.html#afec8966be4edea897999b659cb2298fa" title="Checks if the game is over." alt="" coords="568,531,694,557"/>
+<area shape="rect" id="node33" href="$game__viewer_8c.html#a1dcc98c6c718be26d4d237d9af736cb4" title="Sets up the screenshot for the game." alt="" coords="1102,1100,1227,1127"/>
+<area shape="rect" id="node38" href="$game_8c.html#ac4a0de72a2b303612e6d743cc7073f09" title="Executes a move within the given game." alt="" coords="944,607,1048,633"/>
+<area shape="rect" id="node43" href="$game__controller_8c.html#ad0d056131b6a0f4bf89e8ef82b9c4142" title="Gets all the possible moves for the bot." alt="" coords="579,632,683,659"/>
+<area shape="rect" id="node46" href="$game_8c.html#af5b2aa219d02752bff2a43f472bd0045" title="Switches the turn of the game." alt="" coords="587,733,675,760"/>
+<area shape="rect" id="node20" href="$game_8c.html#a0ffdc13a81e9dfabe4ed6c2b2e83e8d6" title="Checks if the current player is in check mate." alt="" coords="777,531,887,557"/>
+<area shape="rect" id="node21" href="$game_8c.html#a7beff665eadc96e3c79becadc098ebd5" title="Checks if the current player is in stale mate." alt="" coords="781,480,883,507"/>
+<area shape="rect" id="node23" href="$state_8c.html#a9df078faf57977ac2915303f14fbb675" title="Function to clean up resources as the game leaves a state." alt="" coords="953,784,1039,811"/>
+<area shape="rect" id="node28" href="$state_8c.html#a159c1631df227c138f5f83e818473f2d" title="Function to load resources as the game enters a state." alt="" coords="956,973,1037,1000"/>
+<area shape="rect" id="node24" href="$game_8c.html#abd7a5dc575bf590a0886f372aad1c99e" title="Destroys a game." alt="" coords="1113,695,1216,721"/>
+<area shape="rect" id="node25" href="$game__over_8c.html#a762a55a68d1f6a9ebfc4acd4dba63d7c" title="Destroys the game over state." alt="" coords="1098,745,1231,772"/>
+<area shape="rect" id="node26" href="$menu_8c.html#a031ace1fb525cf179ad6bf00dafac684" title="Destroys the initial menu." alt="" coords="1113,796,1216,823"/>
+<area shape="rect" id="node27" href="$name__input_8c.html#a1d81131e1a5b5ce0d6b67cb403bfa9f2" title="Destroys the player name menu and backs up the current name." alt="" coords="1113,847,1216,873"/>
+<area shape="rect" id="node29" href="$game_8c.html#a158fca42a7ca505cec86fd46144c741c" title="Initializes a game." alt="" coords="1116,948,1213,975"/>
+<area shape="rect" id="node30" href="$game__over_8c.html#a85495a0de79bcf3250b26296366bd99c" title="Creates a new game over state." alt="" coords="1101,999,1228,1025"/>
+<area shape="rect" id="node31" href="$menu_8c.html#a90c7936066ecc402268fe2959dcaf322" title="Creates the initial menu." alt="" coords="1116,1049,1213,1076"/>
+<area shape="rect" id="node32" href="$name__input_8c.html#aa8cd2a94e55172787bc48d74a23a0fd5" title="Creates the player name menu." alt="" coords="1116,897,1213,924"/>
+<area shape="rect" id="node34" href="$gpu_8c.html#a7a2f89855e5cd27a774cd210d7f1ec2c" title="Cleans the screen." alt="" coords="1320,1024,1418,1051"/>
+<area shape="rect" id="node35" href="$gpu_8c.html#a86409f7d16ee31f736ba797968fcf5dc" title="Copies the current buffer content to the screenshot buffer." alt="" coords="1281,1075,1457,1101"/>
+<area shape="rect" id="node36" href="$game__viewer_8c.html#a365fbe76a553e0f2afd696b409a29b9f" title="Draws the board." alt="" coords="1325,1125,1413,1152"/>
+<area shape="rect" id="node37" href="$game__viewer_8c.html#a24229272a61f2feaedf3241d7a150684" title="Draws all the pieces." alt="" coords="1322,1176,1416,1203"/>
+<area shape="rect" id="node39" href="$game_8c.html#ae94ec57ec9ca8a04c4af6f49e75104cd" title="Executes a capture move." alt="" coords="1106,644,1223,671"/>
+<area shape="rect" id="node40" href="$game_8c.html#a4cf5771e6bd973cc292351e00165a041" title="Executes a castle move." alt="" coords="1110,492,1219,519"/>
+<area shape="rect" id="node41" href="$game_8c.html#a6c5e3fe6772104f293989db3f1e165e7" title="Executes an en passant move." alt="" coords="1096,543,1233,569"/>
+<area shape="rect" id="node42" href="$game_8c.html#a37a26b57f8d6d9ea0e3e7090b803154b" title="Executes a normal move." alt="" coords="1108,593,1221,620"/>
+<area shape="rect" id="node44" href="$game_8c.html#a03f13b860db83a4144b5ac8630ee7cbb" title="Filters out all the invalid moves of the given piece." alt="" coords="791,632,873,659"/>
+<area shape="rect" id="node45" href="$game_8c.html#a3a3a9eb872c4ea58396f0fdaff7a624b" title="Sets the moves of the given piece." alt="" coords="794,581,870,608"/>
+<area shape="rect" id="node49" href="$viewer_8c.html#a16fcba3b0d3baba459213e36b51e6b35" title="Function to draw a word on the screen at given coordinates." alt="" coords="389,5,471,32"/>
+<area shape="rect" id="node50" href="$gpu_8c.html#a6d12f2e078c761f78261b8235d6410ac" title="Draws a word using XPM letters on the screen." alt="" coords="574,5,688,32"/>
+</map>

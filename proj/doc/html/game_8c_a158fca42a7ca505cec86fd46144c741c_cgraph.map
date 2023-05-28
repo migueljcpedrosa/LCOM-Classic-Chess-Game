@@ -1,0 +1,11 @@
+<map id="create_game" name="create_game">
+<area shape="rect" id="node1" title="Initializes a game." alt="" coords="5,81,102,108"/>
+<area shape="rect" id="node2" href="$board_8c.html#a203276d2183c9776b2e3d2f559670549" title="Initializes a board and it&#39;s pieces." alt="" coords="151,56,248,83"/>
+<area shape="rect" id="node9" href="$player_8c.html#af04ee4e3df6bd1a05d6027557be99804" title="Creates a player." alt="" coords="150,107,249,133"/>
+<area shape="rect" id="node3" href="$board_8c.html#ac4ab96e5708392cd9eb994a13d09f2bd" title="Sets the black pieces in their initial positions." alt="" coords="297,31,419,57"/>
+<area shape="rect" id="node8" href="$board_8c.html#a61057d088a89d9429807817f605b8421" title="Sets the white pieces in their initial positions." alt="" coords="298,81,419,108"/>
+<area shape="rect" id="node4" href="$pieces_8c.html#a11894ff655f41d4e464200fa57775ffb" title="Creates a piece." alt="" coords="474,31,570,57"/>
+<area shape="rect" id="node7" href="$pieces_8c.html#a635528417a24944ef174b32fc5eeee8a" title="Creates a position." alt="" coords="467,81,577,108"/>
+<area shape="rect" id="node5" href="$pieces_8c.html#a20b34bd310e4bdf9d248c6394c32dbed" title=" " alt="" coords="625,5,779,32"/>
+<area shape="rect" id="node6" href="$pieces_8c.html#a2a8d4acb782cd8f93b1d910f71b36be7" title=" " alt="" coords="625,56,779,83"/>
+</map>

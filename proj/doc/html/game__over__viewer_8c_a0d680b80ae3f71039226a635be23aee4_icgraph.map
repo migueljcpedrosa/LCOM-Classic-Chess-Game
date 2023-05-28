@@ -1,0 +1,6 @@
+<map id="game_over_refresh" name="game_over_refresh">
+<area shape="rect" id="node1" title="Refreshes the game over screen." alt="" coords="517,5,647,32"/>
+<area shape="rect" id="node2" href="$state_8c.html#a9d5869e5c565b96193f5aca56adb5b78" title="Function to handle timer events based on the current state." alt="" coords="334,5,469,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a2e6c36e064d205d81eda4de2d9e94561" title=" " alt="" coords="162,5,286,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,5,114,32"/>
+</map>

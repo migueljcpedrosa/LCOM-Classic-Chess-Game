@@ -1,0 +1,52 @@
+<map id="initialize" name="initialize">
+<area shape="rect" id="node1" title=" " alt="" coords="5,484,74,511"/>
+<area shape="rect" id="node2" href="$cursor_8c.html#a5930081ff3acc98b8a64464415ac7499" title="Creates a new cursor." alt="" coords="152,168,252,195"/>
+<area shape="rect" id="node3" href="$mouse_8c.html#abe20128c397b0e728b58316a8e1a6e14" title="Enables the data reporting from the mouse." alt="" coords="128,219,276,245"/>
+<area shape="rect" id="node9" href="$gpu_8c.html#a3b95976f1c1f2460aca11c5c81d94342" title="Gets the video mode information." alt="" coords="136,383,268,409"/>
+<area shape="rect" id="node10" href="$state_8c.html#a261eb6b07e23e328efe8d156005ec614" title="Function to initialize the state." alt="" coords="165,433,239,460"/>
+<area shape="rect" id="node31" href="$keyboard_8c.html#a178b1db0b319dccad2840cc3fd273132" title="Subscribes to keyboard interrupts with policies IRQ_REENABLE and IRQ_EXCLUSIVE." alt="" coords="123,484,281,511"/>
+<area shape="rect" id="node32" href="$sprite_8c.html#a3d39d1edf4dd00233efcecf5a3f6507e" title="Function to load all sprites." alt="" coords="156,535,248,561"/>
+<area shape="rect" id="node35" href="$gpu_8c.html#a0dc066c9e0ab100c5de2dbc6a81eee34" title="Maps VBE mode information into memory." alt="" coords="165,585,239,612"/>
+<area shape="rect" id="node36" href="$mouse_8c.html#a20285aed4b3ef45812cd967532dd09db" title="Subscribes to mouse interrupts with policies IRQ_EXCLUSIVE and IRQ_REENABLE." alt="" coords="130,636,274,663"/>
+<area shape="rect" id="node37" href="$rtc_8c.html#a71cdb1583d1f8cabbbadd632c10e6f99" title="Initializes the RTC system." alt="" coords="132,269,272,296"/>
+<area shape="rect" id="node44" href="$rtc_8c.html#a0420f18e3d3ce594093271df3b1e2af0" title="Subscribes RTC interrupts." alt="" coords="122,687,282,713"/>
+<area shape="rect" id="node45" href="$gpu_8c.html#ada3e20ea63a4f7e572c329f56f8dda44" title="Sets the video display mode." alt="" coords="163,737,241,764"/>
+<area shape="rect" id="node46" href="$timer_8c.html#af2c04fa8e97ffa748fd3f612886a92a7" title="Sets the operating frequency of a timer." alt="" coords="133,332,271,359"/>
+<area shape="rect" id="node50" href="$timer_8c.html#ac57a7e1140a7e00ad95ac5488d2a671b" title="Subscribes to timer interrupts." alt="" coords="135,788,269,815"/>
+<area shape="rect" id="node4" href="$mouse_8c.html#ac3eeb38c1e623ff629657b1f91ce7586" title="Writes a command with optional arguments to the mouse, and optionally reads a response." alt="" coords="355,88,467,115"/>
+<area shape="rect" id="node5" href="$mouse_8c.html#aeed3ea5f7d5c6cce38b318b7e81284a5" title="Waits until a response is ready to be read from the output buffer." alt="" coords="780,5,880,32"/>
+<area shape="rect" id="node7" href="$mouse_8c.html#a21eff784bff74deb6f2c2c6660424d06" title="Writes a command byte to the mouse." alt="" coords="560,88,673,115"/>
+<area shape="rect" id="node6" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title="Reads a byte from the specified port." alt="" coords="982,107,1072,133"/>
+<area shape="rect" id="node8" href="$mouse_8c.html#a9f548277a462b7b504365f8c182fb8fc" title="Waits until the input buffer is free to write to." alt="" coords="761,56,899,83"/>
+<area shape="rect" id="node11" href="$state_8c.html#a159c1631df227c138f5f83e818473f2d" title="Function to load resources as the game enters a state." alt="" coords="370,548,451,575"/>
+<area shape="rect" id="node12" href="$game_8c.html#a158fca42a7ca505cec86fd46144c741c" title="Initializes a game." alt="" coords="568,649,665,676"/>
+<area shape="rect" id="node16" href="$game__over_8c.html#a85495a0de79bcf3250b26296366bd99c" title="Creates a new game over state." alt="" coords="553,700,680,727"/>
+<area shape="rect" id="node17" href="$menu_8c.html#a90c7936066ecc402268fe2959dcaf322" title="Creates the initial menu." alt="" coords="568,751,665,777"/>
+<area shape="rect" id="node18" href="$name__input_8c.html#aa8cd2a94e55172787bc48d74a23a0fd5" title="Creates the player name menu." alt="" coords="568,396,665,423"/>
+<area shape="rect" id="node19" href="$game__over__viewer_8c.html#a9eb138c0be53868dec17e71fc44ee202" title="Takes a screenshot of the game over screen." alt="" coords="539,497,694,524"/>
+<area shape="rect" id="node24" href="$game__viewer_8c.html#a1dcc98c6c718be26d4d237d9af736cb4" title="Sets up the screenshot for the game." alt="" coords="554,599,679,625"/>
+<area shape="rect" id="node27" href="$menu__viewer_8c.html#ad2fac5dceefd149c428555406b1f6981" title="Takes a screenshot of the menu." alt="" coords="554,548,679,575"/>
+<area shape="rect" id="node29" href="$name__viewer_8c.html#a4db90c398144c8697737ff3ddeb81d80" title="Function to take a screenshot of the name input view." alt="" coords="554,447,679,473"/>
+<area shape="rect" id="node13" href="$board_8c.html#a203276d2183c9776b2e3d2f559670549" title="Initializes a board and it&#39;s pieces." alt="" coords="782,751,878,777"/>
+<area shape="rect" id="node15" href="$player_8c.html#af04ee4e3df6bd1a05d6027557be99804" title="Creates a player." alt="" coords="780,801,880,828"/>
+<area shape="rect" id="node14" href="$board_8c.html#ac4ab96e5708392cd9eb994a13d09f2bd" title="Sets the black pieces in their initial positions." alt="" coords="966,751,1088,777"/>
+<area shape="rect" id="node20" href="$gpu_8c.html#a7a2f89855e5cd27a774cd210d7f1ec2c" title="Cleans the screen." alt="" coords="781,497,879,524"/>
+<area shape="rect" id="node21" href="$gpu_8c.html#a86409f7d16ee31f736ba797968fcf5dc" title="Copies the current buffer content to the screenshot buffer." alt="" coords="742,548,918,575"/>
+<area shape="rect" id="node22" href="$game__over__viewer_8c.html#a4456a9677d030e52a3dbd8698a3943f8" title="Draws the complete game over screen." alt="" coords="771,447,889,473"/>
+<area shape="rect" id="node23" href="$viewer_8c.html#ae80435a9c94d201a75a53489c0252e60" title="Function to draw a sprite at given coordinates." alt="" coords="984,447,1071,473"/>
+<area shape="rect" id="node25" href="$game__viewer_8c.html#a365fbe76a553e0f2afd696b409a29b9f" title="Draws the board." alt="" coords="786,649,874,676"/>
+<area shape="rect" id="node26" href="$game__viewer_8c.html#a24229272a61f2feaedf3241d7a150684" title="Draws all the pieces." alt="" coords="783,700,877,727"/>
+<area shape="rect" id="node28" href="$menu__viewer_8c.html#a7d771989b41395d6d703f523c6fc22eb" title="Draws the complete menu." alt="" coords="786,599,874,625"/>
+<area shape="rect" id="node30" href="$viewer_8c.html#a16fcba3b0d3baba459213e36b51e6b35" title="Function to draw a word on the screen at given coordinates." alt="" coords="789,345,871,372"/>
+<area shape="rect" id="node33" href="$sprite_8c.html#a7252128896b98c3188b0dd0952561fd0" title="Function to load a sprite from an xpm file." alt="" coords="369,700,453,727"/>
+<area shape="rect" id="node34" href="$gpu_8c.html#ac05b4b406bf9a2749435ef6a1d5a9969" title="Loads an XPM image." alt="" coords="578,801,655,828"/>
+<area shape="rect" id="node38" href="$rtc_8c.html#ad5b4bbd3e481eb459c63fddee3f7e2b1" title="Checks if the RTC is in binary mode." alt="" coords="344,244,478,271"/>
+<area shape="rect" id="node40" href="$rtc_8c.html#a31b9d04a4fc98dadf67ccb9a682b926f" title="Updates the current time stored in the RTC." alt="" coords="330,193,491,220"/>
+<area shape="rect" id="node39" href="$rtc_8c.html#adad56ed559d74b535482c751a0f1cd8f" title="Reads a value from a specific RTC register." alt="" coords="771,224,889,251"/>
+<area shape="rect" id="node41" href="$rtc_8c.html#ab4200c12ca8fcf100c0e9f825e5e93c9" title="Checks if the RTC is currently updating." alt="" coords="542,193,691,220"/>
+<area shape="rect" id="node42" href="$rtc_8c.html#a603a03e790a750b23dd019c128317824" title="Updates a specific time unit in the RTC." alt="" coords="545,143,688,169"/>
+<area shape="rect" id="node43" href="$rtc_8c.html#a43b18290dcd8121141c99d2e3c78b43a" title="Converts a BCD number to binary." alt="" coords="765,157,895,200"/>
+<area shape="rect" id="node47" href="$timer_8c.html#a0732b22a1c1cd7e587ea836f8fc4b10f" title="Reads a timer&#39;s configuration." alt="" coords="358,396,464,423"/>
+<area shape="rect" id="node48" href="$utils_8c.html#a81621440b3d65680979425e39aa8c789" title="Extracts the least significant byte from a word." alt="" coords="363,345,458,372"/>
+<area shape="rect" id="node49" href="$utils_8c.html#a6a880076cd2ec468834438b6e0c58836" title="Extracts the most significant byte from a word." alt="" coords="361,295,460,321"/>
+</map>

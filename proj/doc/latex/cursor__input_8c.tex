@@ -1,0 +1,56 @@
+\hypertarget{cursor__input_8c}{}\doxysection{model/cursor/cursor\+\_\+input.c File Reference}
+\label{cursor__input_8c}\index{model/cursor/cursor\_input.c@{model/cursor/cursor\_input.c}}
+{\ttfamily \#include \char`\"{}cursor\+\_\+input.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for cursor\+\_\+input.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{cursor__input_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}}() \mbox{\hyperlink{cursor__input_8c_ae9acac723253f6b7360b1db83fde4517}{read\+\_\+cursor\+\_\+input}} (struct packet $\ast$packet)
+\begin{DoxyCompactList}\small\item\em Reads the current cursor input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cursor__input_8c_ae9acac723253f6b7360b1db83fde4517}\label{cursor__input_8c_ae9acac723253f6b7360b1db83fde4517}} 
+\index{cursor\_input.c@{cursor\_input.c}!read\_cursor\_input@{read\_cursor\_input}}
+\index{read\_cursor\_input@{read\_cursor\_input}!cursor\_input.c@{cursor\_input.c}}
+\doxysubsubsection{\texorpdfstring{read\_cursor\_input()}{read\_cursor\_input()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}}() read\+\_\+cursor\+\_\+input (\begin{DoxyParamCaption}\item[{struct packet $\ast$}]{packet }\end{DoxyParamCaption})}
+
+
+
+Reads the current cursor input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & A pointer to the packet structure to be filled with the mouse data.\\
+\hline
+\end{DoxyParams}
+This function reads the current cursor input by processing the mouse packet data. It calculates the cursor\textquotesingle{}s position and reads the state of the left, right, and middle clicks. The calculated information is stored and returned in a \mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} structure.
+
+\begin{DoxyReturn}{Returns}
+Returns the current cursor input as a \mbox{\hyperlink{struct_cursor_input}{Cursor\+Input}} structure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{cursor__input_8c_ae9acac723253f6b7360b1db83fde4517_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor__input_8c_ae9acac723253f6b7360b1db83fde4517_icgraph}
+\end{center}
+\end{figure}

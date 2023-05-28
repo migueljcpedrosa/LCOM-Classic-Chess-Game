@@ -1,0 +1,7 @@
+<map id="execute_move" name="execute_move">
+<area shape="rect" id="node1" title="Executes a move within the given game." alt="" coords="5,81,110,108"/>
+<area shape="rect" id="node2" href="$game_8c.html#ae94ec57ec9ca8a04c4af6f49e75104cd" title="Executes a capture move." alt="" coords="167,5,285,32"/>
+<area shape="rect" id="node3" href="$game_8c.html#a4cf5771e6bd973cc292351e00165a041" title="Executes a castle move." alt="" coords="171,56,281,83"/>
+<area shape="rect" id="node4" href="$game_8c.html#a6c5e3fe6772104f293989db3f1e165e7" title="Executes an en passant move." alt="" coords="158,107,294,133"/>
+<area shape="rect" id="node5" href="$game_8c.html#a37a26b57f8d6d9ea0e3e7090b803154b" title="Executes a normal move." alt="" coords="169,157,283,184"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="draw_word" name="draw_word">
+<area shape="rect" id="node1" title="Function to draw a word on the screen at given coordinates." alt="" coords="5,5,88,32"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#a6d12f2e078c761f78261b8235d6410ac" title="Draws a word using XPM letters on the screen." alt="" coords="136,5,250,32"/>
+<area shape="rect" id="node3" href="$gpu_8c.html#a8d9a52951e31bda064a3c35846c96f28" title="Draws a letter from an XPM image on the screen." alt="" coords="298,5,414,32"/>
+</map>

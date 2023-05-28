@@ -1,0 +1,10 @@
+<map id="write_to_mouse" name="write_to_mouse">
+<area shape="rect" id="node1" title="Writes a command byte to the mouse." alt="" coords="817,31,929,57"/>
+<area shape="rect" id="node2" href="$mouse_8c.html#ac3eeb38c1e623ff629657b1f91ce7586" title="Writes a command with optional arguments to the mouse, and optionally reads a response." alt="" coords="657,31,769,57"/>
+<area shape="rect" id="node3" href="$mouse_8c.html#a213d5f0c93d25fe21ae6ee3ba7b50a15" title="Disables the data reporting from the mouse." alt="" coords="457,5,609,32"/>
+<area shape="rect" id="node7" href="$mouse_8c.html#abe20128c397b0e728b58316a8e1a6e14" title="Enables the data reporting from the mouse." alt="" coords="459,56,607,83"/>
+<area shape="rect" id="node4" href="$main_8c.html#ab565b98afe74cf9e2bb77aab76c5b2f7" title=" " alt="" coords="334,5,409,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#a2e6c36e064d205d81eda4de2d9e94561" title=" " alt="" coords="162,56,286,83"/>
+<area shape="rect" id="node6" href="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,31,114,57"/>
+<area shape="rect" id="node8" href="$main_8c.html#a0b22669bd9e92d10c96045d9abd26b6b" title=" " alt="" coords="338,56,406,83"/>
+</map>

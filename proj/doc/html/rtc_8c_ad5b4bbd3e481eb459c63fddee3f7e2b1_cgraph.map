@@ -1,0 +1,5 @@
+<map id="rtc_in_binary_mode" name="rtc_in_binary_mode">
+<area shape="rect" id="node1" title="Checks if the RTC is in binary mode." alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node2" href="$rtc_8c.html#adad56ed559d74b535482c751a0f1cd8f" title="Reads a value from a specific RTC register." alt="" coords="188,5,306,32"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title="Reads a byte from the specified port." alt="" coords="354,5,444,32"/>
+</map>

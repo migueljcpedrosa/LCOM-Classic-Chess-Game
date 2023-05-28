@@ -1,0 +1,6 @@
+<map id="rtc_update_time_unit" name="rtc_update_time_unit">
+<area shape="rect" id="node1" title="Updates a specific time unit in the RTC." alt="" coords="5,43,148,69"/>
+<area shape="rect" id="node2" href="$rtc_8c.html#a43b18290dcd8121141c99d2e3c78b43a" title="Converts a BCD number to binary." alt="" coords="196,5,326,48"/>
+<area shape="rect" id="node3" href="$rtc_8c.html#adad56ed559d74b535482c751a0f1cd8f" title="Reads a value from a specific RTC register." alt="" coords="202,72,320,99"/>
+<area shape="rect" id="node4" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title="Reads a byte from the specified port." alt="" coords="374,72,464,99"/>
+</map>

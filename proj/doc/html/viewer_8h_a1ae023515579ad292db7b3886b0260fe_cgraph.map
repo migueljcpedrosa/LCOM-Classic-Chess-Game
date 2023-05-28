@@ -1,0 +1,4 @@
+<map id="render_screen" name="render_screen">
+<area shape="rect" id="node1" title="Function to render the screen." alt="" coords="5,5,109,32"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#a6fdef7fe34a010689884865dda4f29b8" title="Copies the buffer content to the video memory." alt="" coords="157,5,334,32"/>
+</map>

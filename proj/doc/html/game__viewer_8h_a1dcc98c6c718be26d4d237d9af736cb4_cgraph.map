@@ -1,0 +1,11 @@
+<map id="game_screenshot" name="game_screenshot">
+<area shape="rect" id="node1" title="Sets up the screenshot for the game." alt="" coords="5,81,130,108"/>
+<area shape="rect" id="node2" href="$gpu_8c.html#a7a2f89855e5cd27a774cd210d7f1ec2c" title="Cleans the screen." alt="" coords="217,5,315,32"/>
+<area shape="rect" id="node3" href="$gpu_8c.html#a86409f7d16ee31f736ba797968fcf5dc" title="Copies the current buffer content to the screenshot buffer." alt="" coords="178,56,354,83"/>
+<area shape="rect" id="node4" href="$game__viewer_8c.html#a365fbe76a553e0f2afd696b409a29b9f" title="Draws the board." alt="" coords="222,107,310,133"/>
+<area shape="rect" id="node6" href="$game__viewer_8c.html#a24229272a61f2feaedf3241d7a150684" title="Draws all the pieces." alt="" coords="219,157,313,184"/>
+<area shape="rect" id="node5" href="$gpu_8c.html#a31178cc71e7af0d6045707842517b225" title="Draws a rectangle in the buffer." alt="" coords="402,107,510,133"/>
+<area shape="rect" id="node7" href="$game__viewer_8c.html#a4bb1aceb1a214453131ffc12622a09d1" title="Draws a piece." alt="" coords="413,157,499,184"/>
+<area shape="rect" id="node8" href="$viewer_8c.html#ae80435a9c94d201a75a53489c0252e60" title="Function to draw a sprite at given coordinates." alt="" coords="558,157,646,184"/>
+<area shape="rect" id="node9" href="$gpu_8c.html#af5a1ad16f3790e99340bede93eb96372" title="Draws an XPM image on the screen." alt="" coords="694,157,774,184"/>
+</map>

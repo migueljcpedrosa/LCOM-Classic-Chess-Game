@@ -1,0 +1,13 @@
+<map id="name_refresh" name="name_refresh">
+<area shape="rect" id="node1" title="Function to draw the name input view." alt="" coords="5,107,105,133"/>
+<area shape="rect" id="node2" href="$viewer_8c.html#a1209cc537c04f860f7bf0301ad7a4987" title="Function to draw a cursor on the screen." alt="" coords="159,5,250,32"/>
+<area shape="rect" id="node5" href="$gpu_8c.html#a6901dcf3355f24bf3014ac42d5eaeb0a" title="Draws the screenshot content into the buffer, using given coordinates and size." alt="" coords="324,73,461,116"/>
+<area shape="rect" id="node6" href="$viewer_8c.html#a16fcba3b0d3baba459213e36b51e6b35" title="Function to draw a word on the screen at given coordinates." alt="" coords="163,157,246,184"/>
+<area shape="rect" id="node9" href="$viewer_8c.html#ab9a69919edf28bcd5fc1e2759894b9f7" title="Function to erase the cursor from the screen." alt="" coords="156,107,253,133"/>
+<area shape="rect" id="node10" href="$viewer_8c.html#a1ae023515579ad292db7b3886b0260fe" title="Function to render the screen." alt="" coords="153,208,256,235"/>
+<area shape="rect" id="node3" href="$viewer_8c.html#ae80435a9c94d201a75a53489c0252e60" title="Function to draw a sprite at given coordinates." alt="" coords="349,5,436,32"/>
+<area shape="rect" id="node4" href="$gpu_8c.html#af5a1ad16f3790e99340bede93eb96372" title="Draws an XPM image on the screen." alt="" coords="547,5,628,32"/>
+<area shape="rect" id="node7" href="$gpu_8c.html#a6d12f2e078c761f78261b8235d6410ac" title="Draws a word using XPM letters on the screen." alt="" coords="336,157,450,184"/>
+<area shape="rect" id="node8" href="$gpu_8c.html#a8d9a52951e31bda064a3c35846c96f28" title="Draws a letter from an XPM image on the screen." alt="" coords="529,157,646,184"/>
+<area shape="rect" id="node11" href="$gpu_8c.html#a6fdef7fe34a010689884865dda4f29b8" title="Copies the buffer content to the video memory." alt="" coords="304,208,481,235"/>
+</map>

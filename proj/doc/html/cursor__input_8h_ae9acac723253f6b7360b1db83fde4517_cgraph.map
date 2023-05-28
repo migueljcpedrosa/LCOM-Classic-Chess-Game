@@ -1,0 +1,4 @@
+<map id="read_cursor_input" name="read_cursor_input">
+<area shape="rect" id="node1" title="Reads the current cursor input." alt="" coords="5,5,130,32"/>
+<area shape="rect" id="node2" href="$cursor_8c.html#add5cb23e815348b7321306219c9bd41a" title="Moves the cursor by the specified amount." alt="" coords="178,5,272,32"/>
+</map>

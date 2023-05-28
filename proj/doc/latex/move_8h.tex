@@ -1,0 +1,177 @@
+\hypertarget{move_8h}{}\doxysection{model/game/move.h File Reference}
+\label{move_8h}\index{model/game/move.h@{model/game/move.h}}
+
+
+This file contains the definition of the move module.  
+
+
+{\ttfamily \#include \char`\"{}game\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for move.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{move_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{move_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_move}{Move}}
+\begin{DoxyCompactList}\small\item\em Represents a move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_move}{Move}} \mbox{\hyperlink{move_8h_aac51cec4fc63cba16e34a97066645d15}{create\+\_\+normal\+\_\+move}} (\mbox{\hyperlink{struct_position}{Position}} origin, \mbox{\hyperlink{struct_position}{Position}} destination, struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$piece, struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$secondary\+\_\+piece)
+\begin{DoxyCompactList}\small\item\em Creates a normal move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_move}{Move}} \mbox{\hyperlink{move_8h_ac1cb727b717e97de319add56b1b09ee2}{create\+\_\+capture}} (\mbox{\hyperlink{struct_position}{Position}} origin, \mbox{\hyperlink{struct_position}{Position}} destination, struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$piece, struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$secondary\+\_\+piece)
+\begin{DoxyCompactList}\small\item\em Creates a capture move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_move}{Move}} \mbox{\hyperlink{move_8h_a13899c447fbd13263bb08b014ee51b2a}{create\+\_\+castle}} (\mbox{\hyperlink{struct_position}{Position}} origin, \mbox{\hyperlink{struct_position}{Position}} destination, struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$piece, struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$secondary\+\_\+piece)
+\begin{DoxyCompactList}\small\item\em Creates a promotion move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_move}{Move}} \mbox{\hyperlink{move_8h_a2c6bb304fb46e5094028c196f8365ebd}{create\+\_\+en\+\_\+passant}} (\mbox{\hyperlink{struct_position}{Position}} origin, \mbox{\hyperlink{struct_position}{Position}} destination, struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$piece, struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$secondary\+\_\+piece)
+\begin{DoxyCompactList}\small\item\em Creates a promotion move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of the move module. 
+
+This includes the definition of the \mbox{\hyperlink{struct_move}{Move}} struct along with methods to create them. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{move_8h_ac1cb727b717e97de319add56b1b09ee2}\label{move_8h_ac1cb727b717e97de319add56b1b09ee2}} 
+\index{move.h@{move.h}!create\_capture@{create\_capture}}
+\index{create\_capture@{create\_capture}!move.h@{move.h}}
+\doxysubsubsection{\texorpdfstring{create\_capture()}{create\_capture()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_move}{Move}} create\+\_\+capture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}}}]{origin,  }\item[{\mbox{\hyperlink{struct_position}{Position}}}]{destination,  }\item[{struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{piece,  }\item[{struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{secondary\+\_\+piece }\end{DoxyParamCaption})}
+
+
+
+Creates a capture move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin of the move \\
+\hline
+{\em destination} & The destination of the move \\
+\hline
+{\em piece} & The piece that is being moved \\
+\hline
+{\em secondary\+\_\+piece} & The piece that is being captured or castled with the move, can be NULL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promotion move 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{move_8h_ac1cb727b717e97de319add56b1b09ee2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{move_8h_a13899c447fbd13263bb08b014ee51b2a}\label{move_8h_a13899c447fbd13263bb08b014ee51b2a}} 
+\index{move.h@{move.h}!create\_castle@{create\_castle}}
+\index{create\_castle@{create\_castle}!move.h@{move.h}}
+\doxysubsubsection{\texorpdfstring{create\_castle()}{create\_castle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_move}{Move}} create\+\_\+castle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}}}]{origin,  }\item[{\mbox{\hyperlink{struct_position}{Position}}}]{destination,  }\item[{struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{piece,  }\item[{struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{secondary\+\_\+piece }\end{DoxyParamCaption})}
+
+
+
+Creates a promotion move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin of the move \\
+\hline
+{\em destination} & The destination of the move \\
+\hline
+{\em piece} & The piece that is being moved \\
+\hline
+{\em secondary\+\_\+piece} & The piece that is being captured or castled with the move, can be NULL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promotion move 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{move_8h_a13899c447fbd13263bb08b014ee51b2a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{move_8h_a2c6bb304fb46e5094028c196f8365ebd}\label{move_8h_a2c6bb304fb46e5094028c196f8365ebd}} 
+\index{move.h@{move.h}!create\_en\_passant@{create\_en\_passant}}
+\index{create\_en\_passant@{create\_en\_passant}!move.h@{move.h}}
+\doxysubsubsection{\texorpdfstring{create\_en\_passant()}{create\_en\_passant()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_move}{Move}} create\+\_\+en\+\_\+passant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}}}]{origin,  }\item[{\mbox{\hyperlink{struct_position}{Position}}}]{destination,  }\item[{struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{piece,  }\item[{struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{secondary\+\_\+piece }\end{DoxyParamCaption})}
+
+
+
+Creates a promotion move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin of the move \\
+\hline
+{\em destination} & The destination of the move \\
+\hline
+{\em piece} & The piece that is being moved \\
+\hline
+{\em secondary\+\_\+piece} & The piece that is being captured or castled with the move, can be NULL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promotion move 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{move_8h_a2c6bb304fb46e5094028c196f8365ebd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{move_8h_aac51cec4fc63cba16e34a97066645d15}\label{move_8h_aac51cec4fc63cba16e34a97066645d15}} 
+\index{move.h@{move.h}!create\_normal\_move@{create\_normal\_move}}
+\index{create\_normal\_move@{create\_normal\_move}!move.h@{move.h}}
+\doxysubsubsection{\texorpdfstring{create\_normal\_move()}{create\_normal\_move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_move}{Move}} create\+\_\+normal\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}}}]{origin,  }\item[{\mbox{\hyperlink{struct_position}{Position}}}]{destination,  }\item[{struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{piece,  }\item[{struct \mbox{\hyperlink{struct_piece}{Piece}} $\ast$}]{secondary\+\_\+piece }\end{DoxyParamCaption})}
+
+
+
+Creates a normal move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin of the move \\
+\hline
+{\em destination} & The destination of the move \\
+\hline
+{\em piece} & The piece that is being moved \\
+\hline
+{\em secondary\+\_\+piece} & The piece that is being captured or castled with the move, can be NULL \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Normal move 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{move_8h_aac51cec4fc63cba16e34a97066645d15_icgraph}
+\end{center}
+\end{figure}

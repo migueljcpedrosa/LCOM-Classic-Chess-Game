@@ -1,0 +1,5 @@
+<map id="draw_piece" name="draw_piece">
+<area shape="rect" id="node1" title="Draws a piece." alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node2" href="$viewer_8c.html#ae80435a9c94d201a75a53489c0252e60" title="Function to draw a sprite at given coordinates." alt="" coords="140,5,227,32"/>
+<area shape="rect" id="node3" href="$gpu_8c.html#af5a1ad16f3790e99340bede93eb96372" title="Draws an XPM image on the screen." alt="" coords="275,5,355,32"/>
+</map>

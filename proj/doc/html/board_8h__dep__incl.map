@@ -1,0 +1,13 @@
+<map id="model/game/board.h" name="model/game/board.h">
+<area shape="rect" id="node1" title="This file contains the definition of the board module." alt="" coords="381,5,520,32"/>
+<area shape="rect" id="node2" href="$board_8c.html" title=" " alt="" coords="217,80,356,107"/>
+<area shape="rect" id="node3" href="$game_8h.html" title="This file contains the definition of the game module." alt="" coords="381,80,520,107"/>
+<area shape="rect" id="node11" href="$pieces_8c.html" title=" " alt="" coords="545,80,690,107"/>
+<area shape="rect" id="node4" href="$game__controller_8h.html" title="This file contains the definition of the game controller module." alt="" coords="39,163,220,189"/>
+<area shape="rect" id="node6" href="$state_8c.html" title=" " alt="" coords="210,245,305,272"/>
+<area shape="rect" id="node7" href="$game_8c.html" title=" " alt="" coords="294,163,434,189"/>
+<area shape="rect" id="node8" href="$game__over_8c.html" title=" " alt="" coords="458,155,617,197"/>
+<area shape="rect" id="node9" href="$game__viewer_8c.html" title=" " alt="" coords="641,163,775,189"/>
+<area shape="rect" id="node10" href="$viewer_8c.html" title=" " alt="" coords="799,163,894,189"/>
+<area shape="rect" id="node5" href="$game__controller_8c.html" title=" " alt="" coords="5,245,187,272"/>
+</map>

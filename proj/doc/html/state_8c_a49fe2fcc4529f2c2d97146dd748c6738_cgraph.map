@@ -1,0 +1,52 @@
+<map id="state_mouse_handler" name="state_mouse_handler">
+<area shape="rect" id="node1" title="Function to handle mouse input based on the current state." alt="" coords="5,715,151,741"/>
+<area shape="rect" id="node2" href="$game__controller_8c.html#acce4237a2da25f7fa8533427e679628a" title="Handles the cursor input." alt="" coords="214,436,310,463"/>
+<area shape="rect" id="node45" href="$game__over__controller_8c.html#a65d75a74ef94faa5447cf1c303219a74" title="Handles cursor inputs within the game over context." alt="" coords="199,715,325,741"/>
+<area shape="rect" id="node48" href="$menu__controller_8c.html#ac2dd24dd681a19ccab36ea90eba14d0e" title="Handles cursor inputs within the menu context." alt="" coords="214,841,310,868"/>
+<area shape="rect" id="node3" href="$game__controller_8c.html#afec8966be4edea897999b659cb2298fa" title="Checks if the game is over." alt="" coords="392,512,517,539"/>
+<area shape="rect" id="node7" href="$game_8c.html#a03f13b860db83a4144b5ac8630ee7cbb" title="Filters out all the invalid moves of the given piece." alt="" coords="915,309,997,336"/>
+<area shape="rect" id="node8" href="$game_8c.html#ac4a0de72a2b303612e6d743cc7073f09" title="Executes a move within the given game." alt="" coords="1102,132,1207,159"/>
+<area shape="rect" id="node14" href="$game_8c.html#a3a3a9eb872c4ea58396f0fdaff7a624b" title="Sets the moves of the given piece." alt="" coords="1321,512,1397,539"/>
+<area shape="rect" id="node34" href="$game__viewer_8c.html#a1dcc98c6c718be26d4d237d9af736cb4" title="Sets up the screenshot for the game." alt="" coords="894,715,1018,741"/>
+<area shape="rect" id="node41" href="$game_8c.html#a803b4640fcae2e518e2c46f81ba01d6b" title="Returns the current player." alt="" coords="390,309,518,336"/>
+<area shape="rect" id="node42" href="$game_8c.html#aaee1cda131ac3a7a13f8af0713d63b9d" title="Retrieves the piece at the given position." alt="" coords="418,360,490,387"/>
+<area shape="rect" id="node43" href="$game__controller_8c.html#a888404dbad2f00939c4ecf609aa9a368" title="Setup the bot waiting timer for it&#39;s move." alt="" coords="397,411,511,437"/>
+<area shape="rect" id="node44" href="$game_8c.html#af5b2aa219d02752bff2a43f472bd0045" title="Switches the turn of the game." alt="" coords="411,461,498,488"/>
+<area shape="rect" id="node4" href="$game_8c.html#a5f7f768a3bc9bff2e01189c05e6834b8" title="Returns the waiting player." alt="" coords="583,512,712,539"/>
+<area shape="rect" id="node5" href="$game_8c.html#a0ffdc13a81e9dfabe4ed6c2b2e83e8d6" title="Checks if the current player is in check mate." alt="" coords="593,461,702,488"/>
+<area shape="rect" id="node30" href="$game_8c.html#a7beff665eadc96e3c79becadc098ebd5" title="Checks if the current player is in stale mate." alt="" coords="596,411,699,437"/>
+<area shape="rect" id="node31" href="$state_8c.html#af7ba017087161066faed01c8bbe8a0bf" title="Function to set the state." alt="" coords="610,740,685,767"/>
+<area shape="rect" id="node6" href="$game_8c.html#a2fba28ad51735136eb0063f1e28cc2ac" title="Checks if the current player has any valid moves." alt="" coords="763,411,843,437"/>
+<area shape="rect" id="node13" href="$game_8c.html#aacd5c6b9f24f491169df49994d83ac8d" title="Checks if the current player is in check." alt="" coords="1118,461,1191,488"/>
+<area shape="rect" id="node25" href="$game_8c.html#a42afa1b20be35bd921c925e784805892" title="Undoes a move within the given game." alt="" coords="1111,309,1198,336"/>
+<area shape="rect" id="node9" href="$game_8c.html#ae94ec57ec9ca8a04c4af6f49e75104cd" title="Executes a capture move." alt="" coords="1300,56,1418,83"/>
+<area shape="rect" id="node10" href="$game_8c.html#a4cf5771e6bd973cc292351e00165a041" title="Executes a castle move." alt="" coords="1304,107,1414,133"/>
+<area shape="rect" id="node11" href="$game_8c.html#a6c5e3fe6772104f293989db3f1e165e7" title="Executes an en passant move." alt="" coords="1291,157,1427,184"/>
+<area shape="rect" id="node12" href="$game_8c.html#a37a26b57f8d6d9ea0e3e7090b803154b" title="Executes a normal move." alt="" coords="1302,5,1416,32"/>
+<area shape="rect" id="node15" href="$game_8c.html#a787c0b2566eb8fda38584d893673ee58" title="Sets the moves of the give bishop." alt="" coords="1475,563,1591,589"/>
+<area shape="rect" id="node19" href="$game_8c.html#a39794e52f15e915d2dd94d33253a5669" title="Sets the moves of the given king." alt="" coords="1482,411,1584,437"/>
+<area shape="rect" id="node21" href="$game_8c.html#a02368aa2f563fecb051410184b125352" title="Sets the moves of the given knight." alt="" coords="1639,461,1753,488"/>
+<area shape="rect" id="node22" href="$game_8c.html#abb070bf6dd447b4416a3f63868351121" title="Sets the moves of the given pawn." alt="" coords="1642,563,1750,589"/>
+<area shape="rect" id="node23" href="$game_8c.html#ad7b57a9417a456e76a6ca52c25967cf6" title="Sets the moves of the given queen." alt="" coords="1476,613,1590,640"/>
+<area shape="rect" id="node24" href="$game_8c.html#af0b0c5ac9b76d90ebed52452cafa4225" title="Sets the moves of the given rook." alt="" coords="1480,664,1586,691"/>
+<area shape="rect" id="node16" href="$game_8c.html#a029ec6f0ce9235992b52ff7879c223e5" title="Sets the moves of the given piece in a line." alt="" coords="1641,613,1751,640"/>
+<area shape="rect" id="node17" href="$move_8c.html#ac1cb727b717e97de319add56b1b09ee2" title="Creates a capture move." alt="" coords="1817,537,1925,564"/>
+<area shape="rect" id="node18" href="$move_8c.html#aac51cec4fc63cba16e34a97066645d15" title="Creates a normal move." alt="" coords="1801,475,1941,501"/>
+<area shape="rect" id="node20" href="$move_8c.html#a13899c447fbd13263bb08b014ee51b2a" title="Creates a promotion move." alt="" coords="1646,411,1746,437"/>
+<area shape="rect" id="node26" href="$game_8c.html#a379a85e7e59bbd3adb29e0019081d061" title="Undoes a capture move." alt="" coords="1309,259,1409,285"/>
+<area shape="rect" id="node27" href="$game_8c.html#a1dd78d3468faaadf416ce69e769c5fc7" title="Undoes a castle move." alt="" coords="1313,309,1405,336"/>
+<area shape="rect" id="node28" href="$game_8c.html#a46fd109c579ef96fddb1c2c95643769c" title="Undoes an en passant move." alt="" coords="1300,360,1418,387"/>
+<area shape="rect" id="node29" href="$game_8c.html#ae6316bc9b0f46a28e80ddbe0d2b07804" title="Undoes a normal move." alt="" coords="1311,208,1407,235"/>
+<area shape="rect" id="node32" href="$state_8c.html#a9df078faf57977ac2915303f14fbb675" title="Function to clean up resources as the game leaves a state." alt="" coords="760,689,846,716"/>
+<area shape="rect" id="node33" href="$state_8c.html#a159c1631df227c138f5f83e818473f2d" title="Function to load resources as the game enters a state." alt="" coords="762,740,844,767"/>
+<area shape="rect" id="node35" href="$gpu_8c.html#a7a2f89855e5cd27a774cd210d7f1ec2c" title="Cleans the screen." alt="" coords="1105,689,1204,716"/>
+<area shape="rect" id="node36" href="$gpu_8c.html#a86409f7d16ee31f736ba797968fcf5dc" title="Copies the current buffer content to the screenshot buffer." alt="" coords="1066,740,1243,767"/>
+<area shape="rect" id="node37" href="$game__viewer_8c.html#a365fbe76a553e0f2afd696b409a29b9f" title="Draws the board." alt="" coords="1111,639,1198,665"/>
+<area shape="rect" id="node39" href="$game__viewer_8c.html#a24229272a61f2feaedf3241d7a150684" title="Draws all the pieces." alt="" coords="1108,791,1201,817"/>
+<area shape="rect" id="node38" href="$gpu_8c.html#a31178cc71e7af0d6045707842517b225" title="Draws a rectangle in the buffer." alt="" coords="1305,689,1413,716"/>
+<area shape="rect" id="node40" href="$game__viewer_8c.html#a4bb1aceb1a214453131ffc12622a09d1" title="Draws a piece." alt="" coords="1316,791,1402,817"/>
+<area shape="rect" id="node46" href="$game__over_8c.html#a6bf73c1e8f1ccbd049fe41a4bd4d14e8" title="Checks if the exit button has been clicked." alt="" coords="375,664,534,691"/>
+<area shape="rect" id="node47" href="$game__over_8c.html#a5349ef2ad4210194f5d0a53346d42aa3" title="Checks if the play button has been clicked." alt="" coords="373,715,535,741"/>
+<area shape="rect" id="node49" href="$menu_8c.html#a0c8f92250230310bd142637e69077e64" title="Checks if the exit button in the initial menu has been clicked." alt="" coords="390,917,519,944"/>
+<area shape="rect" id="node50" href="$menu_8c.html#ac1ad344ca5872dac9cbc09038cd50f38" title="Checks if the play button in the initial menu has been clicked." alt="" coords="388,867,520,893"/>
+</map>

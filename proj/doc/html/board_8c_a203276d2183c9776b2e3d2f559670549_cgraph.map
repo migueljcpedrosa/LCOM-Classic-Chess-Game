@@ -1,0 +1,9 @@
+<map id="create_board" name="create_board">
+<area shape="rect" id="node1" title="Initializes a board and it&#39;s pieces." alt="" coords="5,56,102,83"/>
+<area shape="rect" id="node2" href="$board_8c.html#ac4ab96e5708392cd9eb994a13d09f2bd" title="Sets the black pieces in their initial positions." alt="" coords="150,31,272,57"/>
+<area shape="rect" id="node7" href="$board_8c.html#a61057d088a89d9429807817f605b8421" title="Sets the white pieces in their initial positions." alt="" coords="150,81,272,108"/>
+<area shape="rect" id="node3" href="$pieces_8c.html#a11894ff655f41d4e464200fa57775ffb" title="Creates a piece." alt="" coords="327,31,422,57"/>
+<area shape="rect" id="node6" href="$pieces_8c.html#a635528417a24944ef174b32fc5eeee8a" title="Creates a position." alt="" coords="320,81,429,108"/>
+<area shape="rect" id="node4" href="$pieces_8c.html#a20b34bd310e4bdf9d248c6394c32dbed" title=" " alt="" coords="477,5,632,32"/>
+<area shape="rect" id="node5" href="$pieces_8c.html#a2a8d4acb782cd8f93b1d910f71b36be7" title=" " alt="" coords="478,56,631,83"/>
+</map>

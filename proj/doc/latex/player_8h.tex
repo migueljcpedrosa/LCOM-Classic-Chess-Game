@@ -1,0 +1,135 @@
+\hypertarget{player_8h}{}\doxysection{model/game/player.h File Reference}
+\label{player_8h}\index{model/game/player.h@{model/game/player.h}}
+
+
+This file contains the definition of the player module.  
+
+
+{\ttfamily \#include \char`\"{}pieces.\+h\char`\"{}}\newline
+Include dependency graph for player.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{player_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{player_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_timer}{Timer}}
+\begin{DoxyCompactList}\small\item\em Represents a timer. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_player}{Player}}
+\begin{DoxyCompactList}\small\item\em Represents a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \{ \mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccfae2d30a195cee6b2961cc2c23ea4b520b}{USER}}
+, \mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccfa9c74caa56a3c05723eb1dbad44bc9bc3}{AI}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents a player type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_player}{Player}} $\ast$() \mbox{\hyperlink{player_8h_af04ee4e3df6bd1a05d6027557be99804}{create\+\_\+player}} (char name\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color, \mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Creates a player. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{player_8h_aa968cf4447e8c6c8b5068ac847e578fa}{destroy\+\_\+player}} (\mbox{\hyperlink{struct_player}{Player}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Destroys a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of the player module. 
+
+This includes the definition of the \mbox{\hyperlink{struct_player}{Player}}, Player\+Type and \mbox{\hyperlink{struct_timer}{Timer}} structs.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_player}{Player}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{player_8h_abe590f3c9109f404f003d5d7e4f0fccf}\label{player_8h_abe590f3c9109f404f003d5d7e4f0fccf}} 
+\index{player.h@{player.h}!PlayerType@{PlayerType}}
+\index{PlayerType@{PlayerType}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{PlayerType}{PlayerType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}
+
+
+
+Represents a player type. 
+
+This enum represents a player type. It can be either a user or an AI.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{struct_player}{Player}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{USER@{USER}!player.h@{player.h}}\index{player.h@{player.h}!USER@{USER}}}\mbox{\Hypertarget{player_8h_abe590f3c9109f404f003d5d7e4f0fccfae2d30a195cee6b2961cc2c23ea4b520b}\label{player_8h_abe590f3c9109f404f003d5d7e4f0fccfae2d30a195cee6b2961cc2c23ea4b520b}} 
+USER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AI@{AI}!player.h@{player.h}}\index{player.h@{player.h}!AI@{AI}}}\mbox{\Hypertarget{player_8h_abe590f3c9109f404f003d5d7e4f0fccfa9c74caa56a3c05723eb1dbad44bc9bc3}\label{player_8h_abe590f3c9109f404f003d5d7e4f0fccfa9c74caa56a3c05723eb1dbad44bc9bc3}} 
+AI&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{player_8h_af04ee4e3df6bd1a05d6027557be99804}\label{player_8h_af04ee4e3df6bd1a05d6027557be99804}} 
+\index{player.h@{player.h}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_player}{Player}} $\ast$() create\+\_\+player (\begin{DoxyParamCaption}\item[{char}]{name\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{game__util_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color,  }\item[{\mbox{\hyperlink{player_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Creates a player. 
+
+This function creates a player with the given name, color and type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the player. \\
+\hline
+{\em color} & the color of the player. \\
+\hline
+{\em type} & the type of the player.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the created player. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{player_8h_af04ee4e3df6bd1a05d6027557be99804_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{player_8h_aa968cf4447e8c6c8b5068ac847e578fa}\label{player_8h_aa968cf4447e8c6c8b5068ac847e578fa}} 
+\index{player.h@{player.h}!destroy\_player@{destroy\_player}}
+\index{destroy\_player@{destroy\_player}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{destroy\_player()}{destroy\_player()}}
+{\footnotesize\ttfamily void() destroy\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_player}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Destroys a player. 
+
+This function destroys a player and frees all the memory allocated to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & pointer to the player to be destroyed. \\
+\hline
+\end{DoxyParams}

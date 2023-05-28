@@ -1,0 +1,182 @@
+\hypertarget{board_8c}{}\doxysection{model/game/board.c File Reference}
+\label{board_8c}\index{model/game/board.c@{model/game/board.c}}
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}model/model\+\_\+utils.\+h\char`\"{}}\newline
+Include dependency graph for board.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{board_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_board}{Board}} $\ast$() \mbox{\hyperlink{board_8c_a203276d2183c9776b2e3d2f559670549}{create\+\_\+board}} (\mbox{\hyperlink{struct_player}{Player}} $\ast$white\+\_\+player, \mbox{\hyperlink{struct_player}{Player}} $\ast$black\+\_\+player)
+\begin{DoxyCompactList}\small\item\em Initializes a board and it\textquotesingle{}s pieces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{board_8c_a61057d088a89d9429807817f605b8421}{set\+\_\+white\+\_\+pieces}} (\mbox{\hyperlink{struct_board}{Board}} $\ast$board, \mbox{\hyperlink{struct_player}{Player}} $\ast$white\+\_\+player)
+\begin{DoxyCompactList}\small\item\em Sets the white pieces in their initial positions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{board_8c_ac4ab96e5708392cd9eb994a13d09f2bd}{set\+\_\+black\+\_\+pieces}} (\mbox{\hyperlink{struct_board}{Board}} $\ast$board, \mbox{\hyperlink{struct_player}{Player}} $\ast$black\+\_\+player)
+\begin{DoxyCompactList}\small\item\em Sets the black pieces in their initial positions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{board_8c_a2bd9df095efd565768ac9528c02c7166}{destroy\+\_\+board}} (\mbox{\hyperlink{struct_board}{Board}} $\ast$board)
+\begin{DoxyCompactList}\small\item\em Destroys a board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{board_8c_a0baf794bf4a37094b40df7cc0b6125e7}{square\+\_\+size}} = \mbox{\hyperlink{model__utils_8h_aa465c0206c08c9cde6075c2afb1c8bc8}{SQUARE\+\_\+\+SIZE}}
+\item 
+unsigned int \mbox{\hyperlink{board_8c_af39ef002935f37561ac28cf2c305c43c}{board\+\_\+start}} = \mbox{\hyperlink{model__utils_8h_a2cd109632a6dcccaa80b43561b1ab700}{SCREEN\+\_\+\+WIDTH}} / 2 -\/ 4 $\ast$ \mbox{\hyperlink{model__utils_8h_aa465c0206c08c9cde6075c2afb1c8bc8}{SQUARE\+\_\+\+SIZE}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{board_8c_a203276d2183c9776b2e3d2f559670549}\label{board_8c_a203276d2183c9776b2e3d2f559670549}} 
+\index{board.c@{board.c}!create\_board@{create\_board}}
+\index{create\_board@{create\_board}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{create\_board()}{create\_board()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_board}{Board}} $\ast$() create\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_player}{Player}} $\ast$}]{white\+\_\+player,  }\item[{\mbox{\hyperlink{struct_player}{Player}} $\ast$}]{black\+\_\+player }\end{DoxyParamCaption})}
+
+
+
+Initializes a board and it\textquotesingle{}s pieces. 
+
+This function creates the board and places the pieces in their initial positions. It also associates the pieces with their respective players.
+
+
+\begin{DoxyParams}{Parameters}
+{\em white\+\_\+player} & pointer to the player that will control the white pieces. \\
+\hline
+{\em black\+\_\+player} & pointer to the player that will control the black pieces.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the created board. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a203276d2183c9776b2e3d2f559670549_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a203276d2183c9776b2e3d2f559670549_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{board_8c_a2bd9df095efd565768ac9528c02c7166}\label{board_8c_a2bd9df095efd565768ac9528c02c7166}} 
+\index{board.c@{board.c}!destroy\_board@{destroy\_board}}
+\index{destroy\_board@{destroy\_board}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_board()}{destroy\_board()}}
+{\footnotesize\ttfamily void destroy\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_board}{Board}} $\ast$}]{board }\end{DoxyParamCaption})}
+
+
+
+Destroys a board. 
+
+This function destroys a board and all of it\textquotesingle{}s pieces.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & pointer to the board to be destroyed. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a2bd9df095efd565768ac9528c02c7166_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{board_8c_ac4ab96e5708392cd9eb994a13d09f2bd}\label{board_8c_ac4ab96e5708392cd9eb994a13d09f2bd}} 
+\index{board.c@{board.c}!set\_black\_pieces@{set\_black\_pieces}}
+\index{set\_black\_pieces@{set\_black\_pieces}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{set\_black\_pieces()}{set\_black\_pieces()}}
+{\footnotesize\ttfamily void set\+\_\+black\+\_\+pieces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_board}{Board}} $\ast$}]{board,  }\item[{\mbox{\hyperlink{struct_player}{Player}} $\ast$}]{black\+\_\+player }\end{DoxyParamCaption})}
+
+
+
+Sets the black pieces in their initial positions. 
+
+This function sets the black pieces in their initial positions and associates each with the black player.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & pointer to the board where the pieces will be placed. \\
+\hline
+{\em black\+\_\+player} & pointer to the player that will control the black pieces. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_ac4ab96e5708392cd9eb994a13d09f2bd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_ac4ab96e5708392cd9eb994a13d09f2bd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{board_8c_a61057d088a89d9429807817f605b8421}\label{board_8c_a61057d088a89d9429807817f605b8421}} 
+\index{board.c@{board.c}!set\_white\_pieces@{set\_white\_pieces}}
+\index{set\_white\_pieces@{set\_white\_pieces}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{set\_white\_pieces()}{set\_white\_pieces()}}
+{\footnotesize\ttfamily void set\+\_\+white\+\_\+pieces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_board}{Board}} $\ast$}]{board,  }\item[{\mbox{\hyperlink{struct_player}{Player}} $\ast$}]{white\+\_\+player }\end{DoxyParamCaption})}
+
+
+
+Sets the white pieces in their initial positions. 
+
+This function sets the white pieces in their initial positions and associates each with the white player.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & pointer to the board where the pieces will be placed. \\
+\hline
+{\em white\+\_\+player} & pointer to the player that will control the white pieces. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a61057d088a89d9429807817f605b8421_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{board_8c_a61057d088a89d9429807817f605b8421_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{board_8c_af39ef002935f37561ac28cf2c305c43c}\label{board_8c_af39ef002935f37561ac28cf2c305c43c}} 
+\index{board.c@{board.c}!board\_start@{board\_start}}
+\index{board\_start@{board\_start}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{board\_start}{board\_start}}
+{\footnotesize\ttfamily unsigned int board\+\_\+start = \mbox{\hyperlink{model__utils_8h_a2cd109632a6dcccaa80b43561b1ab700}{SCREEN\+\_\+\+WIDTH}} / 2 -\/ 4 $\ast$ \mbox{\hyperlink{model__utils_8h_aa465c0206c08c9cde6075c2afb1c8bc8}{SQUARE\+\_\+\+SIZE}}}
+
+\mbox{\Hypertarget{board_8c_a0baf794bf4a37094b40df7cc0b6125e7}\label{board_8c_a0baf794bf4a37094b40df7cc0b6125e7}} 
+\index{board.c@{board.c}!square\_size@{square\_size}}
+\index{square\_size@{square\_size}!board.c@{board.c}}
+\doxysubsubsection{\texorpdfstring{square\_size}{square\_size}}
+{\footnotesize\ttfamily unsigned int square\+\_\+size = \mbox{\hyperlink{model__utils_8h_aa465c0206c08c9cde6075c2afb1c8bc8}{SQUARE\+\_\+\+SIZE}}}
+

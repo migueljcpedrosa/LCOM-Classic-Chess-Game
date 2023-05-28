@@ -1,0 +1,113 @@
+\hypertarget{utils_8c}{}\doxysection{drivers/utils.c File Reference}
+\label{utils_8c}\index{drivers/utils.c@{drivers/utils.c}}
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+Include dependency graph for utils.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{utils_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{utils_8c_a79a031a8611f5b2d6afa4158e92b0fb4}{util\+\_\+sys\+\_\+inb}} (int port, uint8\+\_\+t $\ast$value)
+\begin{DoxyCompactList}\small\item\em Reads a byte from the specified port. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{utils_8c_a81621440b3d65680979425e39aa8c789}{util\+\_\+get\+\_\+\+LSB}} (uint16\+\_\+t val, uint8\+\_\+t $\ast$lsb)
+\begin{DoxyCompactList}\small\item\em Extracts the least significant byte from a word. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{utils_8c_a6a880076cd2ec468834438b6e0c58836}{util\+\_\+get\+\_\+\+MSB}} (uint16\+\_\+t val, uint8\+\_\+t $\ast$msb)
+\begin{DoxyCompactList}\small\item\em Extracts the most significant byte from a word. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{utils_8c_a81621440b3d65680979425e39aa8c789}\label{utils_8c_a81621440b3d65680979425e39aa8c789}} 
+\index{utils.c@{utils.c}!util\_get\_LSB@{util\_get\_LSB}}
+\index{util\_get\_LSB@{util\_get\_LSB}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{util\_get\_LSB()}{util\_get\_LSB()}}
+{\footnotesize\ttfamily int() util\+\_\+get\+\_\+\+LSB (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{val,  }\item[{uint8\+\_\+t $\ast$}]{lsb }\end{DoxyParamCaption})}
+
+
+
+Extracts the least significant byte from a word. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The word to extract the LSB from. \\
+\hline
+{\em lsb} & A pointer to the variable that will hold the extracted LSB.\\
+\hline
+\end{DoxyParams}
+This function extracts the least significant byte (LSB) from a word (val) and stores it in the provided pointer (lsb). It returns an error if the pointer is null.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success, and 1 upon failure. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8c_a81621440b3d65680979425e39aa8c789_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utils_8c_a6a880076cd2ec468834438b6e0c58836}\label{utils_8c_a6a880076cd2ec468834438b6e0c58836}} 
+\index{utils.c@{utils.c}!util\_get\_MSB@{util\_get\_MSB}}
+\index{util\_get\_MSB@{util\_get\_MSB}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{util\_get\_MSB()}{util\_get\_MSB()}}
+{\footnotesize\ttfamily int() util\+\_\+get\+\_\+\+MSB (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{val,  }\item[{uint8\+\_\+t $\ast$}]{msb }\end{DoxyParamCaption})}
+
+
+
+Extracts the most significant byte from a word. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The word to extract the MSB from. \\
+\hline
+{\em msb} & A pointer to the variable that will hold the extracted MSB.\\
+\hline
+\end{DoxyParams}
+This function extracts the most significant byte (MSB) from a word (val) and stores it in the provided pointer (msb). It returns an error if the pointer is null.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success, and 1 upon failure. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8c_a6a880076cd2ec468834438b6e0c58836_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utils_8c_a79a031a8611f5b2d6afa4158e92b0fb4}\label{utils_8c_a79a031a8611f5b2d6afa4158e92b0fb4}} 
+\index{utils.c@{utils.c}!util\_sys\_inb@{util\_sys\_inb}}
+\index{util\_sys\_inb@{util\_sys\_inb}!utils.c@{utils.c}}
+\doxysubsubsection{\texorpdfstring{util\_sys\_inb()}{util\_sys\_inb()}}
+{\footnotesize\ttfamily int() util\+\_\+sys\+\_\+inb (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{uint8\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Reads a byte from the specified port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port to read from. \\
+\hline
+{\em value} & A pointer to the variable that will hold the read byte.\\
+\hline
+\end{DoxyParams}
+This function reads a byte from the specified port and stores it in the provided pointer value. It uses the sys\+\_\+inb system call to read the byte and then type casts the result to a uint8\+\_\+t.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 upon success, and 1 upon failure. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8c_a79a031a8611f5b2d6afa4158e92b0fb4_icgraph}
+\end{center}
+\end{figure}
