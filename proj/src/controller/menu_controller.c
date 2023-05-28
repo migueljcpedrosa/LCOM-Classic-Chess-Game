@@ -1,6 +1,6 @@
 #include "menu_controller.h"
 #include "state/state.h"
-#include "drivers/keyboard/i8042.h"
+#include "drivers/keyboard/mkbd.h"
 #include "model/menu/menu.h"
 
 void menu_kbd(uint8_t scan_code[2], int size){
