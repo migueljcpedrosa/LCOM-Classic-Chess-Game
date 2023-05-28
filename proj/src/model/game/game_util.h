@@ -1,7 +1,7 @@
 #ifndef _GAME_UTIL_H_
 #define _GAME_UTIL_H_
 
-#define ROUND_TIME 3
+#define ROUND_TIME 600
 
 typedef struct
 {
