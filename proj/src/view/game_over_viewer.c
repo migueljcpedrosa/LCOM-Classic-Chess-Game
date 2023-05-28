@@ -25,8 +25,6 @@ int (draw_game_over_title)(){
 
 int (draw_game_over_buttons)(){
 
-  printf("draw_game_over_buttons\n");
-
   if(draw_sprite(gameOver->playButton.sprite, gameOver->playButton.x, gameOver->playButton.y)){
        return 1;
   }
@@ -35,12 +33,12 @@ int (draw_game_over_buttons)(){
        return 1;
   }
 
-  printf("draw_game_over_buttons2\n");
-
   return 0;
 }
 
 int (draw_game_over)(){
+
+  if(draw_sprite(chessBackground, 0, 0))  return 1;
 
   if(draw_game_over_title()) return 1;
 
@@ -51,16 +49,12 @@ int (draw_game_over)(){
 
 int (game_over_screenshot)(){
 
-  printf("game_over_screenshot1\n");
-
   if (clean_screen()) return 1;
 
   if(draw_game_over()) return 1;
 
   if (copy_buffer_to_screenshot())
     return 1;
-  
-  printf("game_over_screenshot2\n");
 
   return 0;
 }

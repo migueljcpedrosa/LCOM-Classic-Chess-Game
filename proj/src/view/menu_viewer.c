@@ -43,9 +43,7 @@ int draw_date(){
 
 int draw_menu(){
 
-  if(draw_sprite(menu->background, 0, 0)){
-       return 1;
-  }
+  if(draw_sprite(menu->background, 0, 0)) return 1;
 
   if (draw_title()) return 1;
 
