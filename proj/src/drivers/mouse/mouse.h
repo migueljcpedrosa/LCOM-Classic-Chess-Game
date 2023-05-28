@@ -21,6 +21,8 @@ int (mouse_unsubscribe_int)();
  * @brief Mouse interrupt handler function.
  * Checks the status of the mouse buffer, reads a byte from the buffer if available, 
  * decodes it, and adds it to a packet of mouse data. The packet is ready when three bytes have been read.
+ * 
+ * @return void.
  */
 void (mouse_ih)();
 
