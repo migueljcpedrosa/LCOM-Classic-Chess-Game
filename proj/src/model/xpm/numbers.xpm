@@ -1,7 +1,7 @@
 /* XPM */
 static char * numbers_xpm[] = {
 "550 100 2 1",
-" 	c None",
+" 	c #FF00FF",
 ".	c #FFFFFF",
 "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ",
 "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ",

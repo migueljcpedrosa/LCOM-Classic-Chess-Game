@@ -25,7 +25,7 @@ extern bool packet_read;
 
 int gameTurnCounter = 600;
 
-rtc_timestamp_t current_time;
+rtc_timestamp_t real_time;
 
 int main(int argc, char *argv[]) {
 
@@ -137,10 +137,11 @@ int interrupts_handler(){
                             state_timer_handler();
                         } 
 
+                        
                         if(msg.m_notify.interrupts & irqRtc){
-                            //rtc_ih(&current_time);
-                            //drawDate(&current_time);
+                            rtc_ih(&real_time);
                         }
+
                         break;
 
 

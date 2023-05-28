@@ -19,6 +19,7 @@ Sprite* white_pawn;
 Sprite* mouse;
 
 Sprite* numbers;
+Sprite* slash;
 
 Sprite* alphabet;
 Sprite* alphabet_small;
@@ -85,6 +86,10 @@ int load_sprites(){
   if (load_sprite(numbers, (xpm_map_t) numbers_xpm))
     return 1;
 
+  slash = (Sprite*) malloc(sizeof(Sprite));
+  if (load_sprite(slash, (xpm_map_t) slash_xpm))
+    return 1;
+
   alphabet = (Sprite*) malloc(sizeof(Sprite));
   if (load_sprite(alphabet, (xpm_map_t) alphabet_courier_xpm))
     return 1;
@@ -126,6 +131,7 @@ void (destroy_sprites)(){
   free(mouse);
 
   free(numbers);
+  free(slash);
 
   free(alphabet);
   free(alphabet_small);

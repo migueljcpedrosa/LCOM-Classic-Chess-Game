@@ -5,6 +5,9 @@
 #include "viewer.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "../drivers/rtc/rtc.h"
+
+extern rtc_timestamp_t real_time;
 
 int draw_title(){
   
@@ -30,6 +33,14 @@ int draw_buttons(){
   return 0;
 }
 
+int draw_date(){
+  
+    if(drawDate(&real_time)){
+        return 1;
+    }
+    return 0;
+}
+
 int draw_menu(){
 
   if(draw_sprite(menu->background, 0, 0)){
@@ -50,7 +61,12 @@ int menu_refresh() {
   
     if (draw_cursor()) return 1;
 
+    if(erase_date()) return 1;
+
+    if(draw_date()) return 1;
+
     if (render_screen()) return 1;
+    
   
     return 0;
 }
