@@ -16,9 +16,9 @@ PROG=proj
 .PATH: ${.CURDIR}/controller/
 .PATH: ${.CURDIR}/state/
 
-SRCS = 	main.c timer.c mouse.c keyboard.c menu.c gpu.c game.c pieces.c board.c player.c viewer.c utils.c sprite.c cursor.c cursor_input.c game_controller.c menu_viewer.c name_viewer.c menu_controller.c name_controller.c state.c name_input.c game_viewer.c rtc.c game_over.c game_over_viewer.c game_over_controller.c
+SRCS = 	main.c timer.c mouse.c keyboard.c menu.c gpu.c game.c pieces.c board.c player.c viewer.c utils.c sprite.c cursor.c cursor_input.c game_controller.c menu_viewer.c name_viewer.c menu_controller.c name_controller.c state.c name_input.c game_viewer.c rtc.c game_over.c game_over_viewer.c game_over_controller.c move.c
 
-CFLAGS += -pedantic -D __LCOM_OPTIMIZED__
+CFLAGS += -pedantic -D__LCOM_OPTIMIZED__
 
 DPADD += ${LIBLCF}
 LDADD += -Wall -llcf -lxpm -llm

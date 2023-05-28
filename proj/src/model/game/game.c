@@ -302,15 +302,9 @@ void (undo_normal)(Game* game, Move move){
 
     piece->has_moved = move.had_moved;
 
-    if (piece->type == PAWN && (boardOrigin < 8 || boardOrigin > 55)){
+    if (move.old_type == PAWN && piece->type == QUEEN){
         piece->type = PAWN;
         piece->sprite = piece->color == WHITE ? white_pawn : black_pawn;
-    }
-
-    if (piece->type == PAWN && abs(move.origin.y - move.destination.y) == 2){
-        if (last_moved_pawn == piece) {
-            piece->has_moved = false;
-        }
     }
 
     last_moved_pawn = last_moved_pawn_backup;
@@ -331,6 +325,11 @@ void (undo_capture)(Game* game, Move move){
     board->squares[boardOrigin] = piece;
 
     board->squares[boardDestination] = captured_piece;
+
+    if (piece->type == QUEEN && move.old_type == PAWN){
+        piece->type = PAWN;
+        piece->sprite = piece->color == WHITE ? white_pawn : black_pawn;
+    }
 
     piece->position = move.origin;
 
@@ -423,6 +422,7 @@ void (filterMoves)(Game* game, Piece* piece){
 void (setMoves)(Game* game, Piece* piece, bool checkForCheck){
 
     piece->num_moves = 0;
+    free(piece->moves);
     piece->moves = malloc(sizeof(Move) * 28);
 
     if (piece == NULL){
@@ -470,14 +470,12 @@ void (setPawnMoves)(Game* game, Piece* piece){
         if (last_moved_pawn->position.y == pos.y){
             if (last_moved_pawn->position.x == pos.x + 1 || last_moved_pawn->position.x == pos.x - 1){
                 Position destination = {last_moved_pawn->position.x, last_moved_pawn->position.y + direction};
-                Move move = {
+                Move move = create_en_passant(
                     pos, 
                     destination,
-                    EN_PASSANT,
                     piece,
-                    piece->has_moved,
                     last_moved_pawn
-                };
+                );
                 piece->moves[piece->num_moves] = move;
                 piece->num_moves++;
             }
@@ -486,14 +484,14 @@ void (setPawnMoves)(Game* game, Piece* piece){
 
     if (newPos >= 0 && newPos < 64){
         if (board->squares[newPos] == NULL){
-            Move move = {
+
+            Move move = create_normal_move(
                 pos, 
-                {newPos % 8, newPos / 8},
-                NORMAL,
+                (Position) {newPos % 8, newPos / 8},
                 piece,
-                piece->has_moved,
                 NULL
-            };
+            );
+            
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;
 
@@ -501,14 +499,12 @@ void (setPawnMoves)(Game* game, Piece* piece){
                 newPos = boardPos + direction * 16;
 
                 if (board->squares[newPos] == NULL){
-                    Move move = {
+                    Move move = create_normal_move(
                         pos, 
-                        {newPos % 8, newPos / 8},
-                        NORMAL,
+                        (Position) {newPos % 8, newPos / 8},
                         piece,
-                        piece->has_moved,
                         NULL
-                    };
+                    );
                     piece->moves[piece->num_moves] = move;
                     piece->num_moves++;
                 }
@@ -523,14 +519,13 @@ void (setPawnMoves)(Game* game, Piece* piece){
     if (newPos / 8 == boardPos / 8 + direction){
         if (board->squares[newPos] != NULL) {
             if (board->squares[newPos]->color != piece->color){
-                Move move = {
+
+                Move move = create_capture(
                     pos, 
-                    {newPos % 8, newPos / 8},
-                    CAPTURE,
+                    (Position) {newPos % 8, newPos / 8},
                     piece,
-                    piece->has_moved,
-                    board->squares[newPos],
-                };
+                    board->squares[newPos]
+                );
                 piece->moves[piece->num_moves] = move;
                 piece->num_moves++;
             }
@@ -542,14 +537,12 @@ void (setPawnMoves)(Game* game, Piece* piece){
     if (newPos / 8 == boardPos / 8 + direction) {
         if (board->squares[newPos] != NULL) { 
             if (board->squares[newPos]->color != piece->color){
-                Move move = {
+                Move move = create_capture(
                     pos, 
-                    {newPos % 8, newPos / 8},
-                    CAPTURE,
+                    (Position) {newPos % 8, newPos / 8},
                     piece,
-                    piece->has_moved,
                     board->squares[newPos]
-                };
+                );
                 piece->moves[piece->num_moves] = move;
                 piece->num_moves++;
             }
@@ -574,27 +567,25 @@ void (setMovesInLine)(Game* game, Piece* piece, Position increment){
         }
         
         if (board->squares[newPos.y * 8 + newPos.x] == NULL){
-            Move move = {
+
+            Move move = create_normal_move(
                 pos, 
                 newPos,
-                NORMAL,
                 piece,
-                piece->has_moved,
                 NULL
-            };
+            );
 
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;
         }
         else if (board->squares[newPos.y * 8 + newPos.x]->color != piece->color){
-            Move move = {
+
+            Move move = create_capture(
                 pos, 
                 newPos,
-                CAPTURE,
                 piece,
-                piece->has_moved,
                 board->squares[newPos.y * 8 + newPos.x]
-            };
+            );
 
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;
@@ -664,26 +655,23 @@ void (setKnightMoves)(Game* game, Piece* piece){
         int newPos = dest.y * 8 + dest.x;
 
         if (board->squares[newPos] == NULL){
-            Move move = {
+
+            Move move = create_normal_move(
                 pos, 
-                {newPos % 8, newPos / 8},
-                NORMAL,
+                (Position) {newPos % 8, newPos / 8},
                 piece,
-                piece->has_moved,
                 NULL
-            };
+            );
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;
         } else if (board->squares[newPos]->color != piece->color) {
 
-            Move move = {
+            Move move = create_capture(
                 pos, 
-                {newPos % 8, newPos / 8},
-                CAPTURE,
+                (Position) {newPos % 8, newPos / 8},
                 piece,
-                piece->has_moved,
                 board->squares[newPos]
-            };
+            );
             piece->moves[piece->num_moves] = move;
             piece->num_moves++;
         }
@@ -716,12 +704,23 @@ void (setKingMoves)(Game* game, Piece* king, bool checkForCheck){
 
         if (board->squares[boardNewPos] == NULL){
 
-            Move move = { pos, newPos, NORMAL, king, king->has_moved, NULL};
+            Move move = create_normal_move(
+                pos, 
+                newPos,
+                king,
+                NULL
+            );
+
             king->moves[king->num_moves] = move;
             king->num_moves++;
         } else if (board->squares[boardNewPos]->color != king->color) {
 
-            Move move = {pos, newPos, CAPTURE, king, king->has_moved, board->squares[boardNewPos]};
+            Move move = create_capture(
+                pos, 
+                newPos,
+                king,
+                board->squares[boardNewPos]
+            );
             king->moves[king->num_moves] = move;
             king->num_moves++;
         }
@@ -740,79 +739,102 @@ void (setKingMoves)(Game* game, Piece* king, bool checkForCheck){
     }
     Piece* rightRook = board->squares[boardPos + 3];
     Piece* leftRook = board->squares[boardPos - 4];
+    
 
-    if (!rightRook->has_moved){
+    if (rightRook != NULL){
+        if (!rightRook->has_moved){
 
-        bool empty = true, checkable = false;
+            bool empty = true, checkable = false;
 
-        Move* backup = king->moves;
-        int backupNum = king->num_moves;
-        king->moves = malloc(sizeof(Move));
+            Move* backup = king->moves;
+            int backupNum = king->num_moves;
+            king->moves = malloc(sizeof(Move));
 
-        for (int i = 1; i <= 2; i++){
+            for (int i = 1; i <= 2; i++){
 
-            if (board->squares[boardPos + i] != NULL){
-                empty = false;
-                break;
-
-            } else {        
-                king->num_moves = 1;
-                king->moves[0] = (Move) {pos, {pos.x + i, pos.y}, NORMAL, king, king->has_moved, NULL};
-
-                filterMoves(game, king);
-                if (king->num_moves == 0){
-                    checkable = true;
+                if (board->squares[boardPos + i] != NULL){
+                    empty = false;
                     break;
+
+                } else {        
+                    king->num_moves = 1;
+                    king->moves[0] = create_normal_move(
+                        pos, 
+                        (Position) {pos.x + i, pos.y},
+                        king,
+                        NULL
+                    );
+                    filterMoves(game, king);
+                    if (king->num_moves == 0){
+                        checkable = true;
+                        break;
+                    }
                 }
             }
-        }
 
-        free(king->moves);
-        king->moves = backup;
-        king->num_moves = backupNum;
+            free(king->moves);
+            king->moves = backup;
+            king->num_moves = backupNum;
 
-        if (empty && !checkable){
-            Move move = {pos, rightRook->position, CASTLE, king, king->has_moved, rightRook};
-            king->moves[king->num_moves] = move;
-            king->num_moves++;
-        } 
-    }
-
-    if (!leftRook->has_moved){
-
-        bool empty = true, checkable = false;
-
-        Move* backup = king->moves;
-        int backupNum = king->num_moves;
-        king->moves = malloc(sizeof(Move));
-
-        for (int i = 1; i <= 3; i++){
-
-            if (board->squares[boardPos - i] != NULL){
-
-                empty = false;
-                break;
-
-            } else {
-
-                king->num_moves = 1;
-                king->moves[0] = (Move) {pos, {pos.x - i, pos.y}, NORMAL, king, king->has_moved, NULL};
-                filterMoves(game, king);
-                if (king->num_moves == 0){
-                    checkable = true;
-                    break;
-                }
+            if (empty && !checkable){
+                Move move = create_castle(
+                    pos, 
+                    rightRook->position,
+                    king,
+                    rightRook
+                );
+                king->moves[king->num_moves] = move;
+                king->num_moves++;
             } 
         }
+    }
+    if (leftRook != NULL){
+        if (!leftRook->has_moved){
 
-        free(king->moves);
-        king->moves = backup;
-        king->num_moves = backupNum;
+            bool empty = true, checkable = false;
 
-        if (empty && !checkable){
-            Move move = {pos, leftRook->position, CASTLE, king, king->has_moved, leftRook};
-            king->moves[king->num_moves] = move;
-            king->num_moves++;
-        }  
+            Move* backup = king->moves;
+            int backupNum = king->num_moves;
+            king->moves = malloc(sizeof(Move));
+
+            for (int i = 1; i <= 3; i++){
+
+                if (board->squares[boardPos - i] != NULL){
+
+                    empty = false;
+                    break;
+
+                } else {
+
+                    king->num_moves = 1;
+                    king->moves[0] = create_normal_move(
+                        pos, 
+                        (Position) {pos.x - i, pos.y},
+                        king,
+                        NULL
+                    );
+                    filterMoves(game, king);
+                    if (king->num_moves == 0){
+                        checkable = true;
+                        break;
+                    }
+                } 
+            }
+
+            free(king->moves);
+            king->moves = backup;
+            king->num_moves = backupNum;
+
+            if (empty && !checkable){
+                Move move = create_castle(
+                    pos, 
+                    leftRook->position,
+                    king,
+                    leftRook
+                );
+                king->moves[king->num_moves] = move;
+                king->num_moves++;
+            }  
+        }
     }
 }

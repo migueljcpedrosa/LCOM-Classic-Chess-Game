@@ -9,6 +9,7 @@
 #define _GAME_H_
 
 #include "board.h"
+#include "move.h"
 
 /** 
  * @brief Represents a chess game.

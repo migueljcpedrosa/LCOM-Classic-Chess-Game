@@ -14,6 +14,7 @@
 #include <stdbool.h>
 #include "../../view/sprite.h"
 #include "game_util.h"
+#include "move.h"
 
 /**
  * @brief Represents a chess piece.

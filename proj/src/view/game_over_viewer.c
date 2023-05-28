@@ -11,8 +11,6 @@ int (draw_game_over_title)(){
 
   int x = 100;
   int y = 100;
-
-  printf("draw_game_over_title\n");
   
   draw_word(alphabet, x, y, gameOver->result);
 
