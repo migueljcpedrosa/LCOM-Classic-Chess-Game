@@ -9,7 +9,7 @@
 
 int (draw_game_over_title)(){
 
-  int x = 100;
+  int x = 500;
   int y = 100;
   
   draw_word(alphabet, x, y, gameOver->result);
