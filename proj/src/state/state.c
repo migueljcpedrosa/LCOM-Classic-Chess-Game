@@ -63,7 +63,7 @@ int (load_state)(){
 			break;
 		}
 		case GAME:{
-			create_game(nameBackup, "BOT JERRY");
+			create_game(nameBackup, "LCF BOT");
 			game_screenshot();
 			break;
 		}

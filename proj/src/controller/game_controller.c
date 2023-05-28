@@ -8,8 +8,6 @@ extern unsigned int counter;
 int (check_game_over)(){
 
     if (is_check_mate(game)){
-        
-        // game_winner = game waiting player name wins"
 
         game_winner = malloc(sizeof(char) * 30);
         game_result = malloc(sizeof(char) * 30);
@@ -196,6 +194,16 @@ void (game_timer)(){
     Player* player = get_current_player(game);
 
     player->time_counter--;
+
+    if (player->time_counter == 0){
+
+        game_winner = malloc(sizeof(char) * 30);
+        game_result = malloc(sizeof(char) * 30);
+        sprintf(game_winner, "%s WINS", get_waiting_player(game)->name);
+        sprintf(game_result, "TIMEOUT");
+        set_state(GAME_OVER);
+        return;
+    }
 
     if (player->type == AI) {
 

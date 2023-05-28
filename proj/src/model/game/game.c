@@ -15,7 +15,7 @@ void (create_game)(char white_name[], char black_name[]){
     game = malloc(sizeof(Game));
 
     game->white_player = create_player(white_name, WHITE, USER);
-    game->black_player = create_player(black_name, BLACK, USER);
+    game->black_player = create_player(black_name, BLACK, AI);
     
     game->board = create_board(game->white_player, game->black_player);
    

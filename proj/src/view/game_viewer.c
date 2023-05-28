@@ -134,7 +134,7 @@ int (draw_timers)(){
   int y = board_start;
 
   int count = game->black_player->time_counter;
-  int count_in_seconds = count / 60;
+  int count_in_seconds = (count + 59) / 60;
 
   int minutes = count_in_seconds / 60;
   int seconds = count_in_seconds % 60;
@@ -149,7 +149,7 @@ int (draw_timers)(){
   y = v_res - board_start - numbers->img.height;
 
   count = game->white_player->time_counter;
-  count_in_seconds = count / 60;
+  count_in_seconds = (count + 59) / 60;
 
   minutes = count_in_seconds / 60;
   seconds = count_in_seconds % 60;
