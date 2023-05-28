@@ -14,7 +14,7 @@ int (check_game_over)(){
         game_winner = malloc(sizeof(char) * 30);
         game_result = malloc(sizeof(char) * 30);
         sprintf(game_winner, "%s WINS", get_waiting_player(game)->name);
-        sprintf(game_result, "CHECK MATE");
+        sprintf(game_result, "CHECKMATE");
         set_state(GAME_OVER);
         return 1;
         
@@ -23,7 +23,7 @@ int (check_game_over)(){
         game_winner = malloc(sizeof(char) * 30);
         game_result = malloc(sizeof(char) * 30);
         sprintf(game_winner, "DRAW");
-        sprintf(game_result, "STALE MATE");
+        sprintf(game_result, "STALEMATE");
         set_state(GAME_OVER);
         return 1;
     }
