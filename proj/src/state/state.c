@@ -63,14 +63,13 @@ int (load_state)(){
 			break;
 		}
 		case GAME:{
-			create_game(nameBackup, "LCF BOT");
+			create_game(nameBackup, "BOT");
 			game_screenshot();
 			break;
 		}
 		case GAME_OVER:{
 			create_game_over();
 			game_over_screenshot();
-			printf("After init Game Over\n");
 			break;
 		}
 		case EXIT:

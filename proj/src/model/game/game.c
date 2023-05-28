@@ -40,8 +40,6 @@ void (destroy_game)(){
 
     destroy_board(game->board);
     free(game);
-
-    printf("Game destroyed\n");
 }
 
 void (switch_turn)(Game* game){
@@ -717,8 +715,6 @@ void (getKingMoves)(Game* game, Piece* king, bool checkForCheck){
 
     king->num_moves = 0;
 
-    printf("King pos: %d, %d\n", pos.x, pos.y);
-
     Position direction[] = {
         {1, 1}, {-1, 1}, {1, -1}, {-1, -1},
         {1, 0}, {-1, 0}, {0, 1}, {0, -1}
@@ -728,8 +724,6 @@ void (getKingMoves)(Game* game, Piece* king, bool checkForCheck){
 
         Position newPos = {pos.x + direction[i].x, pos.y + direction[i].y};
 
-        printf("King newPos calculated: %d, %d\n", newPos.x, newPos.y);
-
         if (newPos.x < 0 || newPos.x >= 8 || newPos.y < 0 || newPos.y >= 8){
             continue;
         }
@@ -737,8 +731,6 @@ void (getKingMoves)(Game* game, Piece* king, bool checkForCheck){
         int boardNewPos = newPos.y * 8 + newPos.x;
 
         if (board->squares[boardNewPos] == NULL){
-
-            printf("King newPos before adding: %d, %d\n", newPos.x, newPos.y);
 
             Move move = { pos, newPos, NORMAL, king, king->has_moved, NULL};
             king->moves[king->num_moves] = move;
