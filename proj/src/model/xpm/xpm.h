@@ -20,5 +20,6 @@
 #include "alphabet-courier.xpm"
 #include "chessBackground.xpm"
 #include "alphabet-small.xpm"
+#include "slash.xpm"
 
 #endif

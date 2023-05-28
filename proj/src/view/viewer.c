@@ -79,6 +79,7 @@ int (drawDate)(rtc_timestamp_t* timestamp) {
     }
 
     if(date[i] == '/'){
+      draw_xpm(slash->img, slash->addr, x+15, y+10);
       x += numbers->img.width / 11;
       continue;
     }
