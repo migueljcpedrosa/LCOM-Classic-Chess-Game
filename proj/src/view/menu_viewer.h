@@ -55,13 +55,4 @@ int draw_menu();
  */
 int menu_refresh();
 
-/**
- * @brief Draws the final menu screen.
- * 
- * This function draws the words "GAME" and "OVER" on the screen.
- * 
- * @return Returns 0 on success, 1 otherwise.
- */
-int draw_final_menu();
-
 #endif
