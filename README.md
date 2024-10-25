@@ -2,7 +2,7 @@
 
 Group members:
 
-1. &lt;João&gt; &lt;Ramos&gt; (&lt;up202108743@g.uporto.pt&gt;)
-2. &lt;Matilde&gt; &lt;Simões&gt; (&lt;up202108782@g.uporto.pt&gt;)
-3. &lt;Miguel&gt; &lt;Rocha&gt; (&lt;up202108720@g.uporto.pt&gt;)
-4. &lt;Miguel&gt; &lt;Pedrosa&gt; (&lt;up202108809@g.uporto.pt&gt;)
+1. João Ramos; (up202108743@g.uporto.pt)
+2. Matilde Simões; (up202108782@g.uporto.pt)
+3. Miguel Rocha; (up202108720@g.uporto.pt)
+4. Miguel Pedrosa (up202108809@g.uporto.pt)
